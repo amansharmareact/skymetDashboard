@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 
 export default function SkymetDashboard() {
   return (
-    <div className="p-4 bg-[#f4fdf8] text-[#0e1e15] min-h-screen">
+    <div className="p-4 bg-[#D9FFCE] text-[#0e1e15] min-h-screen">
       <Header />
       <Filters />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

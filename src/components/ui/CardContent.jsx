@@ -1,6 +1,6 @@
 const CardContent=({ children, className = '' })=> {
   return (
-    <div className={`p-4 ${className}`}>{children}</div>
+    <div className={`p-3 ${className}`}>{children}</div>
   );
 }
 export default CardContent
