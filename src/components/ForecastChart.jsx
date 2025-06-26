@@ -22,7 +22,7 @@ const data = [
 
 const ForecastChart = () =>{
   return (
-    <Card className="bg-[#FFFFFF] rounded-xl shadow  ">
+    <Card className="bg-[#FFFFFF] rounded-xl shadow w-[590px]  ">
       <CardContent className="p-4">
         <div className="flex justify-between items-center mb-2">
         <h2 className="text-lg font-semibold">Forecast vs Actual Yield</h2>

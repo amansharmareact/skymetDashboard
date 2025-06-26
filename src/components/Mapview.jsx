@@ -1,16 +1,23 @@
-import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
-function Mapview() {
+// Fix default icon
+let DefaultIcon = L.icon({
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
+L.Marker.prototype.options.icon = DefaultIcon;
+
+function MapView() {
   return (
-    <>
-        <MapContainer
+    <MapContainer
       center={[16.705, 74.2433]} // Kolhapur coordinates
       zoom={10}
       scrollWheelZoom={false}
-      className="h-[300px] w-[410px]  rounded-lg"
+      className="w-[450px] h-[310px] rounded-lg"
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -22,9 +29,7 @@ function Mapview() {
         </Popup>
       </Marker>
     </MapContainer>
-  
-    </>
-  )
+  );
 }
 
-export default Mapview
+export default MapView;
