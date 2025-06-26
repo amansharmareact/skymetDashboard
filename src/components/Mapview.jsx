@@ -13,33 +13,11 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 function MapView() {
   return (
-<<<<<<< HEAD
-    <>
-      <MapContainer
-        center={[16.705, 74.2433]} // Kolhapur coordinates
-        zoom={10}
-        scrollWheelZoom={false}
-        className="h-[300px] w-[410px]  rounded-lg"
-      >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution="&copy; OpenStreetMap contributors"
-        />
-        <Marker position={[16.705, 74.2433]}>
-          <Popup>
-            Kolhapur Plant
-          </Popup>
-        </Marker>
-      </MapContainer>
-
-    </>
-  )
-=======
     <MapContainer
       center={[16.705, 74.2433]} // Kolhapur coordinates
       zoom={10}
       scrollWheelZoom={false}
-      className="w-[450px] h-[310px] rounded-lg"
+      className="w-[450px] h-[310px] rounded-lg mb-5"
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -52,7 +30,6 @@ function MapView() {
       </Marker>
     </MapContainer>
   );
->>>>>>> c7f6d68 (updated)
 }
 
 export default MapView;
