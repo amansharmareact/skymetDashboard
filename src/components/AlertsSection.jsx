@@ -36,10 +36,9 @@ const AlertsSection = () => {
               <li><strong>Parcel #107</strong> – Shirol Block</li>
               <li><strong>Parcel #109</strong> – Ichalkaranji</li>
             </ul>
-
             <div className='border-b mt-5'></div>
 
-            <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-3 ">
+            <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-3 bottom">
             <button class="px-[7px] py-2 hover:bg-gray-100">View on Map</button>
               <div class="w-px bg-gray-300"></div>
             <button class="px-4 py-2 hover:bg-gray-100">Acknowledge</button>
