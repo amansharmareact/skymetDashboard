@@ -16,16 +16,16 @@ const AlertsSection = () => {
               <img src='/images/Plant Icon (4).png' alt='icon'/>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-[#E14343]">Weather Alert</h4>
-              <p className="text-[8px] text-gray-500">Updated 2h ago</p>
+              <h4 className="text-[16px] font-semibold text-[#E14343]">Weather Alert</h4>
+              <p className="text-[8px] text-[#717680]">Updated 2h ago</p>
             </div>
           </div>
 
           <div className="mt-4">
             <h3 className="text-[25px] font-semibold">3 Parcels</h3>
-            <p className="text-[14px] text-gray-700">Rainfall risk</p>
+            <p className="text-[14px] text-[#181D27]">Rainfall risk</p>
 
-            <div className="flex flex-wrap gap-2 text-[10px]   mt-2">
+            <div className="flex flex-wrap gap-2 text-[8px]   mt-2">
               <span className="bg-[#ECFDF3] stroke-[#ABEFC6] border text-[#067647] px-2 py-1 rounded-full">Crop: Maize</span>
               <span className="bg-[#F8F9FC] stroke-[#D5D9EB] border text-[#363F72] px-2 py-1 rounded-full">Readiness: 85%</span>
               <span className="bg-[#FFFAEB] stroke-[#FEDF89] border text-[#B54708] px-2 py-1 rounded-full">Rain ETA: 18 hrs</span>
@@ -38,10 +38,10 @@ const AlertsSection = () => {
             </ul>
             <div className='border-b mt-5'></div>
 
-            <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-3 bottom">
-            <button class="px-[7px] py-2 hover:bg-gray-100">View on Map</button>
-              <div class="w-px bg-gray-300"></div>
-            <button class="px-4 py-2 hover:bg-gray-100">Acknowledge</button>
+            <div className="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-[50px] ">
+            <button className="px-[7px] text-[#414651] py-2 hover:bg-gray-100">View on Map</button>
+              <div className="w-px bg-gray-300"></div>
+            <button className="px-4 py-2 text-[#414651] hover:bg-gray-100">Acknowledge</button>
             </div>
           </div>
         </CardContent>
@@ -58,14 +58,14 @@ const AlertsSection = () => {
                <img src='/images/Plant Icon (6).png' alt='icon'/>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-[#CA6702]">Logistics Delay</h4>
-              <p className="text-[8px] text-gray-500">Updated 2h ago</p>
+              <h4 className="text-[15px] font-semibold text-[#CA6702]">Logistics Delay</h4>
+              <p className="text-[8px] text-[#717680]">Updated 2h ago</p>
             </div>
           </div>
 
           <div className="mt-4">
             <h3 className="text-[25px] font-semibold">5 Collection</h3>
-            <p className="text-[14px] text-gray-700">Trips Delayed</p>
+            <p className="text-[14px] text-[#181D27]">Trips Delayed</p>
 
             <div className=" mt-5">
               <p className='text-[9px] text-[181D27]'>Total biomass: <br/> <strong className='text-[16px] text-[#181D27]'>620 tons</strong></p>
@@ -74,9 +74,9 @@ const AlertsSection = () => {
              <div className='border-b mt-12'></div>
 
             <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-[53px] ">
-            <button class="px-[7px] py-2 hover:bg-gray-100">Assign Agents</button>
-              <div class="w-px bg-gray-300"></div>
-            <button class="px-4 py-2 hover:bg-gray-100">View Routes</button>
+            <button className="px-[7px] text-[#414651] py-2 hover:bg-gray-100">Assign Agents</button>
+              <div className="w-px bg-gray-300"></div>
+            <button className="px-4 py-2 text-[#414651] hover:bg-gray-100">View Routes</button>
             </div>
           </div>
         </CardContent>
@@ -93,14 +93,14 @@ const AlertsSection = () => {
                <img src='/images/Plant Icon (7).png' alt='icon'/>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-[#1D4ED8]">Utilization Drop</h4>
-              <p className="text-[8px] text-gray-500">Updated 2h ago</p>
+              <h4 className="text-[14px] font-semibold text-[#1D4ED8]">Utilization Drop</h4>
+              <p className="text-[8px] text-[#181D27]">Updated 2h ago</p>
             </div>
           </div>
 
           <div className="mt-4">
             <h3 className="text-[25px] font-semibold">63%</h3>
-            <p className="text-[14px] text-gray-700">Utilization Down</p>
+            <p className="text-[14px] text-[#181D27]">Utilization Down</p>
 
             <div className=" mt-4  ">
               <p className='text-[9px] text-[181D27]'>Consecutive dip:<br/> <strong className='text-[16px] text-[#181D27]'>3 Day</strong></p>
@@ -112,10 +112,10 @@ const AlertsSection = () => {
 
              <div className='border-b mt-12'></div>
 
-          <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-[53px] ">
-            <button class="px-[7px] py-2 hover:bg-gray-100">Open Report</button>
-              <div class="w-px bg-gray-300"></div>
-            <button class="px-4 py-2 hover:bg-gray-100">Analyze Drop</button>
+          <div className="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-[53px] ">
+            <button className="px-[7px] py-2 hover:bg-gray-100">Open Report</button>
+              <div className="w-px bg-gray-300"></div>
+            <button className="px-4 py-2 hover:bg-gray-100">Analyze Drop</button>
             </div>
           </div>
         </CardContent>
