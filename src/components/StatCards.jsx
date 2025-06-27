@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from "./ui/Card";
-import CardContent from "./ui/CardContent";
 
 const stats = [
   {
@@ -11,7 +10,6 @@ const stats = [
     subtitle: 'Biomass (Next 7 Days)',
     footer: 'Updated 2h ago',
   },
-
   {
     color: '#E8F0FA',
     stroke: '#B2DDFF',
@@ -52,26 +50,34 @@ const stats = [
     subtitle: 'Pending Supply/Harvest Issues',
     footer: 'View Alerts',
   },
-]
+];
 
 const StatCards = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-3 px-3 md:px-0  items-start">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 px-3 md:px-0 items-stretch">
       {stats.map((stat, idx) => (
         <Card
           key={idx}
-          className="rounded-[24px] w-[100%] sm:w-full h-[150px] shadow-sm border"
+          className="rounded-[24px] w-full min-h-[150px] h-full shadow-sm border flex"
           style={{ backgroundColor: stat.color, borderColor: stat.stroke }}
         >
-          <CardContent className="p-[8px]">
-            <img src={stat.icon} alt="icon" className="w-8 h-8" />
-            <div className="text-[30px] font-bold text-[#181D27]">{stat.title}</div>
-            <div className="text-[12px] text-[#252B37] mt-[8px]">{stat.subtitle}</div>
-            <div className="text-[9px] text-[#717680] ">{stat.footer}</div>
-          </CardContent>
+          <div className="p-2 flex flex-col justify-between w-full h-full">
+            {/* Top - Icon + Title */}
+            <div>
+              <img src={stat.icon} alt="icon" className="w-8 h-8 mb-1" />
+              <div className="text-[26px] font-bold text-[#181D27] leading-tight truncate">{stat.title}</div>
+            </div>
+
+            {/* Bottom - Subtitle + Footer */}
+            <div className="mb-2">
+              <div className="text-[16px] text-[#252B37] leading-tight truncate">{stat.subtitle}</div>
+              <div className="text-[14px] text-[#717680] leading-tight truncate">{stat.footer}</div>
+            </div>
+          </div>
         </Card>
       ))}
     </div>
   );
-}
-export default StatCards
+};
+
+export default StatCards;
