@@ -5,6 +5,7 @@ import MapCard from '../components/MapCard';
 import StatCards from '../components/StatCards';
 import ForecastChart from '../components/ForecastChart';
 import AlertsSection from '../components/AlertsSection';
+import DateRibbon from '../components/DateRibbon';
 import Footer from '../components/Footer';
 
 
@@ -21,6 +22,7 @@ export default function SkymetDashboard() {
         <ForecastChart />
         <AlertsSection />
       </div>
+      <DateRibbon />
       <Footer />
     </div>
   );

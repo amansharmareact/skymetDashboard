@@ -55,7 +55,7 @@ const stats = [
 
 const StatCards = () =>{
   return (
-    <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-2 ml-[65px]">
+    <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-[7px] mt-[10px] ml-[65px]">
       {stats.map((stat, idx) => (
         <Card
          key={idx}
