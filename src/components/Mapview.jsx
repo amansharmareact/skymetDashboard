@@ -1,6 +1,8 @@
 import { MapContainer, TileLayer, Marker, Circle, CircleMarker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
 // Custom center icon (replace with your actual icon path)
 const centerIcon = new L.Icon({
