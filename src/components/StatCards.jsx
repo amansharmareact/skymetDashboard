@@ -63,7 +63,7 @@ const StatCards = () =>{
           className="rounded-[24px]  px-[6px] py-[6px] w-[240px] h-[150px] shadow-sm border "
           style={{ backgroundColor: stat.color, borderColor: stat.stroke }}
         >
-
+            
           <CardContent className="p-[8px]">
            <img src={stat.icon} alt="icon" className="w-8 h-8 " />
           <div className="text-[30px] font-bold text-[#181D27]">{stat.title}</div>
