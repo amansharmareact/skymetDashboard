@@ -1,6 +1,6 @@
 import React from 'react';
-import  Card  from "./ui/Card";
-import  CardContent  from "./ui/CardContent";
+import Card from "./ui/Card";
+import CardContent from "./ui/CardContent";
 
 const stats = [
   {
@@ -11,7 +11,6 @@ const stats = [
     subtitle: 'Biomass (Next 7 Days)',
     footer: 'Updated 2h ago',
   },
-  
   {
     color: '#E8F0FA',
     stroke: '#B2DDFF',
@@ -52,27 +51,27 @@ const stats = [
     subtitle: 'Pending Supply/Harvest Issues',
     footer: 'View Alerts',
   },
-]
+];
 
-const StatCards = () =>{
+const StatCards = () => {
   return (
-    <div className="lg:col-span-2 grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-[8px] mt-[10px] ml-[65px] flex sm:items-start">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-3 px-3 md:px-0 md:ml-[65px] items-start">
       {stats.map((stat, idx) => (
         <Card
-         key={idx}
-          className="rounded-[24px]  px-[6px] py-[6px] w-[240px] h-[150px] shadow-sm border "
+          key={idx}
+          className="rounded-[24px] w-[90%] sm:w-full h-[150px] shadow-sm border"
           style={{ backgroundColor: stat.color, borderColor: stat.stroke }}
         >
-            
           <CardContent className="p-[8px]">
-           <img src={stat.icon} alt="icon" className="w-8 h-8 " />
-          <div className="text-[30px] font-bold text-[#181D27]">{stat.title}</div>
-          <div className="text-[12px] text-[#252B37] mt-[8px]">{stat.subtitle}</div>
-          <div className="text-[9px] text-[#717680] ">{stat.footer}</div>
+            <img src={stat.icon} alt="icon" className="w-8 h-8" />
+            <div className="text-[30px] font-bold text-[#181D27]">{stat.title}</div>
+            <div className="text-[12px] text-[#252B37] mt-[8px]">{stat.subtitle}</div>
+            <div className="text-[9px] text-[#717680]">{stat.footer}</div>
           </CardContent>
         </Card>
       ))}
     </div>
   );
-}
-export default StatCards
+};
+
+export default StatCards;
