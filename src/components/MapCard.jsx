@@ -1,13 +1,19 @@
 import React from 'react';
-import  Card  from "./ui/Card";
-import  CardContent  from "./ui/CardContent";
-import Mapview from './Mapview';
+import Card from "./ui/Card";
+import CardContent from "./ui/CardContent";
+import MapView from './Mapview';
 
-const MapCard= ()=> {
+const MapCard = () => {
   return (
-    <Card className="lg:col-span-1 h-[300px] w-[410px]  bg-[#D9FFCE]] ">
-      <CardContent className=" h-[300px] aspect-[4/3] sm:aspect-[5/3] md:aspect-[4/2] lg:aspect-[4/2] overflow-hiddenitems-center">
-       <Mapview />
+    <Card className="lg:col-span-1 h-[300px] w-[410px] ">
+      <CardContent className="h-[300px] aspect-[4/3] sm:aspect-[5/3] md:aspect-[4/2] lg:aspect-[4/2] overflow-hiddenitems-center">
+        {/* <Mapview /> */}
+        <MapView
+          points={[
+            { lat: 16.6, lng: 74.1, color: 'red' },
+            { lat: 16.9, lng: 74.3, color: 'blue' },
+          ]}
+        />
       </CardContent>
     </Card>
   );

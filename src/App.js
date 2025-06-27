@@ -3,7 +3,7 @@ import SkymetDashboard from './Pages/Dashboard';
 
 function App() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <SkymetDashboard/>
     </div>
   );
