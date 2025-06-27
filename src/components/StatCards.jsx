@@ -55,11 +55,11 @@ const stats = [
 
 const StatCards = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-3 px-3 md:px-0 md:ml-[65px] items-start">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-3 px-3 md:px-0  items-start">
       {stats.map((stat, idx) => (
         <Card
           key={idx}
-          className="rounded-[24px] w-[90%] sm:w-full h-[150px] shadow-sm border"
+          className="rounded-[24px] w-[100%] sm:w-full h-[150px] shadow-sm border"
           style={{ backgroundColor: stat.color, borderColor: stat.stroke }}
         >
           <CardContent className="p-[8px]">
