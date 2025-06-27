@@ -6,7 +6,7 @@ import MapView from './Mapview';
 const MapCard = () => {
   return (
     <Card className="lg:col-span-1 h-[300px] w-[410px] ">
-      <CardContent className="h-[300px] aspect-[4/3] sm:aspect-[5/3] md:aspect-[4/2] lg:aspect-[4/2] overflow-hiddenitems-center">
+      <CardContent className="h-[300px] md:h-[360px] lg:h-[400px] aspect-[4/3] sm:aspect-[5/3] md:aspect-[4/2] lg:aspect-[4/2] overflow-hidden items-center justify-center">
         {/* <Mapview /> */}
         <MapView
           points={[

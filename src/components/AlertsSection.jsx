@@ -7,7 +7,7 @@ const AlertsSection = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-1 ">
       {/* Weather Alert Card */}
       <Card
-        className="rounded-2xl border shadow-sm"
+        className="rounded-2xl border shadow-sm h-[377px] "
         style={{ backgroundColor: '#FFFFFF', borderColor: '#FECDCA' }}
       >
         <CardContent className="p-4">
@@ -40,7 +40,7 @@ const AlertsSection = () => {
             <div className='border-b mt-5'></div>
 
             <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-3 ">
-            <button class="px-1 py-2 hover:bg-gray-100">View on Map</button>
+            <button class="px-[7px] py-2 hover:bg-gray-100">View on Map</button>
               <div class="w-px bg-gray-300"></div>
             <button class="px-4 py-2 hover:bg-gray-100">Acknowledge</button>
             </div>
@@ -50,7 +50,7 @@ const AlertsSection = () => {
 
       {/* Logistics Delay Card */}
       <Card
-        className="rounded-2xl border shadow-sm"
+        className="rounded-2xl border shadow-sm h-[377px]"
         style={{ backgroundColor: '#FFFFFF', borderColor: '#FEEE95' }}
       >
         <CardContent className="p-4">
@@ -74,8 +74,8 @@ const AlertsSection = () => {
             </div>
              <div className='border-b mt-12'></div>
 
-            <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-10 ">
-            <button class="px-1 py-2 hover:bg-gray-100">Assign Agents</button>
+            <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-[53px] ">
+            <button class="px-[7px] py-2 hover:bg-gray-100">Assign Agents</button>
               <div class="w-px bg-gray-300"></div>
             <button class="px-4 py-2 hover:bg-gray-100">View Routes</button>
             </div>
@@ -85,7 +85,7 @@ const AlertsSection = () => {
 
       {/* Utilization Drop Card */}
       <Card
-        className="rounded-2xl border shadow-sm"
+        className="rounded-2xl border shadow-sm h-[377px]"
         style={{ backgroundColor: '#F0F9FF', borderColor: '#7CD4FD' }}
       >
         <CardContent className="p-4">
@@ -111,10 +111,10 @@ const AlertsSection = () => {
               </div>
             </div>
 
-             <div className='border-b mt-10'></div>
+             <div className='border-b mt-12'></div>
 
-          <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-12 ">
-            <button class="px-1 py-2 hover:bg-gray-100">Open Report</button>
+          <div class="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] mt-[53px] ">
+            <button class="px-[7px] py-2 hover:bg-gray-100">Open Report</button>
               <div class="w-px bg-gray-300"></div>
             <button class="px-4 py-2 hover:bg-gray-100">Analyze Drop</button>
             </div>

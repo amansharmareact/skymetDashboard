@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ArrowRight, RotateCcw, Search } from 'lucide-react';
+import { ChevronDown, ArrowRight, RotateCcw, Search, CircleQuestionMark } from 'lucide-react';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -12,7 +12,12 @@ const Filters = () => {
     <div className="flex flex-wrap md:flex-nowrap gap-4 md:gap-6 p-5 items-center justify-center md:items-center">
       {/* Select CBG Plant */}
       <div className="flex flex-col w-full md:w-auto min-w-[200px]">
-        <label className="text-xs text-gray-500 font-medium mb-1">Select CBG Plant *</label>
+      <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
+      <span>
+       Select CBG Plant <span className="text-[#1570EF] font-medium">*</span>
+      </span>
+       <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
+     </label>
         <div className="relative">
           <select className="appearance-none border border-gray-300 rounded-full pl-4 pr-8 py-1 text-sm text-gray-700 w-full bg-white">
             <option>Select CBG Plant...</option>
@@ -23,7 +28,12 @@ const Filters = () => {
 
       {/* Current Region */}
       <div className="flex flex-col w-full md:w-auto min-w-[140px] ">
-        <label className="text-xs text-gray-500 font-medium mb-1">Current Region *</label>
+       <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
+      <span>
+       Current Region <span className="text-[#1570EF] font-medium">*</span>
+      </span>
+       <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
+     </label>
         <div className="relative">
           <Search className="w-4 h-4 text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
           <input
@@ -36,7 +46,12 @@ const Filters = () => {
 
       {/* Date Picker */}
       <div className="flex flex-col w-full md:w-auto min-w-[200px]">
-        <label className="text-xs text-gray-500 font-medium mb-1">Date Picker *</label>
+        <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
+      <span>
+       Date Picker <span className="text-[#1570EF] font-medium">*</span>
+      </span>
+       <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
+     </label>
         <div className="relative">
           <select className="appearance-none border border-gray-300 rounded-full pl-4 pr-8 py-1 text-sm text-gray-700 w-full bg-white">
             <option>7 days</option>
@@ -48,7 +63,12 @@ const Filters = () => {
 
       {/* Season Filter */}
       <div className="flex flex-col w-full md:w-auto min-w-[140px]">
-        <label className="text-xs text-gray-500 font-medium mb-1">Season Filter *</label>
+        <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
+      <span>
+       Season Filter <span className="text-[#1570EF] font-medium">*</span>
+      </span>
+       <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
+     </label>
         <div className="relative">
           <Search className="w-4 h-4 text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
           <input

@@ -11,6 +11,7 @@ const stats = [
     subtitle: 'Biomass (Next 7 Days)',
     footer: 'Updated 2h ago',
   },
+  
   {
     color: '#E8F0FA',
     stroke: '#B2DDFF',
@@ -55,7 +56,7 @@ const stats = [
 
 const StatCards = () =>{
   return (
-    <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-[7px] mt-[10px] ml-[65px]">
+    <div className="lg:col-span-2 grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-[8px] mt-[10px] ml-[65px] flex sm:items-start">
       {stats.map((stat, idx) => (
         <Card
          key={idx}
@@ -63,11 +64,11 @@ const StatCards = () =>{
           style={{ backgroundColor: stat.color, borderColor: stat.stroke }}
         >
 
-          <CardContent className="p-4">
-           <img src={stat.icon} alt="icon" className="w-8 h-8 mb-2" />
+          <CardContent className="p-[8px]">
+           <img src={stat.icon} alt="icon" className="w-8 h-8 " />
           <div className="text-[30px] font-bold text-[#181D27]">{stat.title}</div>
-          <div className="text-[12px] text-[#252B37]">{stat.subtitle}</div>
-          <div className="text-[9px] text-[#717680] mt-1">{stat.footer}</div>
+          <div className="text-[12px] text-[#252B37] mt-[8px]">{stat.subtitle}</div>
+          <div className="text-[9px] text-[#717680] ">{stat.footer}</div>
           </CardContent>
         </Card>
       ))}

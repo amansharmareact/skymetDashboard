@@ -22,7 +22,7 @@ export default function SkymetDashboard() {
         <ForecastChart />
         <AlertsSection />
       </div>
-      <DateRibbon />
+      <DateRibbon/>
       <Footer />
     </div>
   );
