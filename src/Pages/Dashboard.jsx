@@ -17,13 +17,13 @@ export default function SkymetDashboard() {
       <div className="flex flex-col lg:flex-row gap-4 w-full">
         {/* MapCard - 40% on large screens, full on mobile */}
         <div className="w-full lg:w-[40%]">
-          <div className="min-h-[300px] lg:min-h-[350px] h-full">
+          <div className="lg:min-h-[350px] h-full">
             <MapCard />
           </div>
         </div>
         {/* StatCards - 60% on large screens, full on mobile */}
         <div className="w-full lg:w-[60%]">
-          <div className="h-auto lg:h-[350px]">
+          <div className="h-auto">
             <StatCards />
           </div>
         </div>
