@@ -21,7 +21,6 @@ export default function SkymetDashboard() {
             <MapCard />
           </div>
         </div>
-
         {/* StatCards - 60% on large screens, full on mobile */}
         <div className="w-full lg:w-[60%]">
           <div className="h-auto lg:h-[350px]">
