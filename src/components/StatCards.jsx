@@ -81,7 +81,7 @@ const StatCards = () => {
             {/* Top - Icon + Title */}
             <div>
               <img src={stat.icon} alt="icon" className="w-8 h-8 mb-1" />
-              <div className="text-[26px] font-bold text-[#181D27] leading-tight truncate">{stat.title}</div>
+              <div className="text-[42px] font-bold text-[#181D27] leading-tight truncate">{stat.title}</div>
             </div>
 
             {/* Bottom - Subtitle + Footer */}
