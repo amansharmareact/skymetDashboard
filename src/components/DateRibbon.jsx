@@ -1,8 +1,8 @@
 import React from 'react'
 
 function DateRibbon() {
-    
-   const dateData = [
+
+  const dateData = [
     { day: "Sat", date: 21, dots: ["green"] },
     { day: "Sun", date: 22, dots: ["green"] },
     { day: "Mon", date: 23, dots: ["green"], active: true },
@@ -20,28 +20,30 @@ function DateRibbon() {
   ];
 
   return (
-    <div className="flex overflow-x-auto gap-1 p-1  rounded-xl">
+    <div className="mt-5 flex overflow-x-auto gap-1 p-1  rounded-xl">
       {dateData.map(({ day, date, dots, active }, index) => (
         <div
           key={index}
-          className={` items-center  px-[22px] py-[8px] min-w-[79px] h-[40px] rounded-[47px] border text-sm text-[#252B37] shadow-md transition-all hover:border-[#86CB3C] 
+          className={`bg-white bg-opacity-50 items-center  px-[22px] py-[8px] min-w-[79px] h-[40px] rounded-[47px] border text-sm text-[#252B37] shadow-sm transition-all border-[#E5E7EB] 
           
           `}
         >
           <span className=" text-sm  text-[#252B37]">{day}</span>
           <span className=" text-sm ml-[4px] inline font-medium text-[#252B37]">{date}</span>
-          <div className="flex px-[8px] gap-1 ">
+          <div className="flex px-[8px] gap-1 cursor-pointer">
             {dots.map((color, i) => (
               <span
                 key={i}
-                className={`w-1.5 h-1.5 items-center rounded-full ${
-                  color === "green"
-                    ? "bg-green-500"
+                className={`w-1.5 h-1.5 rounded-full ${color === "green"
+                    ? "bg-green-500 bg-opacity-80"
                     : color === "blue"
-                    ? "bg-blue-500"
-                    : "bg-red-500"
-                }`}
+                      ? "bg-blue-500 bg-opacity-80"
+                      : color === "red"
+                        ? "bg-red-500 bg-opacity-80"
+                        : "bg-white bg-opacity-80"
+                  }`}
               ></span>
+
             ))}
           </div>
         </div>

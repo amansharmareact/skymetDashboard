@@ -80,14 +80,14 @@ const StatCards = () => {
           <div className="p-2 flex flex-col justify-between w-full h-full">
             {/* Top - Icon + Title */}
             <div>
-              <img src={stat.icon} alt="icon" className="w-8 h-8 mb-1" />
-              <div className="text-[42px] font-bold text-[#181D27] leading-tight truncate">{stat.title}</div>
+              <img src={stat.icon} alt="icon" className="w-12 h-12 mb-1" />
+              <div className="text-[42px] font-semibold text-[#181D27] truncate" style={{ lineHeight: "1.5" }}>{stat.title}</div>
             </div>
 
             {/* Bottom - Subtitle + Footer */}
             <div className="mb-2">
-              <div className="text-[16px] text-[#252B37] leading-tight truncate">{stat.subtitle}</div>
-              <div className="text-[14px] text-[#717680] leading-tight truncate">{stat.footer}</div>
+              <div className="text-[16px] text-[#252B37] truncate" style={{ lineHeight: "1.5" }}>{stat.subtitle}</div>
+              <div className="text-[14px] text-[#717680] truncate" style={{ lineHeight: "1.5" }}>{stat.footer}</div>
             </div>
           </div>
         </Card>

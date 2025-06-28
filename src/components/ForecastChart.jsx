@@ -27,11 +27,11 @@ const data = [
 
 const ForecastChart = () => {
   return (
-    <div className="bg-white rounded-xl shadow w-full max-w-full overflow-hidden">
+    <div className="bg-white rounded-xl shadow w-full max-w-full overflow-hidden border border-[#E9EAED]">
       <div className="p-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
           <h2 className="text-lg font-semibold">Forecast vs Actual Yield</h2>
-          <button className="text-green-600 text-sm hover:underline whitespace-nowrap">
+          <button className="text-green-600 font-semibold text-sm hover:underline whitespace-nowrap">
             Open in Analytics ↗
           </button>
         </div>
@@ -41,10 +41,10 @@ const ForecastChart = () => {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
                 dataKey="name"
-                label={{ value: "Month", position: "insideBottomRight", offset: -5 }}
+                label={{ value: "Month", position: "insideBottomCenter", offset: -5 }}
               />
               <YAxis
-                label={{ value: "Biomass (kg)", angle: -90, position: "insideLeft" }}
+                label={{ value: "Biomass (tons)", angle: -90, position: "insideLeft" }}
               />
               <Tooltip />
               <Legend verticalAlign="top" height={36} />

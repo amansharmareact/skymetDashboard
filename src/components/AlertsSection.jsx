@@ -27,14 +27,14 @@ const AlertsSection = () => {
       <Card
         className="rounded-2xl border shadow-sm flex flex-col h-full"
         style={{
-          backgroundColor: '#FFFFFF',
+          background: `rgba(255, 255, 255, 0.7)`,
           borderColor: '#FECDCA',
         }}
       >
         <CardContent className="flex flex-col justify-between h-full p-4">
           <div>
             <div className="flex items-start gap-2">
-              <img src="/images/Plant Icon (4).png" alt="icon" className="w-8 h-8" />
+              <img src="/images/Plant Icon (4).png" alt="icon" className="w-12 h-12" />
               <div>
                 <h4 className="text-[16px] font-medium text-[#E14343]">Weather Alert</h4>
                 <p className="text-[10px] text-[#717680]">Updated 2h ago</p>
@@ -44,11 +44,11 @@ const AlertsSection = () => {
               <h3 className="text-[30px] font-semibold text-[#181D27]">3 Parcels</h3>
               <p className="text-[18px] text-[#181D27]">Rainfall risk</p>
               <div className="flex flex-wrap gap-2 text-[8px] mt-4">
-                <span className="bg-[#ECFDF3] border text-[#067647] px-2 py-1 rounded-full">Crop: Maize</span>
-                <span className="bg-[#F8F9FC] border text-[#363F72] px-2 py-1 rounded-full">Readiness: 85%</span>
-                <span className="bg-[#FFFAEB] border text-[#B54708] px-2 py-1 rounded-full">Rain ETA: 18 hrs</span>
+                <span className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] font-semibold px-2 py-1.5 rounded-full">Crop: Maize</span>
+                <span className="bg-[#F8F9FC] border border-[#CBD5E1] text-[#363F72] font-semibold px-2 py-1.5 rounded-full">Readiness: 85%</span>
+                <span className="bg-[#FFFAEB] border border-[#FCD34D] text-[#B54708] font-semibold px-2 py-1.5 rounded-full">Rain ETA: 18 hrs</span>
               </div>
-              <ul className="text-[12px] text-gray-600 mt-3 space-y-2">
+              <ul className="text-[12px] text-black mt-3 space-y-2">
                 <li><strong>Parcel #103</strong> – Rajarampuri</li>
                 <li><strong>Parcel #107</strong> – Shirol Block</li>
                 <li><strong>Parcel #109</strong> – Ichalkaranji</li>
@@ -57,10 +57,10 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
-              <button className="px-[7px] text-[8px] py-2 hover:bg-gray-100">View on Map</button>
+            <div className="inline-flex rounded-2xl border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
+              <button className="px-4 text-[8px] py-2 hover:bg-gray-100 text-black">View on Map</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 text-[8px] py-2 hover:bg-gray-100">Acknowledge</button>
+              <button className="px-4 text-[8px] py-2 hover:bg-gray-100 text-black">Acknowledge</button>
             </div>
           </div>
         </CardContent>
@@ -70,14 +70,14 @@ const AlertsSection = () => {
       <Card
         className="rounded-2xl border shadow-sm flex flex-col h-full"
         style={{
-         background: `linear-gradient(135deg, rgba(255, 247, 247, 0.5), rgba(217, 80, 80, 0.5))`,
+          background: `rgba(255, 255, 255, 0.7)`,
           borderColor: '#FEEE95',
         }}
       >
         <CardContent className="flex flex-col justify-between h-full p-4">
           <div>
             <div className="flex items-start gap-2">
-              <img src="/images/Plant Icon (6).png" alt="icon" className="w-8 h-8" />
+              <img src="/images/Plant Icon (6).png" alt="icon" className="w-12 h-12" />
               <div>
                 <h4 className="text-[16px] font-medium text-[#CA6702]">Logistics Delay</h4>
                 <p className="text-[10px] text-[#717680]">Updated 2h ago</p>
@@ -94,10 +94,10 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
-              <button className="px-[7px] py-2 hover:bg-gray-100">Assign Agents</button>
+            <div className="inline-flex rounded-2xl border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
+              <button className="px-[7px] py-2.5 hover:bg-gray-100  text-black">Assign Agents</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 py-2 hover:bg-gray-100">View Routes</button>
+              <button className="px-4 py-2.5 hover:bg-gray-100  text-black">View Routes</button>
             </div>
           </div>
         </CardContent>
@@ -107,14 +107,14 @@ const AlertsSection = () => {
       <Card
         className="rounded-2xl border shadow-sm flex flex-col h-full"
         style={{
-          backgroundColor: hexToRgba('#7CD4FD', 0.3),
+          backgroundColor: '#F0F9FF',
           borderColor: '#7CD4FD',
         }}
       >
         <CardContent className="flex flex-col justify-between h-full p-4">
           <div>
             <div className="flex items-start gap-2">
-              <img src="/images/Plant Icon (7).png" alt="icon" className="w-8 h-8" />
+              <img src="/images/Plant Icon (7).png" alt="icon" className="w-12 h-12" />
               <div>
                 <h4 className="text-[16px] font-medium text-[#1D4ED8]">Utilization Drop</h4>
                 <p className="text-[10px] text-[#717680]">Updated 2h ago</p>
@@ -134,10 +134,10 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="inline-flex rounded-full border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
-              <button className="px-[7px] py-2 hover:bg-gray-100">Open Report</button>
+            <div className="inline-flex rounded-2xl border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
+              <button className="px-[7px] py-2.5 hover:bg-gray-100  text-black">Open Report</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 py-2 hover:bg-gray-100">Analyze Drop</button>
+              <button className="px-4 py-2.5 hover:bg-gray-100  text-black">Analyze Drop</button>
             </div>
           </div>
         </CardContent>

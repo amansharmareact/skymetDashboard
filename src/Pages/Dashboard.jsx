@@ -11,7 +11,13 @@ import Footer from '../components/Footer';
 
 export default function SkymetDashboard() {
   return (
-    <div className="p-4 bg-[#D9FFCE] text-[#0e1e15] min-h-screen">
+    <div
+      className="p-4 text-[#0e1e15] min-h-screen"
+      style={{
+        background: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(157, 255, 206, 0.4))',
+      }}
+    >
+
       {/* <Header />   */}
       <Filters />
       <div className="flex flex-col lg:flex-row gap-4 w-full">
