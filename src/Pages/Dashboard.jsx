@@ -17,7 +17,7 @@ export default function SkymetDashboard() {
       <div className="flex flex-col lg:flex-row gap-4 w-full">
         {/* MapCard - 40% on large screens, full on mobile */}
         <div className="w-full lg:w-[40%]">
-          <div className="lg:min-h-[350px] h-full">
+          <div className="">
             <MapCard />
           </div>
         </div>
@@ -29,7 +29,7 @@ export default function SkymetDashboard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
         <ForecastChart />
         <AlertsSection />
       </div>
