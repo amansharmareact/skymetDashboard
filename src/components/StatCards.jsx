@@ -51,6 +51,22 @@ const stats = [
     footer: 'View Alerts',
   },
 ];
+const hexToRgba = (hex, alpha) => {
+  let r = 0, g = 0, b = 0;
+  hex = hex.replace('#', '');
+
+  if (hex.length === 3) {
+    r = parseInt(hex[0] + hex[0], 16);
+    g = parseInt(hex[1] + hex[1], 16);
+    b = parseInt(hex[2] + hex[2], 16);
+  } else if (hex.length === 6) {
+    r = parseInt(hex.substring(0, 2), 16);
+    g = parseInt(hex.substring(2, 4), 16);
+    b = parseInt(hex.substring(4, 6), 16);
+  }
+
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
 
 const StatCards = () => {
   return (
@@ -59,7 +75,7 @@ const StatCards = () => {
         <Card
           key={idx}
           className="rounded-[24px] w-full min-h-[150px] h-full shadow-sm border flex"
-          style={{ backgroundColor: stat.color, borderColor: stat.stroke }}
+          style={{ backgroundColor: `${hexToRgba(stat.color, 0.5)}`, borderColor: stat.stroke }}
         >
           <div className="p-2 flex flex-col justify-between w-full h-full">
             {/* Top - Icon + Title */}

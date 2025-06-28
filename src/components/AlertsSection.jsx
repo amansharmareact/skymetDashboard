@@ -8,6 +8,7 @@ const cards = [
     icon: '/images/Plant Icon (4).png',
     titleColor: '#E14343',
     borderColor: '#FECDCA',
+
     body: (
       <>
         <h3 className="text-[25px] font-semibold">3 Parcels</h3>
@@ -37,6 +38,8 @@ const cards = [
     icon: '/images/Plant Icon (6).png',
     titleColor: '#CA6702',
     borderColor: '#FEEE95',
+    bgColor: '#D95050',
+
     body: (
       <>
         <h3 className="text-[25px] font-semibold">5 Collection</h3>
@@ -83,7 +86,22 @@ const cards = [
     ),
   },
 ];
+const hexToRgba = (hex, alpha) => {
+  let r = 0, g = 0, b = 0;
+  hex = hex.replace('#', '');
 
+  if (hex.length === 3) {
+    r = parseInt(hex[0] + hex[0], 16);
+    g = parseInt(hex[1] + hex[1], 16);
+    b = parseInt(hex[2] + hex[2], 16);
+  } else if (hex.length === 6) {
+    r = parseInt(hex.substring(0, 2), 16);
+    g = parseInt(hex.substring(2, 4), 16);
+    b = parseInt(hex.substring(4, 6), 16);
+  }
+
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
 const AlertsSection = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2 md:px-0">
@@ -92,7 +110,7 @@ const AlertsSection = () => {
           key={idx}
           className="rounded-2xl border shadow-sm flex flex-col h-full"
           style={{
-            backgroundColor: card.bgColor || '#FFFFFF',
+            backgroundColor: card.bgColor ? hexToRgba(card.bgColor, 0.5) : '#FFFFFF',
             borderColor: card.borderColor,
           }}
         >
