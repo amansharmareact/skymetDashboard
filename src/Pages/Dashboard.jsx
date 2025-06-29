@@ -20,7 +20,7 @@ export default function SkymetDashboard() {
 
       {/* <Header />   */}
       <Filters />
-      <div className="flex flex-col lg:flex-row gap-4 w-full">
+      <div className="flex flex-col lg:flex-row gap-1 w-full">
         {/* MapCard - 40% on large screens, full on mobile */}
         <div className="w-full lg:w-[40%]">
           <div className="h-full">

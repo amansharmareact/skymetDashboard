@@ -5,7 +5,7 @@ const stats = [
   {
     color: '#E6F4EA',
     stroke: '#CEEAB0',
-    icon: '/images/Plant Icon.png',
+    icon: '/images/Plant Icon.svg',
     title: '20,1020',
     subtitle: 'Biomass (Next 7 Days)',
     footer: 'Updated 2h ago',
@@ -13,7 +13,7 @@ const stats = [
   {
     color: '#E8F0FA',
     stroke: '#B2DDFF',
-    icon: '/images/Plant Icon (1).png',
+    icon: '/images/Plant Icon (1).svg',
     title: '87%',
     subtitle: 'Plant Capacity Utilization',
     footer: 'Daily Rolling Avg',
@@ -21,7 +21,7 @@ const stats = [
   {
     color: '#FFF1D9',
     stroke: '#FFD6AE',
-    icon: '/images/Plant Icon (2).png',
+    icon: '/images/Plant Icon (2).svg',
     title: '2 Parcels',
     subtitle: 'Low Collection Risk Zones',
     footer: 'Prioritize',
@@ -29,7 +29,7 @@ const stats = [
   {
     color: '#FFF5D1',
     stroke: '#FEDF89',
-    icon: '/images/Plant Icon (3).png',
+    icon: '/images/Plant Icon (3).svg',
     title: '12 / 16',
     subtitle: 'Collection Trips Completed',
     footer: 'As of 2:00 PM',
@@ -37,7 +37,7 @@ const stats = [
   {
     color: '#FDEBEC',
     stroke: '#F6D0FE',
-    icon: '/images/Plant Icon (4).png',
+    icon: '/images/Plant Icon (4).svg',
     title: '4 Zones',
     subtitle: 'Rain Threat Forecast',
     footer: 'View Details',
@@ -45,7 +45,7 @@ const stats = [
   {
     color: '#F8E4E4',
     stroke: '#FDA29B',
-    icon: '/images/Plant Icon (5).png',
+    icon: '/images/Plant Icon (5).svg',
     title: '5 Alerts',
     subtitle: 'Pending Supply/Harvest Issues',
     footer: 'View Alerts',

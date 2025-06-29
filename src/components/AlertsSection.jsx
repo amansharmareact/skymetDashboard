@@ -34,7 +34,7 @@ const AlertsSection = () => {
         <CardContent className="flex flex-col justify-between h-full p-4">
           <div>
             <div className="flex items-start gap-2">
-              <img src="/images/Plant Icon (4).png" alt="icon" className="w-12 h-12" />
+              <img src="/images/Plant Icon (4).svg" alt="icon" className="w-12 h-12" />
               <div>
                 <h4 className="text-[16px] font-medium text-[#E14343]">Weather Alert</h4>
                 <p className="text-[10px] text-[#717680]">Updated 2h ago</p>
@@ -77,7 +77,7 @@ const AlertsSection = () => {
         <CardContent className="flex flex-col justify-between h-full p-4">
           <div>
             <div className="flex items-start gap-2">
-              <img src="/images/Plant Icon (6).png" alt="icon" className="w-12 h-12" />
+              <img src="/images/Plant Icon (8).svg" alt="icon" className="w-12 h-12" />
               <div>
                 <h4 className="text-[16px] font-medium text-[#CA6702]">Logistics Delay</h4>
                 <p className="text-[10px] text-[#717680]">Updated 2h ago</p>
@@ -114,7 +114,7 @@ const AlertsSection = () => {
         <CardContent className="flex flex-col justify-between h-full p-4">
           <div>
             <div className="flex items-start gap-2">
-              <img src="/images/Plant Icon (7).png" alt="icon" className="w-12 h-12" />
+              <img src="/images/Plant Icon (6).svg" alt="icon" className="w-12 h-12" />
               <div>
                 <h4 className="text-[16px] font-medium text-[#1D4ED8]">Utilization Drop</h4>
                 <p className="text-[10px] text-[#717680]">Updated 2h ago</p>
