@@ -23,3 +23,8 @@
 body{
     font-family: 'Helvetica Now Display', sans-serif;
 }
+
+
+.recharts-default-legend {
+    text-align: end !important;
+}

@@ -27,7 +27,9 @@ const data = [
 
 const ForecastChart = () => {
   return (
-    <div className="bg-white rounded-xl shadow w-full max-w-full overflow-hidden border border-[#E9EAED]">
+    <div style={{
+      background: `rgba(255, 255, 255, 0.7)`,
+    }} className="rounded-xl shadow w-full max-w-full overflow-hidden border border-[#E9EAED]">
       <div className="p-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
           <h2 className="text-lg font-semibold">Forecast vs Actual Yield</h2>
@@ -37,11 +39,11 @@ const ForecastChart = () => {
         </div>
         <div className="w-full h-[220px] sm:h-[300px] md:h-[350px] lg:h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={data} margin={{ top: 10, right: 20, left: 0, bottom: 5 }}>
+            <LineChart data={data}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
                 dataKey="name"
-                label={{ value: "Month", position: "insideBottomCenter", offset: -5 }}
+                label={{ value: "Month", position: "insideBottom", offset: -10 }}
               />
               <YAxis
                 label={{ value: "Biomass (tons)", angle: -90, position: "insideLeft" }}
@@ -55,14 +57,17 @@ const ForecastChart = () => {
                 strokeWidth={2}
                 dot={false}
                 name="Actual"
+                legendType="circle"
               />
               <Line
                 type="monotone"
                 dataKey="forecast"
-                stroke="#008FFB"
+                stroke="#535862"
                 strokeWidth={2}
                 dot={false}
                 name="Forecast"
+                legendType="circle"
+                strokeDasharray="5 5"
               />
             </LineChart>
           </ResponsiveContainer>
