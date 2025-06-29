@@ -41,8 +41,8 @@ const AlertsSection = () => {
               </div>
             </div>
             <div className="mt-4">
-              <h3 className="text-[30px] font-semibold text-[#181D27]">3 Parcels</h3>
-              <p className="text-[18px] text-[#181D27]">Rainfall risk</p>
+              <h3 className="text-[30px] font-medium text-[#181D27]">3 Parcels</h3>
+              <p className="text-[18px] font-normal text-[#181D27]">Rainfall risk</p>
               <div className="flex flex-wrap gap-2 text-[8px] mt-4">
                 <span className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] font-semibold px-2 py-1.5 rounded-full">Crop: Maize</span>
                 <span className="bg-[#F8F9FC] border border-[#CBD5E1] text-[#363F72] font-semibold px-2 py-1.5 rounded-full">Readiness: 85%</span>
@@ -84,8 +84,8 @@ const AlertsSection = () => {
               </div>
             </div>
             <div className="mt-4">
-              <h3 className="text-[29px] font-semibold text-[#181D27] mt-2">5 Collection</h3>
-              <p className="text-[18px] text-[#181D27]">Trips Delayed</p>
+              <h3 className="text-[29px] font-medium text-[#181D27] mt-2">5 Collection</h3>
+              <p className="text-[18px] font-normal text-[#181D27]">Trips Delayed</p>
               <div className="mt-7">
                 <p className="text-[12px] text-[#181D27]">Total biomass: <br /><strong className="text-[20px]">620 tons</strong></p>
                 <p className="text-[12px] text-[#181D27] mt-4">Unassigned Parcels:<br /><strong className="text-[20px]">#98, #106, #110</strong></p>
@@ -122,7 +122,7 @@ const AlertsSection = () => {
             </div>
             <div className="mt-4">
               <h3 className="text-[30px] font-medium">63%</h3>
-              <p className="text-[18px] text-[#181D27]">Utilization Down</p>
+              <p className="text-[18px] font-normal text-[#181D27]">Utilization Down</p>
               <div className="mt-4">
                 <p className="text-[12px] text-[#181D27] mt-[5px]">Consecutive dip:<br /><strong className="text-[20px] font-medium">3 Day</strong></p>
                 <div className="flex mt-[10px] space-x-4">

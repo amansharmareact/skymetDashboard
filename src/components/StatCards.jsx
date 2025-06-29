@@ -81,13 +81,13 @@ const StatCards = () => {
             {/* Top - Icon + Title */}
             <div>
               <img src={stat.icon} alt="icon" className="w-12 h-12 mb-1" />
-              <div className="text-[42px] font-semibold text-[#181D27] truncate" style={{ lineHeight: "1.5" }}>{stat.title}</div>
+              <div className="text-[42px] font-medium text-[#181D27] truncate" style={{ lineHeight: "1.5" }}>{stat.title}</div>
             </div>
 
             {/* Bottom - Subtitle + Footer */}
             <div className="mb-2">
-              <div className="text-[16px] text-[#252B37] truncate" style={{ lineHeight: "1.5" }}>{stat.subtitle}</div>
-              <div className="text-[14px] text-[#717680] truncate" style={{ lineHeight: "1.5" }}>{stat.footer}</div>
+              <div className="text-[16px] font-normal text-[#252B37] truncate" style={{ lineHeight: "1.5" }}>{stat.subtitle}</div>
+              <div className="text-[14px] font-normal text-[#717680] truncate" style={{ lineHeight: "1.5" }}>{stat.footer}</div>
             </div>
           </div>
         </Card>
