@@ -87,8 +87,8 @@ const AlertsSection = () => {
               <h3 className="text-[29px] font-medium text-[#181D27] mt-2">5 Collection</h3>
               <p className="text-[18px] font-normal text-[#181D27]">Trips Delayed</p>
               <div className="mt-7">
-                <p className="text-[12px] text-[#181D27]">Total biomass: <br /><strong className="text-[20px]">620 tons</strong></p>
-                <p className="text-[12px] text-[#181D27] mt-4">Unassigned Parcels:<br /><strong className="text-[20px]">#98, #106, #110</strong></p>
+                <p className="text-[12px] text-[#181D27]">Total biomass: <br /><div className="font-medium text-[20px]">620 tons</div></p>
+                <p className="text-[12px] text-[#181D27] mt-4">Unassigned Parcels:<br /><div className="font-medium text-[20px]">#98, #106, #110</div></p>
               </div>
             </div>
           </div>
@@ -124,10 +124,10 @@ const AlertsSection = () => {
               <h3 className="text-[30px] font-medium">63%</h3>
               <p className="text-[18px] font-normal text-[#181D27]">Utilization Down</p>
               <div className="mt-4">
-                <p className="text-[12px] text-[#181D27] mt-[5px]">Consecutive dip:<br /><strong className="text-[20px] font-medium">3 Day</strong></p>
+                <p className="text-[12px] text-[#181D27] mt-[5px]">Consecutive dip:<br /><div className="font-medium text-[20px] font-medium">3 Day</div></p>
                 <div className="flex mt-[10px] space-x-4">
-                  <p className="text-[12px]">Forecasted:<br /><strong className="text-[16px]">1080 <span className="text-[8px]">tons</span></strong></p>
-                  <p className="text-[12px]">Collected:<br /><strong className="text-[16px]">620 <span className="text-[8px]">tons</span></strong></p>
+                  <p className="text-[12px]">Forecasted:<br /><div className="font-medium text-[16px]">1080 <span className="text-[8px]">tons</span></div></p>
+                  <p className="text-[12px]">Collected:<br /><div className="font-medium text-[16px]">620 <span className="text-[8px]">tons</span></div></p>
                 </div>
               </div>
             </div>

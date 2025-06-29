@@ -29,7 +29,8 @@ const ForecastChart = () => {
   return (
     <div style={{
       background: `rgba(255, 255, 255, 0.7)`,
-    }} className="rounded-xl shadow w-full max-w-full overflow-hidden border border-[#E9EAED]">
+      borderRadius: "24px",
+    }} className="shadow w-full border border-[#E9EAED]">
       <div className="p-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
           <h2 className="text-lg font-semibold">Forecast vs Actual Yield</h2>
@@ -40,14 +41,31 @@ const ForecastChart = () => {
         <div className="w-full h-[220px] sm:h-[300px] md:h-[350px] lg:h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
+              <CartesianGrid vertical={false} />
               <XAxis
                 dataKey="name"
-                label={{ value: "Month", position: "insideBottom", offset: -10 }}
+                axisLine={false}
+                tickLine={false}
+                label={{
+                  value: "Month",
+                  position: "insideBottom",
+                  offset: -5,
+                  style: { textAnchor: "middle", fontSize: 14 },
+                }}
               />
+
               <YAxis
-                label={{ value: "Biomass (tons)", angle: -90, position: "insideLeft" }}
+                axisLine={false}
+                tickLine={false}
+                label={{
+                  value: "Biomass (tons)",
+                  angle: -90,
+                  position: "insideLeft",
+                  offset: 10,
+                  style: { textAnchor: "middle", fontSize: 14 },
+                }}
               />
+
               <Tooltip />
               <Legend verticalAlign="top" height={36} />
               <Line
