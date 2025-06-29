@@ -4,7 +4,7 @@ import CardContent from './ui/CardContent';
 
 const MapCard = () => {
   return (
-    <div className="lg:col-span-1 w-full max-w-[500px] h-full">
+    <div className="lg:col-span-1 w-full h-full">
       <div className="w-full h-full overflow-hidden rounded-2xl">
         <iframe
           title="Kolhapur Map"
