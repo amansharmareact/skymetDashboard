@@ -1,4 +1,3 @@
-// components/ui/Sidebar.jsx
 import React from "react";
 
 const sidebarItems = [
@@ -20,26 +19,17 @@ const sidebarItems = [
 
 const Sidebar = () => {
   return (
-    <div className="w-[60px] bg-white border-r border-[#D9FFCE] min-h-screen flex flex-col justify-between py-4 px-2">
-      {/* Top Section */}
-      <div className="flex flex-col items-center space-y-5">
+    <div className="w-[60px] bg-white border-r border-[#D9FFCE] h-screen flex flex-col">
+      {/* Scrollable Icon Section */}
+      <div className="flex-1 overflow-y-auto flex flex-col items-center space-y-5 py-4 px-2">
         {sidebarItems.map((item, idx) => (
-          <img
-            key={idx}
-            src={item.icon}
-            alt={item.alt}
-            className="w-5 h-5"
-          />
+          <img key={idx} src={item.icon} alt={item.alt} className="w-5 h-5" />
         ))}
       </div>
 
-      {/* Bottom Logout Icon */}
-      <div className="flex justify-center">
-        <img
-          src="/images/Logout.svg"
-          alt="Logout"
-          className=""
-        />
+      {/* Logout at the bottom */}
+      <div className="p-2 flex justify-center">
+        <img src="/images/Logout.svg" alt="Logout" className="w-5 h-5 p-2 bg-[#FEE2E2] rounded-md" />
       </div>
     </div>
   );
