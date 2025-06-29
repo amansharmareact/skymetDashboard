@@ -57,7 +57,7 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="inline-flex rounded-2xl border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
+            <div className="bg-white shadow-md inline-flex rounded-2xl border border-[#D5D7DA] overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
               <button className="px-4 text-[8px] py-2 hover:bg-gray-100 text-black">View on Map</button>
               <div className="w-px bg-gray-300" />
               <button className="px-4 text-[8px] py-2 hover:bg-gray-100 text-black">Acknowledge</button>
@@ -94,7 +94,7 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="inline-flex rounded-2xl border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
+            <div className="bg-white shadow-md inline-flex rounded-2xl border border-[#D5D7DA] overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
               <button className="px-[7px] py-2.5 hover:bg-gray-100  text-black">Assign Agents</button>
               <div className="w-px bg-gray-300" />
               <button className="px-4 py-2.5 hover:bg-gray-100  text-black">View Routes</button>
@@ -134,7 +134,7 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="inline-flex rounded-2xl border border-gray-300 overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
+            <div className="bg-white shadow-md inline-flex rounded-2xl border border-[#D5D7DA] overflow-hidden text-[9px] font-semibold text-[#414651] w-full justify-between">
               <button className="px-[7px] py-2.5 hover:bg-gray-100  text-black">Open Report</button>
               <div className="w-px bg-gray-300" />
               <button className="px-4 py-2.5 hover:bg-gray-100  text-black">Analyze Drop</button>
