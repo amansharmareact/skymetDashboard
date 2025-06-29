@@ -40,7 +40,7 @@ export default function SkymetDashboard() {
         <AlertsSection />
       </div>
       <DateRibbon />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
