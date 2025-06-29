@@ -54,7 +54,7 @@ const ForecastChart = () => {
                 type="monotone"
                 dataKey="actual"
                 stroke="#00B050"
-                strokeWidth={2}
+                strokeWidth={1}
                 dot={false}
                 name="Actual"
                 legendType="circle"
@@ -63,7 +63,7 @@ const ForecastChart = () => {
                 type="monotone"
                 dataKey="forecast"
                 stroke="#535862"
-                strokeWidth={2}
+                strokeWidth={1}
                 dot={false}
                 name="Forecast"
                 legendType="circle"
