@@ -21,11 +21,11 @@ const hexToRgba = (hex, alpha) => {
 
 const AlertsSection = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between gap-2 w-full">
+    <div className="flex flex-col md:flex-row items-stretch justify-between gap-2 w-full">
 
       {/* ----------- First Card: White background ----------- */}
       <Card
-        className="rounded-2xl border shadow-sm flex flex-col h-full basis-full md:basis-1/3"
+        className="rounded-2xl border shadow-sm flex flex-1 flex-col basis-full md:basis-1/3"
         style={{
           background: `rgba(255, 255, 255, 0.7)`,
           borderColor: '#FECDCA',
@@ -58,9 +58,9 @@ const AlertsSection = () => {
           <div className="mt-4">
             <div className="border-b my-3" />
             <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[9px] font-semibold text-[#414651] w-full justify-between">
-              <button className="px-4 text-[10px] py-2 hover:bg-gray-100 text-black">View on Map</button>
+              <button className="px-4 text-[10px] py-2  text-black">View on Map</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 text-[10px] py-2 hover:bg-gray-100 text-black">Acknowledge</button>
+              <button className="px-4 text-[10px] py-2  text-black">Acknowledge</button>
             </div>
           </div>
         </CardContent>
@@ -68,7 +68,7 @@ const AlertsSection = () => {
 
       {/* ----------- Second Card: Linear Gradient with 50% opacity ----------- */}
       <Card
-        className="rounded-2xl border shadow-sm flex flex-col h-full basis-full md:basis-1/3"
+        className="rounded-2xl border shadow-sm flex flex-1 flex-col basis-full md:basis-1/3"
         style={{
           background: `rgba(255, 255, 255, 0.7)`,
           borderColor: '#FEEE95',
@@ -95,9 +95,9 @@ const AlertsSection = () => {
           <div className="mt-4">
             <div className="border-b my-3" />
             <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between">
-              <button className="px-[7px] py-2.5 hover:bg-gray-100  text-black">Assign Agents</button>
+              <button className="px-[7px] py-2.5   text-black">Assign Agents</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 py-2.5 hover:bg-gray-100  text-black">View Routes</button>
+              <button className="px-4 py-2.5   text-black">View Routes</button>
             </div>
           </div>
         </CardContent>
@@ -105,7 +105,7 @@ const AlertsSection = () => {
 
       {/* ----------- Third Card: Solid bgColor with 50% opacity ----------- */}
       <Card
-        className="rounded-2xl border shadow-sm flex flex-col h-full basis-full md:basis-1/3"
+        className="rounded-2xl border shadow-sm flex flex-col flex-1 basis-full md:basis-1/3"
         style={{
           backgroundColor: '#F0F9FF',
           borderColor: '#7CD4FD',
@@ -135,9 +135,9 @@ const AlertsSection = () => {
           <div className="mt-4">
             <div className="border-b my-3" />
             <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between">
-              <button className="px-[7px] py-2.5 hover:bg-gray-100  text-black">Open Report</button>
+              <button className="px-[7px] py-2.5   text-black">Open Report</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 py-2.5 hover:bg-gray-100  text-black">Analyze Drop</button>
+              <button className="px-4 py-2.5   text-black">Analyze Drop</button>
             </div>
           </div>
         </CardContent>
