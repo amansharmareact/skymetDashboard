@@ -30,7 +30,7 @@ const ForecastChart = () => {
     <div style={{
       background: `rgba(255, 255, 255, 0.7)`,
       borderRadius: "24px",
-    }} className="shadow w-full border border-[#E9EAED]">
+    }} className="shadow w-full border border-[#E9EAED] h-full">
       <div className="p-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
           <h2 className="text-lg font-semibold">Forecast vs Actual Yield</h2>

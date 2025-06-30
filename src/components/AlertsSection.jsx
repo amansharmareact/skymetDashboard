@@ -21,7 +21,7 @@ const hexToRgba = (hex, alpha) => {
 
 const AlertsSection = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2 md:px-0">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
 
       {/* ----------- First Card: White background ----------- */}
       <Card
@@ -31,7 +31,7 @@ const AlertsSection = () => {
           borderColor: '#FECDCA',
         }}
       >
-        <CardContent className="flex flex-col justify-between h-full p-4">
+        <CardContent className="flex flex-col justify-between h-full p-2">
           <div>
             <div className="flex items-start gap-2">
               <img src="/images/Plant Icon (4).svg" alt="icon" className="w-12 h-12" />
@@ -57,10 +57,10 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="bg-white shadow-md inline-flex rounded-2xl border border-[#D5D7DA] text-[9px] font-semibold text-[#414651] w-full justify-between">
-              <button className="px-4 text-[8px] py-2 hover:bg-gray-100 text-black">View on Map</button>
+            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[9px] font-semibold text-[#414651] w-full justify-between">
+              <button className="px-4 text-[10px] py-2 hover:bg-gray-100 text-black">View on Map</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 text-[8px] py-2 hover:bg-gray-100 text-black">Acknowledge</button>
+              <button className="px-4 text-[10px] py-2 hover:bg-gray-100 text-black">Acknowledge</button>
             </div>
           </div>
         </CardContent>
@@ -74,7 +74,7 @@ const AlertsSection = () => {
           borderColor: '#FEEE95',
         }}
       >
-        <CardContent className="flex flex-col justify-between h-full p-4">
+        <CardContent className="flex flex-col justify-between h-full p-2">
           <div>
             <div className="flex items-start gap-2">
               <img src="/images/Plant Icon (8).svg" alt="icon" className="w-12 h-12" />
@@ -94,7 +94,7 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="bg-white shadow-md inline-flex rounded-2xl border border-[#D5D7DA] text-[9px] font-semibold text-[#414651] w-full justify-between">
+            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between">
               <button className="px-[7px] py-2.5 hover:bg-gray-100  text-black">Assign Agents</button>
               <div className="w-px bg-gray-300" />
               <button className="px-4 py-2.5 hover:bg-gray-100  text-black">View Routes</button>
@@ -111,7 +111,7 @@ const AlertsSection = () => {
           borderColor: '#7CD4FD',
         }}
       >
-        <CardContent className="flex flex-col justify-between h-full p-4">
+        <CardContent className="flex flex-col justify-between h-full p-2">
           <div>
             <div className="flex items-start gap-2">
               <img src="/images/Plant Icon (6).svg" alt="icon" className="w-12 h-12" />
@@ -134,7 +134,7 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="bg-white shadow-md inline-flex rounded-2xl border border-[#D5D7DA] text-[9px] font-semibold text-[#414651] w-full justify-between">
+            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between">
               <button className="px-[7px] py-2.5 hover:bg-gray-100  text-black">Open Report</button>
               <div className="w-px bg-gray-300" />
               <button className="px-4 py-2.5 hover:bg-gray-100  text-black">Analyze Drop</button>

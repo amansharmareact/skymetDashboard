@@ -10,14 +10,15 @@ const Topbar = () => {
 
             {/* Search Bar */}
             <div className="flex items-center bg-[#F7FFF3] border border-[#59B200] rounded-full px-4 py-1 w-[400px]">
-                <img src="/images/search-icon.svg" alt="search" className="w-4 h-4 mr-2" />
+                <img src="/images/search-icon.svg" alt="search" className=" mr-2" />
                 <input
                     type="text"
                     placeholder="Search"
                     className="flex-grow bg-transparent outline-none text-sm text-gray-700"
                 />
                 <div className="flex items-center text-gray-500 text-xs gap-1">
-                    <img src="/images/command-icon.svg" alt="cmd" className="w-4 h-4" />
+                    <img src="/images/command-icon.svg" alt="cmd"  />
+                    <img src="/images/Key.svg" alt="cmd" />
                 </div>
             </div>
 

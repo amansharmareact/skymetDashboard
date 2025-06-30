@@ -35,17 +35,18 @@ export default function SkymetDashboard() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-4 mt-4">
-        {/* ForecastChart - 40% on large screens */}
-        <div className="w-full lg:basis-[45%]">
-          <ForecastChart />
+      <div className="flex flex-col lg:flex-row gap-1 mt-4 h-[405px]">
+        {/* ForecastChart - 45% */}
+        <div className="w-full lg:basis-[45%] h-full flex flex-col">
+            <ForecastChart />
         </div>
 
-        {/* AlertsSection - 60% on large screens */}
-        <div className="w-full lg:basis-[55%]">
+        {/* AlertsSection - 55% */}
+        <div className="w-full lg:basis-[55%] h-full flex flex-col">
           <AlertsSection />
         </div>
       </div>
+
 
       <DateRibbon />
       {/* <Footer /> */}
