@@ -19,34 +19,39 @@ const sidebarItems = [
 
 const Sidebar = () => {
   const [expanded, setExpanded] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const handleItemClick = () => {
+  const handleItemClick = (idx) => {
+    setSelectedIndex(idx);
     if (!expanded) setExpanded(true);
+  };
+
+  const handleLabelClick = () => {
+    if (expanded) setExpanded(false);
   };
 
   return (
     <div
-      className={`h-screen bg-white border-r border-[#D9FFCE] transition-all duration-300 ease-in-out ${
-        expanded ? "w-60" : "w-[60px]"
-      }`}
+      className={`h-screen bg-white border-r border-[#D9FFCE] transition-all duration-300 ease-in-out ${expanded ? "w-60" : "w-[60px]"
+        }`}
     >
       <div className="flex-1 overflow-y-auto flex flex-col space-y-2 py-4 px-2">
         {sidebarItems.map((item, idx) => (
           <div
             key={idx}
-            onClick={handleItemClick}
-            className="flex items-center gap-3 px-2 py-2 cursor-pointer hover:bg-gray-100 rounded-md transition-all duration-200"
+            onClick={() => handleItemClick(idx)}
+            className={`flex items-center gap-3 cursor-pointer rounded-md px-2 py-2 transition-all duration-200 ${selectedIndex === idx && "bg-[#3B7C0F]"
+              }`}
           >
             <img src={item.icon} alt={item.label} className="w-5 h-5" />
-            <span
-              className={`text-[13px] font-medium text-[#22C55E] transition-opacity duration-300 ${
-                expanded ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              {item.label}
-            </span>
+            {expanded && (
+              <span onClick={handleLabelClick} className={`text-[13px] font-medium ${selectedIndex === idx ? "text-white" : "text-[#22C55E]"}`}>
+                {item.label}
+              </span>
+            )}
           </div>
         ))}
+
       </div>
 
       {/* Logout */}
@@ -57,9 +62,8 @@ const Sidebar = () => {
           className="w-5 h-5 p-2 bg-[#FEE2E2] rounded-md"
         />
         <span
-          className={`text-[13px] font-medium text-[#E14343] transition-opacity duration-300 ${
-            expanded ? "opacity-100" : "opacity-0"
-          }`}
+          className={`text-[13px] font-medium text-[#E14343] transition-opacity duration-300 ${expanded ? "opacity-100" : "opacity-0"
+            }`}
         >
           Logout
         </span>

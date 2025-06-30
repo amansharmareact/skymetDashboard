@@ -27,18 +27,23 @@ const data = [
 
 const ForecastChart = () => {
   return (
-    <div style={{
-      background: `rgba(255, 255, 255, 0.7)`,
-      borderRadius: "24px",
-    }} className="shadow w-full border border-[#E9EAED] h-full">
-      <div className="p-4">
+    <div
+      className="shadow w-full border border-[#E9EAED] h-full"
+      style={{
+        background: `rgba(255, 255, 255, 0.7)`,
+        borderRadius: "24px",
+      }}
+    >
+      <div className="p-4 h-full flex flex-col">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
           <h2 className="text-lg font-semibold">Forecast vs Actual Yield</h2>
           <button className="text-green-600 font-semibold text-sm hover:underline whitespace-nowrap">
             Open in Analytics ↗
           </button>
         </div>
-        <div className="w-full h-[220px] sm:h-[300px] md:h-[350px] lg:h-[300px]">
+
+        {/* Full height chart container */}
+        <div className="flex-grow w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={data}>
               <CartesianGrid vertical={false} />
@@ -53,7 +58,6 @@ const ForecastChart = () => {
                   style: { textAnchor: "middle", fontSize: 14 },
                 }}
               />
-
               <YAxis
                 axisLine={false}
                 tickLine={false}
@@ -65,7 +69,6 @@ const ForecastChart = () => {
                   style: { textAnchor: "middle", fontSize: 14 },
                 }}
               />
-
               <Tooltip />
               <Legend verticalAlign="top" height={36} />
               <Line

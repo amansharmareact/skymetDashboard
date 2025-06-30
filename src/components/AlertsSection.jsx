@@ -44,9 +44,9 @@ const AlertsSection = () => {
               <h3 className="text-[38px] font-medium text-[#181D27]">3 Parcels</h3>
               <p className="text-[28px] font-normal text-[#181D27]">Rainfall risk</p>
               <div className="flex flex-wrap gap-2 text-[12px] mt-4">
-                <span className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] font-semibold px-2 py-1.5 rounded-full">Crop: Maize</span>
-                <span className="bg-[#F8F9FC] border border-[#CBD5E1] text-[#363F72] font-semibold px-2 py-1.5 rounded-full">Readiness: 85%</span>
-                <span className="bg-[#FFFAEB] border border-[#FCD34D] text-[#B54708] font-semibold px-2 py-1.5 rounded-full">Rain ETA: 18 hrs</span>
+                <span className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] font-semibold px-4 py-2 rounded-full">Crop: Maize</span>
+                <span className="bg-[#F8F9FC] border border-[#CBD5E1] text-[#363F72] font-semibold px-4 py-2 rounded-full">Readiness: 85%</span>
+                <span className="bg-[#FFFAEB] border border-[#FCD34D] text-[#B54708] font-semibold px-4 py-2 rounded-full">Rain ETA: 18 hrs</span>
               </div>
               <ul className="text-[12px] text-black mt-3 space-y-2">
                 <li><strong>Parcel #103</strong> – Rajarampuri</li>
@@ -57,8 +57,8 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[9px] font-semibold text-[#414651] w-full justify-between">
-              <button className="px-4 text-[10px] py-2  text-black">View on Map</button>
+            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[9px] font-semibold text-[#414651] w-full justify-between hover:bg-gray-100  ">
+              <button className="px-4 text-[10px] py-2 text-black">View on Map</button>
               <div className="w-px bg-gray-300" />
               <button className="px-4 text-[10px] py-2  text-black">Acknowledge</button>
             </div>
@@ -94,7 +94,7 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between">
+            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between hover:bg-gray-100  ">
               <button className="px-[7px] py-2.5   text-black">Assign Agents</button>
               <div className="w-px bg-gray-300" />
               <button className="px-4 py-2.5   text-black">View Routes</button>
@@ -134,7 +134,7 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between">
+            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between hover:bg-gray-100  ">
               <button className="px-[7px] py-2.5   text-black">Open Report</button>
               <div className="w-px bg-gray-300" />
               <button className="px-4 py-2.5   text-black">Analyze Drop</button>
