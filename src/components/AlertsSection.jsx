@@ -21,17 +21,17 @@ const hexToRgba = (hex, alpha) => {
 
 const AlertsSection = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+    <div className="flex flex-col md:flex-row justify-between gap-2 w-full">
 
       {/* ----------- First Card: White background ----------- */}
       <Card
-        className="rounded-2xl border shadow-sm flex flex-col h-full"
+        className="rounded-2xl border shadow-sm flex flex-col h-full basis-full md:basis-1/3"
         style={{
           background: `rgba(255, 255, 255, 0.7)`,
           borderColor: '#FECDCA',
         }}
       >
-        <CardContent className="flex flex-col justify-between h-full p-2">
+        <CardContent className="flex flex-col flex-1  justify-between h-full p-2">
           <div>
             <div className="flex items-start gap-2">
               <img src="/images/Plant Icon (4).svg" alt="icon" className="w-12 h-12" />
@@ -41,9 +41,9 @@ const AlertsSection = () => {
               </div>
             </div>
             <div className="mt-4">
-              <h3 className="text-[30px] font-medium text-[#181D27]">3 Parcels</h3>
-              <p className="text-[18px] font-normal text-[#181D27]">Rainfall risk</p>
-              <div className="flex flex-wrap gap-2 text-[8px] mt-4">
+              <h3 className="text-[38px] font-medium text-[#181D27]">3 Parcels</h3>
+              <p className="text-[28px] font-normal text-[#181D27]">Rainfall risk</p>
+              <div className="flex flex-wrap gap-2 text-[12px] mt-4">
                 <span className="bg-[#ECFDF3] border border-[#ABEFC6] text-[#067647] font-semibold px-2 py-1.5 rounded-full">Crop: Maize</span>
                 <span className="bg-[#F8F9FC] border border-[#CBD5E1] text-[#363F72] font-semibold px-2 py-1.5 rounded-full">Readiness: 85%</span>
                 <span className="bg-[#FFFAEB] border border-[#FCD34D] text-[#B54708] font-semibold px-2 py-1.5 rounded-full">Rain ETA: 18 hrs</span>
@@ -68,7 +68,7 @@ const AlertsSection = () => {
 
       {/* ----------- Second Card: Linear Gradient with 50% opacity ----------- */}
       <Card
-        className="rounded-2xl border shadow-sm flex flex-col h-full"
+        className="rounded-2xl border shadow-sm flex flex-col h-full basis-full md:basis-1/3"
         style={{
           background: `rgba(255, 255, 255, 0.7)`,
           borderColor: '#FEEE95',
@@ -84,8 +84,8 @@ const AlertsSection = () => {
               </div>
             </div>
             <div className="mt-4">
-              <h3 className="text-[29px] font-medium text-[#181D27] mt-2">5 Collection</h3>
-              <p className="text-[18px] font-normal text-[#181D27]">Trips Delayed</p>
+              <h3 className="text-[38px] font-medium text-[#181D27] mt-2">5 Collection</h3>
+              <p className="text-[28px] font-normal text-[#181D27]">Trips Delayed</p>
               <div className="mt-7">
                 <p className="text-[12px] text-[#181D27]">Total biomass: <br /><div className="font-medium text-[20px]">620 tons</div></p>
                 <p className="text-[12px] text-[#181D27] mt-4">Unassigned Parcels:<br /><div className="font-medium text-[20px]">#98, #106, #110</div></p>
@@ -105,7 +105,7 @@ const AlertsSection = () => {
 
       {/* ----------- Third Card: Solid bgColor with 50% opacity ----------- */}
       <Card
-        className="rounded-2xl border shadow-sm flex flex-col h-full"
+        className="rounded-2xl border shadow-sm flex flex-col h-full basis-full md:basis-1/3"
         style={{
           backgroundColor: '#F0F9FF',
           borderColor: '#7CD4FD',
@@ -121,13 +121,13 @@ const AlertsSection = () => {
               </div>
             </div>
             <div className="mt-4">
-              <h3 className="text-[30px] font-medium">63%</h3>
-              <p className="text-[18px] font-normal text-[#181D27]">Utilization Down</p>
+              <h3 className="text-[38px] font-medium">63%</h3>
+              <p className="text-[28px] font-normal text-[#181D27]">Utilization Down</p>
               <div className="mt-4">
                 <p className="text-[12px] text-[#181D27] mt-[5px]">Consecutive dip:<br /><div className="font-medium text-[20px] font-medium">3 Day</div></p>
                 <div className="flex mt-[10px] space-x-4">
-                  <p className="text-[12px]">Forecasted:<br /><div className="font-medium text-[16px]">1080 <span className="text-[8px]">tons</span></div></p>
-                  <p className="text-[12px]">Collected:<br /><div className="font-medium text-[16px]">620 <span className="text-[8px]">tons</span></div></p>
+                  <p className="text-[12px]">Forecasted:<br /><div className="font-medium text-[20px]">1080 <span className="text-[12px]">tons</span></div></p>
+                  <p className="text-[12px]">Collected:<br /><div className="font-medium text-[20px]">620 <span className="text-[12px]">tons</span></div></p>
                 </div>
               </div>
             </div>

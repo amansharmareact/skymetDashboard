@@ -15,7 +15,7 @@ function App() {
         <Topbar />
 
         {/* Page Content */}
-        <div className="flex-1 overflow-y-auto bg-[#F9F9F9]">
+        <div className="flex-1 overflow-y-scroll">
           <SkymetDashboard />
         </div>
       </div>

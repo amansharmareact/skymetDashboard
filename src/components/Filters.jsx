@@ -9,7 +9,7 @@ const Filters = () => {
   const [value, setValue] = useState(dayjs());
 
   return (
-    <div className="flex flex-wrap md:flex-nowrap gap-4 md:gap-6 p-5 items-center justify-center md:items-center">
+    <div className="flex flex-wrap md:flex-nowrap gap-4 md:gap-6 px-5 py-2 items-center justify-center md:items-center">
       {/* Select CBG Plant */}
       <div className="flex flex-col w-full md:w-auto min-w-[200px]">
       <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">

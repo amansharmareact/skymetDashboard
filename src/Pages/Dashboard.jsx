@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 export default function SkymetDashboard() {
   return (
     <div
-      className="p-4 text-[#0e1e15] min-h-screen"
+      className="px-2 text-[#0e1e15] min-h-screen"
       style={{
         background: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(157, 255, 206, 0.4))',
       }}
@@ -38,7 +38,7 @@ export default function SkymetDashboard() {
       <div className="flex flex-col lg:flex-row gap-1 mt-4 h-[405px]">
         {/* ForecastChart - 45% */}
         <div className="w-full lg:basis-[45%] h-full flex flex-col">
-            <ForecastChart />
+          <ForecastChart />
         </div>
 
         {/* AlertsSection - 55% */}

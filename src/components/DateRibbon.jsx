@@ -20,7 +20,7 @@ function DateRibbon() {
   ];
 
   return (
-    <div className="mt-5 flex overflow-x-auto gap-1 p-1  rounded-xl">
+    <div className="py-8 flex gap-1 w-full justify-between overflow-x-auto  rounded-xl">
       {dateData.map(({ day, date, dots, active }, index) => (
         <div
           key={index}
