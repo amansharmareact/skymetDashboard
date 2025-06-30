@@ -70,7 +70,7 @@ const hexToRgba = (hex, alpha) => {
 
 const StatCards = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 px-3 md:px-0 items-stretch">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 px-3 md:px-0 items-stretch">
       {stats.map((stat, idx) => (
         <Card
           key={idx}
