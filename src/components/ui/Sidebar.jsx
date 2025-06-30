@@ -1,35 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 
 const sidebarItems = [
-  { icon: "/images/CBS Sidebar-items.svg", alt: "Home" },
-  { icon: "/images/Insect.svg", alt: "Alert" },
-  { icon: "/images/Capa_1.svg", alt: "Buildings" },
-  { icon: "/images/Layer_1.svg", alt: "Truck" },
-  { icon: "/images/Parcel Mapping.svg", alt: "Pin" },
-  { icon: "/images/Calendar Planner.svg", alt: "Calendar" },
-  { icon: "/images/Data Visualization Hub.svg", alt: "Email" },
-  { icon: "/images/Analytics Tools.svg", alt: "Card" },
-  { icon: "/images/Weather Intelligence.svg", alt: "Weather" },
-  { icon: "/images/Harvest Priority.svg", alt: "Delivery" },
-  { icon: "/images/User Management.svg", alt: "Report" },
-  { icon: "/images/System Settings.svg", alt: "Settings" },
-  { icon: "/images/Save.svg", alt: "Chart" },
-  { icon: "/images/Headphone.svg", alt: "Support" },
+  { icon: "/images/CBS Sidebar-items.svg", label: "Dashboard Home" },
+  { icon: "/images/Insect.svg", label: "Crop Intelligence" },
+  { icon: "/images/Capa_1.svg", label: "Production & Capacity" },
+  { icon: "/images/Layer_1.svg", label: "Logistics & Transport" },
+  { icon: "/images/Parcel Mapping.svg", label: "Parcel Mapping" },
+  { icon: "/images/Calendar Planner.svg", label: "Calendar Planner" },
+  { icon: "/images/Data Visualization Hub.svg", label: "Data Visualization Hub" },
+  { icon: "/images/Analytics Tools.svg", label: "Analytics Tools" },
+  { icon: "/images/Weather Intelligence.svg", label: "Weather Intelligence" },
+  { icon: "/images/Harvest Priority.svg", label: "Harvest Priority (AI)" },
+  { icon: "/images/User Management.svg", label: "User Management" },
+  { icon: "/images/System Settings.svg", label: "System Settings" },
+  { icon: "/images/Save.svg", label: "Exports" },
+  { icon: "/images/Headphone.svg", label: "Help" },
 ];
 
 const Sidebar = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleItemClick = () => {
+    if (!expanded) setExpanded(true);
+  };
+
   return (
-    <div className="w-[60px] bg-white border-r border-[#D9FFCE] h-screen flex flex-col">
-      {/* Scrollable Icon Section */}
-      <div className="flex-1 overflow-y-auto flex flex-col items-center space-y-5 py-4 px-2">
+    <div
+      className={`h-screen bg-white border-r border-[#D9FFCE] transition-all duration-300 ease-in-out ${
+        expanded ? "w-60" : "w-[60px]"
+      }`}
+    >
+      <div className="flex-1 overflow-y-auto flex flex-col space-y-2 py-4 px-2">
         {sidebarItems.map((item, idx) => (
-          <img key={idx} src={item.icon} alt={item.alt} className="w-5 h-5" />
+          <div
+            key={idx}
+            onClick={handleItemClick}
+            className="flex items-center gap-3 px-2 py-2 cursor-pointer hover:bg-gray-100 rounded-md transition-all duration-200"
+          >
+            <img src={item.icon} alt={item.label} className="w-5 h-5" />
+            <span
+              className={`text-[13px] font-medium text-[#22C55E] transition-opacity duration-300 ${
+                expanded ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {item.label}
+            </span>
+          </div>
         ))}
       </div>
 
-      {/* Logout at the bottom */}
-      <div className="p-2 flex justify-center">
-        <img src="/images/Logout.svg" alt="Logout" className="w-5 h-5 p-2 bg-[#FEE2E2] rounded-md" />
+      {/* Logout */}
+      <div className="p-2 mt-auto flex items-center gap-2">
+        <img
+          src="/images/Logout.svg"
+          alt="Logout"
+          className="w-5 h-5 p-2 bg-[#FEE2E2] rounded-md"
+        />
+        <span
+          className={`text-[13px] font-medium text-[#E14343] transition-opacity duration-300 ${
+            expanded ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          Logout
+        </span>
       </div>
     </div>
   );
