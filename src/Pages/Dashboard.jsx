@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 export default function SkymetDashboard() {
   return (
     <div
-      className="px-2 text-[#0e1e15] min-h-screen"
+      className="px-2 text-[#0e1e15]"
       style={{
         background: 'linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(157, 255, 206, 0.4))',
       }}
