@@ -29,6 +29,9 @@ const Sidebar = () => {
   const handleLabelClick = () => {
     if (expanded) setExpanded(false);
   };
+  const handleItemLeave=()=>{
+    if (expanded) setExpanded(false);
+  }
 
   return (
     <div
@@ -39,8 +42,9 @@ const Sidebar = () => {
         {sidebarItems.map((item, idx) => (
           <div
             key={idx}
-            onClick={() => handleItemClick(idx)}
-            className={`flex items-center gap-3 cursor-pointer rounded-md px-2 py-2 transition-all duration-200 ${selectedIndex === idx && "bg-[#3B7C0F]"
+            onMouseEnter={() => handleItemClick(idx)}
+            onMouseLeave={() => handleItemLeave(idx)}
+            className={`flex items-center gap-3 cursor-pointer rounded-md px-2 py-2 transition-all ${selectedIndex === idx && "bg-[#3B7C0F]"
               }`}
           >
             <img src={item.icon} alt={item.label} className="w-5 h-5" />
