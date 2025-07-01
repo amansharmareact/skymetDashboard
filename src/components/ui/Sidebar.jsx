@@ -21,53 +21,52 @@ const Sidebar = () => {
   const [expanded, setExpanded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const handleItemClick = (idx) => {
+  const handleItemHover = (idx) => {
     setSelectedIndex(idx);
-    if (!expanded) setExpanded(true);
+    setExpanded(true);
   };
-
-  const handleLabelClick = () => {
-    if (expanded) setExpanded(false);
-  };
-  const handleItemLeave = () => {
-    if (expanded) setExpanded(false);
-  }
 
   return (
     <div
-      className={`h-screen bg-white border-r border-[#D9FFCE] transition-all duration-300 ease-in-out ${expanded ? "w-60" : "w-[60px]"
-        }`}
+      onMouseLeave={() => setExpanded(false)}
+      className={`h-screen bg-white border-r border-[#D9FFCE] transition-[width] duration-300 ease-in-out ${
+        expanded ? "w-60" : "w-[60px]"
+      }`}
     >
       <div className="flex-1 overflow-y-auto flex flex-col space-y-2 py-4 px-2">
         {sidebarItems.map((item, idx) => (
           <div
             key={idx}
-            onMouseEnter={() => handleItemClick(idx)}
-            onMouseLeave={() => handleItemLeave(idx)}
-            className={`flex items-center gap-3 cursor-pointer rounded-md px-2 py-2 transition-all ${selectedIndex === idx && "bg-[#3B7C0F]"
-              }`}
+            onMouseEnter={() => handleItemHover(idx)}
+            className={`flex items-center gap-2 cursor-pointer rounded-md px-2 py-2 transition-colors duration-200 ${
+              selectedIndex === idx ? "bg-[#3B7C0F]" : ""
+            }`}
           >
-            <img src={item.icon} alt={item.label} className="w-5 h-5" />
-            {expanded && (
-              <span onClick={handleLabelClick} className={`text-[13px] font-medium ${selectedIndex === idx ? "text-white" : "text-[#22C55E]"}`}>
-                {item.label}
-              </span>
-            )}
+            <img src={item.icon} alt={item.label} className="w-5 h-5 shrink-0" />
+            <span
+              className={`text-[13px] font-medium transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
+                expanded
+                  ? "opacity-100 ml-2 max-w-[200px] text-[#22C55E]"
+                  : "opacity-0 ml-0 max-w-0 text-transparent"
+              }`}
+            >
+              {item.label}
+            </span>
           </div>
         ))}
-
       </div>
 
       {/* Logout */}
-      <div className="p-2 mt-auto flex items-center justify-center gap-2">
+      <div className="p-2 mt-auto flex items-center justify-start gap-2 w-full">
         <img
           src="/images/Logout.svg"
           alt="Logout"
           className="w-5 h-5 p-2 bg-[#FEE2E2] rounded-md"
         />
         <span
-          className={`text-[13px] font-medium text-[#E14343] transition-opacity duration-300 ${expanded ? "opacity-100" : "opacity-0"
-            }`}
+          className={`text-[13px] font-medium text-[#E14343] transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
+            expanded ? "opacity-100 ml-2 max-w-[200px]" : "opacity-0 ml-0 max-w-0"
+          }`}
         >
           Logout
         </span>
