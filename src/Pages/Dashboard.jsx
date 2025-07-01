@@ -42,7 +42,7 @@ export default function SkymetDashboard() {
         </div>
 
         {/* AlertsSection - 55% */}
-        <div className="w-full lg:basis-[55%] h-auto flex flex-col">
+        <div className="w-full lg:basis-[55%] flex flex-col">
           <AlertsSection />
         </div>
       </div>
