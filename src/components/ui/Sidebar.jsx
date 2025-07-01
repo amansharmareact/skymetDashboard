@@ -68,10 +68,10 @@ const Sidebar = () => {
             Logout
           </span>
         </div>
-
-        {/* Logout */}
-
       </div>
+
+      {/* Logout */}
+
     </div>
   );
 };
