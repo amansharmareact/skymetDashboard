@@ -36,7 +36,7 @@ export default function SkymetDashboard() {
 
       <div className="flex flex-col lg:flex-row gap-1 mt-1">
         {/* ForecastChart - 45% */}
-        <div className="w-full lg:basis-[45%] h-auto flex flex-col">
+        <div className="w-full lg:basis-[45%] flex flex-col">
           <ForecastChart />
         </div>
 

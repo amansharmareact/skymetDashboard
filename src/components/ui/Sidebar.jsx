@@ -61,7 +61,7 @@ const Sidebar = () => {
         <img
           src="/images/Logout.svg"
           alt="Logout"
-          className="w-5 h-5 p-2 bg-[#FEE2E2] rounded-md"
+          className="w-25 h-25 p-2 rounded-md"
         />
         <span
           className={`text-[13px] font-medium text-[#E14343] transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
