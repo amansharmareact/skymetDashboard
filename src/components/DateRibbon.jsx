@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function DateRibbon() {
+  const today = 23; // set today's date dynamically if needed
 
   const dateData = [
     { day: "Sat", date: 21, dots: ["green"] },
@@ -16,42 +17,44 @@ function DateRibbon() {
     { day: "Tue", date: 1, dots: ["red", "blue", "green"] },
     { day: "Wed", date: 2, dots: ["green"] },
     { day: "Thu", date: 3, dots: ["green"] },
-    { day: "Fri", date: 4, dots: ["green"] }
+    { day: "Fri", date: 4, dots: ["green"] },
   ];
 
   return (
-    <div className="py-8 flex gap-1 w-full justify-between overflow-x-auto  rounded-xl">
-      {dateData.map(({ day, date, dots, active }, index) => (
-        <div
-          key={index}
-          className={`bg-white bg-opacity-50 items-center  px-[22px] py-[8px] min-w-[79px] h-[40px] rounded-[47px] border text-sm text-[#252B37] shadow-sm transition-all border-[#E5E7EB] 
-          
-          `}
-        >
-          <span className=" text-sm  text-[#252B37]">{day}</span>
-          <span className=" text-sm ml-[4px] inline font-medium text-[#252B37]">{date}</span>
-          <div className="flex px-[8px] gap-1 cursor-pointer">
-            {dots.map((color, i) => (
-              <span
-                key={i}
-                className={`w-1.5 h-1.5 rounded-full ${color === "green"
-                    ? "bg-green-500 bg-opacity-80"
-                    : color === "blue"
-                      ? "bg-blue-500 bg-opacity-80"
-                      : color === "red"
-                        ? "bg-red-500 bg-opacity-80"
-                        : "bg-white bg-opacity-80"
-                  }`}
-              ></span>
+    <div className="py-6 flex gap-4 w-full overflow-x-auto px-4">
+      {dateData.map(({ day, date, dots }, index) => {
+        const isToday = date === today;
 
-            ))}
+        return (
+          <div
+            key={index}
+            className={`flex flex-col items-center bg-white bg-opacity-50 border border-[#E5E7EB] shadow-sm px-2 py-1 min-w-[80px] max-w-[110px] rounded-[40px] transition-all
+              ${isToday ? "border-[#3B7C0F] border-2" : ""}
+            `}
+          >
+            <div className="text-sm font-medium text-[#252B37] text-center">
+              {day} {date}
+            </div>
+
+            <div className="flex justify-center mt-1 space-x-1">
+              {dots.map((color, i) => (
+                <span
+                  key={i}
+                  className={`w-1.5 h-1.5 rounded-full ${
+                    color === "green"
+                      ? "bg-green-500"
+                      : color === "blue"
+                      ? "bg-blue-500"
+                      : "bg-red-500"
+                  } bg-opacity-80`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
-};
+}
 
-
-
-export default DateRibbon
+export default DateRibbon;

@@ -21,7 +21,7 @@ const hexToRgba = (hex, alpha) => {
 
 const AlertsSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-stretch justify-between gap-2 w-full">
+    <div className="flex flex-col md:flex-row items-stretch justify-between gap-1 w-full">
 
       {/* ----------- First Card: White background ----------- */}
       <Card
@@ -57,10 +57,10 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[9px] font-semibold text-[#414651] w-full justify-between hover:bg-gray-100  ">
-              <button className="px-4 text-[10px] py-2 text-black">View on Map</button>
+            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[9px] font-semibold text-[#414651] w-full">
+              <button className="px-4 text-[10px] py-2  hover:bg-gray-100 transition-all hover:rounded-l-2xl text-black">View on Map</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 text-[10px] py-2  text-black">Acknowledge</button>
+              <button className="px-4 text-[10px] py-2  hover:bg-gray-100 transition-all hover:rounded-r-2xl   text-black">Acknowledge</button>
             </div>
           </div>
         </CardContent>
@@ -94,10 +94,10 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between hover:bg-gray-100  ">
-              <button className="px-[7px] py-2.5   text-black">Assign Agents</button>
+            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full ">
+              <button className="px-4 py-2  hover:bg-gray-100 transition-all hover:rounded-l-2xl  text-black">Assign Agents</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 py-2.5   text-black">View Routes</button>
+              <button className="px-4 py-2  hover:bg-gray-100 transition-all hover:rounded-r-2xl  text-black">View Routes</button>
             </div>
           </div>
         </CardContent>
@@ -134,10 +134,10 @@ const AlertsSection = () => {
           </div>
           <div className="mt-4">
             <div className="border-b my-3" />
-            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full justify-between hover:bg-gray-100  ">
-              <button className="px-[7px] py-2.5   text-black">Open Report</button>
+            <div className="bg-white shadow-sm inline-flex rounded-2xl border border-[#D5D7DA] text-[10px] font-semibold text-[#414651] w-full">
+              <button className="px-4 py-2   text-black hover:bg-gray-100 transition-all hover:rounded-l-2xl">Open Report</button>
               <div className="w-px bg-gray-300" />
-              <button className="px-4 py-2.5   text-black">Analyze Drop</button>
+              <button className="px-4 py-2  text-black hover:bg-gray-100 transition-all hover:rounded-r-2xl ">Analyze Drop</button>
             </div>
           </div>
         </CardContent>
