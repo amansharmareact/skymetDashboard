@@ -29,7 +29,7 @@ const Sidebar = () => {
   const handleLabelClick = () => {
     if (expanded) setExpanded(false);
   };
-  const handleItemLeave=()=>{
+  const handleItemLeave = () => {
     if (expanded) setExpanded(false);
   }
 
@@ -55,22 +55,22 @@ const Sidebar = () => {
             )}
           </div>
         ))}
+        <div className="p-2 mt-auto flex items-center gap-2">
+          <img
+            src="/images/Logout.svg"
+            alt="Logout"
+            className="w-5 h-5 p-2 bg-[#FEE2E2] rounded-md"
+          />
+          <span
+            className={`text-[13px] font-medium text-[#E14343] transition-opacity duration-300 ${expanded ? "opacity-100" : "opacity-0"
+              }`}
+          >
+            Logout
+          </span>
+        </div>
 
-      </div>
+        {/* Logout */}
 
-      {/* Logout */}
-      <div className="p-2 mt-auto flex items-center gap-2">
-        <img
-          src="/images/Logout.svg"
-          alt="Logout"
-          className="w-5 h-5 p-2 bg-[#FEE2E2] rounded-md"
-        />
-        <span
-          className={`text-[13px] font-medium text-[#E14343] transition-opacity duration-300 ${expanded ? "opacity-100" : "opacity-0"
-            }`}
-        >
-          Logout
-        </span>
       </div>
     </div>
   );
