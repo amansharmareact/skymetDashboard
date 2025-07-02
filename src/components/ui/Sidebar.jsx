@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const sidebarItems = [
-  { icon: "/images/CBS Sidebar-items.svg", label: "Dashboard Home" },
+  { icon: "/images/Home.svg", label: "Dashboard Home" },
   { icon: "/images/Insect.svg", label: "Crop Intelligence" },
   { icon: "/images/Capa_1.svg", label: "Production & Capacity" },
   { icon: "/images/Layer_1.svg", label: "Logistics & Transport" },
