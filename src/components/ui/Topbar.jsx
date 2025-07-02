@@ -28,7 +28,7 @@ const Topbar = () => {
                 <img src="/images/bell.svg" alt="bell" className="w-12 h-12" />
 
                 {/* Profile */}
-                <div className="flex items-center gap-2 bg-[#F8F8F8] px-3 py-1 rounded-full border border-gray-200">
+                <div className="flex items-center gap-2 bg-white px-3 py-1 rounded-[52px] border border-gray-200">
                     <img
                         src="/images/user.svg"
                         alt="user"

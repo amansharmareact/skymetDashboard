@@ -94,7 +94,7 @@ const Filters = () => {
 
       {/* Last Synced */}
       <div className="flex items-center gap-2 text-xs text-gray-500 mt-2 w-full">
-        <div className="bg-white flex items-center gap-1 p-2 cursor-pointer rounded-md shadow-sm">
+        <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">
           <RotateCcw className="w-4 h-4 text-green-700" />
         </div>
         <div className="flex flex-col">

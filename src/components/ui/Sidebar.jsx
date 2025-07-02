@@ -54,10 +54,17 @@ const Sidebar = () => {
                 setHoveredIndex(idx);
                 setExpanded(true);
               }}
-              className={`group flex items-center px-3 py-2 rounded-md cursor-pointer transition-all duration-200 ${bgClass}`}
+              className={`group flex items-center px-3 py-2 rounded-[32px] cursor-pointer transition-all duration-200 ${bgClass}`}
             >
               <div className="w-6 h-6 flex justify-center items-center shrink-0">
-                <img src={item.icon} alt={item.label} className="w-5 h-5" />
+                <img
+                  src={item.icon}
+                  alt={item.label}
+                  className={`transition duration-200 ${selectedIndex === idx
+                      ? "w-5 h-5" // selected icon size
+                      : "w-4 h-4" // normal icon size
+                    } ${selectedIndex === idx ? "filter invert brightness-0" : ""}`}
+                />
               </div>
               <span
                 className={`ml-3 text-[13px] font-medium transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${expanded ? `opacity-100 max-w-[160px] ${textColor}` : "opacity-0 max-w-0 text-transparent"
