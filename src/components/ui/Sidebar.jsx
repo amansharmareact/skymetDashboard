@@ -20,58 +20,85 @@ const sidebarItems = [
 const Sidebar = () => {
   const [expanded, setExpanded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);
-
-  const handleItemHover = (idx) => {
-    setSelectedIndex(idx);
-    setExpanded(true);
-  };
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <div
-      onMouseLeave={() => setExpanded(false)}
-      className={`h-screen bg-white border-r border-[#D9FFCE] transition-all duration-300 ease-in-out flex flex-col ${expanded ? "w-60" : "w-[80px]"}`}
+      onMouseLeave={() => {
+        setExpanded(false);
+        setHoveredIndex(null);
+      }}
+      className={`h-screen bg-white border-r border-[#D9FFCE] transition-all duration-300 ease-in-out flex flex-col ${expanded ? "w-60" : "w-[80px]"
+        }`}
     >
-      <div className="flex-1 overflow-y-auto py-4 px-2">
-        {sidebarItems.map((item, idx) => (
-          <div
-            key={idx}
-            onMouseEnter={() => handleItemHover(idx)}
-            className={`group flex items-center px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 ${selectedIndex === idx ? "bg-[#3B7C0F]" : ""}`}
-          >
-            <div className="w-6 h-6 flex justify-center items-center shrink-0">
-              <img src={item.icon} alt={item.label} className="w-5 h-5" />
-            </div>
+      <div className="flex-1 overflow-y-auto py-4 px-2 space-y-1">
+        {sidebarItems.map((item, idx) => {
+          const isSelected = selectedIndex === idx;
+          const isHovered = hoveredIndex === idx;
 
-            {/* Text label */}
-            <span
-              className={`ml-3 text-[13px] font-medium transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
-                expanded
-                  ? "opacity-100 text-[#22C55E] max-w-[160px]"
-                  : "opacity-0 max-w-0 text-transparent"
-              }`}
+          const bgClass = isSelected
+            ? "bg-[#3B7C0F]"
+            : isHovered
+              ? "bg-gray-100"
+              : "";
+
+          const textColor = isSelected
+            ? "text-white"
+            : "text-[#22C55E]";
+
+          return (
+            <div
+              key={idx}
+              onClick={() => setSelectedIndex(idx)}
+              onMouseEnter={() => {
+                setHoveredIndex(idx);
+                setExpanded(true);
+              }}
+              className={`group flex items-center px-3 py-2 rounded-md cursor-pointer transition-all duration-200 ${bgClass}`}
             >
-              {item.label}
-            </span>
+              <div className="w-6 h-6 flex justify-center items-center shrink-0">
+                <img src={item.icon} alt={item.label} className="w-5 h-5" />
+              </div>
+              <span
+                className={`ml-3 text-[13px] font-medium transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${expanded ? `opacity-100 max-w-[160px] ${textColor}` : "opacity-0 max-w-0 text-transparent"
+                  }`}
+              >
+                {item.label}
+              </span>
+            </div>
+          );
+        })}
+        {/* Logout + Version Section */}
+        <div className="mt-auto flex items-center justify-between">
+          {/* Logout Button */}
+          <div
+            className="flex items-center bg-[#FEF3F2] justify-center rounded-xl cursor-pointer w-full max-w-[200px]"
+          >
+            <img
+              src="/images/Logout.svg"
+              alt="Logout"
+              className="w-[24px] h-[24px]"
+            />
+            {expanded && (
+              <span className="text-[14px] font-semibold text-[#F24726]">
+                Logout
+              </span>
+            )}
           </div>
-        ))}
-      </div>
 
-      {/* Logout Section */}
-      <div className="p-3 flex items-center">
-        <div className="w-6 h-6 flex justify-center items-center">
-          <img
-            src="/images/Logout.svg"
-            alt="Logout"
-            className="w-5 h-5 p-1 bg-[#FEE2E2] rounded-md"
-          />
+          {/* Version Info */}
+          {expanded && (
+            <div className="text-right ml-2">
+              <p className="text-[14px] font-semibold text-black leading-tight">
+                Version
+              </p>
+              <p className="text-[14px] font-semibold text-black leading-tight">
+                1.50.00
+              </p>
+            </div>
+          )}
         </div>
-        <span
-          className={`ml-3 text-[13px] font-medium text-[#E14343] transition-all duration-300 overflow-hidden whitespace-nowrap ${
-            expanded ? "opacity-100 max-w-[160px]" : "opacity-0 max-w-0"
-          }`}
-        >
-          Logout
-        </span>
+
       </div>
     </div>
   );
