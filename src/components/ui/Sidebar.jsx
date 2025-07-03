@@ -44,7 +44,7 @@ const Sidebar = () => {
 
           const textColor = isSelected
             ? "text-white"
-            : "text-[#22C55E]";
+            : "text-[#86CB3C]";
 
           return (
             <div
@@ -61,8 +61,8 @@ const Sidebar = () => {
                   src={item.icon}
                   alt={item.label}
                   className={`transition duration-200 ${selectedIndex === idx
-                      ? "w-5 h-5" // selected icon size
-                      : "w-4 h-4" // normal icon size
+                    ? "w-5 h-5" // selected icon size
+                    : "w-4 h-4" // normal icon size
                     } ${selectedIndex === idx ? "filter invert brightness-0" : ""}`}
                 />
               </div>
@@ -95,7 +95,7 @@ const Sidebar = () => {
 
           {/* Version Info */}
           {expanded && (
-            <div className="text-right ml-2">
+            <div className="text-right ml-2 w-[151px] h-[48px]">
               <p className="text-[14px] font-semibold text-black leading-tight">
                 Version
               </p>
