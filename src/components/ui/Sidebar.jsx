@@ -84,7 +84,7 @@ const Sidebar = () => {
             <img
               src="/images/Logout.svg"
               alt="Logout"
-              className="w-[24px] h-[24px]"
+              className="w-[36px] h-[36px]"
             />
             {expanded && (
               <span className="text-[14px] font-semibold text-[#F24726]">
