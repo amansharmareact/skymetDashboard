@@ -21,7 +21,7 @@ const sidebarItems = [
 ];
 
 const Sidebar = () => {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -31,11 +31,15 @@ const Sidebar = () => {
         setExpanded(false);
         setHoveredIndex(null);
       }}
-      className={`h-[90vh] bg-white border-r border-[#D9FFCE] transition-all duration-300 ease-in-out flex flex-col ${
+      className={`transition-all duration-300 ease-in-out flex flex-col h-full bg-white border-r border-[#D9FFCE] ${
         expanded ? "w-60" : "w-[80px]"
       }`}
     >
-      <div className="no-scrollbar w-[80px] overflow-x-hidden flex-1 overflow-y-auto px-[18px] ">
+      <div
+        className={`py-[26px] no-scrollbar overflow-x-hidden flex-1 overflow-y-auto px-[18px] transition-all duration-300 ${
+          expanded ? "w-60" : "w-[80px]"
+        }`}
+      >
         {sidebarItems.map((item, idx) => {
           const isSelected = selectedIndex === idx;
           const isHovered = hoveredIndex === idx;

@@ -1,7 +1,7 @@
 import React from "react";
 
 function DateRibbon() {
-  const today = 23; // set today's date dynamically if needed
+  const today = 23; 
 
   const dateData = [
     { day: "Sat", date: 21, dots: ["green"] },
@@ -21,7 +21,7 @@ function DateRibbon() {
   ];
 
   return (
-    <div className="py-6 flex gap-4 w-full overflow-x-auto px-4 justify-center">
+    <div className="py-[4px] pb-[16px] flex gap-4 w-full overflow-x-auto px-4 justify-center">
       {dateData.map(({ day, date, dots }, index) => {
         const isToday = date === today;
 
