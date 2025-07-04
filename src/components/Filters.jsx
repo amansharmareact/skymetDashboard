@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { ChevronDown, ArrowRight, RotateCcw, Search, CircleQuestionMark } from 'lucide-react';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import dayjs from 'dayjs';
+import {
+  ArrowRight,
+  ChevronDown,
+  CircleQuestionMark,
+  RotateCcw,
+  Search,
+} from "lucide-react";
 
 const Filters = () => {
-  const [value, setValue] = useState(dayjs());
 
   return (
     <div className="flex flex-wrap md:flex-nowrap gap-4 md:gap-6 px-5 py-2 items-center justify-between md:items-center">
@@ -15,7 +15,8 @@ const Filters = () => {
         <div className="">
           <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
             <span>
-              Select CBG Plant <span className="text-[#1570EF] font-medium">*</span>
+              Select CBG Plant{" "}
+              <span className="text-[#1570EF] font-medium">*</span>
             </span>
             <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
           </label>
@@ -62,7 +63,6 @@ const Filters = () => {
         </div>
       </div>
 
-
       {/* Season Filter */}
       <div className="flex flex-col w-full">
         <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
@@ -81,7 +81,6 @@ const Filters = () => {
         </div>
       </div>
 
-
       {/* Apply Button */}
       <div className="w-full">
         <div className="flex items-center justify-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-sm font-medium w-full md:w-auto cursor-pointer">
@@ -89,8 +88,6 @@ const Filters = () => {
           <ArrowRight className="w-4 h-4" />
         </div>
       </div>
-
-
 
       {/* Last Synced */}
       <div className="flex items-center gap-2 text-xs text-gray-500 mt-2 w-full">

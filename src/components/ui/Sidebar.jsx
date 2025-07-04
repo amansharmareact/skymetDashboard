@@ -7,7 +7,10 @@ const sidebarItems = [
   { icon: "/images/Layer_1.svg", label: "Logistics & Transport" },
   { icon: "/images/Parcel Mapping.svg", label: "Parcel Mapping" },
   { icon: "/images/Calendar Planner.svg", label: "Calendar Planner" },
-  { icon: "/images/Data Visualization Hub.svg", label: "Data Visualization Hub" },
+  {
+    icon: "/images/Data Visualization Hub.svg",
+    label: "Data Visualization Hub",
+  },
   { icon: "/images/Analytics Tools.svg", label: "Analytics Tools" },
   { icon: "/images/Weather Intelligence.svg", label: "Weather Intelligence" },
   { icon: "/images/Harvest Priority.svg", label: "Harvest Priority (AI)" },
@@ -18,7 +21,7 @@ const sidebarItems = [
 ];
 
 const Sidebar = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -28,10 +31,11 @@ const Sidebar = () => {
         setExpanded(false);
         setHoveredIndex(null);
       }}
-      className={`h-screen bg-white border-r border-[#D9FFCE] transition-all duration-300 ease-in-out flex flex-col ${expanded ? "w-60" : "w-[80px]"
-        }`}
+      className={`h-[90vh] bg-white border-r border-[#D9FFCE] transition-all duration-300 ease-in-out flex flex-col ${
+        expanded ? "w-60" : "w-[80px]"
+      }`}
     >
-      <div className="flex-1 overflow-y-auto py-4 px-2 space-y-1">
+      <div className="no-scrollbar w-[80px] overflow-x-hidden flex-1 overflow-y-auto px-[18px] ">
         {sidebarItems.map((item, idx) => {
           const isSelected = selectedIndex === idx;
           const isHovered = hoveredIndex === idx;
@@ -39,12 +43,10 @@ const Sidebar = () => {
           const bgClass = isSelected
             ? "bg-[#3B7C0F]"
             : isHovered
-              ? "bg-gray-100"
-              : "";
+            ? "bg-[#E4E7EC]"
+            : "";
 
-          const textColor = isSelected
-            ? "text-white"
-            : "text-[#86CB3C]";
+          const textColor = isSelected ? "text-white" : "text-[#86CB3C]";
 
           return (
             <div
@@ -54,38 +56,42 @@ const Sidebar = () => {
                 setHoveredIndex(idx);
                 setExpanded(true);
               }}
-              className={`group flex items-center px-3 py-2 rounded-[32px] cursor-pointer transition-all duration-200 ${bgClass}`}
+              className={`${
+                expanded ? "w-[212px] h-[48px]" : "w-[44px] h-[44px]"
+              } p-[12px] group flex items-center rounded-[32px] cursor-pointer transition-all duration-200 ${bgClass}`}
             >
-              <div className="w-6 h-6 flex justify-center items-center shrink-0">
+              <div className="">
                 <img
                   src={item.icon}
                   alt={item.label}
-                  className={`transition duration-200 ${selectedIndex === idx
-                    ? "w-5 h-5" // selected icon size
-                    : "w-4 h-4" // normal icon size
-                    } ${selectedIndex === idx ? "filter invert brightness-0" : ""}`}
+                  className={`transition duration-200 ${
+                    selectedIndex === idx
+                      ? "w-[24px] h-[24px]" // selected icon size
+                      : "w-[24px] h-[24px]" // normal icon size
+                  } ${
+                    selectedIndex === idx ? "filter invert brightness-0" : ""
+                  }`}
                 />
               </div>
-              <span
-                className={`ml-3 text-[13px] font-medium transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${expanded ? `opacity-100 max-w-[160px] ${textColor}` : "opacity-0 max-w-0 text-transparent"
-                  }`}
-              >
-                {item.label}
-              </span>
+              {expanded && (
+                <span
+                  className={`ml-3 text-[14px] font-medium transition-all duration-300 ease-in-out whitespace-nowrap ${textColor}`}
+                >
+                  {item.label}
+                </span>
+              )}
             </div>
           );
         })}
         {/* Logout + Version Section */}
-        <div className="mt-auto flex items-center justify-between">
+        <div className="mt-auto flex items-center justify-space-around">
           {/* Logout Button */}
           <div
-            className="flex items-center bg-[#FEF3F2] justify-center rounded-xl cursor-pointer w-full max-w-[200px]"
+            className={`flex items-center bg-[#FEF3F2] justify-center rounded-xl cursor-pointer ${
+              expanded ? "w-[151px] h-[48px]" : "w-[48px] h-[48px]"
+            } `}
           >
-            <img
-              src="/images/Logout.svg"
-              alt="Logout"
-              className="w-[36px] h-[36px]"
-            />
+            <img src="/images/Logout.svg" alt="Logout" />
             {expanded && (
               <span className="text-[14px] font-semibold text-[#F24726]">
                 Logout
@@ -95,17 +101,12 @@ const Sidebar = () => {
 
           {/* Version Info */}
           {expanded && (
-            <div className="text-right ml-2 w-[151px] h-[48px]">
-              <p className="text-[14px] font-semibold text-black leading-tight">
-                Version
-              </p>
-              <p className="text-[14px] font-semibold text-black leading-tight">
-                1.50.00
-              </p>
+            <div className="text-right flex flex-col items-center ml-4">
+              <p className="text-[14px] font-semibold text-black">Version</p>
+              <p className="text-[14px] font-semibold text-black">1.50.00</p>
             </div>
           )}
         </div>
-
       </div>
     </div>
   );
