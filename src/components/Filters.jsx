@@ -5,9 +5,10 @@ import {
   RotateCcw,
   Search,
 } from "lucide-react";
-
+import CustomDropdown from "./ui/Dropdown";
+import { useState } from "react";
 const Filters = () => {
-
+ const [selectedCrop, setSelectedCrop] = useState("Maize");
   return (
     <div className="flex flex-wrap md:flex-nowrap gap-4 md:gap-6 px-5 py-2 items-center justify-between md:items-center">
       {/* Select CBG Plant */}
@@ -51,15 +52,15 @@ const Filters = () => {
       <div className="flex flex-col w-full">
         <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
           <span>
-            Date Picker <span className="text-[#1570EF] font-medium">*</span>
+           Crop <span className="text-[#1570EF] font-medium">*</span>
           </span>
           <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
         </label>
         <div className="relative">
-          <select className="appearance-none border border-gray-300 rounded-full pl-4 pr-8 py-1 text-sm text-gray-700 w-full bg-white">
-            <option>7 days</option>
-          </select>
-          <ChevronDown className="w-4 h-4 text-gray-500 absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+          <CustomDropdown
+        selectedCrop={selectedCrop}
+        setSelectedCrop={setSelectedCrop}
+      />
         </div>
       </div>
 
@@ -67,7 +68,7 @@ const Filters = () => {
       <div className="flex flex-col w-full">
         <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
           <span>
-            Season Filter <span className="text-[#1570EF] font-medium">*</span>
+            Overlay Toggle Group <span className="text-[#1570EF] font-medium">*</span>
           </span>
           <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
         </label>

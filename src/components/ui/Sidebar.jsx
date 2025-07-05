@@ -1,30 +1,75 @@
 import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const sidebarItems = [
-  { icon: "/images/Home.svg", label: "Dashboard Home" },
-  { icon: "/images/Insect.svg", label: "Crop Intelligence" },
-  { icon: "/images/Capa_1.svg", label: "Production & Capacity" },
-  { icon: "/images/Layer_1.svg", label: "Logistics & Transport" },
-  { icon: "/images/Parcel Mapping.svg", label: "Parcel Mapping" },
-  { icon: "/images/Calendar Planner.svg", label: "Calendar Planner" },
+  { icon: "/images/Home.svg", label: "Dashboard Home", path: "/dashboard" },
+  {
+    icon: "/images/Insect.svg",
+    label: "Crop Intelligence",
+    path: "/crop-intelligence",
+  },
+  {
+    icon: "/images/Capa_1.svg",
+    label: "Production & Capacity",
+    path: "/production",
+  },
+  {
+    icon: "/images/Layer_1.svg",
+    label: "Logistics & Transport",
+    path: "/logistics",
+  },
+  {
+    icon: "/images/Parcel Mapping.svg",
+    label: "Parcel Mapping",
+    path: "/parcel-mapping",
+  },
+  {
+    icon: "/images/Calendar Planner.svg",
+    label: "Calendar Planner",
+    path: "/calendar",
+  },
   {
     icon: "/images/Data Visualization Hub.svg",
     label: "Data Visualization Hub",
+    path: "/data-hub",
   },
-  { icon: "/images/Analytics Tools.svg", label: "Analytics Tools" },
-  { icon: "/images/Weather Intelligence.svg", label: "Weather Intelligence" },
-  { icon: "/images/Harvest Priority.svg", label: "Harvest Priority (AI)" },
-  { icon: "/images/User Management.svg", label: "User Management" },
-  { icon: "/images/System Settings.svg", label: "System Settings" },
-  { icon: "/images/Save.svg", label: "Exports" },
-  { icon: "/images/Headphone.svg", label: "Help" },
+  {
+    icon: "/images/Analytics Tools.svg",
+    label: "Analytics Tools",
+    path: "/analytics",
+  },
+  {
+    icon: "/images/Weather Intelligence.svg",
+    label: "Weather Intelligence",
+    path: "/weather",
+  },
+  {
+    icon: "/images/Harvest Priority.svg",
+    label: "Harvest Priority (AI)",
+    path: "/harvest-priority",
+  },
+  {
+    icon: "/images/User Management.svg",
+    label: "User Management",
+    path: "/user-management",
+  },
+  {
+    icon: "/images/System Settings.svg",
+    label: "System Settings",
+    path: "/settings",
+  },
+  { icon: "/images/Save.svg", label: "Exports", path: "/exports" },
+  { icon: "/images/Headphone.svg", label: "Help", path: "/help" },
 ];
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [expanded, setExpanded] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(
+    sidebarItems.findIndex((item) => item.path === location.pathname)
+  );
   const [hoveredIndex, setHoveredIndex] = useState(null);
-
   return (
     <div
       onMouseLeave={() => {
@@ -55,14 +100,17 @@ const Sidebar = () => {
           return (
             <div
               key={idx}
-              onClick={() => setSelectedIndex(idx)}
+              onClick={() => {
+                setSelectedIndex(idx);
+                navigate(item.path);
+              }}
               onMouseEnter={() => {
                 setHoveredIndex(idx);
                 setExpanded(true);
               }}
               className={`${
                 expanded ? "w-[212px] h-[48px]" : "w-[44px] h-[44px]"
-              } p-[12px] group flex items-center rounded-[32px] cursor-pointer transition-all duration-200 ${bgClass}`}
+              } p-[12px] mt-1 group flex items-center rounded-[32px] cursor-pointer transition-all duration-200 ${bgClass}`}
             >
               <div className="">
                 <img

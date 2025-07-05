@@ -39,3 +39,65 @@ body{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+
+.legend-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  line-height: 1.5;
+  width: 193px;
+  backdrop-filter: blur(6px);
+  border: 1px solid #6C737F; 
+}
+
+.legend-box .legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.legend-box .checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+}
+.checkbox{
+  accent-color: #4F7A21;
+  border-radius: 2px !important;
+}
+
+.legend-box .circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white !important;
+}
+
+.legend-box .red { background-color: #FF4B4B; }
+.legend-box .orange { background-color: #FFA500; }
+.legend-box .green { background-color: #2ECC71; }
+.legend-box .black { background-color: #1a1a1a; }
+.legend-box .transparent-circle {
+  background: repeating-linear-gradient(45deg, #ccc 0px, #ccc 2px, transparent 2px, transparent 4px);
+}
+.legend-box .outlined-green {
+  border: 2px solid #2ECC71;
+  background-color: transparent;
+}
+
+
+
+
+.leaflet-tooltip.custom-tooltip {
+  background-color: #101820;
+  border-radius: 6px;
+  padding: 10px;
+  color: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  max-width: fit-content;
+}
