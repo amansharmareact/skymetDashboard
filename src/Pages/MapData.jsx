@@ -12,6 +12,7 @@ import "leaflet/dist/leaflet.css";
 import Topbar from "../components/ui/Topbar";
 import Filters from "../components/Filters";
 import LocationTooltip from "../components/ui/LocationTooltip";
+import DateRibbon from "../components/DateRibbon";
 
 const sampleLocation = {
   name: "Ganeshwadi",
@@ -104,7 +105,8 @@ const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
       <MapContainer
         center={center}
         zoom={12}
-        style={{ height: "82vh", width: "100%" }}
+        className="rounded-4xl mx-[20px]"
+        style={{ height: "75vh", width: "97%" }}
       >
         <Legend />
 
@@ -148,6 +150,8 @@ const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
 
         {/* Legend */}
       </MapContainer>
+        <DateRibbon />
+
     </div>
   );
 };

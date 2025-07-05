@@ -101,3 +101,7 @@ body{
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
   max-width: fit-content;
 }
+
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{
+  border-radius: 32px !important;
+}
