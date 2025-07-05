@@ -13,6 +13,7 @@ import Topbar from "../components/ui/Topbar";
 import Filters from "../components/Filters";
 import LocationTooltip from "../components/ui/LocationTooltip";
 import DateRibbon from "../components/DateRibbon";
+import { Factory } from "lucide-react";
 
 const sampleLocation = {
   name: "Ganeshwadi",
@@ -25,16 +26,25 @@ const sampleLocation = {
   lat: 16.705,
   lng: 74.2433,
 };
-
+const Location = window.location.origin + "/images/Location.svg";
+const Plant = window.location.origin + "/images/Factory.svg";
 // Color mapping
 const getColor = (type) => {
   switch (type) {
     case "low":
-      return "red";
+      return "#F04438";
     case "moderate":
-      return "orange";
+      return "#FAC515";
     case "high":
-      return "green";
+      return "#17B26A";
+    case "inactive":
+      return "#181D27";
+    case "rain-risk":
+      return "transparent"; // blue
+    case "active":
+      return "transparent"; // maybe a green outline?
+    case "collection-center":
+      return "url(Location)"; // or custom icon
     default:
       return "gray";
   }
@@ -100,58 +110,111 @@ const Legend = () => {
 
 const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
   return (
-     <div className=" overflow-y-scroll">
+    <div className=" overflow-y-scroll">
       <Filters />
       <MapContainer
         center={center}
         zoom={12}
         className="rounded-4xl mx-[20px]"
-        style={{ height: "75vh", width: "97%" }}
+        style={{ height: "74vh", width: "97%" }}
       >
         <Legend />
 
         <TileLayer
-          attribution="&copy; OpenStreetMap contributors"
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution="Tiles &copy; Esri — Source: Esri, Maxar"
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
         />
-
+        <TileLayer
+          attribution="Labels &copy; Esri"
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
+        />
         {/* 15 km Radius Circle */}
         <Circle
           center={center}
           radius={15000}
-          pathOptions={{ color: "yellow" }}
+          pathOptions={{
+            color: "#FAC515", // Border color
+            fillColor: "white", // Light yellow fill (Material yellow-100)
+            fillOpacity: 0.1, // Make it slightly transparent
+          }}
         />
 
         {/* Markers */}
-        {locations.map((loc, index) => (
-          <Marker
-            key={index}
-            position={[loc.lat, loc.lng]}
-            icon={L.divIcon({
-              className: "custom-marker",
-              html: `<div style="background-color: ${getColor(
-                loc.type
-              )}; width: 12px; height: 12px; border-radius: 50%;"></div>`,
-              iconSize: [12, 12],
-            })}
-          >
-            <Tooltip>{loc.name}</Tooltip>
-            <Tooltip
-              direction="top"
-              offset={[0, -10]}
-              opacity={1}
-              permanent={false}
-              className="custom-tooltip"
-            >
-              <LocationTooltip location={sampleLocation} />
-            </Tooltip>
-          </Marker>
-        ))}
+        {locations.map((loc, index) => {
+          // This is the main plant/center marker
+          const isPlantCenter = loc.type === "plant";
+
+          return (
+            <>
+              {isPlantCenter && (
+                <>
+                  {/* 🟡 Radius around plant */}
+                  <Circle
+                    center={[loc.lat, loc.lng]}
+                    radius={15000}
+                    pathOptions={{
+                      color: "yellow",
+                      fillColor: "rgba(255, 255, 0, 0.2)", // light yellow fill
+                      fillOpacity: 0.4,
+                    }}
+                  />
+
+                  {/* 🌱 Plant icon */}
+                  <Marker
+                    position={[loc.lat, loc.lng]}
+                    icon={L.icon({
+                      iconUrl: `${Plant}`, // ✅ Put your plant icon in public/images
+                      iconSize: [32, 32],
+                      iconAnchor: [16, 16],
+                    })}
+                  />
+                </>
+              )}
+              {/* 🔴🟠🟢 Other small readiness markers */}
+              {!isPlantCenter && (
+                <Marker
+                  key={index}
+                  position={[loc.lat, loc.lng]}
+                  icon={
+                    loc.type === "collection-center"
+                      ? L.divIcon({
+                          className: "custom-marker",
+                          html: `<img src="${Location}" width="32" height="32" />`,
+                          iconSize: [32, 32],
+                        })
+                      : L.divIcon({
+                          className: "custom-marker",
+                          html: `<div style="background-color: ${getColor(
+                            loc.type
+                          )}; width: 16px; height: 16px;  ${
+                            loc.type === "active"
+                              ? "border: 2px solid #00C853;"
+                              : "border: 2px solid white;"
+                          }
+ border-radius: 50%; border: 2px solid white;"></div>`,
+                          iconSize: [16, 16],
+                        })
+                  }
+                >
+                  <Tooltip>{loc.name}</Tooltip>
+                  <Tooltip
+                    direction="top"
+                    offset={[0, -10]}
+                    opacity={1}
+                    permanent={false}
+                    className="custom-tooltip"
+                  >
+                    <LocationTooltip location={loc} />
+                  </Tooltip>
+                </Marker>
+              )}
+            </>
+          );
+        })}
 
         {/* Legend */}
       </MapContainer>
-        <DateRibbon />
-
+      <DateRibbon />
     </div>
   );
 };

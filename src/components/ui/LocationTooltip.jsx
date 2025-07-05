@@ -22,8 +22,7 @@ const LocationTooltip = ({ location }) => {
       </div>
       <div className="text-[#717680] text-sm">
         <div>
-          Crop Type(s):{" "}
-          <span className="text-white font-medium">{crops.join(", ")}</span>
+          Crop Type(s): <span className="text-white font-medium">{crops}</span>
         </div>
         <div>
           Fields Ready:{" "}

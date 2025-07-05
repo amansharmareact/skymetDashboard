@@ -78,10 +78,10 @@ body{
   border: 2px solid white !important;
 }
 
-.legend-box .red { background-color: #FF4B4B; }
-.legend-box .orange { background-color: #FFA500; }
-.legend-box .green { background-color: #2ECC71; }
-.legend-box .black { background-color: #1a1a1a; }
+.legend-box .red { background-color: #F04438; }
+.legend-box .orange { background-color: #FAC515; }
+.legend-box .green { background-color: #17B26A; }
+.legend-box .black { background-color: #181D27; }
 .legend-box .transparent-circle {
   background: repeating-linear-gradient(45deg, #ccc 0px, #ccc 2px, transparent 2px, transparent 4px);
 }
