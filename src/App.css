@@ -61,17 +61,20 @@ body{
   margin-bottom: 4px;
 }
 
-.legend-box .checkbox {
+.legend-box {
   width: 16px;
   height: 16px;
   border: 2px solid white;
 }
 .checkbox{
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
   accent-color: #4F7A21;
   border-radius: 2px !important;
 }
 
-.legend-box .circle {
+.circle {
   width: 16px;
   height: 16px;
   border-radius: 50%;

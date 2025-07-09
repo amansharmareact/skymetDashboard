@@ -1,19 +1,18 @@
-import React, { useEffect } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import { useEffect, useState } from "react";
 import {
-  MapContainer,
-  TileLayer,
   Circle,
+  MapContainer,
   Marker,
+  TileLayer,
   Tooltip,
   useMap,
 } from "react-leaflet";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import Topbar from "../components/ui/Topbar";
+import DateRibbon from "../components/DateRibbon";
 import Filters from "../components/Filters";
 import LocationTooltip from "../components/ui/LocationTooltip";
-import DateRibbon from "../components/DateRibbon";
-import { Factory } from "lucide-react";
+import LegendOverlay from "../components/ui/LegendCheckbox";
 
 const sampleLocation = {
   name: "Ganeshwadi",
@@ -109,6 +108,16 @@ const Legend = () => {
 };
 
 const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
+  const [selectedReadiness, setSelectedReadiness] = useState([]);
+  const filteredLocations =
+    selectedReadiness.length === 0
+      ? locations
+      : locations.filter(
+          (loc) =>
+            loc.type === "plant" ||
+            loc.type === "collection-center" ||
+            selectedReadiness.includes(loc.type)
+        );
   return (
     <div className=" overflow-y-scroll">
       <Filters />
@@ -118,8 +127,10 @@ const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
         className="rounded-4xl mx-[20px]"
         style={{ height: "74vh", width: "97%" }}
       >
-        <Legend />
-
+        <LegendOverlay
+          selectedReadiness={selectedReadiness}
+          setSelectedReadiness={setSelectedReadiness}
+        />
         <TileLayer
           attribution="Tiles &copy; Esri — Source: Esri, Maxar"
           url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
@@ -138,9 +149,8 @@ const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
             fillOpacity: 0.1, // Make it slightly transparent
           }}
         />
-
         {/* Markers */}
-        {locations.map((loc, index) => {
+        {filteredLocations.map((loc, index) => {
           // This is the main plant/center marker
           const isPlantCenter = loc.type === "plant";
 
@@ -149,6 +159,7 @@ const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
               {isPlantCenter && (
                 <>
                   {/* 🟡 Radius around plant */}
+
                   <Circle
                     center={[loc.lat, loc.lng]}
                     radius={15000}
