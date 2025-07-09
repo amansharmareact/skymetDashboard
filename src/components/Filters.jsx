@@ -8,7 +8,7 @@ import {
 import CustomDropdown from "./ui/Dropdown";
 import { useState } from "react";
 const Filters = () => {
- const [selectedCrop, setSelectedCrop] = useState("Maize");
+  const [selectedCrop, setSelectedCrop] = useState("Maize");
   return (
     <div className="flex flex-wrap md:flex-nowrap gap-4 md:gap-6 px-5 py-2 items-center justify-between md:items-center">
       {/* Select CBG Plant */}
@@ -39,12 +39,7 @@ const Filters = () => {
           <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
         </label>
         <div className="relative">
-          <Search className="w-4 h-4 text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
-          <input
-            type="search"
-            placeholder="Search"
-            className="pl-9 pr-3 py-1 border border-gray-300 rounded-full text-sm bg-white w-full"
-          />
+          <CustomDropdown />
         </div>
       </div>
 
@@ -52,15 +47,12 @@ const Filters = () => {
       <div className="flex flex-col w-full">
         <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
           <span>
-           Crop <span className="text-[#1570EF] font-medium">*</span>
+            Crop <span className="text-[#1570EF] font-medium">*</span>
           </span>
           <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
         </label>
         <div className="relative">
-          <CustomDropdown
-        selectedCrop={selectedCrop}
-        setSelectedCrop={setSelectedCrop}
-      />
+          <CustomDropdown />
         </div>
       </div>
 
@@ -68,17 +60,13 @@ const Filters = () => {
       <div className="flex flex-col w-full">
         <label className="text-xs text-gray-500 font-medium mb-1 flex items-center gap-1">
           <span>
-            Overlay Toggle Group <span className="text-[#1570EF] font-medium">*</span>
+            Overlay Toggle Group{" "}
+            <span className="text-[#1570EF] font-medium">*</span>
           </span>
           <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
         </label>
         <div className="relative">
-          <Search className="w-4 h-4 text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
-          <input
-            type="search"
-            placeholder="Search"
-            className="pl-9 pr-3 py-1 border border-gray-300 rounded-full text-sm bg-white w-full"
-          />
+          <CustomDropdown />
         </div>
       </div>
 

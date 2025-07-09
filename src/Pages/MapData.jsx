@@ -211,7 +211,6 @@ const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
             </>
           );
         })}
-
         {/* Legend */}
       </MapContainer>
       <DateRibbon />
