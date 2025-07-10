@@ -1,9 +1,9 @@
-import AlertsSection from "../components/AlertsSection";
-import DateRibbon from "../components/DateRibbon";
-import Filters from "../components/Filters";
-import ForecastChart from "../components/ForecastChart";
-import MapCard from "../components/MapCard";
-import StatCards from "../components/StatCards";
+import AlertsSection from "../../components/AlertsSection";
+import DateRibbon from "../../components/DateRibbon";
+import Filters from "../../components/Filters";
+import ForecastChart from "../../components/ForecastChart";
+import MapCard from "../../components/MapCard";
+import StatCards from "../../components/StatCards";
 
 export default function SkymetDashboard() {
   return (

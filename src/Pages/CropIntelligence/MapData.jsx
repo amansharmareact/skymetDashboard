@@ -9,10 +9,10 @@ import {
   Tooltip,
   useMap,
 } from "react-leaflet";
-import DateRibbon from "../components/DateRibbon";
-import Filters from "../components/Filters";
-import LocationTooltip from "../components/ui/LocationTooltip";
-import LegendOverlay from "../components/ui/LegendCheckbox";
+import DateRibbon from "../../components/DateRibbon";
+import Filters from "../../components/Filters";
+import LocationTooltip from "../../components/ui/LocationTooltip";
+import LegendOverlay from "../../components/ui/LegendCheckbox";
 
 const sampleLocation = {
   name: "Ganeshwadi",
@@ -119,13 +119,12 @@ const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
             selectedReadiness.includes(loc.type)
         );
   return (
-    <div className=" overflow-y-scroll">
-      <Filters />
+    <div className="">
       <MapContainer
         center={center}
         zoom={12}
         className="rounded-4xl mx-[20px]"
-        style={{ height: "74vh", width: "97%" }}
+        style={{ height: "80vh", width: "fitContent" }}
       >
         <LegendOverlay
           selectedReadiness={selectedReadiness}
@@ -224,7 +223,6 @@ const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
         })}
         {/* Legend */}
       </MapContainer>
-      <DateRibbon />
     </div>
   );
 };
