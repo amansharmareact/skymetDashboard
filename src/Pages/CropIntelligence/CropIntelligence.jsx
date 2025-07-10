@@ -59,10 +59,10 @@ const CropIntelligence = () => {
     <div className="w-full">
       <Filters />
       <div className="w-full flex h-screen">
-        <div className="w-[70%] h-full">
+        <div className="w-[65%] h-full">
           <MapData center={[16.705, 74.2433]} locations={locations} />
         </div>
-        <div className="w-[30%] h-full overflow-y-auto">
+        <div className="w-[35%] h-full overflow-y-auto">
           <HarvestStatusCard />
         </div>
       </div>
