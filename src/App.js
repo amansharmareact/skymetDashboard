@@ -2,10 +2,9 @@ import "leaflet/dist/leaflet.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Sidebar from "./components/ui/Sidebar";
-import SkymetDashboard from "./Pages/Dashboard/Dashboard";
-import MapData from "./Pages/CropIntelligence/MapData";
 import Topbar from "./components/ui/Topbar";
 import CropIntelligence from "./Pages/CropIntelligence/CropIntelligence";
+import SkymetDashboard from "./Pages/Dashboard/Dashboard";
 import LogisticsAndTransport from "./Pages/Logistics&Transport/page";
 
 function App() {

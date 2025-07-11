@@ -1,6 +1,5 @@
 // components/FilterModal.jsx
 
-import { Filter } from "lucide-react"; // or your preferred icon library
 
 function FilterModal({ isOpen, onClose }) {
   if (!isOpen) return null;

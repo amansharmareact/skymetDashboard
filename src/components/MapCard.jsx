@@ -1,21 +1,57 @@
 import React from 'react';
-import Card from './ui/Card';
-import CardContent from './ui/CardContent';
+import { MapContainer, TileLayer, Marker, GeoJSON } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 
-const MapCard = () => {
+const Plant = window.location.origin + "/images/Factory.svg";
+
+const MapCard = ({ apiData }) => {
+  if (!apiData) return null;
+
+  const point = JSON.parse(apiData.geom);
+  const buffer = JSON.parse(apiData.geom_buffer150);
+  const extent = apiData.extent;
+
+  const extentCoords = extent
+    .replace("BOX(", "")
+    .replace(")", "")
+    .split(",");
+  const [xmin, ymin] = extentCoords[0].split(" ").map(Number);
+  const [xmax, ymax] = extentCoords[1].split(" ").map(Number);
+
+  const bounds = [
+    [ymin, xmin],
+    [ymax, xmax],
+  ];
+
+  const plantIcon = L.icon({
+    iconUrl: Plant,
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+  });
+
   return (
     <div className="lg:col-span-1 w-full h-full">
-      <div className="w-full h-full overflow-hidden rounded-4xl">
-        <iframe
-          title="Kolhapur Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122283.79400665694!2d74.1564661212228!3d16.70845223348975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1000cdec07a29%3A0xece8ea642952e42f!2sKolhapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1751025747721!5m2!1sen!2sin"
-          width="100%"
-          height="100%"
-          style={{ borderRadius: '16px', backgroundColor: 'gray' }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+      <div className="w-full h-full overflow-hidden rounded-[32px]">
+        <MapContainer bounds={bounds} style={{ height: "100%", width: "100%" }} scrollWheelZoom={false}>
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          />
+
+          {/* Point Marker */}
+          {point?.coordinates && (
+            <Marker
+              position={[point.coordinates[1], point.coordinates[0]]}
+              icon={plantIcon}
+            />
+          )}
+
+          {/* Buffer Polygon */}
+          {buffer?.coordinates && (
+            <GeoJSON data={buffer} style={{ color: "green", weight: 2 }} />
+          )}
+        </MapContainer>
       </div>
     </div>
   );
