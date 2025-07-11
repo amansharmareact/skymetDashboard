@@ -6,6 +6,7 @@ import SkymetDashboard from "./Pages/Dashboard/Dashboard";
 import MapData from "./Pages/CropIntelligence/MapData";
 import Topbar from "./components/ui/Topbar";
 import CropIntelligence from "./Pages/CropIntelligence/CropIntelligence";
+import LogisticsAndTransport from "./Pages/Logistics&Transport/page";
 
 function App() {
  
@@ -29,6 +30,12 @@ function App() {
                 path="/crop-intelligence"
                 element={
                   <CropIntelligence />
+                }
+              />
+               <Route
+                path="/logistics"
+                element={
+                  <LogisticsAndTransport/>
                 }
               />
               {/* Add more routes as needed */}

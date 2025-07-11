@@ -3,11 +3,10 @@ import {
   ChevronDown,
   CircleQuestionMark,
   Filter,
-  RotateCcw,
-  Search,
+  RotateCcw
 } from "lucide-react";
-import CustomDropdown from "./ui/Dropdown";
 import { useState } from "react";
+import CustomDropdown from "./ui/Dropdown";
 import FilterModal from "./ui/FilterModal";
 const Filters = () => {
   const [selectedCrop, setSelectedCrop] = useState("Maize");
