@@ -26,7 +26,7 @@ const Filters = () => {
             <CircleQuestionMark className="w-3 h-3 text-gray-400 cursor-help" />
           </label>
           <div className="relative">
-            <select className="border border-gray-300 rounded-full pl-4 pr-8 py-1 text-sm text-gray-700 w-[330px] bg-white">
+            <select className="border border-gray-300 rounded-full pl-4 pr-8 py-1 text-sm text-gray-700 w-[260px] bg-white">
               <option>Select CBG Plant...</option>
             </select>
             <ChevronDown className="w-4 h-4 text-gray-500 absolute right-3 top-2.5 pointer-events-none" />
