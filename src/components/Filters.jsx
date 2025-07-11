@@ -2,13 +2,17 @@ import {
   ArrowRight,
   ChevronDown,
   CircleQuestionMark,
+  Filter,
   RotateCcw,
   Search,
 } from "lucide-react";
 import CustomDropdown from "./ui/Dropdown";
 import { useState } from "react";
+import FilterModal from "./ui/FilterModal";
 const Filters = () => {
   const [selectedCrop, setSelectedCrop] = useState("Maize");
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="flex flex-wrap md:flex-nowrap gap-4 md:gap-6 px-5 py-2 items-center justify-between md:items-center">
       {/* Select CBG Plant */}
@@ -71,6 +75,16 @@ const Filters = () => {
       </div>
 
       {/* Apply Button */}
+      <>
+        <div
+          className="bg-white border  border-[#D5D7DA] p-[12px]  w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm"
+          onClick={() => setOpen(true)}
+        >
+          <Filter className="w-[16px] h-[16px] text-[#A4A7AE]" />
+        </div>
+        <FilterModal isOpen={open} onClose={() => setOpen(false)} />
+      </>
+
       <div className="w-full">
         <div className="flex items-center justify-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-sm font-medium w-full md:w-auto cursor-pointer">
           <div>Apply</div>
