@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import ImagePreviewModal from "./ImagePreviewModal ";
+import AddFieldNoteModal from "./AddFieldNoteModal";
 
 const FieldOfficerComments = () => {
+  const [isImgOpen, setIsImgOpen] = useState(false);
+  const [isNotesOpen, setIsNotesOpen] = useState(false);
   return (
     <div className="bg-white rounded-md shadow-sm px-4 py-3 text-sm">
       <div className="text-[#717680] text-sm font-medium mb-2">
@@ -32,17 +36,22 @@ const FieldOfficerComments = () => {
               Attachments
             </div>
             <div className="flex items-center gap-1 text-[#181D27] text-md font-medium">
-              <img src="/images/FileIcon.svg" alt="FileIcon" />
-              <span>
-                24 June (Tentative)
-              </span>
+              <img
+                src="/images/FileIcon.svg"
+                alt="FileIcon"
+                onClick={() => setIsImgOpen(true)}
+              />
+              <span>24 June (Tentative)</span>
             </div>
           </div>
         </div>
 
         {/* Actions */}
         <div className="flex gap-0.5 mt-4 sm:mt-0 shadow-sm text-[#414651] font-bold">
-          <button className="px-4 py-1.5 border border-[#D5D7DA] rounded-l hover:bg-gray-100">
+          <button
+            className="px-4 py-1.5 border border-[#D5D7DA] rounded-l hover:bg-gray-100"
+            onClick={() => setIsNotesOpen(true)}
+          >
             Add Note
           </button>
           <button className="px-4 py-1.5 border border-[#D5D7DA] border-l-0 rounded-r hover:bg-gray-100">
@@ -50,6 +59,14 @@ const FieldOfficerComments = () => {
           </button>
         </div>
       </div>
+      {isImgOpen && (
+        <ImagePreviewModal
+          imageUrl={
+            "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/YEGVFNBR5ZIJTPY6BWUR4R2P2E.jpg"
+          }
+        />
+      )}
+      {isNotesOpen && <AddFieldNoteModal isNotesOpen={isNotesOpen} />}
     </div>
   );
 };
