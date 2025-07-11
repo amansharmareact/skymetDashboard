@@ -9,7 +9,6 @@ import { useState } from "react";
 import CustomDropdown from "./ui/Dropdown";
 import FilterModal from "./ui/FilterModal";
 const Filters = () => {
-  const [selectedCrop, setSelectedCrop] = useState("Maize");
   const [open, setOpen] = useState(false);
 
   return (

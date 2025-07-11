@@ -114,8 +114,8 @@ const TransportStatusCard = () => {
         <div className="h-[7px] w-full bg-gray-200 rounded-full overflow-hidden">
           <div
             ref={fillRef}
-            className="h-full bg-gradient-to-r from-lime-400 to-green-600 transition-all duration-1000 ease-in-out"
-            style={{ width: "0%" }}
+            className="h-full bg-[#4F7A21]"
+            style={{ width: "50%" }}
           />
         </div>
 
