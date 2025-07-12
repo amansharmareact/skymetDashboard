@@ -1,6 +1,5 @@
 // components/FilterModal.jsx
 
-
 function FilterModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
@@ -12,7 +11,12 @@ function FilterModal({ isOpen, onClose }) {
           <img src="/images/filter.svg" className="w-6 h-6" alt="Filter" />
           <h2 className="text-[16px] font-bold"> Filter Report</h2>
         </div>
-
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+        >
+          ✕
+        </button>
         {/* Dropdowns */}
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
