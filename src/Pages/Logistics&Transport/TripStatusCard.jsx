@@ -1,7 +1,15 @@
 import { RotateCcw } from "lucide-react";
-import React from "react";
-
+import React, { useState } from "react";
+import ReassignTripModal from "../Logistics&Transport/ReassignTripModal";
+import ReassignParcelModal from "./ReassignParcelModal";
 const TripStatusCard = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isParcelModalOpen, setIsParcelModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+  const handleCloseParcelModal = () => setIsParcelModalOpen(false);
+
   const trip = {
     id: "TRP-3409",
     status: "En Route",
@@ -96,10 +104,23 @@ const TripStatusCard = () => {
           <RotateCcw className="w-4 h-4 text-[#414651]" />
         </div>
         <div className="inline-flex border border-gray-300 rounded-md overflow-hidden text-sm font-medium">
-          <button className="px-4 py-2 bg-white hover:bg-gray-100 border-r border-gray-300">
+          <button
+            className="px-4 py-2 bg-white hover:bg-gray-100 border-r border-gray-300"
+            onClick={handleOpenModal}
+          >
             Reassign
           </button>
-          <button className="px-4 py-2 bg-white hover:bg-gray-100 border-r border-gray-300">
+
+          {/* Modal */}
+          {isModalOpen && <ReassignTripModal onClose={handleCloseModal} />}
+          {isParcelModalOpen && (
+            <ReassignParcelModal onClose={handleCloseParcelModal} />
+          )}
+          {isModalOpen && <ReassignTripModal onClose={handleCloseModal} />}
+          <button
+            className="px-4 py-2 bg-white hover:bg-gray-100 border-r border-gray-300"
+            onClick={() => setIsParcelModalOpen(true)}
+          >
             Split Parcels
           </button>
           <button className="px-4 py-2 bg-white hover:bg-gray-100">

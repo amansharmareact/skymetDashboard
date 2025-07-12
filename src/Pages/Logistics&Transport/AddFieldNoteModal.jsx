@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoClose } from "react-icons/io5";
-import { FaUpload } from "react-icons/fa6";
 
 const AddFieldNoteModal = ({ isNotesOpen }) => {
   const [noteType, setNoteType] = useState("Visit Note");
@@ -75,7 +74,10 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
                 <div className="flex gap-4">
                   {["Visit Note", "Reschedule Note", "Risk Flag"].map(
                     (type) => (
-                      <label key={type} className="flex items-center gap-2 text-[#414651] w-full">
+                      <label
+                        key={type}
+                        className="flex items-center gap-2 text-[#414651] w-full"
+                      >
                         <input
                           type="radio"
                           name="noteType"

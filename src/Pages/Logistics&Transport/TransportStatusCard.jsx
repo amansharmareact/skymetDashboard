@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import RouteCard from "./RouteCardTooltip";
 
 const TransportStatusCard = () => {
   const fillRef = useRef(null);
-
+  const [isHovered, setIsHovered] = useState(false);
   useEffect(() => {
     if (fillRef.current) {
       fillRef.current.style.width = "0%"; // Set progress %
@@ -87,7 +88,24 @@ const TransportStatusCard = () => {
 
           {/* +3 More */}
           <div className="justify-between w-[66px] py-[3px] px-[8px] border border-[#FDE272] bg-[#FEFBE8] text-[#717680] rounded-full flex items-center text-xs font-semibold">
-            <span className="text-[#F38744]">+3</span> <span>More</span>
+            <div className="relative group inline-block cursor-pointer">
+              {/* Trigger */}
+              <div
+                className="relative inline-block cursor-pointer"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <span className="text-[#F38744] font-semibold">+3</span>
+                <span className="text-[#717680] font-medium ml-1">More</span>
+              </div>
+
+              {/* Tooltip (hidden by default, shown on hover) */}
+              {isHovered && (
+                <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 z-50 w-max whitespace-nowrap">
+                  <RouteCard />
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Arrow */}
