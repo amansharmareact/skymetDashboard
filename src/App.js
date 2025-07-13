@@ -6,7 +6,10 @@ import Topbar from "./components/ui/Topbar";
 import CropIntelligence from "./Pages/CropIntelligence/CropIntelligence";
 import SkymetDashboard from "./Pages/Dashboard/Dashboard";
 import LogisticsAndTransport from "./Pages/Logistics&Transport/page";
-
+import ParcelMapping from "./Pages/ParcelMapping/page";
+import ParcelMappingTwo from "./Pages/ParcelMapping/PracelMappingTwo"
+import ParcelMappingThree from "./Pages/ParcelMapping/ParcelMappingThree";
+import AssignDriver from "./Pages/ParcelMapping/AssignDriver";
 function App() {
  
 
@@ -35,6 +38,30 @@ function App() {
                 path="/logistics"
                 element={
                   <LogisticsAndTransport/>
+                }
+              />
+               <Route
+                path="/parcel-mapping"
+                element={
+                  <ParcelMapping/>
+                }
+              />
+               <Route
+                path="/parcel-mapping-two"
+                element={
+                  <ParcelMappingTwo/>
+                }
+              />
+                <Route
+                path="/parcel-mapping-three"
+                element={
+                  <ParcelMappingThree/>
+                }
+              />
+                <Route
+                path="/assign-driver"
+                element={
+                  <AssignDriver/>
                 }
               />
               {/* Add more routes as needed */}

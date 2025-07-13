@@ -2,7 +2,7 @@ import React from "react";
 
 const WeatherForecast = () => {
   return (
-    <div className="space-y-2 w-full">
+    <div className="space-y-2 w-full mt-2">
       <p className="text-[#717680] font-bold text-sm ml-2 mb-2">Weather Forecast</p>
       <div className="flex items-center justify-between">
         {/* Card 1 - Sunny */}
