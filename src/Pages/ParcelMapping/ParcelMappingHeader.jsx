@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const ParcelMappingHeader = () => {
   return (
     <div className="flex justify-between items-center py-3 px-4 bg-white">
@@ -16,22 +16,29 @@ const ParcelMappingHeader = () => {
 
       {/* Right Side */}
       <div className="flex items-center gap-3">
-        <button className=" w-[200px] h-[36px] flex items-center gap-2 px-4 py-2 bg-[#4F7A21] text-white text-sm font-bold rounded-md">
-          <span className="text-lg font-normal">＋</span> Create Collection Trip
-        </button>
+        <Link to="/parcel-mapping-two">
 
-        <button className="w-[190px] h-[36px] flex items-center gap-2 px-4 py-2 bg-[#4F7A21] text-white text-sm font-bold rounded-md">
-          <span className="text-lg font-normal">＋</span> Create Dispatch Trip
-        </button>
+          <button className=" w-[200px] h-[36px] flex items-center gap-2 px-4 py-2 bg-[#4F7A21] text-white text-sm font-bold rounded-md">
+            <span className="text-lg font-normal">＋</span> Create Collection Trip
+          </button>
+        </Link>
+        <Link to="/parcel-mapping-three">
 
-        <div className="flex items-center px-4 py-2 border border-[#D5D7DA] rounded-md bg-white cursor-pointer">
-          <img
-            src="/images/Draft.svg"
-            alt="Drafts"
-            className="w-[18px] h-[18px] mr-2"
-          />
-          <span className="text-sm text-[#414651] font-bold">Drafts</span>
-        </div>
+          <button className="w-[190px] h-[36px] flex items-center gap-2 px-4 py-2 bg-[#4F7A21] text-white text-sm font-bold rounded-md">
+            <span className="text-lg font-normal">＋</span> Create Dispatch Trip
+          </button>
+        </Link>
+        <Link to="/assign-driver">
+          <div className="flex items-center px-4 py-2 border border-[#D5D7DA] rounded-md bg-white cursor-pointer">
+
+            <img
+              src="/images/Draft.svg"
+              alt="Drafts"
+              className="w-[18px] h-[18px] mr-2"
+            />
+            <span className="text-sm text-[#414651] font-bold">Drafts</span>
+          </div>
+        </Link>
 
         <div className="text-xs text-[#414651] font-medium">
           Last Synced <br />
