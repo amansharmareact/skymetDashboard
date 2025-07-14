@@ -6,10 +6,12 @@ import Topbar from "./components/ui/Topbar";
 import CropIntelligence from "./Pages/CropIntelligence/CropIntelligence";
 import SkymetDashboard from "./Pages/Dashboard/Dashboard";
 import LogisticsAndTransport from "./Pages/Logistics&Transport/page";
-import ParcelMapping from "./Pages/ParcelMapping/page";
-import ParcelMappingTwo from "./Pages/ParcelMapping/PracelMappingTwo"
-import ParcelMappingThree from "./Pages/ParcelMapping/ParcelMappingThree";
 import AssignDriver from "./Pages/ParcelMapping/AssignDriver";
+import ParcelMapping from "./Pages/ParcelMapping/page";
+import Parcel from "./Pages/ParcelMapping/Parcel";
+import ParcelMappingThree from "./Pages/ParcelMapping/ParcelMappingThree";
+import ParcelMappingTwo from "./Pages/ParcelMapping/ParcelMappingTwo";
+import ParcelPointSelection from "./Pages/ParcelMapping/ParcelPointSelection";
 function App() {
 
 
@@ -53,9 +55,21 @@ function App() {
                 }
               />
               <Route
+                path="/parcel-point-selection"
+                element={
+                  <ParcelPointSelection />
+                }
+              />
+              <Route
                 path="/parcel-mapping-three"
                 element={
                   <ParcelMappingThree />
+                }
+              />
+              <Route
+                path="/parcel-estimate"
+                element={
+                  <Parcel />
                 }
               />
               <Route

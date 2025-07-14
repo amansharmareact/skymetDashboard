@@ -3,9 +3,9 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import ConfirmTripModal from "./ConfirmTripModal";
 import UnsavedChangesModal from "./UnsavedChangesModal";
 import CustomDatePicker from "./CustomDatePicker";
+import {Link} from "react-router-dom"
 
 const TripPriorityPanel = () => {
-  const [showModal, setShowModal] = useState(false);
   const [unsavedShowModal, setUnsavedShowModal] = useState(false);
   const [showPicker, setShowPicker] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
@@ -13,6 +13,22 @@ const TripPriorityPanel = () => {
   const handleApply = (date) => {
     setSelectedDate(date);
     setShowPicker(false);
+  };
+
+  const [showModal, setShowModal] = useState(false);
+
+  // Handlers for modal actions
+  const handleOpenModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+
+  const handleConfirm = () => {
+    console.log("Save changes clicked");
+    setShowModal(false);
+  };
+
+  const handleDiscard = () => {
+    console.log("Discard clicked");
+    setShowModal(false);
   };
   return (
     <div className="w-full max-w-5xl bg-white px-4 py-2">
@@ -46,10 +62,17 @@ const TripPriorityPanel = () => {
           Go Back Selecting Parcels
         </button>
 
-        <button className="flex items-center justify-center w-full gap-2 bg-[#4F7A21] text-white font-bold rounded-md px-6 h-[44px] transition">
+        <button className="flex items-center justify-center w-full gap-2 bg-[#4F7A21] text-white font-bold rounded-md px-6 h-[44px] transition" onClick={handleOpenModal}>
           Assign Driver & Vehicle
           <FaArrowRight className="text-sm" />
         </button>
+        {showModal && (
+            <UnsavedChangesModal
+                onUnsavedClose={handleCloseModal}
+                onSaveDraft={handleDiscard}
+                onConfirm={handleConfirm}
+            />
+        )}
       </div>
 
       {/* Step Progress Bar */}

@@ -3,8 +3,12 @@ import ParcelEstimateCard from "./ParcelEstimateCard";
 import ParcelMappingTable from "./ParcelMappingTable";
 import TripDetails from "./TripDetails";
 import TripSummaryBox from "./TripSummaryBox";
+import CustomDatePicker from "./CustomDatePicker";
+import {useState} from "react";
 
 const ParcelMappingThree = () => {
+    const [dateRange, setDateRange] = useState(null);
+
   return (
     <div className="flex flex-col">
       <div className=""></div>
@@ -13,7 +17,7 @@ const ParcelMappingThree = () => {
           <MapData />
         </div>
         <div className="w-[60%] px-5 space-y-5">
-          <TripDetails />
+          <TripDetails onDateRangeChange={(range) => setDateRange(range)}/>
           <TripSummaryBox />
           <ParcelMappingTable />
           <ParcelEstimateCard />

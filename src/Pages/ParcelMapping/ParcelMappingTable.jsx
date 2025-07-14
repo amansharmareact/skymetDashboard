@@ -108,7 +108,7 @@ const ParcelMappingTable = () => {
                 />
               </span>
             </th>
-            <th className="px-4 py-2 flex items-center justify-center">
+            <th className="px-4 py-2">
               <span>Parcel ID</span>{" "}
               <span className="inline-block">
                 <img
@@ -118,7 +118,7 @@ const ParcelMappingTable = () => {
                 />
               </span>
             </th>
-            <th className="px-4 py-2 flex items-center justify-center">
+            <th className="px-4 py-2">
               <span>Village </span>
               <span className="inline-block">
                 <img
@@ -138,7 +138,7 @@ const ParcelMappingTable = () => {
                 />
               </span>
             </th>
-            <th className="px-4 py-2 flex items-center justify-center">
+            <th className="px-4 py-2">
               <span>Est. (Tons) </span>
               <span className="inline-block">
                 <img
@@ -174,7 +174,7 @@ const ParcelMappingTable = () => {
                     <img
                       src="/images/Factory.svg"
                       alt="Magnify"
-                      className="w-[27px h-[27px]"
+                      className="w-[27px] h-[27px]"
                     />
                   </span>
                 )}
