@@ -7,7 +7,7 @@ import CropIntelligence from "./Pages/CropIntelligence/CropIntelligence";
 import SkymetDashboard from "./Pages/Dashboard/Dashboard";
 import LogisticsAndTransport from "./Pages/Logistics&Transport/page";
 import ParcelMapping from "./Pages/ParcelMapping/page";
-import ParcelMappingTwo from "./Pages/ParcelMapping/PracelMappingTwo"
+import ParcelMappingTwo from "./Pages/ParcelMapping/ParcelMappingTwo"
 import ParcelMappingThree from "./Pages/ParcelMapping/ParcelMappingThree";
 import AssignDriver from "./Pages/ParcelMapping/AssignDriver";
 function App() {

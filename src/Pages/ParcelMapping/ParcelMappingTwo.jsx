@@ -1,4 +1,5 @@
 import React from "react";
+import {useState} from "react";
 import ParcelMappingFilters from "./ParcelMappingFilters";
 import MapData from "../CropIntelligence/MapData";
 import WeatherForecast from "../CropIntelligence/WeatherForecast";
@@ -7,11 +8,13 @@ import ParcelEstimateCard from "./ParcelEstimateCard";
 import RoutingSteps from "./RoutingSteps";
 import ParcelTable from "./ParcelTable";
 
-const PracelMappingTwo = () => {
-  return (
+const ParcelMappingTwo = () => {
+    const [dateRange, setDateRange] = useState(null);
+
+    return (
     <div className="flex flex-col">
       <div className="">
-        <ParcelMappingFilters />
+        <ParcelMappingFilters  onDateRangeChange={(range) => setDateRange(range)} />
       </div>
       <div className="w-full flex justify-between">
         <div className="w-full">
@@ -29,4 +32,4 @@ const PracelMappingTwo = () => {
   );
 };
 
-export default PracelMappingTwo;
+export default ParcelMappingTwo;
