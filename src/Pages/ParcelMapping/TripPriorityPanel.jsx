@@ -3,6 +3,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import ConfirmTripModal from "./ConfirmTripModal";
 import UnsavedChangesModal from "./UnsavedChangesModal";
 import CustomDatePicker from "./CustomDatePicker";
+import {Link} from "react-router-dom"
 
 const TripPriorityPanel = () => {
   const [showModal, setShowModal] = useState(false);
@@ -46,10 +47,12 @@ const TripPriorityPanel = () => {
           Go Back Selecting Parcels
         </button>
 
+        <Link to="/assign-driver" className="decoration-none">
         <button className="flex items-center justify-center w-full gap-2 bg-[#4F7A21] text-white font-bold rounded-md px-6 h-[44px] transition">
           Assign Driver & Vehicle
           <FaArrowRight className="text-sm" />
         </button>
+        </Link>
       </div>
 
       {/* Step Progress Bar */}

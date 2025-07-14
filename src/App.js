@@ -18,6 +18,7 @@ import VehicleSelectorWithDetails from "./Pages/ParcelMapping/VehicleSelectorWit
 import DriverSelectorWithDetails from "./Pages/ParcelMapping/DriverSelectorWithDetails";
 import ConfirmTripModal from "./Pages/ParcelMapping/ConfirmTripModal";
 import BioMassCard from "./Pages/ParcelMapping/BioMassCard";
+import Parcel from "./Pages/ParcelMapping/Parcel";
 function App() {
  
 
@@ -75,7 +76,7 @@ function App() {
                 <Route
                 path="/parcel-estimate"
                 element={
-                    <BioMassCard />
+                    <Parcel />
                 }
                 />
                 <Route

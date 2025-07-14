@@ -17,7 +17,7 @@ const RoutingSteps = () => {
       </div>
 
       {/* Continue Button */}
-      <Link to="/assign-driver" className="decoration:none">
+      <Link to="/parcel-estimate" className="decoration:none">
           <button className="w-full bg-[#4F7A21] text-white py-3 mt-2 text-center text-md font-bold rounded-md mb-4">
             Continue to Routing Phase
           </button>
