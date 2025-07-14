@@ -107,7 +107,7 @@ const Legend = () => {
   return null;
 };
 
-const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
+const MapData = ({ center = [16.705, 74.2433], locations = [], onClick }) => {
   const [selectedReadiness, setSelectedReadiness] = useState([]);
   const filteredLocations =
     selectedReadiness.length === 0
@@ -125,6 +125,9 @@ const MapData = ({ center = [16.705, 74.2433], locations = [] }) => {
         zoom={12}
         className="rounded-4xl mx-[20px]"
         style={{ height: "80vh", width: "fitContent" }}
+        whenReady={(map) => {
+          map.target.getContainer().addEventListener("click", onClick); // 👈 Add routing handler on map click
+        }}
       >
         <LegendOverlay
           selectedReadiness={selectedReadiness}

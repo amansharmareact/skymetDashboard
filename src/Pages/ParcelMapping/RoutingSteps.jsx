@@ -1,5 +1,6 @@
 import React from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const RoutingSteps = () => {
   return (
@@ -9,13 +10,18 @@ const RoutingSteps = () => {
         <span>
           <IoIosArrowRoundBack className="w-[20px] h-[20px] text-[#A4A7AE]" />
         </span>
-        <span>Select Parcels from Another Village</span>
+        <Link to="/parcel-mapping" className="decoration:none">
+          Select Parcels from Another Village
+        </Link>
+
       </div>
 
       {/* Continue Button */}
-      <button className="w-full bg-[#4F7A21] text-white py-3 mt-2 text-center text-md font-bold rounded-md mb-4">
-        Continue to Routing Phase
-      </button>
+      <Link to="/assign-driver" className="decoration:none">
+          <button className="w-full bg-[#4F7A21] text-white py-3 mt-2 text-center text-md font-bold rounded-md mb-4">
+            Continue to Routing Phase
+          </button>
+      </Link>
 
       {/* Steps */}
       <div className="flex justify-between text-sm">

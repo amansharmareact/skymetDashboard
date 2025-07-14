@@ -10,6 +10,14 @@ import ParcelMapping from "./Pages/ParcelMapping/page";
 import ParcelMappingTwo from "./Pages/ParcelMapping/ParcelMappingTwo"
 import ParcelMappingThree from "./Pages/ParcelMapping/ParcelMappingThree";
 import AssignDriver from "./Pages/ParcelMapping/AssignDriver";
+import ParcelPointSelection from "./Pages/ParcelMapping/ParcelPointSelection";
+import ParcelEstimateCard from "./Pages/ParcelMapping/ParcelEstimateCard";
+import TripSummaryBox from "./Pages/ParcelMapping/TripSummaryBox";
+import TripPriorityPanel from "./Pages/ParcelMapping/TripPriorityPanel";
+import VehicleSelectorWithDetails from "./Pages/ParcelMapping/VehicleSelectorWithDetails";
+import DriverSelectorWithDetails from "./Pages/ParcelMapping/DriverSelectorWithDetails";
+import ConfirmTripModal from "./Pages/ParcelMapping/ConfirmTripModal";
+import BioMassCard from "./Pages/ParcelMapping/BioMassCard";
 function App() {
  
 
@@ -53,11 +61,23 @@ function App() {
                 }
               />
                 <Route
+                path="/parcel-point-selection"
+                element={
+                    <ParcelPointSelection />
+                }
+                />
+                <Route
                 path="/parcel-mapping-three"
                 element={
                   <ParcelMappingThree/>
                 }
               />
+                <Route
+                path="/parcel-estimate"
+                element={
+                    <BioMassCard />
+                }
+                />
                 <Route
                 path="/assign-driver"
                 element={
