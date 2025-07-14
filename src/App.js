@@ -11,7 +11,7 @@ import ParcelMappingTwo from "./Pages/ParcelMapping/PracelMappingTwo"
 import ParcelMappingThree from "./Pages/ParcelMapping/ParcelMappingThree";
 import AssignDriver from "./Pages/ParcelMapping/AssignDriver";
 function App() {
- 
+
 
   return (
     <BrowserRouter>
@@ -34,37 +34,36 @@ function App() {
                   <CropIntelligence />
                 }
               />
-               <Route
+              <Route
                 path="/logistics"
                 element={
-                  <LogisticsAndTransport/>
+                  <LogisticsAndTransport />
                 }
               />
-               <Route
+              <Route
                 path="/parcel-mapping"
                 element={
-                  <ParcelMapping/>
+                  <ParcelMapping />
                 }
               />
-               <Route
+              <Route
                 path="/parcel-mapping-two"
                 element={
-                  <ParcelMappingTwo/>
+                  <ParcelMappingTwo />
                 }
               />
-                <Route
+              <Route
                 path="/parcel-mapping-three"
                 element={
-                  <ParcelMappingThree/>
+                  <ParcelMappingThree />
                 }
               />
-                <Route
+              <Route
                 path="/assign-driver"
                 element={
-                  <AssignDriver/>
+                  <AssignDriver />
                 }
               />
-              {/* Add more routes as needed */}
             </Routes>
           </div>
         </div>
