@@ -28,7 +28,6 @@ const ParcelMappingHeader = () => {
             <span className="text-lg font-normal">＋</span> Create Dispatch Trip
           </button>
         </Link>
-        <Link to="/assign-driver">
           <div className="flex items-center px-4 py-2 border border-[#D5D7DA] rounded-md bg-white cursor-pointer">
 
             <img
@@ -38,7 +37,6 @@ const ParcelMappingHeader = () => {
             />
             <span className="text-sm text-[#414651] font-bold">Drafts</span>
           </div>
-        </Link>
 
         <div className="text-xs text-[#414651] font-medium">
           Last Synced <br />

@@ -2,7 +2,7 @@ import React from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const RoutingSteps = () => {
+const RoutingSteps = ({ setShowPointSelection }) => {
   return (
     <div className="w-[512px] bg-white font-sans p-4 rounded-md shadow-sm">
       {/* Header */}
@@ -10,18 +10,16 @@ const RoutingSteps = () => {
         <span>
           <IoIosArrowRoundBack className="w-[20px] h-[20px] text-[#A4A7AE]" />
         </span>
-        <Link to="/parcel-mapping" className="decoration:none">
+        <Link to="/parcel-mapping-two" className="decoration:none">
           Select Parcels from Another Village
         </Link>
 
       </div>
 
       {/* Continue Button */}
-      <Link to="/parcel-estimate" className="decoration:none">
-          <button className="w-full bg-[#4F7A21] text-white py-3 mt-2 text-center text-md font-bold rounded-md mb-4">
-            Continue to Routing Phase
-          </button>
-      </Link>
+      <button onClick={() => setShowPointSelection(false)} className="w-full bg-[#4F7A21] text-white py-3 mt-2 text-center text-md font-bold rounded-md mb-4">
+        Continue to Routing Phase
+      </button>
 
       {/* Steps */}
       <div className="flex justify-between text-sm">

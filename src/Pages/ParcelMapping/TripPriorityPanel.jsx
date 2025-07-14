@@ -3,10 +3,9 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import ConfirmTripModal from "./ConfirmTripModal";
 import UnsavedChangesModal from "./UnsavedChangesModal";
 import CustomDatePicker from "./CustomDatePicker";
-import {Link} from "react-router-dom"
+import { Link, useRouteError } from "react-router-dom"
 
 const TripPriorityPanel = () => {
-  const [unsavedShowModal, setUnsavedShowModal] = useState(false);
   const [showPicker, setShowPicker] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -15,21 +14,7 @@ const TripPriorityPanel = () => {
     setShowPicker(false);
   };
 
-  const [showModal, setShowModal] = useState(false);
 
-  // Handlers for modal actions
-  const handleOpenModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
-
-  const handleConfirm = () => {
-    console.log("Save changes clicked");
-    setShowModal(false);
-  };
-
-  const handleDiscard = () => {
-    console.log("Discard clicked");
-    setShowModal(false);
-  };
   return (
     <div className="w-full max-w-5xl bg-white px-4 py-2">
       {/* Top Row: Dropdown and Audit Code */}
@@ -57,22 +42,16 @@ const TripPriorityPanel = () => {
 
       {/* Navigation Buttons */}
       <div className="flex items-center justify-between mb-5 gap-x-4">
-        <button className="flex items-center justify-center gap-2 w-full border border-[#D5D7DA] px-4 h-[44px] text-[#414651] font-bold rounded-md bg-white hover:bg-gray-100 transition">
+        <Link to="/parcel-mapping-two" className="decoration:none flex items-center justify-center gap-2 w-full border border-[#D5D7DA] px-4 h-[44px] text-[#414651] font-bold rounded-md bg-white hover:bg-gray-100 transition">
           <FaArrowLeft className="text-sm" />
-          Go Back Selecting Parcels
-        </button>
+          <span> Go Back Selecting Parcels</span>
+        </Link>
 
-        <button className="flex items-center justify-center w-full gap-2 bg-[#4F7A21] text-white font-bold rounded-md px-6 h-[44px] transition" onClick={handleOpenModal}>
+        <Link to="/assign-driver" className="flex items-center justify-center w-full gap-2 bg-[#4F7A21] text-white font-bold rounded-md px-6 h-[44px] transition">
           Assign Driver & Vehicle
           <FaArrowRight className="text-sm" />
-        </button>
-        {showModal && (
-            <UnsavedChangesModal
-                onUnsavedClose={handleCloseModal}
-                onSaveDraft={handleDiscard}
-                onConfirm={handleConfirm}
-            />
-        )}
+        </Link>
+
       </div>
 
       {/* Step Progress Bar */}
@@ -104,8 +83,6 @@ const TripPriorityPanel = () => {
           </p>
         </div>
       </div>
-      {/* <ConfirmTripModal onClose={() => setShowModal(false)} /> */}
-      {/* <UnsavedChangesModal onUnsavedClose={() => setUnsavedShowModal(false)} /> */}
       {showPicker && (
         <div className="mt-6 z-50">
           <CustomDatePicker

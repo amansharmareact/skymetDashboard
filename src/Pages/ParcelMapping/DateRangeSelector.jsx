@@ -35,13 +35,13 @@ const DateRangeSelector = ({ onChange, label = "Date Range Picker" }) => {
                         className="text-[#4F7A21] w-[20px] h-[20px]"
                     />
                     <span className="text-sm text-[#414651]">
-            {selectedRange?.startDate instanceof Date &&
-            selectedRange?.endDate instanceof Date
-                ? `${formatDate(selectedRange.startDate)} – ${formatDate(
-                    selectedRange.endDate
-                )}`
-                : "Select Range"}
-          </span>
+                        {selectedRange?.startDate instanceof Date &&
+                            selectedRange?.endDate instanceof Date
+                            ? `${formatDate(selectedRange.startDate)} – ${formatDate(
+                                selectedRange.endDate
+                            )}`
+                            : "Select Range"}
+                    </span>
                 </div>
 
                 {/* Overlay Calendar */}
