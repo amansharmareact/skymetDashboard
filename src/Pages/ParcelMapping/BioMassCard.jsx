@@ -2,7 +2,7 @@ import React from "react";
 
 const BioMassCard = () => {
   return (
-    <div className="w-[345px] h-full border border-[#E9EAEB] rounded-[32px] px-6 py-5 flex flex-col justify-between">
+    <div className="w-[445px] h-full border border-[#E9EAEB] rounded-[32px] px-6 py-5 flex flex-col justify-between">
       <p className="text-[#535862] text-sm font-normal">
         Total Biomass Available...
       </p>

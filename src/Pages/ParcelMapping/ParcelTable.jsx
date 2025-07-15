@@ -1,12 +1,12 @@
 const ParcelTable = ({ selectedParcels }) => {
   return (
-    <div className="w-[512px]">
+    <div className="w-[792px]">
       <h2 className="text-[#717680] text-sm font-bold mb-2">
         Select Parcels for the trip-391
       </h2>
 
       <div className="rounded-xl border border-[#E9EAEB] shadow-xs">
-        <div className="bg-[#FAFAFA] text-[#7B7B7B] text-xs font-bold grid grid-cols-3 py-3 px-4">
+        <div className="bg-[#FAFAFA] text-[#7B7B7B] text-xs font-bold grid grid-cols-3 py-3 px-4 gap-[30px]">
           <div className="text-left">Parcel ID</div>
           <div className="text-left">Readiness %</div>
           <div className="text-left">Est. Tons</div>

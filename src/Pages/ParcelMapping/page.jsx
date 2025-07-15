@@ -59,7 +59,7 @@ const ParcelMapping = () => {
       <div className="">
         <ParcelMappingHeader />
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-x-5">
         <BioMassCard />
         <BioMassCard />
         <BioMassCard />

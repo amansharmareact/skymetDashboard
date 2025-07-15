@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const RoutingSteps = ({ setShowPointSelection }) => {
   return (
-    <div className="w-[512px] bg-white font-sans p-4 rounded-md shadow-sm">
+    <div className="w-[805px] bg-white font-sans p-4 rounded-md shadow-sm">
       {/* Header */}
       <div className="flex items-center justify-center rounded-[8px] text-[#414651] text-md font-bold py-[10px] px-[16px] border border-[#D5D7DA]">
         <span>

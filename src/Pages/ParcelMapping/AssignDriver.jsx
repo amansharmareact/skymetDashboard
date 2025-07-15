@@ -59,7 +59,6 @@ const AssignDriver = () => {
   ];
   return (
     <div className="flex flex-col">
-      <div className=""></div>
       <div className="w-full flex justify-between mt-10">
         <div className="w-full">
           <MapData center={[16.705, 74.2433]} locations={locations} />

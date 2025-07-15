@@ -48,7 +48,7 @@ export default function CropSelector() {
   return (
     <div className="relative w-[242px] h-[40px] max-w-md" ref={dropdownRef}>
       <div
-        className={`flex items-center border border-[#ACDC79] rounded-full px-3 py-1 bg-[#F7FFF3] ${
+        className={`h-[40px] flex items-center border border-[#ACDC79] rounded-full px-3 py-1 bg-[#F7FFF3] ${
           selectedCrop ? "justify-start" : ""
         }`}
         onClick={() => setShowDropdown(true)}

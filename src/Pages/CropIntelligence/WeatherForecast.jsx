@@ -6,7 +6,7 @@ const WeatherForecast = () => {
       <p className="text-[#717680] font-bold text-sm ml-2 mb-2">Weather Forecast</p>
       <div className="flex items-center justify-between">
         {/* Card 1 - Sunny */}
-        <div className="w-[145px] h-[100px] border rounded-2xl flex justify-around flex-col px-1 py-2">
+        <div className="w-[255px] h-[100px] border rounded-2xl flex justify-around flex-col px-8 py-2">
           <div className="text-left flex justify-between items-center">
             <img src="/images/Sunny.svg" alt="Sunny" className="w-[42px] h-[42px]" />
             <div className="">
@@ -18,7 +18,7 @@ const WeatherForecast = () => {
         </div>
 
         {/* Card 2 - Moderate Rain */}
-        <div className="w-[145px] h-[100px] border rounded-2xl flex justify-around flex-col px-1 py-2">
+        <div className="w-[255px] h-[100px] border rounded-2xl flex justify-around flex-col px-8 py-2">
           <div className="text-left flex justify-between">
             <img src="/images/Cloudy.svg" alt="Rain" className="w-[42px] h-[42px]" />
             <div className="">
@@ -30,7 +30,7 @@ const WeatherForecast = () => {
         </div>
 
         {/* Card 3 - Cloudy */}
-        <div className="w-[145px] h-[100px] border rounded-2xl flex justify-around flex-col px-1 py-2">
+        <div className="w-[255px] h-[100px] border rounded-2xl flex justify-around flex-col px-8 py-2">
           <div className="text-left flex justify-between">
             <img src="/images/Rainy.svg" alt="Cloudy" className="w-[42px] h-[42px]" />
             <div className="">
