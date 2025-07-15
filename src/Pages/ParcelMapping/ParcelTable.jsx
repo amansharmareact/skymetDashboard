@@ -1,15 +1,39 @@
 const ParcelTable = ({ selectedParcels }) => {
   return (
-    <div className="w-[792px]">
+    <div className="w-[540px]">
       <h2 className="text-[#717680] text-sm font-bold mb-2">
         Select Parcels for the trip-391
       </h2>
 
       <div className="rounded-xl border border-[#E9EAEB] shadow-xs">
         <div className="bg-[#FAFAFA] text-[#7B7B7B] text-xs font-bold grid grid-cols-3 py-3 px-4 gap-[30px]">
-          <div className="text-left">Parcel ID</div>
-          <div className="text-left">Readiness %</div>
-          <div className="text-left">Est. Tons</div>
+          <div className="text-left flex items-center gap-1">Parcel ID
+            <span className="inline-block">
+              <img
+                src="/images/TableArrow.svg"
+                alt="TableArrow"
+                className="w-[12px] h-[12px]"
+              />
+            </span>
+          </div>
+          <div className="text-left flex items-center gap-1">Readiness %
+            <span className="inline-block">
+              <img
+                src="/images/TableArrow.svg"
+                alt="TableArrow"
+                className="w-[12px] h-[12px]"
+              />
+            </span>
+          </div>
+          <div className="text-left flex items-center gap-1">Est. Tons
+            <span className="inline-block">
+              <img
+                src="/images/TableArrow.svg"
+                alt="TableArrow"
+                className="w-[12px] h-[12px]"
+              />
+            </span>
+          </div>
         </div>
 
         {selectedParcels.length === 0 ? (

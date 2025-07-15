@@ -56,10 +56,10 @@ const ParcelMapping = () => {
   ];
   return (
     <div className="flex flex-col m-2">
-      <div className="">
+      <div className=" px-[20px]">
         <ParcelMappingHeader />
       </div>
-      <div className="flex items-center justify-between gap-x-5">
+      <div className="flex items-center justify-between gap-x-1  px-[20px]" >
         <BioMassCard />
         <BioMassCard />
         <BioMassCard />
@@ -69,7 +69,7 @@ const ParcelMapping = () => {
         <ParcelMappingFilters />
       </div>
       <div className="">
-                 <MapData center={[16.705, 74.2433]} locations={locations} />
+        <MapData center={[16.705, 74.2433]} locations={locations} />
       </div>
     </div>
   );

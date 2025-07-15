@@ -25,11 +25,13 @@ const ParcelMappingFilters = ({ onDateRangeChange }) => {
 
     return (
         <>
-            <div className="flex items-center m-2 gap-4 flex-wrap">
+            <div className="flex items-center p-[20px] gap-4 flex-wrap">
                 {/* TCC Location */}
                 <div className="flex flex-col text-sm font-medium text-[#414651]">
                     <label className="font-medium mb-1">
-                        TCC Location <span className="text-[#4F7A21]">*</span>
+                        TCC Location <span className="text-[#4F7A21]">*
+                            <img src="/images/HelpIcon.svg" alt="Info" className="inline-block ml-1 w-[16px] h-[16px]" />
+                        </span>
                     </label>
                     <select className="h-[40px] w-[233px] border border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm text-[#717680]">
                         <option>Shirgaon TCC (Auto-Assign)</option>
@@ -39,7 +41,9 @@ const ParcelMappingFilters = ({ onDateRangeChange }) => {
                 {/* Crop Type */}
                 <div className="flex flex-col text-sm font-medium text-[#414651]">
                     <label className="font-medium mb-1">
-                        Crop Type <span className="text-[#4F7A21]">*</span>
+                        Crop Type <span className="text-[#4F7A21]">*
+                            <img src="/images/HelpIcon.svg" alt="Info" className="inline-block ml-1 w-[16px] h-[16px]" />
+                        </span>
                     </label>
                     <div className="relative">
                         <CustomDropdown />
@@ -49,11 +53,13 @@ const ParcelMappingFilters = ({ onDateRangeChange }) => {
                 {/* Date Range Picker */}
                 <div className="flex flex-col text-sm font-medium text-[#414651]">
                     <label className="font-medium mb-1">
-                        Date Range Picker <span className="text-[#4F7A21]">*</span>
+                        Date Range Picker <span className="text-[#4F7A21]">*
+                            <img src="/images/HelpIcon.svg" alt="Info" className="inline-block ml-1 w-[16px] h-[16px]" />
+                        </span>
                     </label>
                     <div
                         onClick={() => setShowDatePicker(true)}
-                        className="flex items-center gap-2 h-[36px] w-[233px] border border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm text-[#717680] cursor-pointer"
+                        className="flex items-center gap-2 h-[40px] w-[233px] border border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm text-[#717680] cursor-pointer"
                     >
                         <img
                             src="/images/CalendarIcon.svg"
@@ -62,7 +68,7 @@ const ParcelMappingFilters = ({ onDateRangeChange }) => {
                         />
                         <span className="text-sm text-[#414651]">
                             {selectedRange?.startDate instanceof Date &&
-                            selectedRange?.endDate instanceof Date
+                                selectedRange?.endDate instanceof Date
                                 ? `${formatDate(selectedRange.startDate)} – ${formatDate(selectedRange.endDate)}`
                                 : "Select Range"}
                         </span>
@@ -73,17 +79,21 @@ const ParcelMappingFilters = ({ onDateRangeChange }) => {
                 {/* Radius */}
                 <div className="flex flex-col text-sm font-medium text-[#414651]">
                     <label className="font-medium mb-1">
-                        Radius (km) <span className="text-[#4F7A21]">*</span>
+                        Radius (km) <span className="text-[#4F7A21]">*
+
+                        </span>
                     </label>
-                    <select className="h-[36px] w-[80px] border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
+                    <select className="h-[40px] w-[105px] border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
                         <option>200</option>
                     </select>
                 </div>
 
                 {/* Min Readiness % */}
                 <div className="flex flex-col text-sm font-medium text-[#414651]">
-                    <label className="font-medium mb-1">Min Readiness %</label>
-                    <select className="h-[36px] w-[80px]  border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
+                    <label className="font-medium mb-1">Min Readiness %
+                        <img src="/images/HelpIcon.svg" alt="Info" className="inline-block ml-1 w-[16px] h-[16px]" />
+                    </label>
+                    <select className="h-[40px] w-[138px]  border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
                         <option>80</option>
                     </select>
                 </div>
@@ -91,7 +101,7 @@ const ParcelMappingFilters = ({ onDateRangeChange }) => {
                 {/* Exclude Risk Zones */}
                 <div className="flex flex-col text-sm font-medium text-[#414651]">
                     <label className="font-medium mb-1">Exclude Risk Zones</label>
-                    <div className="flex items-center h-[36px] border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
+                    <div className="flex items-center h-[40px]  w-[138px] border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
                         <label className="flex items-center gap-2 cursor-pointer">
                             <input type="checkbox" className="accent-[#4F7A21]" />
                             <span className="text-[#535862]">Exclude OFF</span>
@@ -105,14 +115,14 @@ const ParcelMappingFilters = ({ onDateRangeChange }) => {
                     <input
                         type="text"
                         placeholder="Type parcel ID or village name"
-                        className="h-[36px] w-[220px] border border-[#ACDC79] text-[#535862] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm "
+                        className="h-[40px] w-[229px] border border-[#ACDC79] text-[#535862] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm "
                     />
                 </div>
 
                 {/* Reload Icon */}
                 <div className="flex items-end h-full pt-5">
                     <div className="bg-white w-[44px] h-[44px] flex items-center border border-[#CEEAB0] justify-center gap-1 cursor-pointer rounded-md shadow-sm">
-                        <RotateCcw className="w-4 h-4 text-green-700" />
+                        <img src="/images/RefreshIcon.svg" className="w-4 h-4 text-green-700" />
                     </div>
                 </div>
             </div>

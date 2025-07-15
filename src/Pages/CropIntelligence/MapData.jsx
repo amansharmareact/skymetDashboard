@@ -118,7 +118,6 @@ const MapData = ({
           attribution="Labels &copy; Esri"
           url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
         />
-
         <Circle
           center={center}
           radius={15000}
@@ -175,8 +174,8 @@ const MapData = ({
                     html: `<div style="background-color: ${getColor(
                       loc.type
                     )}; width: 16px; height: 16px; ${loc.type === "active"
-                        ? "border: 2px solid #00C853;"
-                        : "border: 2px solid white;"
+                      ? "border: 2px solid #00C853;"
+                      : "border: 2px solid white;"
                       } border-radius: 50%;"></div>`,
                     iconSize: [16, 16],
                   })

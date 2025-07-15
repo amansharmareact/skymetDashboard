@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 const ParcelMappingHeader = () => {
   return (
-    <div className="flex justify-between items-center py-3 px-4 bg-white">
+    <div className="flex justify-between items-center py-3 bg-white">
       {/* Left Side */}
       <div>
-        <h1 className="text-[18px] font-bold text-[#000000] mb-[2px]">
+        <h2 className="text-[18px] font-bold text-[#000000] mb-[2px]">
           Parcel Mapping Dashboard
-        </h1>
+        </h2>
         <p className="text-[18px] text-[#000000] font-normal">
           Plan and assign optimized field collection or dispatch trips from this
           center.
@@ -28,15 +28,14 @@ const ParcelMappingHeader = () => {
             <span className="text-lg font-normal">＋</span> Create Dispatch Trip
           </button>
         </Link>
-          <div className="flex items-center px-4 py-2 border border-[#D5D7DA] rounded-md bg-white cursor-pointer">
-
-            <img
-              src="/images/Draft.svg"
-              alt="Drafts"
-              className="w-[18px] h-[18px] mr-2"
-            />
-            <span className="text-sm text-[#414651] font-bold">Drafts</span>
-          </div>
+        <div className="flex items-center gap-1 px-4 py-2 border border-[#D5D7DA] rounded-md bg-white cursor-pointer hover:shadow-sm transition">
+          <img
+            src="/images/Draft.svg"
+            alt="Drafts"
+            className="w-[18px] h-[18px]"
+          />
+          <span className="text-sm text-[#414651] font-bold">Drafts</span>
+        </div>
 
         <div className="text-xs text-[#414651] font-medium">
           Last Synced <br />

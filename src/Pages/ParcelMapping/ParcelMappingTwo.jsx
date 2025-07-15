@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from "react";
+import { useState } from "react";
 import ParcelMappingFilters from "./ParcelMappingFilters";
 import MapData from "../CropIntelligence/MapData";
 import WeatherForecast from "../CropIntelligence/WeatherForecast";
@@ -11,9 +11,9 @@ import Steps from "../../components/Steps"
 import { useNavigate } from "react-router-dom";
 
 const ParcelMappingTwo = () => {
-    const [dateRange, setDateRange] = useState(null);
-    const navigate = useNavigate();
-const locations = [
+  const [dateRange, setDateRange] = useState(null);
+  const navigate = useNavigate();
+  const locations = [
     {
       lat: 16.705,
       lng: 74.2433,
@@ -63,21 +63,21 @@ const locations = [
       type: "plant",
     },
   ];
-    const handleRedirect = () => {
-        navigate("/parcel-point-selection"); // 👈 Replace with your desired path
-    };
+  const handleRedirect = () => {
+    navigate("/parcel-point-selection"); // 👈 Replace with your desired path
+  };
 
-    return (
+  return (
     <div className="flex flex-col">
       <div className="">
-        <ParcelMappingFilters  onDateRangeChange={(range) => setDateRange(range)} />
+        <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} />
       </div>
       <div className="w-full flex justify-between">
         <div className="w-full">
-          <div className = "pl-6 m-4">
-              <Steps />
+          <div className="my-4 px-[20px]">
+            <Steps />
           </div>
-                    <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
+          <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
         </div>
         {/*<div className="w-[60%] px-5">*/}
         {/*    <LastSync/>*/}
