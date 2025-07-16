@@ -2,7 +2,7 @@ import React from "react";
 
 const WeatherForecast = () => {
   return (
-    <div className="space-y-2 w-full mt-2">
+    <div className="space-y-2 w-[540px] h-[130px] mt-2">
       <p className="text-[#717680] font-bold text-sm ml-2 mb-2">Weather Forecast</p>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {/* Card */}
@@ -31,7 +31,7 @@ const WeatherForecast = () => {
         ].map((card, index) => (
           <div
             key={index}
-            className="w-[174px] h-[100px] border border-[#E5E7EB] rounded-2xl flex items-center gap-4 px-2 py-2 bg-white"
+            className="w-[173.33px] h-[100px] border border-[#E5E7EB] rounded-2xl flex items-center gap-4 px-2 py-2 bg-white"
           >
             <img src={card.icon} alt={card.title} className="w-[42px] h-[42px]" />
             <div className="flex flex-col justify-center">

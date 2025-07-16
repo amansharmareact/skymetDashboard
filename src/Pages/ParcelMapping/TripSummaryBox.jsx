@@ -2,7 +2,7 @@ import React from "react";
 
 const TripSummaryBox = () => {
   return (
-    <div className="w-[756px] font-sans">
+    <div className="w-[654px] font-sans">
       <h2 className="text-[#717680] text-sm font-bold mb-2">Trip Summary</h2>
 
       <div className="bg-[#F5F5F5] rounded-xl p-4 text-sm text-[#4A4A4A] flex flex-wrap gap-x-[30px] gap-y-4">

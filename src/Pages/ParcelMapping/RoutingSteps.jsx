@@ -22,7 +22,7 @@ const RoutingSteps = ({ setShowPointSelection }) => {
       </button>
 
       {/* Steps */}
-      <div className="flex justify-between text-sm">
+      <div className="h-[92px] flex justify-between text-sm">
         <div className="flex-1 text-left">
           <div className="border-t-2 border-[#4A772F] w-full mb-1"></div>
           <div className="font-bold text-[#414651] text-sm">Step 1:</div>

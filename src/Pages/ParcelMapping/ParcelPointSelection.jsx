@@ -118,21 +118,23 @@ const ParcelPointSelection = () => {
         <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} />
       </div>
 
-      <div className="flex w-full gap-4 px-4">
+      <div className="flex justify-between w-full gap-[10px] px-[20px] py-[16px]">
         {/* Left - Map */}
-        <div className="w-[55%]">
-          <div className="pl-2 py-4">
-            <Steps />
-          </div>
+        <div className="w-[65%]">
+          {/*<div className="pl-2 py-4">*/}
+          {/*  <Steps />*/}
+          {/*</div>*/}
+          <div className="w-full">
           <MapData
             center={[16.705, 74.2433]}
             locations={locations}
             onMarkerClick={handleMarkerClick}
           />
+          </div>
         </div>
 
         {/* Right - Panel */}
-        <div className={`${showPointSelection ? "w-[45%]" : "w-[45%]"} overflow-y-auto`}>
+        <div className={`${showPointSelection ? "w-[580px]" : "w-[580px]"} overflow-y-auto`}>
           {showPointSelection ? (
             <div className="flex flex-col gap-4">
               <LastSync />
