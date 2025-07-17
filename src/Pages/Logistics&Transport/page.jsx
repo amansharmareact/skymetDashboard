@@ -12,12 +12,12 @@ import TripActivityLog from "./TripActivityLog.jsx";
 
 const LogisticsAndTransport = () => {
   return (
-    <div className="bg-gray-50 min-h-screen p-4">
+    <div className="bg-gray-50 min-h-screen px-[20px]">
       {/* Filters */}
       <Filters />
 
       {/* Header Cards Section */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-4">
+      <div className="flex flex-wrap gap-[4px] pt-[16px]">
         {Array.from({ length: 6 }).map((_, idx) => (
           <ScheduledTripsCard key={idx} />
         ))}

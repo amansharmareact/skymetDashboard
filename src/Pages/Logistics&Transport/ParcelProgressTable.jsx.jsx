@@ -58,39 +58,45 @@ const parcels = [
 ];
 
 const getStatusBadge = (status) => {
-  const base = "px-1 py-0.5 text-xs rounded-full font-medium inline-block";
+  const base =
+    "inline-flex items-center gap-1 px-2 py-[2px] text-xs rounded-full font-medium whitespace-nowrap"; // Added `whitespace-nowrap`
+
+  const dotStyle = "w-[6px] h-[6px] rounded-full mt-[1px] flex-shrink-0";
+
   switch (status) {
     case "Completed":
       return (
         <span
-          className={`${base} flex items-center justify-around bg-[#ECFDF3] border border-[#ABEFC6] text-[#079455]`}
+          className={`${base} bg-[#ECFDF3] border border-[#ABEFC6] text-[#079455]`}
         >
-          <div className="rounded-full w-[5px] h-[5px] bg-[#079455]"></div>
-          <span>{status}</span>
+          <span className={`${dotStyle} bg-[#079455]`}></span>
+          {status}
         </span>
       );
     case "In Progress":
       return (
         <span
-          className={`${base} flex items-center justify-around bg-[#FEF6EE] border border-[#F7B27A] text-[#E04F16]`}
+          className={`${base} bg-[#FEF6EE] border border-[#F7B27A] text-[#E04F16]`}
         >
-          <div className="rounded-full w-[5px] h-[5px] bg-[#E04F16]"></div>
-          <span>{status}</span>
+          <span className={`${dotStyle} bg-[#E04F16]`}></span>
+          {status}
         </span>
       );
     case "Scheduled":
       return (
         <span
-          className={`${base} flex items-center justify-around bg-[#FAFAFA] text-[#414651] font-medium border border-[#E9EAEB]`}
+          className={`${base} bg-[#FAFAFA] border border-[#E9EAEB] text-[#414651]`}
         >
-          <div className="rounded-full w-[5px] h-[5px] bg-[#414651]"></div>
-          <span>{status}</span>
+          <span className={`${dotStyle} bg-[#414651]`}></span>
+          {status}
         </span>
       );
     default:
       return <span className="text-gray-400">-</span>;
   }
 };
+
+
 
 const ParcelProgressTable = () => {
   return (

@@ -35,8 +35,8 @@ const TripStatusCard = () => {
         </div>
         <div>
           <p className="font-medium text-[#717680] text-sm">Status</p>
-          <span className="w-full flex items-center justify-center text-[13px] font-semibold px-[6px] py-[2px] rounded-full bg-[#FEF6EE] text-[#E04F16] border border-[#F7B27A]">
-            <div className="w-[5px] h-[5px] bg-[#E04F16] rounded-full mr-2"></div>{" "}
+          <span className="w-full flex items-center justify-center text-[13px] font-semibold px-[6px] py-[2px] rounded-full bg-[#FEF6EE] text-[#E04F16] border border-[#F7B27A] whitespace-nowrap">
+            <div className="w-[5px] h-[5px] bg-[#E04F16] rounded-full mr-2 shrink-0"></div>
             {trip.status}
           </span>
         </div>
@@ -104,12 +104,7 @@ const TripStatusCard = () => {
           <RotateCcw className="w-4 h-4 text-[#414651]" />
         </div>
         <div className="inline-flex border border-gray-300 rounded-md overflow-hidden text-sm font-medium">
-          <button
-            className="px-4 py-2 bg-white hover:bg-gray-100 border-r border-gray-300"
-            onClick={handleOpenModal}
-          >
-            Reassign
-          </button>
+
 
           {/* Modal */}
           {isModalOpen && <ReassignTripModal onClose={handleCloseModal} />}
@@ -117,15 +112,27 @@ const TripStatusCard = () => {
             <ReassignParcelModal onClose={handleCloseParcelModal} />
           )}
           {isModalOpen && <ReassignTripModal onClose={handleCloseModal} />}
-          <button
-            className="px-4 py-2 bg-white hover:bg-gray-100 border-r border-gray-300"
-            onClick={() => setIsParcelModalOpen(true)}
-          >
-            Split Parcels
-          </button>
-          <button className="px-4 py-2 bg-white hover:bg-gray-100">
-            Export Report
-          </button>
+
+          <div className="inline-flex w-[324px] h-[40px] border rounded-lg overflow-hidden">
+  <button
+    onClick={handleOpenModal}
+    className="w-1/3 h-full text-sm font-semibold text-[#414651] bg-white focus:outline-none"
+  >
+    Reassign
+  </button>
+  <button
+    className="w-1/3 h-full text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none"
+  >
+    Split Parcels
+  </button>
+  <button
+    onClick={() => setIsParcelModalOpen(true)}
+    className="w-1/3 h-full text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none"
+  >
+    Export Report
+  </button>
+</div>
+
         </div>
       </div>
     </div>
