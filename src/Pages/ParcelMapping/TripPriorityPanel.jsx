@@ -16,29 +16,7 @@ const TripPriorityPanel = () => {
 
 
   return (
-    <div className="w-full max-w-5xl bg-white px-4 py-2">
-      {/* Top Row: Dropdown and Audit Code */}
-      {/*<div className="flex items-start justify-between mb-4">*/}
-      {/*  <div className="w-full flex items-center justify-between">*/}
-      {/*    <div className="">*/}
-      {/*      <label className="block text-sm font-medium text-[#717680] mb-1">*/}
-      {/*        Trip Priority <span className="text-[#4F7A21]">*</span>*/}
-      {/*      </label>*/}
-      {/*      <select className="w-[450px] h-[44px] border border-[#D5D7DA] text-[#717680] rounded-md px-[14px] py-[10px] text-sm focus:outline-none">*/}
-      {/*        <option>Rain Sensitive</option>*/}
-      {/*      </select>*/}
-      {/*    </div>*/}
-      {/*    <div>*/}
-      {/*      <p*/}
-      {/*        className="text-sm font-medium text-[#717680] ml-2"*/}
-      {/*        onClick={() => setShowPicker(!showPicker)}*/}
-      {/*      >*/}
-      {/*        Audit Tracking Code*/}
-      {/*      </p>*/}
-      {/*      <p className="text-[24px] font-bold text-[#414651]">427452</p>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+    <div className="w-full max-w-5xl bg-white py-[24px] ">
 
       {/* Navigation Buttons */}
       <div className="flex items-center justify-between mb-5 gap-x-4">

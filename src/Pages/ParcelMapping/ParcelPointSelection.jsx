@@ -144,7 +144,7 @@ const ParcelPointSelection = () => {
                 </div>
 
                 {/* Right - Panel */}
-                <div className="w-[580px]">
+                <div className="overflow-y-auto h-full">
                     {showPointSelection ? (
                         <div className="flex flex-col p-[12px]">
                             <ParcelTable selectedParcels={selectedParcels} />

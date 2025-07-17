@@ -30,7 +30,7 @@ const Parcel = () => {
                     <div className="w-full">
                         <ParcelEstimateCard/>
                     </div>
-                    <div className="mt-[16px]">
+                    <div className="">
                         <TripPriority/>
                     </div>
                 </div>

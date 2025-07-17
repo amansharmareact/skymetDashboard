@@ -59,11 +59,11 @@ const AssignDriver = () => {
   ];
   return (
     <div className="flex flex-col">
-      <div className="w-full flex justify-between mt-10">
+      <div className="w-full flex justify-between pt-[16px]">
         <div className="w-full">
           <MapData center={[16.705, 74.2433]} locations={locations} />
         </div>
-        <div className="w-[60%] px-5 space-y-5 mb-5">
+        <div className="w-[60%] pr-[10px] mb-5">
           <TripSummaryBox />
           <ParcelEstimateCard />
           <DriverSelectorWithDetails />

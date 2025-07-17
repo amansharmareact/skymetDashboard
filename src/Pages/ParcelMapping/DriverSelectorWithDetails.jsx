@@ -2,7 +2,7 @@ import React from "react";
 
 const DriverSelectorWithDetails = () => {
   return (
-    <div className="border border-[#ECECED] rounded-2xl p-4 w-[654px] max-w-3xl h-[288px] bg-white">
+    <div className="border border-[#ECECED] rounded-2xl p-4 bg-white mt-[16px]">
       {/* Dropdown */}
       <label className="block text-sm font-medium text-[#414651] mb-1">
         Select New Driver <span className="text-red-500">*</span>

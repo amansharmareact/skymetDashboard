@@ -2,7 +2,7 @@ import React from "react";
 
 const ParcelEstimateCard = () => {
   return (
-    <div className="flex justify-between items-center border border-[#ECECED] rounded-2xl p-[12px] mt-[16px] w-[540px] h-[80px] text-[#717680] text-[16px] font-medium gap-[16px]">
+    <div className="flex justify-between items-center border border-[#ECECED] rounded-2xl p-[12px] mt-[16px] h-[80px] text-[#717680] text-[16px] font-medium gap-[16px]">
       <div>
         <p>Fields Selected:</p>
         <p className="text-[#414651] text-[24px] font-bold">6 Parcels</p>
