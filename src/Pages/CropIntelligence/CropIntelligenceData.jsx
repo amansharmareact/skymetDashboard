@@ -56,8 +56,8 @@ const CropIntelligenceData = () => {
     },
   ];
   return (
-    <div className="w-full">
-      <div className="w-[812px] flex justify-around">
+    <div className="w-full px-[20px]">
+      <div className="">
       <Filters visibleFilters={{
         crop: true,
         season: true,

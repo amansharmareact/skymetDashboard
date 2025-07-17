@@ -64,12 +64,16 @@ const CropIntelligence = () => {
     ];
     return (
         <div>
+            
+            <div className="w-full px-[20px]">
             <Filters />
+            </div>
+
             <div className="mt-[16px]">
                 <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
             </div>
             <div className="flex justify-items-start">
-            <div className="mt-[10px]">
+            <div className="mt-[10px] px-[20px]">
                 <DateRibbon />
             </div>
             </div>

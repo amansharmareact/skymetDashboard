@@ -8,7 +8,10 @@ import StatCards from "../../components/StatCards";
 export default function SkymetDashboard() {
   return (
     <div className="flex-1 overflow-y-scroll">
-      <Filters />
+        <div className="w-full px-[20px]">
+            <Filters />
+            </div>
+
       <div
         className="px-2 text-[#0e1e15]"
         style={{

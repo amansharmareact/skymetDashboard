@@ -105,7 +105,7 @@ const Filters = ({ visibleFilters = {} }) => {
         <FilterModal isOpen={open} onClose={() => setOpen(false)} />
       </>
 
-      <div className=" w-[109px] h-[44px] flex items-center justify-center gap-2 bg-[#4CA30D] text-white px-4 py-2 rounded-lg  text-sm font-medium cursor-pointer">
+      <div className=" w-[109px] h-[44px] flex items-center justify-center gap-2 bg-[#4CA30D] text-white px-[18px] py-[12px] rounded-lg  text-sm font-medium cursor-pointer">
         <div>Apply</div>
         <ArrowRight className="w-4 h-4" />
       </div>
