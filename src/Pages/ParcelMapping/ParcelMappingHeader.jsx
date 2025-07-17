@@ -28,14 +28,14 @@ const ParcelMappingHeader = () => {
             <span className="text-lg font-normal">＋</span> Create Dispatch Trip
           </button>
         </Link>
-        <div className="w-[91px] h-[36px] flex items-center gap-1 px-4 py-2 border border-[#D5D7DA] rounded-md bg-white cursor-pointer hover:shadow-sm transition">
-          <img
-            src="/images/Draft.svg"
-            alt="Drafts"
-            className="w-[18px] h-[18px]"
-          />
-          <span className="text-sm text-[#414651] font-bold">Drafts</span>
-        </div>
+       <div className="w-[110px] h-[36px] flex items-center justify-center gap-1 px-4 py-2 border border-[#D5D7DA] rounded-md bg-white cursor-pointer hover:shadow-sm transition">
+  <img
+    src="/images/Draft.svg"
+    alt="Drafts"
+    className="w-[18px] h-[18px]"
+  />
+  <span className="text-sm text-[#414651] font-bold">Drafts</span>
+</div>
 
         <div className="text-xs text-[#414651] font-medium">
           Last Synced <br />

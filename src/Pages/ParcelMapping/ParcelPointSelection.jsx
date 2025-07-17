@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import ParcelMappingFilters from "./ParcelMappingFilters";
 import MapData from "../CropIntelligence/MapData";
 import WeatherForecast from "../CropIntelligence/WeatherForecast";
@@ -125,7 +125,7 @@ const ParcelPointSelection = () => {
                     searchParcel: false,
                     reload: true,
                     lastSync: true,
-                }}/>
+                }} />
             </div>
 
             <div className="flex justify-between w-full gap-[10px] px-[20px] py-[16px]">
@@ -144,16 +144,16 @@ const ParcelPointSelection = () => {
                 </div>
 
                 {/* Right - Panel */}
-                <div className={`${showPointSelection ? "w-[580px]" : "w-[580px]"}`}>
+                <div className="w-[580px]">
                     {showPointSelection ? (
                         <div className="flex flex-col p-[12px]">
-                            <ParcelTable selectedParcels={selectedParcels}/>
-                            <WeatherForecast/>
-                            <ParcelEstimateCard/>
-                            <RoutingSteps setShowPointSelection={setShowPointSelection}/>
+                            <ParcelTable selectedParcels={selectedParcels} />
+                            <WeatherForecast />
+                            <ParcelEstimateCard />
+                            <RoutingSteps setShowPointSelection={setShowPointSelection} />
                         </div>
                     ) : (
-                        <Parcel className="w-[580px]"/>
+                        <Parcel className="w-[580px]" />
                     )}
                 </div>
             </div>

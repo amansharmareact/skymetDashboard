@@ -31,7 +31,7 @@ const WeatherForecast = () => {
         ].map((card, index) => (
           <div
             key={index}
-            className="w-[173.33px] h-[100px] border border-[#E5E7EB] rounded-2xl flex items-center gap-4 px-2 py-2 bg-white"
+            className="w-[173.33px] h-[100px] border border-[#E5E7EB] rounded-2xl flex items-center gap-[10px] px-2 py-2 bg-white"
           >
             <img src={card.icon} alt={card.title} className="w-[42px] h-[42px]" />
             <div className="flex flex-col justify-center">

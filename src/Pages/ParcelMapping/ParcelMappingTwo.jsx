@@ -72,11 +72,11 @@ const ParcelMappingTwo = () => {
       <div className="mt-[16px] ml-[20px]">
         <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
           lastSync: false
-        }}/>
+        }} />
       </div>
       <div className="w-full flex justify-between">
         <div className="w-full">
-          <div className="my-4 px-[20px]">
+          <div className="pb-[16px] px-[20px]">
             <Steps />
           </div>
           <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />

@@ -56,7 +56,7 @@ const ParcelMapping = () => {
   ];
   return (
     <div className="flex flex-col m-2">
-      <div className=" px-[20px]">
+      <div className="px-[20px]">
         <ParcelMappingHeader />
       </div>
       <div className="flex items-center justify-between gap-x-1  px-[20px]" >
