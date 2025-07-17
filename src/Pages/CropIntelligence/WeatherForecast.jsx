@@ -2,9 +2,9 @@ import React from "react";
 
 const WeatherForecast = () => {
   return (
-    <div className="space-y-2 w-[540px] h-[130px] mt-2">
+    <div className="space-y-2 w-[540px] h-[130px] mt-[16px]">
       <p className="text-[#717680] font-bold text-sm ml-2 mb-2">Weather Forecast</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[10px]">
         {/* Card */}
         {[
           {

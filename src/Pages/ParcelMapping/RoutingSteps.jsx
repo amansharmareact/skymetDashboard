@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const RoutingSteps = ({ setShowPointSelection }) => {
   return (
-    <div className="w-[540px] bg-white font-sans p-4 rounded-md shadow-sm">
+    <div className="w-[540px] h-[104px] bg-white font-sans mt-[24px] rounded-md shadow-sm">
       {/* Header */}
-      <div className="flex items-center justify-center rounded-[8px] text-[#414651] text-md font-bold py-[10px] px-[16px] border border-[#D5D7DA]">
+      <div className="w-full flex items-center justify-center rounded-[8px] text-[#414651] text-md font-bold py-[10px] px-[16px] border border-[#D5D7DA]">
         <span>
           <IoIosArrowRoundBack className="w-[20px] h-[20px] text-[#A4A7AE]" />
         </span>
@@ -17,7 +17,7 @@ const RoutingSteps = ({ setShowPointSelection }) => {
       </div>
 
       {/* Continue Button */}
-      <button onClick={() => setShowPointSelection(false)} className="w-full bg-[#4F7A21] text-white py-3 mt-2 text-center text-md font-bold rounded-md mb-4">
+      <button onClick={() => setShowPointSelection(false)} className="w-full bg-[#4F7A21] text-white py-3 mt-[16px] text-center text-md font-bold rounded-md mb-4">
         Continue to Routing Phase
       </button>
 

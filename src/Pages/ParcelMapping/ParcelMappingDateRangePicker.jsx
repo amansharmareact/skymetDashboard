@@ -24,7 +24,7 @@ const ParcelMappingDateRangePicker = ({ onChange }) => {
     };
 
     return (
-        <div className="flex items-end gap-6">
+        <div className="flex items-center gap-6">
             {/* 📅 Trip Date */}
             <div className="flex flex-col text-sm font-medium text-[#414651]">
                 <label className="mb-1 text-[#414651] text-sm font-medium flex items-center">

@@ -66,7 +66,9 @@ const ParcelMapping = () => {
         <BioMassCard />
       </div>
       <div className="">
-        <ParcelMappingFilters />
+        <ParcelMappingFilters visibleFilters={{
+          lastSync:false,
+        }}/>
       </div>
       <div className="">
         <MapData center={[16.705, 74.2433]} locations={locations} />

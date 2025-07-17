@@ -69,8 +69,10 @@ const ParcelMappingTwo = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="">
-        <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} />
+      <div className="mt-[16px] ml-[20px]">
+        <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
+          lastSync: false
+        }}/>
       </div>
       <div className="w-full flex justify-between">
         <div className="w-full">

@@ -6,7 +6,7 @@ const ParcelTable = ({ selectedParcels }) => {
       </h2>
 
       <div className="rounded-xl border border-[#E9EAEB] shadow-xs">
-        <div className="bg-[#FAFAFA] text-[#7B7B7B] text-xs font-bold grid grid-cols-3 py-3 px-4 gap-[30px]">
+        <div className="bg-[#FAFAFA] text-[#7B7B7B] text-xs font-bold grid grid-cols-2 py-3 px-4 gap-[30px]">
           <div className="text-left flex items-center gap-1">Parcel ID
             <span className="inline-block">
               <img
@@ -16,6 +16,7 @@ const ParcelTable = ({ selectedParcels }) => {
               />
             </span>
           </div>
+          <div className="flex justify-between">
           <div className="text-left flex items-center gap-1">Readiness %
             <span className="inline-block">
               <img
@@ -33,6 +34,7 @@ const ParcelTable = ({ selectedParcels }) => {
                 className="w-[12px] h-[12px]"
               />
             </span>
+          </div>
           </div>
         </div>
 

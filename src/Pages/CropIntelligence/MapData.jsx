@@ -40,35 +40,36 @@ const Legend = () => {
 
   useEffect(() => {
     const legend = L.control({ position: "bottomleft" });
-    legend.onAdd = () => {
-      const div = L.DomUtil.create("div", "info legend-box");
-      div.innerHTML = `
-        <div class="legend-row"><input type="checkbox" class="checkbox" checked />
-          <div class="circle red border border-white"></div><span>Low Readiness</span>
-        </div>
-        <div class="legend-row"><input type="checkbox" class="checkbox" />
-          <div class="circle orange"></div><span>Moderate Readiness</span>
-        </div>
-        <div class="legend-row"><input type="checkbox" class="checkbox" />
-          <div class="circle green"></div><span>High Readiness</span>
-        </div>
-        <div class="legend-row"><input type="checkbox" class="checkbox" />
-          <div class="circle black"></div><span>No Data / Inactive</span>
-        </div>
-        <div class="legend-row"><input type="checkbox" class="checkbox" />
-          <span>Rain Risk Overlay</span>
-        </div>
-        <div class="legend-row"><input type="checkbox" class="checkbox" />
-          <div class="circle outlined-green"></div><span>Active Village</span>
-        </div>
-        <div class="legend-row"><input type="checkbox" class="checkbox" />
-          <img src="${Location}" /><span>Collection Center</span>
-        </div>
-      `;
-      return div;
-    };
 
-    legend.addTo(map);
+    // legend.onAdd = () => {
+    //   const div = L.DomUtil.create("div", "info legend-box");
+    //   div.innerHTML = `
+    //     <div class="legend-row"><input type="checkbox" class="checkbox" checked />
+    //       <div class="circle red border border-white"></div><span>Low Readiness</span>
+    //     </div>
+    //     <div class="legend-row"><input type="checkbox" class="checkbox" />
+    //       <div class="circle orange"></div><span>Moderate Readiness</span>
+    //     </div>
+    //     <div class="legend-row"><input type="checkbox" class="checkbox" />
+    //       <div class="circle green"></div><span>High Readiness</span>
+    //     </div>
+    //     <div class="legend-row"><input type="checkbox" class="checkbox" />
+    //       <div class="circle black"></div><span>No Data / Inactive</span>
+    //     </div>
+    //     <div class="legend-row"><input type="checkbox" class="checkbox" />
+    //       <span>Rain Risk Overlay</span>
+    //     </div>
+    //     <div class="legend-row"><input type="checkbox" class="checkbox" />
+    //       <div class="circle outlined-green"></div><span>Active Village</span>
+    //     </div>
+    //     <div class="legend-row"><input type="checkbox" class="checkbox" />
+    //       <img src="${Location}" /><span>Collection Center</span>
+    //     </div>
+    //   `;
+    //   return div;
+    // };
+
+    // legend.addTo(map);
     return () => {
       legend.remove();
     };

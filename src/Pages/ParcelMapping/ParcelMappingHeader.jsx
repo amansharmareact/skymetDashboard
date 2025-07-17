@@ -28,7 +28,7 @@ const ParcelMappingHeader = () => {
             <span className="text-lg font-normal">＋</span> Create Dispatch Trip
           </button>
         </Link>
-        <div className="flex items-center gap-1 px-4 py-2 border border-[#D5D7DA] rounded-md bg-white cursor-pointer hover:shadow-sm transition">
+        <div className="w-[91px] h-[36px] flex items-center gap-1 px-4 py-2 border border-[#D5D7DA] rounded-md bg-white cursor-pointer hover:shadow-sm transition">
           <img
             src="/images/Draft.svg"
             alt="Drafts"
