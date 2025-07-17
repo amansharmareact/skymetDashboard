@@ -7,30 +7,35 @@ import VisitLog from "./VisitLog";
 import WeatherForecast from "./WeatherForecast";
 
 const HarvestStatusCard = () => {
-  return (
-    <div className="bg-white rounded-xl shadow-md border border-gray-200 p-4 space-y-4 text-sm text-gray-800">
-      {/* Header */}
-     <LastSync/>
+    return (
+        <div className="bg-white rounded-xl border-gray-200 space-y-1 text-sm text-gray-800 z-10">
+            {/* Header */}
+            <LastSync/>
 
-      {/* Map Image */}
-      <MapImage />
+            {/* Map Image */}
+            <div className="w-[540px]">
+                <MapImage/>
+            </div>
+            {/* Crop Harvest Summary */}
+            <div>
+                <CropReadinessCard/>
+            </div>
 
-      {/* Crop Harvest Summary */}
-      <CropReadinessCard />
+            {/* Weather Forecast */}
+            <div>
+                <WeatherForecast/>
+            </div>
 
-      {/* Weather Forecast */}
-      <WeatherForecast />
+            {/* Logistics */}
+            <LogisticsSection/>
 
-      {/* Logistics */}
-      <LogisticsSection />
+            {/* Past Collection Attempts */}
+            <PastCollection/>
 
-      {/* Past Collection Attempts */}
-      <PastCollection />
-
-      {/* Visit Log */}
-      <VisitLog />
-    </div>
-  );
+            {/* Visit Log */}
+            <VisitLog/>
+        </div>
+    );
 };
 
 export default HarvestStatusCard;

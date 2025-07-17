@@ -11,7 +11,7 @@ const VisitLog = () => {
         {/* Last Visit By */}
         <div>
           <p className="text-xs text-[#717680] mb-1">Last Visit By</p>
-          <p className="text-[18px] font-semibold text-[#1D2739]">
+          <p className="text-[18px] font-semibold text-[#414651]">
             Amol Sargar – 22 June
           </p>
         </div>
@@ -19,7 +19,7 @@ const VisitLog = () => {
         {/* Visit Outcome */}
         <div>
           <p className="text-xs text-[#717680] mb-1">Visit Outcome</p>
-          <p className="text-[18px] font-semibold text-[#1D2739]">
+          <p className="text-[18px] font-semibold text-[#414651]">
             Marked as Ready, Advised Drying Delay
           </p>
         </div>
@@ -31,7 +31,7 @@ const VisitLog = () => {
             Notes & Special Instructions
           </p>
           <div className="w-full rounded-2xl border border-[#ECECED] px-5 py-4">
-            <p className="text-[18px] font-semibold text-[#1D2739] leading-6 break-words whitespace-normal">
+            <p className="text-[18px] font-semibold text-[#414651] leading-6 break-words whitespace-normal">
               Field access blocked by harvest vehicle — advise reschedule.
             </p>
           </div>

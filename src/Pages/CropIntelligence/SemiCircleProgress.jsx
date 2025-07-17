@@ -4,7 +4,7 @@ const SemiCircleProgress = ({ percentage }) => {
   const progress = (percentage / 100) * circumference;
 
   return (
-    <div className="relative w-28 h-14">
+    <div className="relative w-[200px] h-[110px]">
       <svg viewBox="0 0 36 18" className="w-full h-full">
         {/* Background Arc */}
         <path
@@ -24,7 +24,7 @@ const SemiCircleProgress = ({ percentage }) => {
           strokeDashoffset={circumference - progress}
         />
       </svg>
-      <div className="absolute inset-0 flex items-end justify-center pb-1 text-lg font-semibold text-[#101828]">
+      <div className="absolute inset-0 flex items-end justify-center pb-1 text-[36px] font-700 font-bold text-[#414651]">
         {percentage}%
       </div>
     </div>

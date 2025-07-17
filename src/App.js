@@ -4,6 +4,7 @@ import "./App.css";
 import Sidebar from "./components/ui/Sidebar";
 import Topbar from "./components/ui/Topbar";
 import CropIntelligence from "./Pages/CropIntelligence/CropIntelligence";
+import CropIntelligenceData from "./Pages/CropIntelligence/CropIntelligenceData";
 import SkymetDashboard from "./Pages/Dashboard/Dashboard";
 import LogisticsAndTransport from "./Pages/Logistics&Transport/page";
 import AssignDriver from "./Pages/ParcelMapping/AssignDriver";
@@ -30,10 +31,14 @@ function App() {
           <div className="flex-1 overflow-y-auto">
             <Routes>
               <Route path="/dashboard" index element={<SkymetDashboard />} />
+                <Route
+                    path="/crop-intelligence"
+                    element={<CropIntelligence />}
+                />
               <Route
-                path="/crop-intelligence"
+                path="/crop-intelligence-data"
                 element={
-                  <CropIntelligence />
+                  <CropIntelligenceData />
                 }
               />
               <Route

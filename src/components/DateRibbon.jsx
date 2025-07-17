@@ -26,7 +26,7 @@ function DateRibbon() {
     };
   });
   return (
-    <div className="py-[5px] pb-[16px] flex gap-[5px] w-full overflow-x-auto px-[5px] justify-center">
+    <div className="py-[5px] pb-[16px] flex gap-[5px] w-full overflow-x-auto px-[5px] justify-center z-1">
       {dateData.map(({ day, date, dots, isToday }, index) => (
         <div
           key={index}

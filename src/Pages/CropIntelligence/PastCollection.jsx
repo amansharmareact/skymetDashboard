@@ -11,7 +11,7 @@ const PastCollection = () => {
         {/* Last Trip Attempt */}
         <div>
           <p className="text-xs text-[#717680] mb-1">Last Trip Attempt</p>
-          <p className="text-[18px] font-semibold text-[#1D2739]">
+          <p className="text-[18px] font-semibold text-[#414651]">
             25 June – Cancelled (
             <span className="">⚠️ Rain</span>)
           </p>
@@ -22,7 +22,7 @@ const PastCollection = () => {
           <p className="text-xs text-[#717680] mb-1">
             Previous Trip Success Rate
           </p>
-          <p className="text-[18px] font-semibold text-[#1D2739]">
+          <p className="text-[18px] font-semibold text-[#414651]">
             3/5 Completed in last 14 days
           </p>
         </div>
@@ -33,7 +33,7 @@ const PastCollection = () => {
             <p className="text-xs text-[#717680] mb-1">
               Skipped Reasons (if any)
             </p>
-            <p className="text-[18px] font-semibold text-[#1D2739]">
+            <p className="text-[18px] font-semibold text-[#414651]">
               Rainfall, Access Blocked
             </p>
           </div>
