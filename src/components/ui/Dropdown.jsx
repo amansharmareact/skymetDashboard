@@ -72,7 +72,7 @@ export default function CropSelector() {
       </div>
 
       {showDropdown && (
-        <div className="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow z-10 max-h-[256px] overflow-auto">
+        <div className="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow z-10 max-h-[256px] overflow-auto" style={{ zIndex: 9999 }}>
           {filteredCrops.length ? (
             filteredCrops.map((crop, index) => (
               <div
