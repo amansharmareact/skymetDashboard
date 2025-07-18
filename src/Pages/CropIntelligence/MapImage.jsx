@@ -1,15 +1,12 @@
 import React from "react";
 import {BsCopy} from "react-icons/bs";
+import MapDataSnippet from "./MapDataSnippet";
 
 const MapImage = () => {
     return (
-        <div className="w-full flex justify-between items-center">
+        <div className="w-full flex justify-items-start items-center">
             <div className="rounded-lg overflow-hidden">
-                <img
-                    src="/images/mapimage.jpg"
-                    alt="Map"
-                    className="w-[215px] h-[215px] object-cover"
-                />
+                <MapDataSnippet />
             </div>
 
             {/* Field Info */}

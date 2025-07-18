@@ -11,7 +11,6 @@ import {
 } from "react-leaflet";
 import LegendOverlay from "../../components/ui/LegendCheckbox";
 import LocationTooltip from "../../components/ui/LocationTooltip";
-import {useLocation} from "react-router-dom"
 
 const Location = window.location.origin + "/images/Location.svg";
 const Plant = window.location.origin + "/images/Factory.svg";
@@ -84,6 +83,7 @@ const MapData = ({
                      locations = [],
                      onClick,
                      onMarkerClick,
+                    visibleFilters = {}
                  }) => {
     const [selectedReadiness, setSelectedReadiness] = useState([]);
 
@@ -103,7 +103,7 @@ const MapData = ({
                 center={center}
                 zoom={12}
                 className="rounded-4xl mx-[20px]"
-                style={{height: "752px", width: "fitContent"}}
+                style={{height: "450px", width: "fitContent"}}
                 whenReady={(map) => {
                     map.target.getContainer().addEventListener("click", onClick);
                 }}
@@ -120,6 +120,8 @@ const MapData = ({
                     attribution="Labels &copy; Esri"
                     url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
                 />
+
+                {visibleFilters.circle !== false && (
                 <Circle
                     center={center}
                     radius={15000}
@@ -129,6 +131,7 @@ const MapData = ({
                         fillOpacity: 0.1,
                     }}
                 />
+                )}
 
                 {filteredLocations.map((loc, index) => {
                     const isPlantCenter = loc.type === "plant";

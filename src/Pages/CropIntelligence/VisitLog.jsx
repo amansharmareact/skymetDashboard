@@ -2,7 +2,7 @@ import React from "react";
 
 const VisitLog = () => {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 mt-[10px]">
       <p className="text-[#717680] font-bold text-sm ml-2 mb-2">
         Field Officer Visit Log
       </p>

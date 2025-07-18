@@ -2,7 +2,7 @@ import React from "react";
 
 const PastCollection = () => {
   return (
-    <div className="space-y-2">
+    <div className="mt-4">
       <p className="text-[#717680] font-bold text-sm ml-2 mb-2">
         Past Collection Attempts
       </p>

@@ -9,6 +9,7 @@ import ParcelProgressTable from "./ParcelProgressTable.jsx.jsx";
 import ParcelTimeline from "./ParcelTimeline.jsx";
 import FieldOfficerComments from "./FieldOfficerComments.jsx";
 import TripActivityLog from "./TripActivityLog.jsx";
+import MapDataLogistics from "./MapDataLogistics";
 
 const LogisticsAndTransport = () => {
   return (
@@ -34,8 +35,10 @@ const LogisticsAndTransport = () => {
           <div className="mt-1 w-full">
             <TripStatusCard />
           </div>
-          <div className="mt-1 w-full">
-            <img src="/images/DummyMapLogistics.png" alt="Map" />
+          <div className="mt-1 w-full z-0">
+            <MapDataLogistics visibleFilters={{
+              circle: false
+            }} />
           </div>
           <div className="mt-1 w-full">
             <PickupPoint />

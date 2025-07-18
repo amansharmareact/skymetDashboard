@@ -5,78 +5,78 @@ import DateRibbon from "../../components/DateRibbon";
 import Filters from "../../components/Filters";
 
 const CropIntelligenceData = () => {
-  const locations = [
-    {
-      lat: 16.705,
-      lng: 74.2433,
-      name: "Kolhapur",
-      type: "high", // ✅ High Readiness
-    },
-    {
-      lat: 16.65,
-      lng: 74.3,
-      name: "Village A",
-      type: "high", // ✅ Moderate Readiness
-    },
-    {
-      lat: 16.68,
-      lng: 74.2,
-      name: "Village B",
-      type: "low", // ✅ Low Readiness
-    },
-    {
-      lat: 16.66,
-      lng: 74.25,
-      name: "Village C",
-      type: "moderate", // ✅ No Data / Inactive
-    },
-    {
-      lat: 16.69,
-      lng: 74.26,
-      name: "Village D",
-      type: "rain-risk", // ✅ Rain Risk Overlay
-    },
-    {
-      lat: 16.675,
-      lng: 74.255,
-      name: "Village E",
-      type: "active", // ✅ Active Village
-    },
-    {
-      lat: 16.685,
-      lng: 74.235,
-      name: "Collection Center 1",
-      type: "collection-center", // ✅ Collection Center
-    },
-    {
-      lat: 16.705,
-      lng: 74.2433,
-      name: "Ganeshwadi Plant Center",
-      type: "plant",
-    },
-  ];
-  return (
-    <div className="w-full px-[20px]">
-      <div className="">
-      <Filters visibleFilters={{
-        crop: true,
-        season: true,
-        village: true,
-        region: false,
-        selectPlant: false
-      }}/>
-      </div>
-      <div className="w-full flex h-screen">
-        <div className="w-[calc(100%-580px)] h-full mt-[16px] flex flex-col">
-          <MapData center={[16.705, 74.2433]} locations={locations} />
-          <DateRibbon />
+    const locations = [
+        {
+            lat: 16.705,
+            lng: 74.2433,
+            name: "Kolhapur",
+            type: "high", // ✅ High Readiness
+        },
+        {
+            lat: 16.65,
+            lng: 74.3,
+            name: "Village A",
+            type: "high", // ✅ Moderate Readiness
+        },
+        {
+            lat: 16.68,
+            lng: 74.2,
+            name: "Village B",
+            type: "low", // ✅ Low Readiness
+        },
+        {
+            lat: 16.66,
+            lng: 74.25,
+            name: "Village C",
+            type: "moderate", // ✅ No Data / Inactive
+        },
+        {
+            lat: 16.69,
+            lng: 74.26,
+            name: "Village D",
+            type: "rain-risk", // ✅ Rain Risk Overlay
+        },
+        {
+            lat: 16.675,
+            lng: 74.255,
+            name: "Village E",
+            type: "active", // ✅ Active Village
+        },
+        {
+            lat: 16.685,
+            lng: 74.235,
+            name: "Collection Center 1",
+            type: "collection-center", // ✅ Collection Center
+        },
+        {
+            lat: 16.705,
+            lng: 74.2433,
+            name: "Ganeshwadi Plant Center",
+            type: "plant",
+        },
+    ];
+    return (
+        <div className="w-full px-[20px]">
+            <div className="">
+                <Filters visibleFilters={{
+                    crop: true,
+                    season: true,
+                    village: true,
+                    region: false,
+                    selectPlant: false
+                }}/>
+            </div>
+            <div className="w-full flex  h-[calc(100vh-150px)] fixed overflow-hidden">
+                <div className="w-[calc(100%-680px)] h-full mt-[16px] flex flex-col">
+                    <MapData center={[16.705, 74.2433]} locations={locations}/>
+                    <DateRibbon/>
+                </div>
+                <div className="w-[580px] h-full overflow-y-auto">
+                    <HarvestStatusCard/>
+                </div>
+            </div>
         </div>
-        <div className="w-[580px] h-full">
-          <HarvestStatusCard />
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default CropIntelligenceData;

@@ -9,9 +9,7 @@ import {
     Tooltip,
     useMap,
 } from "react-leaflet";
-import LegendOverlay from "../../components/ui/LegendCheckbox";
 import LocationTooltip from "../../components/ui/LocationTooltip";
-import {useLocation} from "react-router-dom"
 
 const Location = window.location.origin + "/images/Location.svg";
 const Plant = window.location.origin + "/images/Factory.svg";
@@ -36,48 +34,7 @@ const getColor = (type) => {
 };
 
 // 🧭 Legend Component
-const Legend = () => {
-    const map = useMap();
 
-    useEffect(() => {
-        const legend = L.control({position: "bottomleft"});
-
-        // legend.onAdd = () => {
-        //   const div = L.DomUtil.create("div", "info legend-box");
-        //   div.innerHTML = `
-        //     <div class="legend-row"><input type="checkbox" class="checkbox" checked />
-        //       <div class="circle red border border-white"></div><span>Low Readiness</span>
-        //     </div>
-        //     <div class="legend-row"><input type="checkbox" class="checkbox" />
-        //       <div class="circle orange"></div><span>Moderate Readiness</span>
-        //     </div>
-        //     <div class="legend-row"><input type="checkbox" class="checkbox" />
-        //       <div class="circle green"></div><span>High Readiness</span>
-        //     </div>
-        //     <div class="legend-row"><input type="checkbox" class="checkbox" />
-        //       <div class="circle black"></div><span>No Data / Inactive</span>
-        //     </div>
-        //     <div class="legend-row"><input type="checkbox" class="checkbox" />
-        //       <span>Rain Risk Overlay</span>
-        //     </div>
-        //     <div class="legend-row"><input type="checkbox" class="checkbox" />
-        //       <div class="circle outlined-green"></div><span>Active Village</span>
-        //     </div>
-        //     <div class="legend-row"><input type="checkbox" class="checkbox" />
-        //       <img src="${Location}" /><span>Collection Center</span>
-        //     </div>
-        //   `;
-        //   return div;
-        // };
-
-        // legend.addTo(map);
-        return () => {
-            legend.remove();
-        };
-    }, [map]);
-
-    return null;
-};
 
 const MapData = ({
                      center = [16.705, 74.2433],
@@ -102,60 +59,51 @@ const MapData = ({
             <MapContainer
                 center={center}
                 zoom={12}
-                className="rounded-4xl mx-[20px]"
-                style={{height: "752px", width: "fitContent"}}
+                className="rounded-4xl mx-[0px]"
+                style={{height: "215px", width: "215px"}}
                 whenReady={(map) => {
                     map.target.getContainer().addEventListener("click", onClick);
                 }}
             >
-                <LegendOverlay
-                    selectedReadiness={selectedReadiness}
-                    setSelectedReadiness={setSelectedReadiness}
-                />
+                {/*<LegendOverlay*/}
+                {/*    selectedReadiness={selectedReadiness}*/}
+                {/*    setSelectedReadiness={setSelectedReadiness}*/}
+                {/*/>*/}
                 <TileLayer
-                    attribution="Tiles &copy; Esri — Source: Esri, Maxar"
+                    // attribution="Tiles &copy; Esri — Source: Esri, Maxar"
                     url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
                 />
                 <TileLayer
-                    attribution="Labels &copy; Esri"
+                    // attribution="Labels &copy; Esri"
                     url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
-                />
-                <Circle
-                    center={center}
-                    radius={15000}
-                    pathOptions={{
-                        color: "#FAC515",
-                        fillColor: "white",
-                        fillOpacity: 0.1,
-                    }}
                 />
 
                 {filteredLocations.map((loc, index) => {
                     const isPlantCenter = loc.type === "plant";
 
-                    if (isPlantCenter) {
-                        return (
-                            <Circle
-                                key={index}
-                                center={[loc.lat, loc.lng]}
-                                radius={15000}
-                                pathOptions={{
-                                    color: "yellow",
-                                    fillColor: "rgba(255, 255, 0, 0.2)",
-                                    fillOpacity: 0.4,
-                                }}
-                            >
-                                <Marker
-                                    position={[loc.lat, loc.lng]}
-                                    icon={L.icon({
-                                        iconUrl: Plant,
-                                        iconSize: [32, 32],
-                                        iconAnchor: [16, 16],
-                                    })}
-                                />
-                            </Circle>
-                        );
-                    }
+                    // if (isPlantCenter) {
+                    //     return (
+                    //         <Circle
+                    //             key={index}
+                    //             center={[loc.lat, loc.lng]}
+                    //             radius={15000}
+                    //             pathOptions={{
+                    //                 color: "yellow",
+                    //                 fillColor: "rgba(255, 255, 0, 0.2)",
+                    //                 fillOpacity: 0.4,
+                    //             }}
+                    //         >
+                    //             <Marker
+                    //                 position={[loc.lat, loc.lng]}
+                    //                 icon={L.icon({
+                    //                     iconUrl: Plant,
+                    //                     iconSize: [32, 32],
+                    //                     iconAnchor: [16, 16],
+                    //                 })}
+                    //             />
+                    //         </Circle>
+                    //     );
+                    // }
 
                     return (
                         <Marker
@@ -183,7 +131,7 @@ const MapData = ({
                                     })
                             }
                         >
-                            <Tooltip>{loc.name}</Tooltip>
+                            {/*<Tooltip>{loc.name}</Tooltip>*/}
                             <Tooltip
                                 direction="top"
                                 offset={[0, -10]}
@@ -196,8 +144,6 @@ const MapData = ({
                         </Marker>
                     );
                 })}
-
-                <Legend/>
             </MapContainer>
         </div>
     );
