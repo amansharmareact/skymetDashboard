@@ -102,7 +102,7 @@ const MapData = ({
             <MapContainer
                 center={center}
                 zoom={12}
-                className="rounded-4xl mx-[20px]"
+                className="rounded-4xl mx-[20px] mt-[16px]"
                 style={{height: "752px", width: "fitContent"}}
                 whenReady={(map) => {
                     map.target.getContainer().addEventListener("click", onClick);

@@ -1,6 +1,6 @@
 const ParcelTable = ({ selectedParcels }) => {
   return (
-    <div className="w-[540px]">
+    <div className="w-full">
       <h2 className="text-[#717680] text-sm font-bold mb-2">
         Select Parcels for the trip-391
       </h2>

@@ -59,16 +59,16 @@ const ParcelMapping = () => {
       <div className="px-[20px]">
         <ParcelMappingHeader />
       </div>
-      <div className="flex items-center justify-between gap-x-1  px-[20px]" >
+      <div className="flex items-center justify-between gap-x-1 px-[20px]" >
         <BioMassCard />
         <BioMassCard />
         <BioMassCard />
         <BioMassCard />
       </div>
-      <div className="">
+      <div className=" mt-[16px]">
         <ParcelMappingFilters visibleFilters={{
-          lastSync:false,
-        }}/>
+          lastSync: false,
+        }} />
       </div>
       <div className="">
         <MapData center={[16.705, 74.2433]} locations={locations} />

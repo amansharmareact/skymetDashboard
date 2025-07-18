@@ -128,12 +128,8 @@ const ParcelPointSelection = () => {
                 }} />
             </div>
 
-            <div className="flex justify-between w-full gap-[10px] px-[20px] py-[16px]">
-                {/* Left - Map */}
+            <div className="flex justify-between w-full gap-[5px] px-[20px] py-[16px]">
                 <div className="w-[65%]">
-                    {/*<div className="pl-2 py-4">*/}
-                    {/*  <Steps />*/}
-                    {/*</div>*/}
                     <div className="w-full">
                         <MapData
                             center={[16.705, 74.2433]}
@@ -153,7 +149,7 @@ const ParcelPointSelection = () => {
                             <RoutingSteps setShowPointSelection={setShowPointSelection} />
                         </div>
                     ) : (
-                        <Parcel className="w-[580px]" />
+                        <Parcel className="w-full" />
                     )}
                 </div>
             </div>

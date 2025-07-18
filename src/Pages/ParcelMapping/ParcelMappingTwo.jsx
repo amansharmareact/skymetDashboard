@@ -76,7 +76,7 @@ const ParcelMappingTwo = () => {
       </div>
       <div className="w-full flex justify-between">
         <div className="w-full">
-          <div className="pb-[16px] px-[20px]">
+          <div className="my-[16px] mx-[36px]">
             <Steps />
           </div>
           <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />

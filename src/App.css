@@ -119,3 +119,14 @@ body{
       width: 209px  !important;
     border-radius: 16px !important;
 }
+
+
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
