@@ -26,115 +26,120 @@ const TripStatusCard = () => {
   };
 
   return (
-    <div className="bg-[#F5F5F5] shadow-sm rounded-xl p-6 mx-auto text-sm">
-      {/* Top Info */}
-      <div className="flex items-center justify-between gap-4 mb-4">
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Trip ID</p>
-          <p className="text-md font-medium text-black pt-1">{trip.id}</p>
+    <div>
+
+      <div className="bg-[#F5F5F5] shadow-sm rounded-xl p-6 mx-auto text-sm">
+        {/* Top Info */}
+        <div className="flex items-center justify-between gap-4 mb-4">
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Trip ID</p>
+            <p className="text-md font-medium text-black pt-1">{trip.id}</p>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Status</p>
+            <span className="w-full flex items-center justify-center text-[13px] font-semibold px-[6px] py-[2px] rounded-full bg-[#FEF6EE] text-[#E04F16] border border-[#F7B27A] whitespace-nowrap">
+              <div className="w-[5px] h-[5px] bg-[#E04F16] rounded-full mr-2 shrink-0"></div>
+              {trip.status}
+            </span>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Truck No.</p>
+            <p className="text-md font-medium text-black pt-1">{trip.truckNo}</p>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Driver Name</p>
+            <p className="text-md font-medium text-black pt-1">
+              {trip.driverName}
+            </p>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">ETA</p>
+            <p className="text-md font-medium text-black pt-1">{trip.eta}</p>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Total Distance</p>
+            <p className="text-md font-medium text-black pt-1">{trip.distance}</p>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Stops</p>
+            <p className="text-md font-medium text-black pt-1">{trip.stops}</p>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Load Forecast</p>
+            <p className="text-md font-medium text-black pt-1">
+              {trip.loadForecast}
+            </p>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Actual Load</p>
+            <p className="text-md font-medium text-black pt-1">
+              {trip.actualLoad}
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Status</p>
-          <span className="w-full flex items-center justify-center text-[13px] font-semibold px-[6px] py-[2px] rounded-full bg-[#FEF6EE] text-[#E04F16] border border-[#F7B27A] whitespace-nowrap">
-            <div className="w-[5px] h-[5px] bg-[#E04F16] rounded-full mr-2 shrink-0"></div>
-            {trip.status}
-          </span>
-        </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Truck No.</p>
-          <p className="text-md font-medium text-black pt-1">{trip.truckNo}</p>
-        </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Driver Name</p>
-          <p className="text-md font-medium text-black pt-1">
-            {trip.driverName}
-          </p>
-        </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">ETA</p>
-          <p className="text-md font-medium text-black pt-1">{trip.eta}</p>
-        </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Total Distance</p>
-          <p className="text-md font-medium text-black pt-1">{trip.distance}</p>
-        </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Stops</p>
-          <p className="text-md font-medium text-black pt-1">{trip.stops}</p>
-        </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Load Forecast</p>
-          <p className="text-md font-medium text-black pt-1">
-            {trip.loadForecast}
-          </p>
-        </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Actual Load</p>
-          <p className="text-md font-medium text-black pt-1">
-            {trip.actualLoad}
-          </p>
+
+        {/* Middle Info */}
+
+        {/* Alert & Risk */}
+        <div className="flex gap-6 items-center mb-4">
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Alert Label</p>
+            <p className="text-md font-medium text-black pt-1">
+              {trip.alertLabel}
+            </p>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">
+              🌧️ Risk Indicator
+            </p>
+            <p className="text-md font-medium text-black pt-1">
+              {trip.riskIndicator}
+            </p>
+          </div>
+          <div>
+            <p className="font-medium text-[#717680] text-sm">Last Synced</p>
+            <p className="text-md font-medium text-black pt-1">
+              {trip.lastSynced}
+            </p>
+          </div>
+          <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">
+            <RotateCcw className="w-4 h-4 text-[#414651]" />
+          </div>
+          <div className="inline-flex border border-gray-300 rounded-md overflow-hidden text-sm font-medium">
+
+
+            {/* Modal */}
+
+
+            <div className="inline-flex w-[324px] h-[40px] border rounded-lg overflow-hidden">
+              <button
+                onClick={handleOpenModal}
+                className="w-1/3 h-full text-sm font-semibold text-[#414651] bg-white focus:outline-none"
+              >
+                Reassign
+              </button>
+              <button
+                className="w-1/3 h-full text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none"
+              >
+                Split Parcels
+              </button>
+              <button
+                onClick={() => setIsParcelModalOpen(true)}
+                className="w-1/3 h-full text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none"
+              >
+                Export Report
+              </button>
+            </div>
+
+          </div>
         </div>
       </div>
 
-      {/* Middle Info */}
-
-      {/* Alert & Risk */}
-      <div className="flex gap-6 items-center mb-4">
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Alert Label</p>
-          <p className="text-md font-medium text-black pt-1">
-            {trip.alertLabel}
-          </p>
-        </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">
-            🌧️ Risk Indicator
-          </p>
-          <p className="text-md font-medium text-black pt-1">
-            {trip.riskIndicator}
-          </p>
-        </div>
-        <div>
-          <p className="font-medium text-[#717680] text-sm">Last Synced</p>
-          <p className="text-md font-medium text-black pt-1">
-            {trip.lastSynced}
-          </p>
-        </div>
-        <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">
-          <RotateCcw className="w-4 h-4 text-[#414651]" />
-        </div>
-        <div className="inline-flex border border-gray-300 rounded-md overflow-hidden text-sm font-medium">
-
-
-          {/* Modal */}
-          {isModalOpen && <ReassignTripModal onClose={handleCloseModal} />}
-          {isParcelModalOpen && (
-            <ReassignParcelModal onClose={handleCloseParcelModal} />
-          )}
-          {isModalOpen && <ReassignTripModal onClose={handleCloseModal} />}
-
-          <div className="inline-flex w-[324px] h-[40px] border rounded-lg overflow-hidden">
-  <button
-    onClick={handleOpenModal}
-    className="w-1/3 h-full text-sm font-semibold text-[#414651] bg-white focus:outline-none"
-  >
-    Reassign
-  </button>
-  <button
-    className="w-1/3 h-full text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none"
-  >
-    Split Parcels
-  </button>
-  <button
-    onClick={() => setIsParcelModalOpen(true)}
-    className="w-1/3 h-full text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none"
-  >
-    Export Report
-  </button>
-</div>
-
-        </div>
-      </div>
+      {isModalOpen && <ReassignTripModal onClose={handleCloseModal} />}
+      {isParcelModalOpen && (
+        <ReassignParcelModal onClose={handleCloseParcelModal} />
+      )}
+      {isModalOpen && <ReassignTripModal onClose={handleCloseModal} />}
     </div>
   );
 };

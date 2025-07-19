@@ -2,9 +2,9 @@ import React from "react";
 
 const ReassignParcelModal = ({ onClose }) => {
   return (
-    <div className="fixed inset-0  z-50 bg-black bg-opacity-30 flex items-center justify-center">
+    <div className="fixed h-screen overflow-y-auto  inset-0 z-50 bg-black bg-opacity-30 flex items-center justify-center">
       {/* Modal Content: full screen height, scrollable if needed */}
-      <div className="bg-white m-[100px] h-screen overflow-y-auto rounded-xl w-[660px] p-6 relative shadow-lg">
+      <div className="bg-white rounded-xl w-[660px] p-6 relative shadow-lg">
         {/* Close Button */}
         <button
           onClick={onClose}

@@ -128,8 +128,10 @@ const ParcelPointSelection = () => {
                     lastSync: true,
                 }} />
             </div>
-
-            <div className="no-scrollbar flex justify-between w-full gap-[5px] px-[20px] py-[16px] overflow-hidden">
+                {showPointSelection && <div className="mx-[36px]">
+          <Steps content={"These fields meet the readiness threshold and are suitable for assigning to the current trip."} />
+            </div> }  
+            <div className="no-scrollbar flex justify-between w-full gap-[5px] px-[20px] overflow-hidden">
                 <div className="w-[65%]">
                     <div className="w-full">
                         <MapData

@@ -77,10 +77,10 @@ const ParcelMappingTwo = () => {
       <div className="w-full flex justify-between">
         <div className="w-full">
           <div className="my-[16px] mx-[36px]">
-            <Steps />
+            <Steps content="Step 1: Use the map below to find villages with high crop readiness. Click on any green marker to zoom into its fields and view eligible parcels for collection."/>
           </div>
-          <div className="ml-[16px]">
-          <MapData  center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
+          <div className="ml-[16px] mb-[10px]">
+            <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
           </div>
         </div>
         {/*<div className="w-[60%] px-5">*/}
