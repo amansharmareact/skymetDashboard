@@ -4,15 +4,15 @@ import MapDataSnippet from "./MapDataSnippet";
 
 const MapImage = () => {
     return (
-        <div className="w-full flex justify-items-start items-center">
+        <div className="w-full flex justify-between items-center flex-wrap gap-y-1">
             <div className="rounded-lg overflow-hidden">
                 <MapDataSnippet />
             </div>
 
             {/* Field Info */}
-            <div className="text-xs w-[315px] p-4 rounded-2xl border border-[#ECECED] space-y-3">
+            <div className="text-xs w-full p-2 rounded-2xl border border-[#ECECED] space-y-3 lg:w-[315px]">
                 {/* Tag Label */}
-                <div className="text-[#717680] font-400 text-[16px]">Field/Village Type Tag</div>
+                <div className="text-[#717680] text-sm font-400 lg:text-[16px]">Field/Village Type Tag</div>
 
                 {/* Tags */}
                 <div className="flex gap-2">
@@ -31,7 +31,7 @@ const MapImage = () => {
                 </div>
 
                 {/* Parcel ID */}
-                <div className="w-[246px] h-[56px]">
+                <div className="w-full lg:w-[246px] h-[56px]">
                     <div className="flex items-center justify-start space-x-2 text-[#717680] font-600 text-[16px]">
                         <span>Parcel ID / Village Name</span>
                         <BsCopy className="w-[12px] h-[12px] text-gray-400 cursor-pointer"/>
@@ -42,10 +42,10 @@ const MapImage = () => {
                 </div>
 
                 {/* Coordinates */}
-                <div className="w-[290px] h-[56px]">
+                <div className="w-full lg:w-[290px] h-[56px]">
                     <div className="flex items-center justify-start space-x-2 text-[#717680] font-400 text-[16px]">
                         <span>Coordinates</span>
-                        <BsCopy className="w-[12px] h-[12px] text-gray-400 cursor-pointer"/>
+                        <BsCopy className="w-full text-gray-400 cursor-pointer lg:w-[12px] h-[12px]"/>
                     </div>
                     <div className="text-[#414651] text-lg font-bold leading-tight mt-[2px]">
                         Lat: 16.69° N Long: 74.23° E
