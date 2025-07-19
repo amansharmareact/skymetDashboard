@@ -8,6 +8,7 @@ import RoutingSteps from "./RoutingSteps";
 import ParcelTable from "./ParcelTable";
 import Steps from "../../components/Steps";
 import Parcel from "./Parcel";
+import '../../App.css'
 
 const ParcelPointSelection = () => {
     const [dateRange, setDateRange] = useState(null);
@@ -128,7 +129,7 @@ const ParcelPointSelection = () => {
                 }} />
             </div>
 
-            <div className="flex justify-between w-full gap-[5px] px-[20px] py-[16px]">
+            <div className="no-scrollbar flex justify-between w-full gap-[5px] px-[20px] py-[16px] overflow-hidden">
                 <div className="w-[65%]">
                     <div className="w-full">
                         <MapData
@@ -140,7 +141,7 @@ const ParcelPointSelection = () => {
                 </div>
 
                 {/* Right - Panel */}
-                <div className="overflow-y-auto h-full">
+                <div className="no-scrollbar h-[calc(100vh-15vh)] overflow-y-auto">
                     {showPointSelection ? (
                         <div className="flex flex-col p-[12px]">
                             <ParcelTable selectedParcels={selectedParcels} />

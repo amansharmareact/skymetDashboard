@@ -74,7 +74,7 @@ const AssignDriverButtonComp = () => {
                 <div>
                     <hr className="border-t-[3px] border-[#4F7A21] mb-2" />
                     <p className="font-bold text-sm text-[#414651]">Step 1:</p>
-                    <p className="text[#535862] font-normal text-sm">
+                    <p className="text-[#535862] font-normal text-sm">
                         Discover Villages with Harvest Potential
                     </p>
                 </div>
