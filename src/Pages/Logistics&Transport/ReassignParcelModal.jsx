@@ -2,8 +2,9 @@ import React from "react";
 
 const ReassignParcelModal = ({ onClose }) => {
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-30 flex items-center justify-center">
-      <div className="bg-white rounded-xl w-[660px] p-6 relative shadow-lg">
+    <div className="fixed inset-0  z-50 bg-black bg-opacity-30 flex items-center justify-center">
+      {/* Modal Content: full screen height, scrollable if needed */}
+      <div className="bg-white m-[100px] h-screen overflow-y-auto rounded-xl w-[660px] p-6 relative shadow-lg">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -13,18 +14,18 @@ const ReassignParcelModal = ({ onClose }) => {
         </button>
 
         {/* Top Icon */}
-        <div className="w-[48px] h-[48px] rounded-[10px] border border-[#E9EAEB] bg-white flex items-center justify-center mb-4">
+        <div className="w-[48px] h-[48px] rounded-[10px] border border-[#E9EAEB] bg-white flex items-center justify-center">
           <img src="/images/Refresh.svg" alt="Refresh" />
         </div>
 
         {/* Heading */}
-        <h2 className="text-lg font-bold text-[#181D27]">Reassign Parcels</h2>
-        <p className="text-sm font-normal text-[#535862] mb-4">
+        <h2 className="text-lg font-bold text-[#181D27] mt-[16px]">Reassign Parcels</h2>
+        <p className="text-sm font-normal text-[#535862]">
           Reassign specific parcels to another vehicle
         </p>
 
         {/* Trip Info */}
-        <div className="grid grid-cols-4 gap-3 text-sm mb-4">
+        <div className="grid grid-cols-4 gap-3 text-sm mt-[16px]">
           <div>
             <p className="text-[#717680] font-medium">Trip ID</p>
             <p className="font-bold text-[#414651]">TRP-3409</p>
@@ -44,7 +45,7 @@ const ReassignParcelModal = ({ onClose }) => {
         </div>
 
         {/* Parcel Table */}
-        <div className="border border-[#E9EAEB] rounded-md mb-5 overflow-x-auto">
+        <div className="border border-[#E9EAEB] rounded-md overflow-x-auto mt-[16px]">
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-[#F7F8F9] text-[#717680] text-bold text-xs text-left">
@@ -111,7 +112,7 @@ const ReassignParcelModal = ({ onClose }) => {
                   key={index}
                   className="border-b border-[#E9EAEB] text-[#535862] font-normal"
                 >
-                  <td className="px-4 py-2 ">
+                  <td className="px-4 py-2">
                     {index !== 3 && <input type="checkbox" />}
                   </td>
                   <td className="px-4 py-2 text-[#181D27] font-medium">
@@ -127,17 +128,17 @@ const ReassignParcelModal = ({ onClose }) => {
         </div>
 
         {/* Driver & Vehicle Dropdowns */}
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <div>
-            <label className="text-sm font-medium text-[#414651] block mb-1">
+        <div className="flex items-center mt-[16px] justify-between gap-4">
+          <div className="w-full ">
+            <label className="text-sm mb-[6px] font-medium text-[#414651] block">
               Select New Driver <span className="text-red-500">*</span>
             </label>
             <select className="w-full h-[44px] border border-[#D5D7DA] text-[#717680] rounded-md px-3 text-sm">
               <option>Choose from available drivers</option>
             </select>
           </div>
-          <div>
-            <label className="text-sm font-medium text-[#414651] block mb-1">
+          <div className="w-full">
+            <label className="text-sm mb-[6px] font-medium text-[#414651] block">
               Select New Vehicle <span className="text-red-500">*</span>
             </label>
             <select className="w-full h-[44px] border border-[#D5D7DA] text-[#717680] rounded-md px-3 text-sm">
@@ -147,8 +148,8 @@ const ReassignParcelModal = ({ onClose }) => {
         </div>
 
         {/* Optional Note */}
-        <div className="mb-5">
-          <label className="text-sm font-medium text-[#414651] block mb-1">
+        <div className="">
+          <label className="text-sm font-medium text-[#414651] block mt-[16px] mb-[6px]">
             Optional Reassign Note
           </label>
           <textarea
@@ -159,7 +160,7 @@ const ReassignParcelModal = ({ onClose }) => {
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mt-[32px]">
           <p className="text-xs text-[#414651]">
             Time Stamp: <span className="font-bold">21/08/2025 14:23</span>
           </p>

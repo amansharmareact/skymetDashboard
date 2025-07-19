@@ -10,32 +10,32 @@ const HarvestStatusCard = () => {
     return (
         <div className="w-full bg-white rounded-xl border-gray-200 text-sm text-gray-800 z-10">
             {/* Header */}
-            <LastSync/>
+            <LastSync />
 
             {/* Map Image */}
             <div className="w-full">
-                <MapImage/>
+                <MapImage />
             </div>
             {/* Crop Harvest Summary */}
             <div>
-                <CropReadinessCard/>
+                <CropReadinessCard />
             </div>
 
             {/* Weather Forecast */}
             <div>
-                <WeatherForecast/>
+                <WeatherForecast />
             </div>
 
             {/* Logistics */}
             <div>
-            <LogisticsSection/>
+                <LogisticsSection />
             </div>
 
             {/* Past Collection Attempts */}
-            <PastCollection/>
+            <PastCollection />
 
             {/* Visit Log */}
-            <VisitLog/>
+            <VisitLog />
         </div>
     );
 };

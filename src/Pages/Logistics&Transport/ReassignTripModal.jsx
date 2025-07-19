@@ -64,7 +64,7 @@ const ReassignTripModal = ({ onClose }) => {
             Time Stamp: <span className="font-bold">21/08/2025 14:23</span>
           </p>
           {/* Submit Button */}
-          <button className="w-full bg-[#4F7A21] text-white h-[44px] font-bold py-2 rounded-lg hover:bg-[#3a620c] transition">
+          <button className="w-full bg-[#4F7A21] flex items-center justify-center text-white h-[44px] font-bold py-2 rounded-lg hover:bg-[#3a620c] transition">
             Reassign
           </button>
         </div>

@@ -31,7 +31,7 @@ const AssignDriverButtonComp = () => {
 
 
     return (
-        <div className="w-full max-w-5xl bg-white px-4 py-2">
+        <div className="w-full max-w-5xl bg-white py-2">
             {/* Top Row: Dropdown and Audit Code */}
             <div className="flex items-start justify-between mb-4">
                 <div className="w-full flex items-center justify-between">

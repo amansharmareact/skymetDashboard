@@ -16,7 +16,7 @@ const TripPriorityPanel = () => {
 
 
   return (
-    <div className="w-full max-w-5xl bg-white py-[24px] ">
+    <div className="w-full max-w-5xl bg-white py-[24px]">
 
       {/* Navigation Buttons */}
       <div className="flex items-center justify-between mb-5 gap-x-4">
