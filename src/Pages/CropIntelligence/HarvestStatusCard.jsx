@@ -8,9 +8,7 @@ import WeatherForecast from "./WeatherForecast";
 
 const HarvestStatusCard = () => {
     return (
-        <div className="w-full bg-white rounded-xl border-gray-200 text-sm text-gray-800 z-10">
-            {/* Header */}
-            <LastSync/>
+        <div className="w-full bg-white rounded-xl border-gray-200 text-sm text-gray-800 z-10 lg:w-[540px]">
 
             {/* Map Image */}
             <div className="w-full">

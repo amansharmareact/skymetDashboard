@@ -20,11 +20,15 @@ export default function SkymetDashboard() {
         }}
       >
         {/* <Header />   */}
-        <div className="flex flex-col lg:flex-row gap-1 w-full">
+        <div className="flex flex-col mt-[16px] lg:flex-row gap-1 w-full">
           {/* MapCard - 40% on large screens, full on mobile */}
           <div className="w-full lg:w-[40%]">
             <div className="h-full">
-              <MapCard />
+              <MapCard apiData={{
+                geom: '{"type":"Point","coordinates":[72.8777,19.076]}',
+                geom_buffer150: '{"type":"Polygon","coordinates":[[[72.87,19.07],[72.88,19.07],[72.88,19.08],[72.87,19.08],[72.87,19.07]]]}',
+                extent: "BOX(72.87 19.07,72.88 19.08)"
+              }} />
             </div>
           </div>
           {/* StatCards - 60% on large screens, full on mobile */}

@@ -5,6 +5,7 @@ import ParcelEstimateCard from './ParcelEstimateCard'
 import TripPriorityPanel from './TripPriorityPanel'
 import TripSummaryBox from './TripSummaryBox'
 import VehicleSelectorWithDetails from './VehicleSelectorWithDetails'
+import '../../App.css'
 
 const AssignDriver = () => {
   const locations = [
@@ -63,7 +64,7 @@ const AssignDriver = () => {
         <div className="w-full">
           <MapData center={[16.705, 74.2433]} locations={locations} />
         </div>
-        <div className="w-[60%] pr-[10px] mb-5">
+        <div className="no-scrollbar w-[100%] pr-[10px] mb-5  h-[calc(100vh-15vh)] overflow-y-auto">
           <TripSummaryBox />
           <ParcelEstimateCard />
           <DriverSelectorWithDetails />
