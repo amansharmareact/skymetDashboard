@@ -3,6 +3,7 @@ import MapData from "./MapData";
 import HarvestStatusCard from "./HarvestStatusCard";
 import DateRibbon from "../../components/DateRibbon";
 import Filters from "../../components/Filters";
+import '../../App.css'
 
 const CropIntelligenceData = () => {
     const locations = [
@@ -56,7 +57,7 @@ const CropIntelligenceData = () => {
         },
     ];
     return (
-        <div className="w-full px-[20px]">
+        <div className="scrollbar-hide w-full px-[10px]">
             <div className="">
                 <Filters visibleFilters={{
                     crop: true,
@@ -66,12 +67,12 @@ const CropIntelligenceData = () => {
                     selectPlant: false
                 }} />
             </div>
-            <div className="w-full flex h-full">
-                <div className="w-[50%] h-full mt-[16px] flex flex-col">
+            <div className="w-full flex h-full sm:flex flex-wrap">
+                <div className="w-full h-full mt-[16px] flex flex-col lg:w-[68%]">
                     <MapData center={[16.705, 74.2433]} locations={locations} />
                     <DateRibbon />
                 </div>
-                <div className="w-[50%] h-full">
+                <div className="no-scrollbar w-full h-[calc(100vh-14vh)] overflow-y-auto lg:w-[32%]">
                     <HarvestStatusCard />
                 </div>
             </div>

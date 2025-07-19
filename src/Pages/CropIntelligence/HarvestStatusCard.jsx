@@ -8,7 +8,7 @@ import WeatherForecast from "./WeatherForecast";
 
 const HarvestStatusCard = () => {
     return (
-        <div className="bg-white rounded-xl border-gray-200 text-sm mb-5 text-gray-800 z-10">
+        <div className="w-full bg-white rounded-xl border-gray-200 text-sm text-gray-800 z-10">
             {/* Header */}
             <LastSync/>
 
@@ -27,7 +27,9 @@ const HarvestStatusCard = () => {
             </div>
 
             {/* Logistics */}
+            <div>
             <LogisticsSection/>
+            </div>
 
             {/* Past Collection Attempts */}
             <PastCollection/>

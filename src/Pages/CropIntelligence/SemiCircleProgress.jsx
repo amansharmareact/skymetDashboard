@@ -4,7 +4,7 @@ const SemiCircleProgress = ({ percentage }) => {
   const progress = (percentage / 100) * circumference;
 
   return (
-    <div className="relative w-[200px] h-[110px]">
+    <div className="w-full relative lg:w-[200px] h-[110px]">
       <svg viewBox="0 0 36 18" className="w-full h-full">
         {/* Background Arc */}
         <path

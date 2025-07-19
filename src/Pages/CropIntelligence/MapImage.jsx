@@ -4,8 +4,8 @@ import MapDataSnippet from "./MapDataSnippet";
 
 const MapImage = () => {
     return (
-        <div className="w-full flex justify-between items-center flex-wrap gap-y-1">
-            <div className="rounded-lg overflow-hidden">
+        <div className="w-full flex items-center flex-wrap gap-[10px]">
+            <div className="w-full rounded-lg lg:w-[215px] h-[215px]">
                 <MapDataSnippet />
             </div>
 
