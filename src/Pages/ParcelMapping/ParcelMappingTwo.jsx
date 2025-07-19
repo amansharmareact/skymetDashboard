@@ -79,7 +79,9 @@ const ParcelMappingTwo = () => {
           <div className="my-[16px] mx-[36px]">
             <Steps />
           </div>
-          <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
+          <div className="ml-[16px]">
+          <MapData  center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
+          </div>
         </div>
         {/*<div className="w-[60%] px-5">*/}
         {/*    <LastSync/>*/}

@@ -4,25 +4,27 @@ import { Link } from "react-router-dom";
 
 const RoutingSteps = ({ setShowPointSelection }) => {
   return (
-    <div className="w-full h-[104px] bg-white font-sans mt-[24px] rounded-md shadow-sm">
+    <div className="w-full h-auto bg-white font-sans mt-[24px] rounded-md ">
       {/* Header */}
-      <div className="w-full flex items-center justify-center rounded-[8px] text-[#414651] text-md font-bold py-[10px] px-[16px] border border-[#D5D7DA]">
+      <div className="w-full flex items-center justify-center rounded-[8px] text-[#414651] text-md font-bold py-[10px] px-[16px] border border-[#D5D7DA] mb-[16px]">
         <span>
           <IoIosArrowRoundBack className="w-[20px] h-[20px] text-[#A4A7AE]" />
         </span>
-        <Link to="/parcel-mapping-two" className="decoration:none">
+        <Link to="/parcel-mapping-two" className="ml-2 no-underline">
           Select Parcels from Another Village
         </Link>
-
       </div>
 
       {/* Continue Button */}
-      <button onClick={() => setShowPointSelection(false)} className="w-full bg-[#4F7A21] text-white py-3 mt-[16px] text-center text-md font-bold rounded-md mb-4">
+      <button
+        onClick={() => setShowPointSelection(false)}
+        className="w-full bg-[#4F7A21] text-white py-3 text-center text-md font-bold rounded-md mb-[16px]"
+      >
         Continue to Routing Phase
       </button>
 
       {/* Steps */}
-      <div className="h-[92px] flex justify-between text-sm">
+      <div className="flex justify-between text-sm space-x-4">
         <div className="flex-1 text-left">
           <div className="border-t-2 border-[#4A772F] w-full mb-1"></div>
           <div className="font-bold text-[#414651] text-sm">Step 1:</div>
