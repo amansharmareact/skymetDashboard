@@ -3,7 +3,7 @@ import SemiCircleProgress from "./SemiCircleProgress";
 
 const CropReadinessCard = () => {
   return (
-    <div className="w-[531px] h-[278px] p-0 mt-[16px]">
+    <div className="w-full h-[278px] p-0 mt-[16px]">
       <div className="text-[#717680] font-bold text-[14px] font-400 ml-2 mb-2">
         Crop + Harvest Summary :
       </div>

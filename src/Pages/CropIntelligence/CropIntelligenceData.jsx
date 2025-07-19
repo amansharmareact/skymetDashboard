@@ -64,15 +64,15 @@ const CropIntelligenceData = () => {
                     village: true,
                     region: false,
                     selectPlant: false
-                }}/>
+                }} />
             </div>
-            <div className="w-full flex  h-[calc(100vh-150px)] fixed overflow-hidden">
-                <div className="w-[calc(100%-680px)] h-full mt-[16px] flex flex-col">
-                    <MapData center={[16.705, 74.2433]} locations={locations}/>
-                    <DateRibbon/>
+            <div className="w-full flex h-full">
+                <div className="w-[50%] h-full mt-[16px] flex flex-col">
+                    <MapData center={[16.705, 74.2433]} locations={locations} />
+                    <DateRibbon />
                 </div>
-                <div className="w-[580px] h-full overflow-y-auto">
-                    <HarvestStatusCard/>
+                <div className="w-[50%] h-full">
+                    <HarvestStatusCard />
                 </div>
             </div>
         </div>
