@@ -3,7 +3,10 @@ import React from "react";
 import { AiOutlineExpandAlt } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 
-const LastSync = () => {
+const LastSync = ({ setLastSync }) => {
+  const closeSync = () => {
+    setLastSync(true);
+  }
   return (
     <div className="flex items-center justify-between px-4 py-2 w-full lg:w-[540px]">
       {/* Left: Sync Status */}
@@ -25,7 +28,7 @@ const LastSync = () => {
         <AiOutlineExpandAlt className="w-[20px] h-[20px]" />
 
         {/* Close Icon */}
-        <IoMdClose className="w-[20px] h-[20px]" />
+        <IoMdClose className="w-[20px] h-[20px]" onClick={closeSync} />
       </div>
     </div>
   );

@@ -7,6 +7,11 @@ import '../../App.css'
 import LastSync from "./LastSync";
 
 const CropIntelligenceData = () => {
+    const [lastSync, setLastSync] = React.useState(false);
+    const setLastSyncFunc = (val) => {
+        setLastSync(val);
+        console.log("value set in CropIntelligenceData:", val);
+    }
     const locations = [
         {
             lat: 16.705,
@@ -60,27 +65,31 @@ const CropIntelligenceData = () => {
     return (
         <div className="scrollbar-hide w-full px-[10px]">
             <div className="flex">
-              
                 {/* <div className="mt-6 mr-4">
                 <LastSync />
                 </div> */}
             </div>
             <div className="w-full flex h-full sm:flex flex-wrap">
-                <div className="w-full h-full mt-[16px] flex flex-col lg:w-[57%]">
-                      <Filters visibleFilters={{
-                    crop: true,
-                    season: true,
-                    village: true,
-                    region: false,
-                    selectPlant: false
-                }} />
+                <div
+                    className={`h-full mt-[16px] flex flex-col ${lastSync ? 'w-full' : 'lg:w-[57%]'
+                        }`}
+                >
+                    <Filters visibleFilters={{
+                        crop: true,
+                        season: true,
+                        village: true,
+                        region: false,
+                        selectPlant: false
+                    }} />
                     <MapData center={[16.705, 74.2433]} locations={locations} />
                     <DateRibbon />
                 </div>
-                <div className="no-scrollbar w-full h-[calc(100vh-14vh)] mt-[32px] overflow-y-auto lg:w-[43%]">
-                    <HarvestStatusCard />
+                {!lastSync && (<div className="no-scrollbar w-full h-[calc(100vh-14vh)] mt-[32px] overflow-y-auto lg:w-[43%]">
+                    <HarvestStatusCard setLastSync={setLastSyncFunc} />
                 </div>
+                )}
             </div>
+
         </div>
     );
 };

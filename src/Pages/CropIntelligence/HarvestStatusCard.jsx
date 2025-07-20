@@ -6,11 +6,15 @@ import PastCollection from "./PastCollection";
 import VisitLog from "./VisitLog";
 import WeatherForecast from "./WeatherForecast";
 
-const HarvestStatusCard = () => {
+const HarvestStatusCard = ({ setLastSync }) => {
+    const setLastSyncHandler = (val) => {
+        setLastSync(val);
+    }
+
     return (
         <div className="w-full bg-white rounded-xl border-gray-200 text-sm text-gray-800 z-10">
             {/* Header */}
-            <LastSync />
+            <LastSync setLastSync={setLastSyncHandler} />
 
             {/* Map Image */}
             <div className="w-full">
