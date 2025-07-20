@@ -50,7 +50,7 @@ const AssignDriverButtonComp = () => {
                         >
                             Audit Tracking Code
                         </p>
-                        <p className="text-[24px] font-bold text-[#414651]">427452</p>
+                        <p className="text-right text-[24px] font-bold text-[#414651]">427452</p>
                     </div>
                 </div>
             </div>

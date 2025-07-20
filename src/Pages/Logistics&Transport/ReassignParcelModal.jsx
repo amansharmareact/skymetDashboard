@@ -132,7 +132,7 @@ const ReassignParcelModal = ({ onClose }) => {
           <div className="w-full ">
             <label className="text-sm mb-[6px] font-medium text-[#414651] block">
               Select New Driver <span className="text-red-500">*</span>
-            </label>
+            </label>  
             <select className="w-full h-[44px] border border-[#D5D7DA] text-[#717680] rounded-md px-3 text-sm">
               <option>Choose from available drivers</option>
             </select>

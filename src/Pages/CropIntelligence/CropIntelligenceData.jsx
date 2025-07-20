@@ -67,9 +67,9 @@ const CropIntelligenceData = () => {
                     region: false,
                     selectPlant: false
                 }} />
-                <div className="mt-6 mr-4">
+                {/* <div className="mt-6 mr-4">
                 <LastSync />
-                </div>
+                </div> */}
             </div>
             <div className="w-full flex h-full sm:flex flex-wrap">
                 <div className="w-full h-full mt-[16px] flex flex-col lg:w-[57%]">

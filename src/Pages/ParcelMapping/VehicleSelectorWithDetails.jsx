@@ -7,7 +7,7 @@ const VehicleSelectorWithDetails = () => {
       <label className="block text-sm font-medium text-[#414651] mb-1">
         Select New Vehicle <span className="text-red-500">*</span>
       </label>
-      <select className="w-[630px] h-[44px] border border-[#D5D7DA] rounded-md px-[14px] py-[10px] text-sm text-[#717680] mb-4 focus:outline-none">
+      <select className="w-full h-[44px] border border-[#D5D7DA] rounded-md px-[14px] py-[10px] text-sm text-[#717680] mb-4 focus:outline-none">
         <option>Choose available truck / vehicle</option>
       </select>
 
