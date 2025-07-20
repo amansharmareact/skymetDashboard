@@ -60,19 +60,20 @@ const CropIntelligenceData = () => {
     return (
         <div className="scrollbar-hide w-full px-[10px]">
             <div className="flex">
-                <Filters visibleFilters={{
-                    crop: true,
-                    season: true,
-                    village: true,
-                    region: false,
-                    selectPlant: false
-                }} />
+              
                 {/* <div className="mt-6 mr-4">
                 <LastSync />
                 </div> */}
             </div>
             <div className="w-full flex h-full sm:flex flex-wrap">
                 <div className="w-full h-full mt-[16px] flex flex-col lg:w-[57%]">
+                      <Filters visibleFilters={{
+                    crop: true,
+                    season: true,
+                    village: true,
+                    region: false,
+                    selectPlant: false
+                }} />
                     <MapData center={[16.705, 74.2433]} locations={locations} />
                     <DateRibbon />
                 </div>
