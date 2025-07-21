@@ -13,12 +13,12 @@ import MapDataLogistics from "./MapDataLogistics";
 
 const LogisticsAndTransport = () => {
   return (
-    <div className="bg-gray-50 min-h-screen px-[20px]">
+    <div className="bg-gray-50 min-h-screen px-[20px] w-full">
       {/* Filters */}
       <Filters />
 
       {/* Header Cards Section */}
-      <div className="flex flex-wrap gap-[4px] pt-[16px]">
+      <div className="w-full flex flex-wrap gap-[4px] pt-[16px]">
         {Array.from({ length: 6 }).map((_, idx) => (
           <ScheduledTripsCard key={idx} />
         ))}
