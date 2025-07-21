@@ -49,7 +49,7 @@ const LogisticsAndTransport = () => {
           <div className="mt-1 w-full">
             <ParcelProgressTable />
           </div>
-          <div className="mt-1 w-full">
+          <div className="my-[12px] mx-[12px] w-full">
             <ParcelTimeline />
           </div>
           <div className="mt-1 w-full">

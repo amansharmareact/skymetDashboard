@@ -1,67 +1,92 @@
+// ParcelTimeline.jsx
 import React from "react";
+import { FaCheck } from "react-icons/fa";
 
 const steps = [
-  { label: "Shirgaon", status: "completed" },
-  { label: "Ambewadi", status: "completed" },
-  { label: "Shahuwadi", status: "current" },
-  { label: "Kale", status: "upcoming" },
-  { label: "Padal", status: "upcoming" },
-  { label: "Kolhapur CBG Plant", status: "upcoming" },
+  "Shirgaon",
+  "Ambewadi",
+  "Shahuwadi",
+  "Kale",
+  "Padal",
+  "Kolhapur CBG Plant",
 ];
 
+const currentStep = 3; // index 0-based
+
 const ParcelTimeline = () => {
+  // Calculate left offset and width for the progress line
+  const stepCount = steps.length;
+  const percentPerStep = 100 / (stepCount - 1);
+  const leftPercent = 0; // Start at first step
+  const widthPercent = currentStep * percentPerStep;
+
   return (
-    <div className="flex items-center w-full px-6 py-4 bg-gradient-to-br from-white to-[#F4FAF3] rounded-md">
-      {steps.map((step, index) => {
-        const isLast = index === steps.length - 1;
-        const status = step.status;
+    <div className="flex items-center justify-center w-full bg-gray-50 lg:h-[56px]">
+      <div className="flex items-center w-full max-w-5xl relative">
+        {/* Background progress line */}
+        <div className="absolute top-[28%] h-0.5 bg-gray-200 rounded-full z-0 transform -translate-y-1/2" />
+        {/* Foreground progress line */}
+        <div
+          className="absolute top-[28%] z-10 h-0.5 rounded-full transform -translate-y-1/2 transition-all duration-500"
+          style={{
+            left: `calc(${leftPercent}% + 62px)`,
+            width: `calc(${widthPercent}% - 150px)`,
+            background: "linear-gradient(90deg, #4F7A21 60%, #7BC043 100%)",
+            boxShadow: "0 2px 8px 0 rgba(79,122,33,0.15)",
+          }}
+        />
 
-        const isCompleted = status === "completed";
-        const isCurrent = status === "current";
-        const isUpcoming = status === "upcoming";
+        {steps.map((step, index) => {
+          const isCompleted = index < currentStep;
+          const isActive = index === currentStep;
 
-        return (
-          <div key={index} className="flex items-center flex-1 min-w-0">
-            {/* Step Indicator */}
-            <div className="flex flex-col items-center w-full min-w-[70px]">
+          return (
+            <div key={index} className="flex-1 z-20 flex flex-col items-center">
+              {/* Circle */}
               <div
-                className={`w-6 h-6 flex items-center justify-center rounded-full border-2 
-                  ${
-                    isCompleted
-                      ? "bg-[#4F7A21] border-[#4F7A21] text-white"
-                      : isCurrent
-                      ? "border-[#4F7A21] text-[#4F7A21]"
-                      : "border-[#D5D7DA] text-[#D5D7DA]"
-                  } text-sm`}
+                className={`w-8 h-8 rounded-full flex items-center justify-center border-2 shadow-md transition-all duration-300
+                  ${isCompleted
+                    ? "border-[#4F7A21] bg-[#4F7A21] text-white"
+                    : isActive
+                      ? "border-[#7BC043] bg-white text-[#4F7A21] scale-110"
+                      : "border-gray-300 bg-white text-gray-300"
+                  }
+                  group-hover:scale-105
+                `}
+                style={{
+                  boxShadow: isActive ? "0 4px 16px 0 rgba(123,192,67,0.15)" : undefined,
+                  position: "relative",
+                }}
               >
-                {isCompleted ? "✓" : "●"}
+                {isCompleted ? (
+                  <FaCheck className="text-[16px]" />
+                ) : isActive ? (
+                  <>
+                    <div className="w-[24px] h-[24px] rounded-full bg-[#7bc043]" />
+                    <div className="absolute w-2 h-2 rounded-full border-2 border-[#7BC043] bg-white" />
+                  </>
+                ) : (
+                  <div className="w-[8px] h-[8px] rounded-full bg-gray-300" />
+                )}
               </div>
-              <div
-                className={`mt-2 text-[13px] text-center leading-4
-                  ${
-                    isCompleted || isCurrent
-                      ? "text-[#4F7A21] font-medium"
-                      : "text-[#414651] font-normal"
+              {/* Label */}
+              <span
+                className={`mt-3 text-[14px] text-base text-center font-medium transition-colors duration-300
+                  truncate max-w-[90px]
+                  ${isCompleted
+                    ? "text-[#4F7A21]"
+                    : isActive
+                      ? "text-[#7BC043]"
+                      : "text-gray-400"
                   }`}
+                title={step} // Optional: shows full text on hover
               >
-                {step.label}
-              </div>
+                {step}
+              </span>
             </div>
-
-            {/* Connector */}
-            {!isLast && (
-              <div
-                className={`h-[2px] flex-1 mx-1 
-                  ${
-                    isCompleted || isCurrent
-                      ? "bg-[#4F7A21]"
-                      : "bg-[#D5D7DA]"
-                  }`}
-              ></div>
-            )}
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

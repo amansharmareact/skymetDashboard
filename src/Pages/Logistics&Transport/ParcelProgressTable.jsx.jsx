@@ -96,6 +96,12 @@ const getStatusBadge = (status) => {
   }
 };
 
+const steps = [
+  { label: "Step 1", status: "complete" },
+  { label: "Step 2", status: "current" },
+  { label: "Step 3", status: "upcoming" },
+];
+
 
 
 const ParcelProgressTable = () => {

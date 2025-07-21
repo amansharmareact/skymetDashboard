@@ -18,6 +18,7 @@
     "dayjs": "^1.11.13",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.523.0",
+    "progress-tracker": "^3.1.0",
     "react": "^19.1.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.1.0",
@@ -26,6 +27,7 @@
     "react-router-dom": "^7.6.3",
     "react-scripts": "^5.0.1",
     "react-select": "^5.10.1",
+    "react-step-progress-bar": "^1.0.3",
     "recharts": "^3.0.0",
     "web-vitals": "^2.1.4"
   },
