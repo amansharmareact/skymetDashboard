@@ -26,7 +26,7 @@ const LogisticsAndTransport = () => {
 
       {/* Transport Status Cards */}
       <div className="flex">
-        <div className="flex flex-col px-1">
+        <div className="no-scrollbar flex flex-col px-1 overflow-y-auto h-[calc(100vh-200px)]">
           {Array.from({ length: 6 }).map((_, idx) => (
             <TransportStatusCard key={idx} />
           ))}

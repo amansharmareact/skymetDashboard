@@ -29,7 +29,7 @@ const ParcelTimeline = () => {
         <div
           className="absolute top-[28%] z-10 h-0.5 rounded-full transform -translate-y-1/2 transition-all duration-500"
           style={{
-            left: `calc(${leftPercent}% + 62px)`,
+            left: `calc(${leftPercent}% + 70px)`,
             width: `calc(${widthPercent}% - 150px)`,
             background: "linear-gradient(90deg, #4F7A21 60%, #7BC043 100%)",
             boxShadow: "0 2px 8px 0 rgba(79,122,33,0.15)",

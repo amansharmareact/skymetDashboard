@@ -13,7 +13,7 @@ const TransportStatusCard = () => {
   return (
     <div className="w-[332px] mt-2 h-full  rounded-xl border border-[#E9EAEB] bg-[#FAFAFA] p-[14px] pb-[13px] text-[#111827] shadow-sm">
       {/* Header */}
-      <div className="flex justify-between items-start mb-4">
+      <div className="flex justify-between items-start">
         <div>
           <h2 className="text-[20px] font-bold leading-none text-black">
             TRP-3409
