@@ -7,11 +7,7 @@ import '../../App.css'
 import LastSync from "./LastSync";
 
 const CropIntelligenceData = () => {
-    const [lastSync, setLastSync] = React.useState(false);
-    const setLastSyncFunc = (val) => {
-        setLastSync(val);
-        console.log("value set in CropIntelligenceData:", val);
-    }
+
     const locations = [
         {
             lat: 16.705,
@@ -71,8 +67,7 @@ const CropIntelligenceData = () => {
             </div>
             <div className="w-full flex h-full sm:flex flex-wrap">
                 <div
-                    className={`h-full mt-[16px] flex flex-col ${lastSync ? 'w-full' : 'lg:w-[57%]'
-                        }`}
+                    className="h-full mt-[16px] flex flex-col  lg:w-[57%]"
                 >
                     <Filters visibleFilters={{
                         crop: true,
@@ -84,10 +79,9 @@ const CropIntelligenceData = () => {
                     <MapData center={[16.705, 74.2433]} locations={locations} />
                     <DateRibbon />
                 </div>
-                {!lastSync && (<div className="no-scrollbar w-full h-[calc(100vh-14vh)] mt-[32px] overflow-y-auto lg:w-[43%]">
-                    <HarvestStatusCard setLastSync={setLastSyncFunc} />
+                <div className="no-scrollbar w-full h-[calc(100vh-14vh)] mt-[32px] overflow-y-auto lg:w-[43%]">
+                    <HarvestStatusCard />
                 </div>
-                )}
             </div>
 
         </div>

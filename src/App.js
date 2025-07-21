@@ -14,8 +14,6 @@ import ParcelMappingThree from "./Pages/ParcelMapping/ParcelMappingThree";
 import ParcelMappingTwo from "./Pages/ParcelMapping/ParcelMappingTwo";
 import ParcelPointSelection from "./Pages/ParcelMapping/ParcelPointSelection";
 function App() {
-
-
   return (
     <BrowserRouter>
       <div className="flex flex-col h-screen">
@@ -31,10 +29,10 @@ function App() {
           <div className="flex-1 overflow-y-auto">
             <Routes>
               <Route path="/dashboard" index element={<SkymetDashboard />} />
-                <Route
-                    path="/crop-intelligence"
-                    element={<CropIntelligence />}
-                />
+              <Route
+                path="/crop-intelligence"
+                element={<CropIntelligence />}
+              />
               <Route
                 path="/crop-intelligence-data"
                 element={
