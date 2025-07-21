@@ -2,10 +2,13 @@ import { RotateCcw } from "lucide-react";
 import React from "react";
 import { AiOutlineExpandAlt } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
-const LastSync = ({ setLastSync }) => {
+const LastSync = () => {
+  const navigate = useNavigate();
+
   const closeSync = () => {
-    setLastSync(true);
+    navigate("/crop-intelligence");
   }
   return (
     <div className="flex items-center justify-between px-4 py-2 w-full lg:w-[540px]">
