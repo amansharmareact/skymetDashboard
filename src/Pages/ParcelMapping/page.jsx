@@ -70,7 +70,7 @@ const ParcelMapping = () => {
           lastSync: false,
         }} />
       </div>
-      <div className="">
+      <div className="w-full">
         <MapData center={[16.705, 74.2433]} locations={locations} />
       </div>
     </div>

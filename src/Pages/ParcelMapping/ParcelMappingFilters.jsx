@@ -26,7 +26,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
 
   return (
     <>
-      <div className="flex items-center px-[20px] flex-wrap">
+      <div className="flex items-center pl-[20px] flex-wrap">
         {/* TCC Location */}
         <div className="flex items-center gap-[8px] flex-wrap">
           {visibleFilters.location !== false && (
@@ -96,10 +96,10 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
                 />
                 <span className="text-sm text-[#414651]">
                   {selectedRange?.startDate instanceof Date &&
-                  selectedRange?.endDate instanceof Date
+                    selectedRange?.endDate instanceof Date
                     ? `${formatDate(selectedRange.startDate)} – ${formatDate(
-                        selectedRange.endDate
-                      )}`
+                      selectedRange.endDate
+                    )}`
                     : "Select Range"}
                 </span>
               </div>
@@ -181,13 +181,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
           )}
         </div>
         {/*Last Sync*/}
-        <div>
-          {visibleFilters.lastSync !== false && (
-            <div className="w-[540px]">
-              <LastSync />
-            </div>
-          )}
-        </div>
+
       </div>
 
       {/* Render date picker modal */}

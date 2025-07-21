@@ -114,25 +114,15 @@ const ParcelPointSelection = () => {
     ];
 
     return (
-        <div className="flex flex-col w-full">
-            <div className="mt-[16px] ml-[20px]">
-                <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
-                    location: true,
-                    cropType: true,
-                    dateRange: false,
-                    radius: false,
-                    readiness: true,
-                    riskZones: false,
-                    searchParcel: false,
-                    reload: true,
-                    lastSync: true,
-                }} />
-            </div>
-                {showPointSelection && <div className="mx-[36px]">
-          <Steps content={"These fields meet the readiness threshold and are suitable for assigning to the current trip."} />
-            </div> }  
-            <div className="no-scrollbar flex justify-between w-full gap-[5px] px-[20px] overflow-hidden">
-                <div className="w-[65%]">
+        <div className="flex w-full">
+            <div className={`transition-all duration-300 ${showPointSelection ? "w-[60%]" : "w-[60%]"}`}>
+               
+                <div className="mt-[16px]">
+                    {showPointSelection && <div className="ml-[36px]">
+                        <Steps content={"These fields meet the readiness threshold and are suitable for assigning to the current trip."} />
+                    </div>}
+                </div>
+                <div className="no-scrollbar flex justify-between w-full gap-[5px] pl-[20px] overflow-hidden">
                     <div className="w-full">
                         <MapData
                             center={[16.705, 74.2433]}
@@ -141,9 +131,15 @@ const ParcelPointSelection = () => {
                         />
                     </div>
                 </div>
+            </div>
 
-                {/* Right - Panel */}
-                <div className="no-scrollbar h-[calc(100vh-15vh)] overflow-y-auto">
+            {/* Right - Panel */}
+            {/* Right - Panel */}
+            <div className={` h-screen mt-[36px] flex flex-col transition-all duration-300 ${showPointSelection ? "w-[40%]" : "w-[50%]"}`}>
+                <div>
+                    <LastSync />
+                </div>
+                <div className="flex-1 overflow-y-auto no-scrollbar">
                     {showPointSelection ? (
                         <div className="flex flex-col p-[12px]">
                             <ParcelTable selectedParcels={selectedParcels} />
@@ -152,11 +148,12 @@ const ParcelPointSelection = () => {
                             <RoutingSteps setShowPointSelection={setShowPointSelection} />
                         </div>
                     ) : (
-                        <Parcel className="w-full" />
+                        <Parcel />
                     )}
                 </div>
             </div>
-        </div>
+
+        </div >
     );
 };
 
