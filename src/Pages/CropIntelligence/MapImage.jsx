@@ -16,7 +16,7 @@ const MapImage = () => {
                 <div className="text-xs sm:text-sm lg:text-base text-[#717680] font-medium">Field/Village Type Tag</div>
 
                 {/* Tags */}
-                <div className="flex gap-x-[1px] flex-nowrap">
+                <div className="flex gap-[5px] flex-nowrap">
                     <span className="text-xs sm:text-sm lg:text-base text-[#067647] bg-[#ECFDF3] border border-[#ABEFC6] px-3 py-0.5 rounded-md font-medium">
                         Field
                     </span>
