@@ -62,7 +62,7 @@ const AssignDriver = () => {
     <div className="flex flex-col">
       <div className="w-full flex justify-between pt-[16px]">
         <div className="w-full">
-          <MapData center={[16.705, 74.2433]} locations={locations} />
+          <MapData center={[16.705, 74.2433]} locations={locations} height="88vh"/>
         </div>
         <div className="no-scrollbar w-[100%] pr-[10px] mb-5  h-[calc(100vh-15vh)] overflow-y-auto">
           <TripSummaryBox />

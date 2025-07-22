@@ -84,6 +84,7 @@ const MapData = ({
                      locations = [],
                      onClick,
                      onMarkerClick,
+                     height,
                  }) => {
     const [selectedReadiness, setSelectedReadiness] = useState([]);
 
@@ -102,8 +103,8 @@ const MapData = ({
             <MapContainer
                 center={center}
                 zoom={12}
-                className="rounded-4xl mx-5 mt-4 h-[60vh] sm:h-[65vh] md:h-[65vh] lg:h-[75vh]"
-                //style={{width: "fitContent"}}
+                className="rounded-4xl mx-5 mt-4"
+                style={{ height: height }}
                 whenReady={(map) => {
                     map.target.getContainer().addEventListener("click", onClick);
                 }}

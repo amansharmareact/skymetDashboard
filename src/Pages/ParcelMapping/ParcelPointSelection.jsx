@@ -114,7 +114,7 @@ const ParcelPointSelection = () => {
     ];
 
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full h-[calc(100vh-7vh)]">
             <div className="mt-[16px] ml-[20px]">
                 <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
                     location: true,
@@ -138,12 +138,13 @@ const ParcelPointSelection = () => {
                             center={[16.705, 74.2433]}
                             locations={locations}
                             onMarkerClick={handleMarkerClick}
+                            height = "77vh"
                         />
                     </div>
                 </div>
 
                 {/* Right - Panel */}
-                <div className="no-scrollbar h-[calc(100vh-15vh)] overflow-y-auto">
+                <div className="no-scrollbar overflow-y-auto">
                     {showPointSelection ? (
                         <div className="flex flex-col p-[12px]">
                             <ParcelTable selectedParcels={selectedParcels} />
