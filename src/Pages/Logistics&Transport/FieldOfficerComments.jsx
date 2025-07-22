@@ -6,7 +6,7 @@ const FieldOfficerComments = () => {
   const [isImgOpen, setIsImgOpen] = useState(false);
   const [isNotesOpen, setIsNotesOpen] = useState(false);
   return (
-    <div className="w-full bg-white rounded-md shadow-sm px-4 py-3 text-sm lg:w-[980px]">
+    <div className="w-full bg-white rounded-md shadow-sm px-4 py-3 text-sm">
       <div className="text-[#717680] text-sm font-medium mb-2">
         Field Officer Comments
       </div>

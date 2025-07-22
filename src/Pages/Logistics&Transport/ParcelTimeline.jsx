@@ -21,8 +21,8 @@ const ParcelTimeline = () => {
   const widthPercent = currentStep * percentPerStep;
 
   return (
-    <div className="flex items-center justify-center w-full bg-gray-50 lg:h-[56px]">
-      <div className="flex items-center w-full max-w-5xl relative">
+    <div className="flex items-center justify-center w-full mt-[12px]">
+      <div className="flex items-center w-full relative">
         {/* Background progress line */}
         <div className="absolute top-[28%] h-0.5 bg-gray-200 rounded-full z-0 transform -translate-y-1/2" />
         {/* Foreground progress line */}
@@ -71,15 +71,15 @@ const ParcelTimeline = () => {
               </div>
               {/* Label */}
               <span
-                className={`py-[12px] text-[14px] text-base text-center font-medium transition-colors duration-300
-                  ${isCompleted
+                className={`mt-2 text-sm font-medium
+                    ${isCompleted
                     ? "text-[#4F7A21]"
                     : isActive
                       ? "text-[#7BC043]"
-                      : "text-gray-400"
-                  }`}
-                title={step}
+                      : "text-gray-400"}
+                  `}
               >
+
                 {step}
               </span>
             </div>

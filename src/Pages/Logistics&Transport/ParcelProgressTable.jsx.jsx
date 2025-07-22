@@ -106,7 +106,7 @@ const steps = [
 
 const ParcelProgressTable = () => {
   return (
-    <div className="rounded-xl shadow border border-[#E9EAEB]">
+    <div className="rounded-xl overflow-hidden shadow border border-[#E9EAEB]">
       <table className="min-w-full text-sm text-left bg-white">
         <thead className="bg-[#FAFAFA] text-[#717680] font-bold text-xs">
           <tr>

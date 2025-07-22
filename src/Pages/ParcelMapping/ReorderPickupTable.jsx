@@ -132,7 +132,7 @@ const ReorderPickupTable = () => {
     };
 
     return (
-        <div className="rounded-xl shadow border border-[#E9EAEB]">
+        <div className="overflow-hidden rounded-xl shadow border border-[#E9EAEB]">
             <DndContext
                 sensors={sensors}
                 collisionDetection={closestCenter}

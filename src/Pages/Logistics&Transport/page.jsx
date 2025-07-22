@@ -18,9 +18,9 @@ const LogisticsAndTransport = () => {
     <div className="backgroundColor min-h-screen px-[20px] w-full">
       {/* Filters */}
       <Filters lastSync={true} apply={true}
-      visibleFilters={{
-        lastSync: false,
-      }}/>
+        visibleFilters={{
+          lastSync: false,
+        }} />
       {/* Header Cards Section */}
       <div className="w-full flex flex-wrap gap-[4px] pt-[16px]">
         {Array.from({ length: 6 }).map((_, idx) => (
@@ -28,18 +28,18 @@ const LogisticsAndTransport = () => {
         ))}
       </div>
       {/* Transport Status Cards */}
-      <div className="flex">
-        <div className="no-scrollbar bg-white border-2 border-[#E9EAEB] rounded-[16px] flex flex-col h-[calc(100vh-250px)] mt-[16px] overflow-y-auto">
+      <div className="flex w-full mt-[16px]">
+        <div className="w-[30%] bg-white border p-[6px] border-[#E9EAEB] rounded-[16px] flex flex-col h-[100vh] overflow-y-auto">
           <ProgressFilter />
           {Array.from({ length: 6 }).map((_, idx) => (
             <TransportStatusCard key={idx} />
           ))}
         </div>
-        <div className="flex flex-col">
-          <div className="mt-1 w-full">
+        <div className="flex flex-col w-[70%] backgroundColor border border-[#E9EAEB] p-[6px] rounded-xl pl-[4px]">
+          <div className="w-full">
             <TripStatusCard />
           </div>
-          <div className="mt-1 w-full z-0">
+          <div className="mt-[4px] w-full z-0">
             <MapDataLogistics visibleFilters={{
               circle: false
             }} />
@@ -53,7 +53,7 @@ const LogisticsAndTransport = () => {
           <div className="mt-1 w-full">
             <ParcelProgressTable />
           </div>
-          <div className="my-[12px] mx-[12px] w-full">
+          <div className="">
             <ParcelTimeline />
           </div>
           <div className="mt-1 w-full">
