@@ -76,7 +76,7 @@ const CropIntelligenceData = () => {
                         region: false,
                         selectPlant: false
                     }} />
-                    <MapData center={[16.705, 74.2433]} locations={locations} />
+                    <MapData center={[16.705, 74.2433]} locations={locations} height={"75vh"}/>
                     <DateRibbon />
                 </div>
                 <div className="no-scrollbar w-full h-[calc(100vh-14vh)] mt-[32px] overflow-y-auto lg:w-[43%]">

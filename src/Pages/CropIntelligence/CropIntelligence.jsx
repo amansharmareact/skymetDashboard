@@ -4,6 +4,7 @@ import HarvestStatusCard from "./HarvestStatusCard";
 import DateRibbon from "../../components/DateRibbon";
 import Filters from "../../components/Filters";
 import { useNavigate } from "react-router-dom";
+import '../../App.css'; // Import your CSS file for styling
 
 const CropIntelligence = () => {
     const navigate = useNavigate();
@@ -63,17 +64,17 @@ const CropIntelligence = () => {
         },
     ];
     return (
-        <div>
+        <div className="backgroundColor overflow-hidden">
 
             <div className="w-full px-[20px]">
                 <Filters />
             </div>
 
             <div className="mt-[16px]">
-                <MapData height={"70vh"} center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
+                <MapData height={"73vh"} center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
             </div>
             <div className="flex justify-items-start">
-                <div className="mt-[10px] px-[20px]">
+                <div className="mt-[10px] px-[20px] overflow-x-auto">
                     <DateRibbon />
                 </div>
             </div>

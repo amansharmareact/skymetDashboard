@@ -68,7 +68,7 @@ const ParcelMappingTwo = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="backgroundColor flex flex-col">
       <div className="mt-[16px] ml-[20px]">
         <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
           lastSync: false
@@ -79,7 +79,7 @@ const ParcelMappingTwo = () => {
           <div className="my-[16px] mx-[36px]">
             <Steps content="Step 1: Use the map below to find villages with high crop readiness. Click on any green marker to zoom into its fields and view eligible parcels for collection."/>
           </div>
-          <div className="ml-[16px] mb-[10px]">
+          <div className="ml-[16px] mb-[16px]">
             <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} height={"78vh"}/>
           </div>
         </div>

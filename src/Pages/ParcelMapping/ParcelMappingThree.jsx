@@ -63,9 +63,9 @@ const ParcelMappingThree = () => {
       <div className=""></div>
       <div className="w-full flex justify-between mt-10">
         <div className="w-full">
-          <MapData center={[16.705, 74.2433]} locations={locations} height="86vh"/>
+          <MapData center={[16.705, 74.2433]} locations={locations} height="83vh"/>
         </div>
-        <div className="w-[60%] px-5 space-y-5">
+        <div className="w-[60%] px-5 space-y-5 bg-white">
           <TripDetails onDateRangeChange={(range) => setDateRange(range)} />
           <TripSummaryBox />
           <ParcelMappingTable />

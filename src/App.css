@@ -42,6 +42,10 @@ body {
   /* Firefox */
 }
 
+.backgroundColor {
+  background: radial-gradient(239.04% 131.22% at 7.04% 7.38%, #FFF 0%, #E3EBE0 100%), #F8F8F8;
+}
+
 
 .legend-box {
   background: rgba(0, 0, 0, 0.6);

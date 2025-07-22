@@ -133,7 +133,7 @@ const ParcelPointSelection = () => {
             </div>}
             <div className="flex w-full gap-[5px] px-[20px]">
                 {/* Map Section */}
-                <div className="w-[55%]">
+                <div className="w-[55%] mb-[16px]">
                     <MapData
                         center={[16.705, 74.2433]}
                         locations={locations}
@@ -142,9 +142,9 @@ const ParcelPointSelection = () => {
                     />
                 </div>
                 {/* Right Panel */}
-                <div className="w-[45%] h-[77vh] no-scrollbar overflow-y-auto">
+                <div className="w-[45%] h-[80vh] no-scrollbar overflow-y-auto bg-white mb-[16px]">
                     {showPointSelection ? (
-                        <div className="flex flex-col p-[12px]">
+                        <div className="flex flex-col p-[12px] ">
                             <ParcelTable selectedParcels={selectedParcels} />
                             <WeatherForecast />
                             <ParcelEstimateCard />
