@@ -3,7 +3,7 @@ import MapData from "./MapData";
 import HarvestStatusCard from "./HarvestStatusCard";
 import DateRibbon from "../../components/DateRibbon";
 import Filters from "../../components/Filters";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CropIntelligence = () => {
     const navigate = useNavigate();
@@ -64,18 +64,18 @@ const CropIntelligence = () => {
     ];
     return (
         <div>
-            
+
             <div className="w-full px-[20px]">
-            <Filters />
+                <Filters />
             </div>
 
             <div className="mt-[16px]">
-                <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
+                <MapData height={"70vh"} center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
             </div>
             <div className="flex justify-items-start">
-            <div className="mt-[10px] px-[20px]">
-                <DateRibbon />
-            </div>
+                <div className="mt-[10px] px-[20px]">
+                    <DateRibbon />
+                </div>
             </div>
         </div>
     )

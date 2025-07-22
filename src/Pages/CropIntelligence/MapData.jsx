@@ -80,20 +80,12 @@ const Legend = () => {
 };
 
 const MapData = ({
-<<<<<<< HEAD
                      center = [16.705, 74.2433],
                      locations = [],
                      onClick,
                      onMarkerClick,
                      height,
                  }) => {
-=======
-    center = [16.705, 74.2433],
-    locations = [],
-    onClick,
-    onMarkerClick,
-}) => {
->>>>>>> 9e8c36e8bd3f8b71ad5be31e750e84ae3314d6ea
     const [selectedReadiness, setSelectedReadiness] = useState([]);
 
     const filteredLocations =
@@ -111,12 +103,8 @@ const MapData = ({
             <MapContainer
                 center={center}
                 zoom={12}
-<<<<<<< HEAD
                 className="rounded-4xl mx-5 mt-4"
                 style={{ height: height }}
-=======
-                className="rounded-4xl mx-5 mt-4 h-[60vh] sm:h-[65vh] md:h-[65vh] lg:h-[75vh]"
->>>>>>> 9e8c36e8bd3f8b71ad5be31e750e84ae3314d6ea
                 whenReady={(map) => {
                     map.target.getContainer().addEventListener("click", onClick);
                 }}
