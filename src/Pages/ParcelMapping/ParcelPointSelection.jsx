@@ -144,7 +144,7 @@ const ParcelPointSelection = () => {
             </div>
 
             {/* Right Panel */}
-            <div className="w-[45%] h-[100vh] no-scrollbar overflow-y-auto bg-white my-[16px]">
+            <div className="w-[45%] no-scrollbar overflow-y-auto bg-white my-[16px]">
                 <LastSync />
                 {showPointSelection ? (
                     <div className="flex flex-col p-[12px]">
