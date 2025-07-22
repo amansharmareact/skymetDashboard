@@ -10,6 +10,7 @@ import ParcelTimeline from "./ParcelTimeline.jsx";
 import FieldOfficerComments from "./FieldOfficerComments.jsx";
 import TripActivityLog from "./TripActivityLog.jsx";
 import MapDataLogistics from "./MapDataLogistics";
+import "../../App.css"
 
 const LogisticsAndTransport = () => {
   return (
@@ -24,7 +25,7 @@ const LogisticsAndTransport = () => {
       </div>
       {/* Transport Status Cards */}
       <div className="flex">
-        <div className="flex flex-col px-1 h-[calc(100vh-200px)]">
+        <div className="no-scrollbar flex flex-col px-1 h-[calc(100vh-280px)] overflow-y-auto">
           {Array.from({ length: 6 }).map((_, idx) => (
             <TransportStatusCard key={idx} />
           ))}

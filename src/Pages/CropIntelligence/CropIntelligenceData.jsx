@@ -74,12 +74,13 @@ const CropIntelligenceData = () => {
                         season: true,
                         village: true,
                         region: false,
-                        selectPlant: false
+                        selectPlant: false,
+                        lastSync: true,
                     }} />
-                    <MapData center={[16.705, 74.2433]} locations={locations} height={"75vh"}/>
+                    <MapData center={[16.705, 74.2433]} locations={locations} height={"72vh"}/>
                     <DateRibbon />
                 </div>
-                <div className="no-scrollbar w-full h-[calc(100vh-14vh)] mt-[32px] overflow-y-auto lg:w-[43%]">
+                <div className="no-scrollbar w-full h-[calc(100vh-20vh)] mt-[110px] overflow-y-auto lg:w-[43%]">
                     <HarvestStatusCard />
                 </div>
             </div>

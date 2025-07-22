@@ -11,7 +11,7 @@ const HarvestStatusCard = () => {
     return (
         <div className="w-full bg-white rounded-xl border-gray-200 text-sm text-gray-800 z-10">
             {/* Header */}
-            <LastSync />
+            {/* <LastSync /> */}
 
             {/* Map Image */}
             <div className="w-full">
