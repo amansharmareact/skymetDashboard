@@ -1,6 +1,6 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import {
     Circle,
     MapContainer,
@@ -11,7 +11,7 @@ import {
 } from "react-leaflet";
 import LegendOverlay from "../../components/ui/LegendCheckbox";
 import LocationTooltip from "../../components/ui/LocationTooltip";
-import {useLocation} from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
 const Location = window.location.origin + "/images/Location.svg";
 const Plant = window.location.origin + "/images/Factory.svg";
@@ -40,7 +40,7 @@ const Legend = () => {
     const map = useMap();
 
     useEffect(() => {
-        const legend = L.control({position: "bottomleft"});
+        const legend = L.control({ position: "bottomleft" });
 
         // legend.onAdd = () => {
         //   const div = L.DomUtil.create("div", "info legend-box");
@@ -80,12 +80,20 @@ const Legend = () => {
 };
 
 const MapData = ({
+<<<<<<< HEAD
                      center = [16.705, 74.2433],
                      locations = [],
                      onClick,
                      onMarkerClick,
                      height,
                  }) => {
+=======
+    center = [16.705, 74.2433],
+    locations = [],
+    onClick,
+    onMarkerClick,
+}) => {
+>>>>>>> 9e8c36e8bd3f8b71ad5be31e750e84ae3314d6ea
     const [selectedReadiness, setSelectedReadiness] = useState([]);
 
     const filteredLocations =
@@ -103,8 +111,12 @@ const MapData = ({
             <MapContainer
                 center={center}
                 zoom={12}
+<<<<<<< HEAD
                 className="rounded-4xl mx-5 mt-4"
                 style={{ height: height }}
+=======
+                className="rounded-4xl mx-5 mt-4 h-[60vh] sm:h-[65vh] md:h-[65vh] lg:h-[75vh]"
+>>>>>>> 9e8c36e8bd3f8b71ad5be31e750e84ae3314d6ea
                 whenReady={(map) => {
                     map.target.getContainer().addEventListener("click", onClick);
                 }}
@@ -179,7 +191,7 @@ const MapData = ({
                                         )}; width: 16px; height: 16px; ${loc.type === "active"
                                             ? "border: 2px solid #00C853;"
                                             : "border: 2px solid white;"
-                                        } border-radius: 50%;"></div>`,
+                                            } border-radius: 50%;"></div>`,
                                         iconSize: [16, 16],
                                     })
                             }
@@ -192,13 +204,13 @@ const MapData = ({
                                 permanent={false}
                                 className="custom-tooltip"
                             >
-                                <LocationTooltip location={loc}/>
+                                <LocationTooltip location={loc} />
                             </Tooltip>
                         </Marker>
                     );
                 })}
 
-                <Legend/>
+                <Legend />
             </MapContainer>
         </div>
     );

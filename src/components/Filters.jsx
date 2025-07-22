@@ -8,7 +8,7 @@ import {
 import { useState } from "react";
 import CustomDropdown from "./ui/Dropdown";
 import FilterModal from "./ui/FilterModal";
-const Filters = ({ visibleFilters = {} }) => {
+const Filters = ({ visibleFilters = {}, lastSync, apply }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -28,7 +28,7 @@ const Filters = ({ visibleFilters = {} }) => {
               <select className="appearance-none border border-[#ACDC79] rounded-full pl-4 pr-8 py-1 text-sm text-gray-700 w-[228px] h-[40px] bg-[#F6FEF9]">
                 <option>Select CBG Plant...</option>
               </select>
-                <ChevronDown className="w-4 h-4 m-1 text-gray-500 absolute right-3 top-2.5 pointer-events-none" />
+              <ChevronDown className="w-4 h-4 m-1 text-gray-500 absolute right-3 top-2.5 pointer-events-none" />
             </div>
           </div>
         </div>
@@ -95,32 +95,31 @@ const Filters = ({ visibleFilters = {} }) => {
       )}
 
       {/* Apply Button */}
-      {/*<>*/}
-      {/*  <div*/}
-      {/*    className="bg-white border  border-[#D5D7DA] p-[12px]  w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm"*/}
-      {/*    onClick={() => setOpen(true)}*/}
-      {/*  >*/}
-      {/*    <Filter className="w-[16px] h-[16px] text-[#A4A7AE]" />*/}
-      {/*  </div>*/}
-      {/*  <FilterModal isOpen={open} onClose={() => setOpen(false)} />*/}
-      {/*</>*/}
+      {/* <>
+        <div
+          className="bg-white border  border-[#D5D7DA] p-[12px]  w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm"
+          onClick={() => setOpen(true)}
+        >
+          <Filter className="w-[16px] h-[16px] text-[#A4A7AE]" />
+        </div>
+        <FilterModal isOpen={open} onClose={() => setOpen(false)} />
+      </> */}
 
-      {/*<div className=" w-[109px] h-[44px] flex items-center justify-center gap-2 bg-[#4CA30D] text-white px-[18px] py-[12px] rounded-lg  text-sm font-medium cursor-pointer">*/}
-      {/*  <div>Apply</div>*/}
-      {/*  <ArrowRight className="w-4 h-4" />*/}
-      {/*</div>*/}
+      {apply && <div className=" w-[109px] h-[44px] flex items-center justify-center gap-2 bg-[#4CA30D] text-white px-[18px] py-[12px] rounded-lg  text-sm font-medium cursor-pointer">
+        <div>Apply</div>
+        <ArrowRight className="w-4 h-4" />
+      </div>}
 
       {/* Last Synced */}
-      {/*<div className="flex items-center gap-2 text-xs text-gray-500 mt-2">*/}
-      {/*  <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">*/}
-      {/*    <img src="/images/RefreshIcon.svg" className="w-[20px] h-[20px] text-green-700" />*/}
-
-      {/*  </div>*/}
-      {/*  <div className="flex flex-col">*/}
-      {/*    <span>Last Synced</span>*/}
-      {/*    <span className="text-gray-700 font-medium">21/08/2025 14:23</span>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+      {lastSync && <div className="flex items-center gap-2 text-xs text-gray-500 mt-2 ml-[14px]">
+        <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">
+          <img src="/images/RefreshIcon.svg" className="w-[20px] h-[20px] text-green-700" />
+        </div>
+        <div className="flex flex-col">
+          <span>Last Synced</span>
+          <span className="text-gray-700 font-medium">21/08/2025 14:23</span>
+        </div>
+      </div>}
     </div>
   );
 };

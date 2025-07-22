@@ -26,28 +26,28 @@ const RoutingSteps = ({ setShowPointSelection }) => {
       {/* Steps */}
       <div className="flex justify-between text-sm space-x-4">
         <div className="flex-1 text-left">
-          <div className="border-t-2 border-[#4A772F] w-full mb-1"></div>
-          <div className="font-bold text-[#414651] text-sm">Step 1:</div>
+          <div className="border-t-4 border-[#4A772F] w-full"></div>
+          <div className="font-bold text-[#414651] text-sm pt-[12px]">Step 1:</div>
           <div className="text-[#535862]">
             Discover Villages with Harvest Potential
           </div>
         </div>
 
         <div className="flex-1 text-left">
-          <div className="border-t-2 border-[#A5D549] w-full mb-1"></div>
-          <div className="font-bold text-[#414651] text-sm">Step 2:</div>
+          <div className="border-t-4 border-[#A5D549] w-full"></div>
+          <div className="font-bold text-[#414651] text-sm pt-[12px]">Step 2:</div>
           <div className="text-[#4A772F]">Select Parcels for the Trip</div>
         </div>
 
         <div className="flex-1 text-left">
-          <div className="border-t-2 border-[#E5E5E5] w-full mb-1"></div>
-          <div className="font-bold text-[#414651] text-sm">Step 3:</div>
+          <div className="border-t-4 border-[#E5E5E5] w-full"></div>
+          <div className="font-bold text-[#414651] text-sm pt-[12px]">Step 3:</div>
           <div className="text-[#535862]">Optimize Route</div>
         </div>
 
         <div className="flex-1 text-left">
-          <div className="border-t-2 border-[#E5E5E5] w-full mb-1"></div>
-          <div className="font-bold text-[#414651] text-sm">Step 4:</div>
+          <div className="border-t-4 border-[#E5E5E5] w-full"></div>
+          <div className="font-bold text-[#414651] text-sm pt-[12px]">Step 4:</div>
           <div className="text-[#535862]">
             Assign Driver, Vehicle & Create Trip
           </div>

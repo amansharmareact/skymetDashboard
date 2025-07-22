@@ -11,7 +11,7 @@ const Parcel = () => {
     const [dateRange, setDateRange] = useState(null);
 
     return (
-        <div className="flex ">
+        <div className="flex mr-[20px]">
             <div className="w-full relative top-3 flex justify-between">
                 <div className="flex flex-col">
                     <div>

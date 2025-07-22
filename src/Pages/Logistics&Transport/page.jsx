@@ -15,18 +15,16 @@ const LogisticsAndTransport = () => {
   return (
     <div className="bg-gray-50 min-h-screen px-[20px] w-full">
       {/* Filters */}
-      <Filters />
-
+      <Filters lastSync={true} apply={true}/>
       {/* Header Cards Section */}
       <div className="w-full flex flex-wrap gap-[4px] pt-[16px]">
         {Array.from({ length: 6 }).map((_, idx) => (
           <ScheduledTripsCard key={idx} />
         ))}
       </div>
-
       {/* Transport Status Cards */}
       <div className="flex">
-        <div className="no-scrollbar flex flex-col px-1 overflow-y-auto h-[calc(100vh-200px)]">
+        <div className="flex flex-col px-1 h-[calc(100vh-200px)]">
           {Array.from({ length: 6 }).map((_, idx) => (
             <TransportStatusCard key={idx} />
           ))}

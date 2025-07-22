@@ -11,7 +11,7 @@ const LastSync = () => {
     navigate("/crop-intelligence");
   }
   return (
-    <div className="flex items-center justify-between px-4 py-2 w-full lg:w-[540px]">
+    <div className="flex items-center justify-between px-4 py-2 w-full">
       {/* Left: Sync Status */}
       <div className="flex items-center gap-3">
         <div className="border border-[#ACDC79] bg-white rounded-md p-1 w-[36px] h-[36px] flex items-center justify-center">

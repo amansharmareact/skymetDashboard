@@ -21,7 +21,7 @@ const DriverSelectorWithDetails = () => {
         />
 
         {/* Info */}
-        <div className="grid grid-cols-3 font-medium rounded-xl p-[10px]  gap-y-3 text-sm text-[#717680] w-[494px] h-[182px] bg-[#F6F7F8]">
+        <div className="grid grid-cols-3 font-medium rounded-xl p-[10px]  gap-y-3 text-sm text-[#717680] w-full bg-[#F6F7F8]">
           <div>
             <p>Driver Name</p>
             <p className="font-bold text-[#181D27] text-md">Sunil Pawar</p>
