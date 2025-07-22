@@ -114,7 +114,7 @@ const ParcelPointSelection = () => {
     ];
 
     return (
-        <div className="flex flex-col w-full h-[calc(100vh-7vh)]">
+        <div className="flex flex-col w-full h-[calc(100vh - 64px)]">
             <div className="mt-[16px] ml-[20px]">
                 <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
                     location: true,
@@ -131,31 +131,29 @@ const ParcelPointSelection = () => {
             {showPointSelection && <div className="mx-[36px]">
                 <Steps content={"These fields meet the readiness threshold and are suitable for assigning to the current trip."} />
             </div>}
-            <div className="no-scrollbar flex justify-between w-full gap-[5px] px-[20px] overflow-hidden">
-                <div className="w-[65%]">
-                    <div className="w-full">
-                        <MapData
-                            center={[16.705, 74.2433]}
-                            locations={locations}
-                            onMarkerClick={handleMarkerClick}
-                            height="77vh"
-                        />
-                    </div>
+            <div className="flex w-full gap-[5px] px-[20px]">
+                {/* Map Section */}
+                <div className="w-[55%]">
+                    <MapData
+                        center={[16.705, 74.2433]}
+                        locations={locations}
+                        onMarkerClick={handleMarkerClick}
+                        height={"77vh"}
+                    />
                 </div>
-            </div>
-
-            {/* Right - Panel */}
-            <div className="no-scrollbar overflow-y-auto">
-                {showPointSelection ? (
-                    <div className="flex flex-col p-[12px]">
-                        <ParcelTable selectedParcels={selectedParcels} />
-                        <WeatherForecast />
-                        <ParcelEstimateCard />
-                        <RoutingSteps setShowPointSelection={setShowPointSelection} />
-                    </div>
-                ) : (
-                    <Parcel />
-                )}
+                {/* Right Panel */}
+                <div className="w-[45%] h-[77vh] no-scrollbar overflow-y-auto">
+                    {showPointSelection ? (
+                        <div className="flex flex-col p-[12px]">
+                            <ParcelTable selectedParcels={selectedParcels} />
+                            <WeatherForecast />
+                            <ParcelEstimateCard />
+                            <RoutingSteps setShowPointSelection={setShowPointSelection} />
+                        </div>
+                    ) : (
+                        <Parcel />
+                    )}
+                </div>
             </div>
         </div>
     );

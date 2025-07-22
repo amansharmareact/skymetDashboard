@@ -80,7 +80,7 @@ const ParcelMappingTwo = () => {
             <Steps content="Step 1: Use the map below to find villages with high crop readiness. Click on any green marker to zoom into its fields and view eligible parcels for collection."/>
           </div>
           <div className="ml-[16px] mb-[10px]">
-            <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} height="67vh"/>
+            <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} height={"78vh"}/>
           </div>
         </div>
         {/*<div className="w-[60%] px-5">*/}

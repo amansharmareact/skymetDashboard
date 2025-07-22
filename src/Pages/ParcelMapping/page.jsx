@@ -71,7 +71,7 @@ const ParcelMapping = () => {
         }} />
       </div>
       <div className="w-full">
-        <MapData center={[16.705, 74.2433]} locations={locations} />
+        <MapData center={[16.705, 74.2433]} locations={locations} height={"70vh"}/>
       </div>
     </div>
   );
