@@ -2,7 +2,7 @@ import React from "react";
 
 const VisitLog = () => {
   return (
-    <div className="space-y-2 mt-[10px]">
+    <div className="space-y-2 mt-[16px]">
       <p className="text-[#717680] font-bold text-sm ml-2 mb-2">
         Field Officer Visit Log
       </p>
@@ -23,10 +23,9 @@ const VisitLog = () => {
             Marked as Ready, Advised Drying Delay
           </p>
         </div>
-
-        {/* Bottom Row */}
       </div>
-        <div className="space-y-2">
+        {/* Bottom Row */}
+        <div className="space-y-[10px]">
           <p className="text-[#717680] font-bold text-sm ml-2 mb-2">
             Notes & Special Instructions
           </p>

@@ -67,7 +67,11 @@ const CropIntelligence = () => {
         <div className="backgroundColor overflow-hidden">
 
             <div className="w-full px-[20px]">
-                <Filters />
+                <Filters visibleFilters={{
+                    apply: false,
+                    lastSync: false,
+                    filter: false,
+                }}/>
             </div>
 
             <div className="mt-[16px]">

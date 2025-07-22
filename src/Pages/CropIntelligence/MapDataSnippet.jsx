@@ -1,13 +1,12 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import {useEffect, useState} from "react";
+import { useState } from "react";
 import {
     Circle,
     MapContainer,
     Marker,
     TileLayer,
     Tooltip,
-    useMap,
 } from "react-leaflet";
 import LocationTooltip from "../../components/ui/LocationTooltip";
 
@@ -33,15 +32,12 @@ const getColor = (type) => {
     }
 };
 
-// 🧭 Legend Component
-
-
-const MapData = ({
-                     center = [16.705, 74.2433],
-                     locations = [],
-                     onClick,
-                     onMarkerClick,
-                 }) => {
+const MapDataSnippet = ({
+    center = [16.705, 74.2433],
+    locations = [],
+    onClick,
+    onMarkerClick,
+}) => {
     const [selectedReadiness, setSelectedReadiness] = useState([]);
 
     const filteredLocations =
@@ -55,56 +51,24 @@ const MapData = ({
             );
 
     return (
-        <div>
+        <div className="w-full h-full flex items-center justify-center">
             <MapContainer
                 center={center}
                 zoom={12}
-                className="rounded-4xl mx-[0px]"
-                style={{height: "215px", width: "215px"}}
+                className="rounded-4xl w-full h-full"
+                style={{ width: "215px", height: "215px" }}
                 whenReady={(map) => {
                     map.target.getContainer().addEventListener("click", onClick);
                 }}
             >
-                {/*<LegendOverlay*/}
-                {/*    selectedReadiness={selectedReadiness}*/}
-                {/*    setSelectedReadiness={setSelectedReadiness}*/}
-                {/*/>*/}
                 <TileLayer
-                    // attribution="Tiles &copy; Esri — Source: Esri, Maxar"
                     url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
                 />
                 <TileLayer
-                    // attribution="Labels &copy; Esri"
                     url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
                 />
 
                 {filteredLocations.map((loc, index) => {
-                    const isPlantCenter = loc.type === "plant";
-
-                    // if (isPlantCenter) {
-                    //     return (
-                    //         <Circle
-                    //             key={index}
-                    //             center={[loc.lat, loc.lng]}
-                    //             radius={15000}
-                    //             pathOptions={{
-                    //                 color: "yellow",
-                    //                 fillColor: "rgba(255, 255, 0, 0.2)",
-                    //                 fillOpacity: 0.4,
-                    //             }}
-                    //         >
-                    //             <Marker
-                    //                 position={[loc.lat, loc.lng]}
-                    //                 icon={L.icon({
-                    //                     iconUrl: Plant,
-                    //                     iconSize: [32, 32],
-                    //                     iconAnchor: [16, 16],
-                    //                 })}
-                    //             />
-                    //         </Circle>
-                    //     );
-                    // }
-
                     return (
                         <Marker
                             key={index}
@@ -126,12 +90,11 @@ const MapData = ({
                                         )}; width: 16px; height: 16px; ${loc.type === "active"
                                             ? "border: 2px solid #00C853;"
                                             : "border: 2px solid white;"
-                                        } border-radius: 50%;"></div>`,
+                                            } border-radius: 50%;"></div>`,
                                         iconSize: [16, 16],
                                     })
                             }
                         >
-                            {/*<Tooltip>{loc.name}</Tooltip>*/}
                             <Tooltip
                                 direction="top"
                                 offset={[0, -10]}
@@ -139,7 +102,7 @@ const MapData = ({
                                 permanent={false}
                                 className="custom-tooltip"
                             >
-                                <LocationTooltip location={loc}/>
+                                <LocationTooltip location={loc} />
                             </Tooltip>
                         </Marker>
                     );
@@ -149,4 +112,4 @@ const MapData = ({
     );
 };
 
-export default MapData;
+export default MapDataSnippet;

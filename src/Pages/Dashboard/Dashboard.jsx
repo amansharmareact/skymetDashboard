@@ -4,23 +4,23 @@ import Filters from "../../components/Filters";
 import ForecastChart from "../../components/ForecastChart";
 import MapCard from "../../components/MapCard";
 import StatCards from "../../components/StatCards";
+import { FiFilter } from 'react-icons/fi';
+import '../../App.css'
 
 export default function SkymetDashboard() {
   return (
-    <div className="flex-1 overflow-y-scroll">
-      <div className="w-full px-[20px]">
-        <Filters />
+    <div className="backgroundColor flex-1 overflow-y-scroll over-x-hidden">
+      <div className="w-full px-[10px] flex flex-grow flex-shrink flex-nowrap items-center gap-2 bg-transparent">
+        <Filters
+          visibleFilters={{ refresh: false }}
+          className="flex-1 min-w-[180px] max-w-[90vw]"
+        />
       </div>
 
-      <div
-        className="px-2 text-[#0e1e15]"
-        style={{
-          background:
-            "linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(157, 255, 206, 0.4))",
-        }}
-      >
+
+      <div className="px-2 text-[#0e1e15]">
         {/* <Header />   */}
-        <div className="flex flex-col mt-[16px] lg:flex-row gap-1 w-full">
+        <div className="flex flex-col p-4 lg:flex-row gap-1 w-full">
           {/* MapCard - 40% on large screens, full on mobile */}
           <div className="w-full lg:w-[40%]">
             <div className="h-full">

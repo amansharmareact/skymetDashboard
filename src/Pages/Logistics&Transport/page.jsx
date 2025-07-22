@@ -10,13 +10,17 @@ import ParcelTimeline from "./ParcelTimeline.jsx";
 import FieldOfficerComments from "./FieldOfficerComments.jsx";
 import TripActivityLog from "./TripActivityLog.jsx";
 import MapDataLogistics from "./MapDataLogistics";
+import ProgressFilter from "./progressFilter";
 import "../../App.css"
 
 const LogisticsAndTransport = () => {
   return (
-    <div className="bg-gray-50 min-h-screen px-[20px] w-full">
+    <div className="backgroundColor min-h-screen px-[20px] w-full">
       {/* Filters */}
-      <Filters lastSync={true} apply={true}/>
+      <Filters lastSync={true} apply={true}
+      visibleFilters={{
+        lastSync: false,
+      }}/>
       {/* Header Cards Section */}
       <div className="w-full flex flex-wrap gap-[4px] pt-[16px]">
         {Array.from({ length: 6 }).map((_, idx) => (
@@ -25,7 +29,8 @@ const LogisticsAndTransport = () => {
       </div>
       {/* Transport Status Cards */}
       <div className="flex">
-        <div className="no-scrollbar flex flex-col px-1 h-[calc(100vh-280px)] overflow-y-auto">
+        <div className="no-scrollbar bg-white border-2 border-[#E9EAEB] rounded-[16px] flex flex-col h-[calc(100vh-250px)] mt-[16px] overflow-y-auto">
+          <ProgressFilter />
           {Array.from({ length: 6 }).map((_, idx) => (
             <TransportStatusCard key={idx} />
           ))}

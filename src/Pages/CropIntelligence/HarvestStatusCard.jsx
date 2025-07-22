@@ -18,7 +18,7 @@ const HarvestStatusCard = () => {
                 <MapImage />
             </div>
             {/* Crop Harvest Summary */}
-            <div>
+            <div className="w-full mt-[16px]">
                 <CropReadinessCard />
             </div>
 

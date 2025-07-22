@@ -1,6 +1,6 @@
 import React from "react";
 
-function DateRibbon() {
+function DateRibbon({ className = "" }) {
   const today = new Date();
 
   // Dummy dots logic (you can replace this with your own rule later)
@@ -25,30 +25,29 @@ function DateRibbon() {
       isToday: date.toDateString() === new Date().toDateString(),
     };
   });
+
   return (
-    <div className="py-[5px] pb-[16px] flex gap-[5px] w-full overflow-x-auto px-[5px] justify-center z-1">
+    <div className={`py-[5px] pb-[16px] flex gap-[5px] w-full overflow-x-auto px-[5px] justify-center z-1 ${className}`}>
       {dateData.map(({ day, date, dots, isToday }, index) => (
         <div
           key={index}
-          className={`flex flex-col items-center bg-white bg-opacity-50 border  shadow-sm px-2 py-1 min-w-[91px] max-w-[110px] rounded-[40px] transition-all
-    ${isToday ? "border-[#86CB3C] border-2" : "border-[#E5E7EB]"}
-  `}
+          className={`flex flex-col items-center bg-white bg-opacity-50 border shadow-sm px-2 py-1 min-w-[91px] max-w-[110px] rounded-[40px] transition-all
+            ${isToday ? "border-[#86CB3C] border-2" : "border-[#E5E7EB]"}
+          `}
         >
           <div className="text-sm font-medium text-[#252B37] text-center">
             {day} {date}
           </div>
-
           <div className="flex justify-center mt-1 space-x-1">
             {dots.map((color, i) => (
               <span
                 key={i}
-                className={`w-1.5 h-1.5 rounded-full ${
-                  color === "green"
+                className={`w-1.5 h-1.5 rounded-full ${color === "green"
                     ? "bg-green-500"
                     : color === "blue"
-                    ? "bg-blue-500"
-                    : "bg-red-500"
-                } bg-opacity-80`}
+                      ? "bg-blue-500"
+                      : "bg-red-500"
+                  } bg-opacity-80`}
               />
             ))}
           </div>

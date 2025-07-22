@@ -27,7 +27,7 @@ const ParcelTimeline = () => {
         <div className="absolute top-[28%] h-0.5 bg-gray-200 rounded-full z-0 transform -translate-y-1/2" />
         {/* Foreground progress line */}
         <div
-          className="absolute top-[28%] z-10 h-0.5 rounded-full transform -translate-y-1/2 transition-all duration-500"
+          className="absolute top-[23%] z-10 h-0.5 rounded-full transform -translate-y-1/2 transition-all duration-500"
           style={{
             left: `calc(${leftPercent}% + 70px)`,
             width: `calc(${widthPercent}% - 150px)`,
@@ -44,7 +44,7 @@ const ParcelTimeline = () => {
             <div key={index} className="flex-1 z-20 flex flex-col items-center">
               {/* Circle */}
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center border-2 shadow-md transition-all duration-300
+                className={`w-6 h-6 rounded-full flex items-center justify-center border-2 shadow-md transition-all duration-300
                   ${isCompleted
                     ? "border-[#4F7A21] bg-[#4F7A21] text-white"
                     : isActive
@@ -59,27 +59,26 @@ const ParcelTimeline = () => {
                 }}
               >
                 {isCompleted ? (
-                  <FaCheck className="text-[16px]" />
+                  <FaCheck className="text-[14px]" />
                 ) : isActive ? (
                   <>
-                    <div className="w-[24px] h-[24px] rounded-full bg-[#7bc043]" />
+                    <div className="w-4 h-4 rounded-full bg-[#7bc043]" />
                     <div className="absolute w-2 h-2 rounded-full border-2 border-[#7BC043] bg-white" />
                   </>
                 ) : (
-                  <div className="w-[8px] h-[8px] rounded-full bg-gray-300" />
+                  <div className="w-2 h-2 rounded-full bg-gray-300" />
                 )}
               </div>
               {/* Label */}
               <span
-                className={`mt-3 text-[14px] text-base text-center font-medium transition-colors duration-300
-                  truncate max-w-[90px]
+                className={`py-[12px] text-[14px] text-base text-center font-medium transition-colors duration-300
                   ${isCompleted
                     ? "text-[#4F7A21]"
                     : isActive
                       ? "text-[#7BC043]"
                       : "text-gray-400"
                   }`}
-                title={step} // Optional: shows full text on hover
+                title={step}
               >
                 {step}
               </span>

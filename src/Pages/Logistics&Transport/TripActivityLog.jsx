@@ -48,14 +48,14 @@ const getTimeBadgeColor = (type) => {
 };
 
 const getTagStyle = (type) => {
-  const base = "px-2 py-0.5 font-medium flex items-center ";
+  const base = "px-[8px] py-[2px] font-medium flex items-center ";
   switch (type) {
     case "manual":
-      return `${base} bg-blue-100 text-xs rounded-[6px] bg-[#EFF8FF] text-[#175CD3] border border-[#B2DDFF]`;
+      return `${base} text-xs rounded-[6px] bg-[#EFF8FF] text-[#175CD3] border border-[#B2DDFF]`;
     case "weather":
-      return `${base} bg-orange-100 text-xs rounded-[6px] bg-[#EFF8FF] text-[#B54708] border border-[#FEDF89]`;
+      return `${base} text-xs rounded-[6px] bg-[#FFFAEB] text-[#B54708] border border-[#FEDF89]`;
     case "system":
-      return `${base} bg-orange-100 text-xs rounded-[6px] bg-[#FAFAFA] text-[#414651] border border-[#E9EAEB]`;
+      return `${base} text-xs rounded-[6px] bg-[#FAFAFA] text-[#414651] border border-[#E9EAEB]`;
     default:
       return `${base} bg-gray-100 text-gray-700`;
   }
