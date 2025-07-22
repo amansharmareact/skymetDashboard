@@ -2,8 +2,8 @@ import React from "react";
 
 const PastCollection = () => {
   return (
-    <div className="w-full mt-4">
-      <p className="text-[#717680] font-bold text-sm ml-2 mb-2">
+    <div className="w-full ">
+      <p className="text-[#717680] font-bold text-sm ml-2 mt-[16px] mb-[10px]">
         Past Collection Attempts
       </p>
 

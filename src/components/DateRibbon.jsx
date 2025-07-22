@@ -27,7 +27,7 @@ function DateRibbon({ className = "" }) {
   });
 
   return (
-    <div className={`py-[5px] pb-[16px] flex gap-[5px] w-full overflow-x-auto px-[5px] justify-center z-1 ${className}`}>
+    <div className={`py-[5px] pb-[16px] flex gap-[5px] w-full no-scrollbar overflow-x-auto px-[5px] justify-center z-1 ${className}`}>
       {dateData.map(({ day, date, dots, isToday }, index) => (
         <div
           key={index}
@@ -43,10 +43,10 @@ function DateRibbon({ className = "" }) {
               <span
                 key={i}
                 className={`w-1.5 h-1.5 rounded-full ${color === "green"
-                    ? "bg-green-500"
-                    : color === "blue"
-                      ? "bg-blue-500"
-                      : "bg-red-500"
+                  ? "bg-green-500"
+                  : color === "blue"
+                    ? "bg-blue-500"
+                    : "bg-red-500"
                   } bg-opacity-80`}
               />
             ))}

@@ -9,8 +9,8 @@ import '../../App.css'
 
 export default function SkymetDashboard() {
   return (
-    <div className="backgroundColor flex-1 overflow-y-scroll over-x-hidden">
-      <div className="w-full px-[10px] flex flex-grow flex-shrink flex-nowrap items-center gap-2 bg-transparent">
+    <div className="backgroundColor flex-1 px-[20px]">
+      <div className="w-full flex flex-grow flex-shrink flex-nowrap items-center gap-2">
         <Filters
           visibleFilters={{ refresh: false }}
           className="flex-1 min-w-[180px] max-w-[90vw]"
@@ -18,9 +18,9 @@ export default function SkymetDashboard() {
       </div>
 
 
-      <div className="px-2 text-[#0e1e15]">
+      <div className="text-[#0e1e15] pt-[16px]">
         {/* <Header />   */}
-        <div className="flex flex-col p-4 lg:flex-row gap-1 w-full">
+        <div className="flex flex-col lg:flex-row gap-1 w-full">
           {/* MapCard - 40% on large screens, full on mobile */}
           <div className="w-full lg:w-[40%]">
             <div className="h-full">

@@ -3,7 +3,7 @@ import React from "react";
 const LogisticsSection = () => {
   return (
     <div className="w-full mt-[16px]">
-      <p className="text-[#717680] font-bold text-[14px] ml-2">
+      <p className="text-[#717680] font-bold text-[14px] mb-[10px] ml-2">
         Logistics & Field Activity
       </p>
       <div className="w-full rounded-2xl border border-[#ECECED] px-5 py-4 grid grid-cols-2 gap-y-4">

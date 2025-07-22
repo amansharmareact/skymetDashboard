@@ -59,16 +59,12 @@ const CropIntelligenceData = () => {
         },
     ];
     return (
-        <div className="scrollbar-hide w-full px-[10px]">
-            <div className="flex">
-                {/* <div className="mt-6 mr-4">
-                <LastSync />
-                </div> */}
-            </div>
+        <div className="scrollbar-hide w-full">
+
             <div className="backgroundColor w-full grid grid-cols-2 lg:grid-cols-5 h-full">
                 {/* Left/Main Section */}
-                <div className="col-span-1 lg:col-span-3 h-full mt-[16px] flex flex-col">
-                    <Filters visibleFilters={{
+                <div className="col-span-1 lg:col-span-3 mt-[16px] flex flex-col">
+                    <Filters className="pl-[20px]" visibleFilters={{
                         crop: true,
                         season: true,
                         village: true,
@@ -83,11 +79,11 @@ const CropIntelligenceData = () => {
                     <DateRibbon className="w-[95%] mx-auto" />
                 </div>
                 {/* Right Panel */}
-                <div className="col-span-2 bg-white overflow-hidden">
-                    <div className="bg-white mt-[20px] px-[20px]">
+                <div className="col-span-2 bg-white px-[20px] overflow-hidden">
+                    <div className="bg-white mt-[21px]">
                         <LastSync />
                     </div>
-                    <div className="no-scrollbar mt-[44px] h-[calc(100vh-20vh)] overflow-y-auto">
+                    <div className="no-scrollbar mt-[36px] h-[calc(100vh-20vh)] overflow-y-auto">
                         <HarvestStatusCard />
                     </div>
                 </div>

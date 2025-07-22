@@ -8,9 +8,8 @@ import '../../App.css'; // Import your CSS file for styling
 
 const CropIntelligence = () => {
     const navigate = useNavigate();
-
     const handleRedirect = () => {
-        navigate("/crop-intelligence-data"); // 👈 Replace with your desired path
+        navigate("/crop-intelligence-data"); 
     };
 
     const locations = [
@@ -70,11 +69,12 @@ const CropIntelligence = () => {
                 <Filters visibleFilters={{
                     apply: false,
                     lastSync: false,
+                    refresh: false,
                     filter: false,
                 }}/>
             </div>
 
-            <div className="mt-[16px]">
+            <div className="mt-[16px] w-full">
                 <MapData height={"73vh"} center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
             </div>
             <div className="flex justify-items-start">

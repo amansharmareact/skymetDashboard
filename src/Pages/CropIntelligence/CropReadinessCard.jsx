@@ -28,7 +28,7 @@ const CropReadinessCard = () => {
           <div className="text-[16px] text-[#717680] font-normal">
             Forecast Harvest Date
           </div>
-          <div className="text-[22px] lg:text-[24px] font-bold text-[#414651]">
+          <div className="text-[22px] lg:text-[24px] leading-2 font-bold text-[#414651]">
             ETA:
             <span className="text-[#079455]"> 26 June 2025</span>
           </div>
