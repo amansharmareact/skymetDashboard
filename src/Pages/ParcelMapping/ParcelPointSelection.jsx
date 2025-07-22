@@ -114,26 +114,26 @@ const ParcelPointSelection = () => {
     ];
 
     return (
-        <div className="flex flex-col w-full h-[calc(100vh - 64px)]">
-            <div className="mt-[16px] ml-[20px]">
-                <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
-                    location: true,
-                    cropType: true,
-                    dateRange: false,
-                    radius: false,
-                    readiness: true,
-                    riskZones: false,
-                    searchParcel: false,
-                    reload: true,
-                    lastSync: true,
-                }} />
-            </div>
-            {showPointSelection && <div className="mx-[36px] mt-[16px]">
-                <Steps content={"These fields meet the readiness threshold and are suitable for assigning to the current trip."} />
-            </div>}
-            <div className="flex w-full gap-[5px] px-[20px]">
+        <div className="flex w-full h-[calc(100vh - 64px)]">
+            <div className="flex flex-col w-[55%] gap-[5px]">
                 {/* Map Section */}
-                <div className="w-[55%] mb-[16px]">
+                <div className="mt-[16px] ml-[20px]">
+                    <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
+                        location: true,
+                        cropType: true,
+                        dateRange: false,
+                        radius: false,
+                        readiness: true,
+                        riskZones: false,
+                        searchParcel: false,
+                        reload: true,
+                        lastSync: true,
+                    }} />
+                </div>
+                {showPointSelection && <div className="mx-[36px] mt-[16px]">
+                    <Steps content={"These fields meet the readiness threshold and are suitable for assigning to the current trip."} />
+                </div>}
+                <div className="mb-[16px]">
                     <MapData
                         center={[16.705, 74.2433]}
                         locations={locations}
@@ -141,21 +141,23 @@ const ParcelPointSelection = () => {
                         height={"75vh"}
                     />
                 </div>
-                {/* Right Panel */}
-                <div className="w-[45%] h-[80vh] no-scrollbar overflow-y-auto bg-white mb-[16px]">
-                    {showPointSelection ? (
-                        <div className="flex flex-col p-[12px] ">
-                            <ParcelTable selectedParcels={selectedParcels} />
-                            <WeatherForecast />
-                            <ParcelEstimateCard />
-                            <RoutingSteps setShowPointSelection={setShowPointSelection} />
-                        </div>
-                    ) : (
-                        <Parcel />
-                    )}
-                </div>
             </div>
-        </div>
+
+            {/* Right Panel */}
+            <div className="w-[45%] h-[100vh] no-scrollbar overflow-y-auto bg-white my-[16px]">
+                <LastSync />
+                {showPointSelection ? (
+                    <div className="flex flex-col p-[12px]">
+                        <ParcelTable selectedParcels={selectedParcels} />
+                        <WeatherForecast />
+                        <ParcelEstimateCard />
+                        <RoutingSteps setShowPointSelection={setShowPointSelection} />
+                    </div>
+                ) : (
+                    <Parcel />
+                )}
+            </div>
+        </div >
     );
 };
 
