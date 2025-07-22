@@ -128,7 +128,7 @@ const ParcelPointSelection = () => {
                     lastSync: true,
                 }} />
             </div>
-            {showPointSelection && <div className="mx-[36px]">
+            {showPointSelection && <div className="mx-[36px] mt-[16px]">
                 <Steps content={"These fields meet the readiness threshold and are suitable for assigning to the current trip."} />
             </div>}
             <div className="flex w-full gap-[5px] px-[20px]">

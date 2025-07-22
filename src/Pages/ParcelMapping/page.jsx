@@ -55,7 +55,7 @@ const ParcelMapping = () => {
     },
   ];
   return (
-    <div className="backgroundColor flex flex-col">
+    <div className="bg-white flex flex-col">
       <div className="px-[20px]">
         <ParcelMappingHeader />
       </div>
