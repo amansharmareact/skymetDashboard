@@ -114,21 +114,25 @@ const ParcelPointSelection = () => {
     ];
 
     return (
-        <div className="flex w-full h-[calc(100vh - 64px)]">
-            <div className="flex flex-col w-[55%] gap-[5px]">
+        <div className="flex w-full h-[calc(100vh-64px)] grid grid-cols-2">
+            <div className="flex flex-col w-[100%] gap-[5px]">
                 {/* Map Section */}
-                <div className="mt-[16px] ml-[20px]">
-                    <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
-                        location: true,
-                        cropType: true,
-                        dateRange: false,
-                        radius: false,
-                        readiness: true,
-                        riskZones: false,
-                        searchParcel: false,
-                        reload: true,
-                        lastSync: true,
-                    }} />
+                <div className="mt-[16px] ml-[10px] w-full">
+                    <ParcelMappingFilters
+                        className="grid grid-cols-4 justify-start gap-2 w-full ml-[20px] mt-[16px]"
+                        onDateRangeChange={(range) => setDateRange(range)}
+                        visibleFilters={{
+                            location: true,
+                            cropType: true,
+                            dateRange: false,
+                            radius: false,
+                            readiness: true,
+                            riskZones: false,
+                            searchParcel: false,
+                            reload: true,
+                            lastSync: true,
+                        }}
+                    />
                 </div>
                 {showPointSelection && <div className="mx-[36px] mt-[16px]">
                     <Steps content={"These fields meet the readiness threshold and are suitable for assigning to the current trip."} />
@@ -144,7 +148,7 @@ const ParcelPointSelection = () => {
             </div>
 
             {/* Right Panel */}
-            <div className="w-[45%] no-scrollbar overflow-y-auto bg-white my-[16px]">
+            <div className="w-[100%] no-scrollbar overflow-y-auto bg-white mt-[16px]">
                 <LastSync />
                 {showPointSelection ? (
                     <div className="flex flex-col p-[12px]">

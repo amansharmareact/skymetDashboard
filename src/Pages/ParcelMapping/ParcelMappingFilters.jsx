@@ -4,7 +4,7 @@ import CustomDropdown from "../../components/ui/Dropdown";
 import CustomDateRangePicker from "./CustomDatePicker";
 import LastSync from "../CropIntelligence/LastSync"; // import your range picker
 
-const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
+const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, className="" }) => {
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedRange, setSelectedRange] = useState({
     startDate: null,
@@ -26,28 +26,31 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
 
   return (
     <>
-      <div className="flex items-center pl-[20px] flex-wrap">
+      <div className="flex items-end pl-[10px] flex-wrap">
         {/* TCC Location */}
-        <div className="flex items-center gap-[8px] flex-wrap">
+        <div className={`flex items-end gap-[8px] flex-wrap ${className}`}>
           {visibleFilters.location !== false && (
             <div className="flex flex-col text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">
                 TCC Location{" "}
                 <span className="text-[#4F7A21]">
                   *
-                  <img
+                  {/* <img
                     src="/images/HelpIcon.svg"
                     alt="Info"
                     className="inline-block ml-1 w-[16px] h-[16px]"
-                  />
+                  /> */}
                 </span>
               </label>
-              <div className="relative">
-                <select className="appearance-none h-[40px] w-[233px] border border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm text-[#717680]">
+              <div className="relative w-full">
+                <select
+                  className="appearance-none h-[40px] w-full border border-[#ACDC79] bg-[#F6FEF9] rounded-full px-3 pr-8 text-sm text-[#717680]"
+                >
                   <option>Shirgaon TCC (Auto-Assign)</option>
                 </select>
-                <ChevronDown className="w-4 h-4 m-1 text-gray-500 absolute right-3 top-2.5 pointer-events-none" />
+                <ChevronDown className="w-4 h-4 text-gray-500 absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
               </div>
+
             </div>
           )}
 
@@ -87,7 +90,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
               </label>
               <div
                 onClick={() => setShowDatePicker(true)}
-                className="flex items-center gap-2 h-[40px] w-[228px] border border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm text-[#717680] cursor-pointer"
+                className="flex items-center gap-2 h-[40px] w-full border border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm text-[#717680] cursor-pointer"
               >
                 <img
                   src="/images/CalendarIcon.svg"
@@ -113,7 +116,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
                 Radius (km) <span className="text-[#4F7A21]">*</span>
               </label>
               <div className="relative">
-                <select className="appearance-none h-[40px] w-[105px] border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
+                <select className="appearance-none h-[40px] w-full border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
                   <option>200</option>
                 </select>
                 <ChevronDown className="w-4 h-4 m-1 text-gray-500 absolute right-3 top-2.5 pointer-events-none" />
@@ -126,14 +129,14 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
             <div className="flex flex-col text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">
                 Min Readiness %
-                <img
+                {/* <img
                   src="/images/HelpIcon.svg"
                   alt="Info"
                   className="inline-block ml-1 w-[16px] h-[16px]"
-                />
+                /> */}
               </label>
               <div className="relative">
-                <select className="appearance-none h-[40px] w-[138px]  border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
+                <select className="appearance-none h-[40px] w-full border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
                   <option>80</option>
                 </select>
                 <ChevronDown className="w-4 h-4 m-1 text-gray-500 absolute right-3 top-2.5 pointer-events-none" />
@@ -145,7 +148,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
           {visibleFilters.riskZones !== false && (
             <div className="flex flex-col text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">Exclude Risk Zones</label>
-              <div className="flex items-center h-[40px]  w-[156px] border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
+              <div className="flex items-center h-[40px]  w-full border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" className="accent-[#4F7A21]" />
                   <span className="text-[#535862]">Exclude OFF</span>
@@ -163,7 +166,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
               <input
                 type="text"
                 placeholder="Type parcel ID or village name"
-                className="h-[40px] w-[229px] border border-[#ACDC79] text-[#535862] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm "
+                className="h-[40px] full border border-[#ACDC79] text-[#535862] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm "
               />
             </div>
           )}

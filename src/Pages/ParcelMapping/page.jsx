@@ -66,7 +66,7 @@ const ParcelMapping = () => {
         <BioMassCard />
       </div>
       <div className=" mt-[16px]">
-        <ParcelMappingFilters visibleFilters={{
+        <ParcelMappingFilters className="grid grid-cols-8 w-full" visibleFilters={{
           lastSync: false,
         }} />
       </div>
