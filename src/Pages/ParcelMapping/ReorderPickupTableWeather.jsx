@@ -13,6 +13,7 @@ import {
     verticalListSortingStrategy
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import { ChevronUp, ChevronDown } from 'lucide-react';
 
 const initialParcel = [
     {
@@ -138,7 +139,10 @@ const ReorderPickupTableWeather = () => {
                 <table className="min-w-full text-sm text-left bg-white">
                     <thead className="bg-[#FAFAFA] text-[#717680] font-bold text-xs">
                         <tr>
-                            <th className="px-4 py-2"></th>
+                            <th className="px-4 py-2"><div className="flex flex-col items-center">
+                                <ChevronUp size={12} />
+                                <ChevronDown size={12} className="-mt-1" />
+                            </div></th>
                             <th className="px-4 py-2">Parcel ID</th>
                             <th className="px-4 py-2">Village</th>
                             <th className="px-4 py-2">Readiness %</th>

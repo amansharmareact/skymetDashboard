@@ -19,13 +19,13 @@ const TripPriorityPanel = () => {
     <div className="w-full max-w-5xl bg-white py-[24px]">
 
       {/* Navigation Buttons */}
-      <div className="flex items-center justify-between mb-5 gap-x-4">
-        <Link to="/parcel-mapping-two" className="decoration:none flex items-center justify-center gap-2 w-full border border-[#D5D7DA] px-4 h-[44px] text-[#414651] font-bold rounded-md bg-white hover:bg-gray-100 transition">
+      <div className="grid grid-cols-2 flex items-center justify-between mb-5 gap-x-4">
+        <Link to="/parcel-mapping-two" className="decoration:none flex items-center justify-center gap-2 w-full border border-[#D5D7DA] px-2 h-[44px] text-[#414651] font-bold rounded-md bg-white hover:bg-gray-100 transition">
           <FaArrowLeft className="text-sm" />
           <span> Go Back Selecting Parcels</span>
         </Link>
 
-        <Link to="/assign-driver" className="flex items-center justify-center w-full gap-2 bg-[#4F7A21] text-white font-bold rounded-md px-6 h-[44px] transition">
+        <Link to="/assign-driver" className="flex items-center justify-center w-full gap-2 bg-[#4F7A21] text-white font-bold rounded-md px-4 h-[44px] transition">
           Assign Driver & Vehicle
           <FaArrowRight className="text-sm" />
         </Link>
