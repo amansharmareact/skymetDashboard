@@ -8,11 +8,11 @@ const FieldOfficerComments = () => {
 
   const handleNotesCloseModal = () => setIsNotesOpen(false);
   return (
-    <div className="w-full bg-white rounded-md shadow-sm px-4 py-3 text-sm">
-      <div className="text-[#717680] text-sm font-medium mb-2">
+    <div className="w-full text-sm">
+      <div className="text-[#717680] text-sm font-medium mb-[4px]">
         Field Officer Comments
       </div>
-      <div className="flex flex-wrap justify-between items-center">
+      <div className="flex flex-wrap bg-[#F5F5F5] rounded-[12px] p-[10px]  justify-between items-center">
         {/* Comment Info */}
         <div className="flex flex-wrap gap-8 text-gray-800">
           <div>
@@ -48,15 +48,16 @@ const FieldOfficerComments = () => {
           </div>
         </div>
 
-        {/* Actions */}
-        <div className="flex gap-0.5 mt-4 sm:mt-0 shadow-sm text-[#414651] font-bold">
+        <div className="flex border border-gray-300 rounded-lg overflow-hidden text-sm font-medium">
           <button
-            className="px-4 py-1.5 border border-[#D5D7DA] rounded-l hover:bg-gray-100"
             onClick={() => setIsNotesOpen(true)}
+            className=" px-[16px] py-[10px] text-sm font-semibold text-[#414651] bg-white focus:outline-none focus:ring-0"
           >
             Add Note
           </button>
-          <button className="px-4 py-1.5 border border-[#D5D7DA] border-l-0 rounded-r hover:bg-gray-100">
+          <button
+            className=" px-[16px] py-[10px] text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none focus:ring-0"
+          >
             Acknowledge
           </button>
         </div>
@@ -68,12 +69,12 @@ const FieldOfficerComments = () => {
           }
         />
       )}
-    {isNotesOpen && (
-  <AddFieldNoteModal
-    isNotesOpen={isNotesOpen}
-    onClose={handleNotesCloseModal}
-  />
-)}
+      {isNotesOpen && (
+        <AddFieldNoteModal
+          isNotesOpen={isNotesOpen}
+          onClose={handleNotesCloseModal}
+        />
+      )}
     </div>
   );
 };

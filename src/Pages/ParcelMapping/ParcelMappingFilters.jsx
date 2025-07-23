@@ -4,7 +4,7 @@ import CustomDropdown from "../../components/ui/Dropdown";
 import CustomDateRangePicker from "./CustomDatePicker";
 import LastSync from "../CropIntelligence/LastSync"; // import your range picker
 
-const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, className="" }) => {
+const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, className = "" }) => {
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedRange, setSelectedRange] = useState({
     startDate: null,
@@ -26,20 +26,20 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
 
   return (
     <>
-      <div className="flex items-end pl-[10px] flex-wrap">
+      <div className="flex items-end flex-wrap">
         {/* TCC Location */}
-        <div className={`flex items-end gap-[8px] flex-wrap ${className}`}>
+        <div className={`flex items-end flex-wrap ${className}`}>
           {visibleFilters.location !== false && (
-            <div className="flex flex-col text-sm font-medium text-[#414651]">
+            <div className="flex flex-col w-full  text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">
                 TCC Location{" "}
                 <span className="text-[#4F7A21]">
                   *
-                  {/* <img
+                  <img
                     src="/images/HelpIcon.svg"
                     alt="Info"
                     className="inline-block ml-1 w-[16px] h-[16px]"
-                  /> */}
+                  />
                 </span>
               </label>
               <div className="relative w-full">
@@ -56,7 +56,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
 
           {/* Crop Type */}
           {visibleFilters.cropType !== false && (
-            <div className="flex flex-col text-sm font-medium text-[#414651]">
+            <div className="flex flex-col w-full text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">
                 Crop Type{" "}
                 <span className="text-[#4F7A21]">
@@ -68,7 +68,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
                   />
                 </span>
               </label>
-              <div className="relative">
+              <div className="relative w-full">
                 <CustomDropdown />
               </div>
             </div>
@@ -76,7 +76,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
 
           {/* Date Range Picker */}
           {visibleFilters.dateRange !== false && (
-            <div className="flex flex-col text-sm font-medium text-[#414651]">
+            <div className="flex flex-col w-full text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">
                 Date Range Picker{" "}
                 <span className="text-[#4F7A21]">
@@ -111,11 +111,11 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
 
           {/* Radius */}
           {visibleFilters.radius !== false && (
-            <div className="flex flex-col text-sm font-medium text-[#414651]">
+            <div className="flex flex-col w-full text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">
                 Radius (km) <span className="text-[#4F7A21]">*</span>
               </label>
-              <div className="relative">
+              <div className="relative w-full">
                 <select className="appearance-none h-[40px] w-full border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
                   <option>200</option>
                 </select>
@@ -126,7 +126,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
 
           {/* Min Readiness % */}
           {visibleFilters.readiness !== false && (
-            <div className="flex flex-col text-sm font-medium text-[#414651]">
+            <div className="flex flex-col w-full text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">
                 Min Readiness %
                 {/* <img
@@ -146,7 +146,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
 
           {/* Exclude Risk Zones */}
           {visibleFilters.riskZones !== false && (
-            <div className="flex flex-col text-sm font-medium text-[#414651]">
+            <div className="flex w-full flex-col text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">Exclude Risk Zones</label>
               <div className="flex items-center h-[40px]  w-full border text-[#535862] border-[#ACDC79] bg-[#F6FEF9] rounded-full px-[12px] py-[8px] text-sm ">
                 <label className="flex items-center gap-2 cursor-pointer">
@@ -159,7 +159,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
 
           {/* Search Parcel */}
           {visibleFilters.searchParcel !== false && (
-            <div className="flex flex-col text-sm font-medium text-[#414651]">
+            <div className="flex  w-full flex-col text-sm font-medium text-[#414651]">
               <label className="font-medium mb-1">
                 Search Parcel or Village
               </label>
@@ -173,7 +173,6 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
 
           {/* Reload Icon */}
           {visibleFilters.reload !== false && (
-            <div className="flex items-end h-full pt-5">
               <div className="bg-white w-[44px] h-[44px] flex items-center border border-[#CEEAB0] justify-center gap-1 cursor-pointer rounded-md shadow-sm">
                 <img
                   src="/images/RefreshIcon.svg"
@@ -181,7 +180,6 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {}, classNam
                   className="w-[20px] h-[20px] text-green-700"
                 />
               </div>
-            </div>
           )}
         </div>
         {/*Last Sync*/}

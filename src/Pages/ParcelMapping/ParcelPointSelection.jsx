@@ -119,7 +119,7 @@ const ParcelPointSelection = () => {
                 {/* Map Section */}
                 <div className="mt-[16px] ml-[10px] w-full">
                     <ParcelMappingFilters
-                        className="grid grid-cols-4 justify-start gap-2 w-full ml-[20px] mt-[16px]"
+                        className="grid grid-cols-4 gap-[8px] w-full ml-[20px] mt-[16px]"
                         onDateRangeChange={(range) => setDateRange(range)}
                         visibleFilters={{
                             location: true,

@@ -106,25 +106,25 @@ const TripStatusCard = () => {
               <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">
                 <RotateCcw className="w-4 h-4 text-[#414651]" />
               </div>
-            <div className="inline-flex w-full border border-gray-300 rounded-lg overflow-hidden text-sm font-medium">
-  <button
-    onClick={handleOpenModal}
-    className="w-1/3 py-[10px] px-[16px] text-sm font-semibold text-[#414651] bg-white focus:outline-none focus:ring-0"
-  >
-    Reassign
-  </button>
-  <button
-    className="w-1/3 py-[10px] px-[16px] text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none focus:ring-0"
-  >
-    Split Parcels
-  </button>
-  <button
-    onClick={() => setIsParcelModalOpen(true)}
-    className="w-1/3 py-[10px] px-[16px] text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none focus:ring-0"
-  >
-    Export Report
-  </button>
-</div>
+              <div className="inline-flex w-full border border-gray-300 rounded-lg overflow-hidden text-sm font-medium">
+                <button
+                  onClick={handleOpenModal}
+                  className="w-1/3 py-[10px] px-[16px] text-sm font-semibold text-[#414651] bg-white focus:outline-none focus:ring-0"
+                >
+                  Reassign
+                </button>
+                <button
+                  className="w-1/3 py-[10px] px-[16px] text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none focus:ring-0"
+                >
+                  Split Parcels
+                </button>
+                <button
+                  onClick={() => setIsParcelModalOpen(true)}
+                  className="w-1/3 py-[10px] px-[16px] text-sm font-semibold text-[#414651] bg-white border-l focus:outline-none focus:ring-0"
+                >
+                  Export Report
+                </button>
+              </div>
 
             </div>
           </div>

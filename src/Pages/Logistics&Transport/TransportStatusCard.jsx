@@ -101,7 +101,7 @@ const TransportStatusCard = () => {
 
               {/* Tooltip (hidden by default, shown on hover) */}
               {isHovered && (
-                <div className="z-50 absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-max whitespace-nowrap">
+                <div className="z-50  absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-max whitespace-nowrap">
                   <RouteCard />
                 </div>
               )}

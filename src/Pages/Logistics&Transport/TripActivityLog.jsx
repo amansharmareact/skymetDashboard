@@ -64,7 +64,7 @@ const getTagStyle = (type) => {
 const TripActivityLog = () => {
   return (
     <div className="">
-      <div className="text-[#717680] font-medium my-1 text-sm ml-2 flex items-center gap-2">
+      <div className="text-[#717680] font-medium my-1 text-sm flex items-center gap-2">
         Trip Activity Logs
         <span>
           <img src="/images/HelpIcon.svg" alt="HelpIcon" />
