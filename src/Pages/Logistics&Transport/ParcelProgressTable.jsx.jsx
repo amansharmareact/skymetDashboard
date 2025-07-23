@@ -106,8 +106,8 @@ const steps = [
 
 const ParcelProgressTable = () => {
   return (
-    <div className="rounded-xl overflow-hidden shadow border border-[#E9EAEB]">
-      <table className=" text-sm text-left bg-white">
+    <div className="rounded-xl overflow-x-auto shadow border border-[#E9EAEB]">
+      <table className="text-sm text-left bg-white">
         <thead className="bg-[#FAFAFA] text-[#717680] font-bold text-xs">
           <tr>
             <th className="px-[24px] py-[13px]">Stop</th>
@@ -126,9 +126,9 @@ const ParcelProgressTable = () => {
               key={idx}
               className="bg-white text-sm border-b border-[#E9EAEB]"
             >
-              <td className="pl-[24px] pr-[44px] py-[26px] text-[#535862]">{parcel.stop}</td>
-              <td className="pl-[24px] pr-[38px] py-[26px] text-[#535862]">{parcel.id}</td>
-              <td className="pl-[24px] pr-[38px] py-[26px] text-[#535862] gap-2">
+              <td className="pl-[14px] pr-[38px] py-[16px] text-[#535862]">{parcel.stop}</td>
+              <td className="pl-[14px] pr-[38px] py-[16px] text-[#535862]">{parcel.id}</td>
+              <td className="pl-[14px] pr-[38px] py-[16px] text-[#535862] gap-2">
                 {parcel.village === "Kolhapur Plant" && (
                   <span role="img" aria-label="plant">
                     <img
@@ -140,17 +140,17 @@ const ParcelProgressTable = () => {
                 )}
                 {parcel.village}
               </td>
-              <td className="pl-[24px] pr-[38px] py-[26px] text-[#181D27] font-semibold">
+              <td className="pl-[14px] pr-[38px] py-[16px] text-[#181D27] font-semibold">
                 {parcel.readiness}
               </td>
-              <td className="pl-[24px] pr-[38px] py-[26px] text-[#181D27]">{parcel.load}</td>
-              <td className="pl-[24px] pr-[38px] py-[26px] text-[#535862]">
+              <td className="pl-[14px] pr-[38px] py-[16px] text-[#181D27]">{parcel.load}</td>
+              <td className="pl-[14px] pr-[38px] py-[16px] text-[#535862]">
                 {getStatusBadge(parcel.status)}
               </td>
-              <td className="pl-[24px] pr-[38px] py-[26px] text-[#181D27] text-sm font-medium">
+              <td className="pl-[14px] pr-[38px] py-[16px] text-[#181D27] text-sm font-medium">
                 {parcel.notes}
               </td>
-              <td className="pl-[24px] pr-[38px] py-[26px] text-center">
+              <td className="pl-[14px] pr-[38px] py-[16px] text-center">
                 <span>
                   <img
                     src="/images/Magnify.svg"

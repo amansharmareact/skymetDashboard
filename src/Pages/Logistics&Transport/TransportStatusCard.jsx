@@ -133,13 +133,13 @@ const TransportStatusCard = () => {
           <div
             ref={fillRef}
             className="h-full bg-[#4F7A21]"
-            style={{ width: "50%" }}
+            style={{ width: "70%" }}
           />
         </div>
 
         {/* % Text */}
         <p className="text-right text-xs font-semibold text-gray-500 mt-[2px]">
-          0%
+          70%
         </p>
       </div>
     </div>
