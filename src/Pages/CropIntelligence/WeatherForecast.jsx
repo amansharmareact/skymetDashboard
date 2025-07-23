@@ -29,10 +29,10 @@ const WeatherForecast = () => {
     <div className="w-full mt-[16px]">
       <p className="text-[#717680] font-bold text-sm ml-2 mb-2">Weather Forecast</p>
       <div className="flex gap-[10px] overflow-x-auto no-scrollbar">
-        {cards.map((card, index) => (
+        {cards?.map((card, index) => (
           <div
             key={index}
-            className="flex-1 min-w-[173px] max-w-[173px] border border-[#E5E7EB] rounded-2xl flex items-center gap-[10px] bg-white h-full"
+            className="min-w-[180px] snap-start scroll-smooth snap-x  border border-[#E5E7EB] rounded-2xl flex items-center gap-[10px] bg-white h-full"
           >
             <div>
               <div className="flex justify-center p-[12px]">
