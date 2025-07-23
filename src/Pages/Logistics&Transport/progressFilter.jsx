@@ -8,13 +8,15 @@ const StatusFilter = () => {
         { id: 'in-progress', label: 'In Progress', color: 'bg-[#669F2A]', bg: 'bg-[#FAFAFA]', border: 'border-[#E9EAEB]', text: 'text-[#669F2A]', },
         { id: 'en-route', label: 'En Route', color: 'bg-[#EF6820]', bg: 'bg-[#FEF6EE]', border: 'border-[#F7B27A]', text: 'text-[#E04F16]', },
         { id: 'completed', label: 'Completed', color: 'bg-[#16B364]', bg: 'bg-[#ECFDF3]', border: 'border-[#ABEFC6]', text: 'text-[#079455]', },
-        { id: 'cancelled', label: 'Cancelled', color: 'bg-[#F04438]', bg: 'bg-[#FAFAFA]', border: 'border-[#FECDCA]', text: 'text-[#B42318]' }
+        { id: 'cancelled', label: 'Cancelled', color: 'bg-[#F04438]', bg: 'bg-[#FAFAFA]', border: 'border-[#FECDCA]', text: 'text-[#B42318]' },
+          { id: 'scheduled', label: 'Scheduled', color: 'bg-[#717680]', bg: 'bg-[#FAFAFA]', border: 'border-[#E9EAEB]', text: 'text-[#414651]', },
+        { id: 'cancelled', label: 'Cancelled', color: 'bg-[#FAC515]', bg: 'bg-[#FEFBE8]', border: 'border-[#FEEE95]', text: 'text-[#CA8504]' }
     ];
 
     return (
         <div className="no-scrollbar flex items-center justify-between px-2 py-1 bg-white rounded-xl h-[21.12px] min-h-[56px] overflow-x-auto">
             {/* Filter Icon and Label */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center pr-[4px]">
                 <FiFilter className="text-gray-500" size={20} />
             </div>
 

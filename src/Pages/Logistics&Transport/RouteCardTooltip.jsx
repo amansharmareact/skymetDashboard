@@ -47,7 +47,7 @@ const RouteCard = () => {
   ];
 
   return (
-    <div className="w-full h-[148px]  rounded-2xl px-6 py-4 bg-[#0A0D12] flex flex-col gap-3 text-white">
+    <div className="w-full rounded-2xl px-6 py-4 bg-[#0A0D12] flex flex-col gap-3 text-white">
       {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-md font-medium text-white">TRP-3409</h1>

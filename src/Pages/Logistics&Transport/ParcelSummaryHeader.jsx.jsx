@@ -2,7 +2,7 @@ import React from "react";
 
 const ParcelSummaryHeader = () => {
   return (
-    <div className="flex flex-wrap items-center justify-between bg-[#E9EAEB] px-4 py-2 text-sm rounded-xl font-medium">
+    <div className="flex flex-wrap items-center justify-between bg-[#F5F5F5] px-4 py-2 text-sm rounded-xl font-medium">
       {/* Labels */}
       <div className="flex gap-[30px] items-center w-full">
         <div>

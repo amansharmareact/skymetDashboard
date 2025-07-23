@@ -29,37 +29,37 @@ const LogisticsAndTransport = () => {
       </div>
       {/* Transport Status Cards */}
       <div className="flex w-full mt-[16px]">
-        <div className="w-[30%] bg-white border p-[6px] border-[#E9EAEB] rounded-[16px] flex flex-col h-[100vh] overflow-y-auto">
+        <div className="w-[35%] bg-white border py-[9.56px] border-[#E9EAEB] rounded-[16px] flex flex-col h-[100vh] overflow-x-visible overflow-y-auto">
           <ProgressFilter />
-          {Array.from({ length: 6 }).map((_, idx) => (
+          {Array.from({ length: 10 }).map((_, idx) => (
             <TransportStatusCard key={idx} />
           ))}
         </div>
-        <div className="flex flex-col w-[70%] backgroundColor border border-[#E9EAEB] p-[6px] rounded-xl pl-[4px]">
+        <div className="flex flex-col w-[65%] backgroundColor border border-[#E9EAEB] p-[6px] rounded-[12px] ml-[4px]">
           <div className="w-full">
             <TripStatusCard />
           </div>
-          <div className="mt-[4px] w-full z-0">
+          <div className="mt-[4px] w-full">
             <MapDataLogistics visibleFilters={{
               circle: false
             }} />
           </div>
-          <div className="mt-1 w-full">
+          <div className="mt-[4px] w-full">
             <PickupPoint />
           </div>
-          <div className="mt-1 w-full">
+          <div className="mt-[4px] w-full">
             <ParcelSummaryHeader />
           </div>
-          <div className="mt-1 w-full">
+          <div className="mt-[4px] w-full">
             <ParcelProgressTable />
           </div>
-          <div className="">
+          <div className="mt-[4px] w-full">
             <ParcelTimeline />
           </div>
-          <div className="mt-1 w-full">
+          <div className="mt-[4px] w-full">
             <FieldOfficerComments />
           </div>
-          <div className="mt-1 w-full">
+          <div className="mt-[4px] w-full">
             <TripActivityLog />
           </div>
         </div>

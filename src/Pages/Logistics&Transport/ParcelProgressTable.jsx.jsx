@@ -107,17 +107,17 @@ const steps = [
 const ParcelProgressTable = () => {
   return (
     <div className="rounded-xl overflow-hidden shadow border border-[#E9EAEB]">
-      <table className="min-w-full text-sm text-left bg-white">
+      <table className=" text-sm text-left bg-white">
         <thead className="bg-[#FAFAFA] text-[#717680] font-bold text-xs">
           <tr>
-            <th className="px-4 py-2">Stop</th>
-            <th className="px-4 py-2">Parcel ID</th>
-            <th className="px-4 py-2">Village Name</th>
-            <th className="px-4 py-2">Readiness %</th>
-            <th className="px-4 py-2">Load (Tons)</th>
-            <th className="px-4 py-2">Status</th>
-            <th className="px-4 py-2">Notes</th>
-            <th className="px-4 py-2 text-center">Actions</th>
+            <th className="px-[24px] py-[13px]">Stop</th>
+            <th className="px-[24px] py-[13px]">Parcel ID</th>
+            <th className="px-[24px] py-[13px]">Village Name</th>
+            <th className="px-[24px] py-[13px]">Readiness %</th>
+            <th className="px-[24px] py-[13px]">Load (Tons)</th>
+            <th className="px-[24px] py-[13px]">Status</th>
+            <th className="px-[24px] py-[13px]">Notes</th>
+            <th className="px-[24px] py-[13px]">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -126,36 +126,36 @@ const ParcelProgressTable = () => {
               key={idx}
               className="bg-white text-sm border-b border-[#E9EAEB]"
             >
-              <td className="px-4 py-2 text-[#535862]">{parcel.stop}</td>
-              <td className="px-4 py-2 text-[#535862]">{parcel.id}</td>
-              <td className="px-4 py-2 text-[#535862] flex items-center gap-2">
+              <td className="pl-[24px] pr-[44px] py-[26px] text-[#535862]">{parcel.stop}</td>
+              <td className="pl-[24px] pr-[38px] py-[26px] text-[#535862]">{parcel.id}</td>
+              <td className="pl-[24px] pr-[38px] py-[26px] text-[#535862] gap-2">
                 {parcel.village === "Kolhapur Plant" && (
                   <span role="img" aria-label="plant">
                     <img
                       src="/images/Factory.svg"
                       alt="Magnify"
-                      className="w-[27px h-[27px]"
+                      className="w-[27px] h-[27px]"
                     />
                   </span>
                 )}
                 {parcel.village}
               </td>
-              <td className="px-4 py-2 text-[#181D27] font-semibold">
+              <td className="pl-[24px] pr-[38px] py-[26px] text-[#181D27] font-semibold">
                 {parcel.readiness}
               </td>
-              <td className="px-4 py-2 text-[#181D27]">{parcel.load}</td>
-              <td className="px-4 py-2 text-[#535862]">
+              <td className="pl-[24px] pr-[38px] py-[26px] text-[#181D27]">{parcel.load}</td>
+              <td className="pl-[24px] pr-[38px] py-[26px] text-[#535862]">
                 {getStatusBadge(parcel.status)}
               </td>
-              <td className="px-4 py-2 text-[#181D27] text-sm font-medium">
+              <td className="pl-[24px] pr-[38px] py-[26px] text-[#181D27] text-sm font-medium">
                 {parcel.notes}
               </td>
-              <td className="px-4 py-2 text-center">
+              <td className="pl-[24px] pr-[38px] py-[26px] text-center">
                 <span>
                   <img
                     src="/images/Magnify.svg"
                     alt="Magnify"
-                    className="w-[27px h-[27px]"
+                    className="w-[27px] h-[27px]"
                   />
                 </span>
               </td>

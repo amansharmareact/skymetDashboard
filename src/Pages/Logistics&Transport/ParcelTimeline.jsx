@@ -27,7 +27,7 @@ const ParcelTimeline = () => {
         <div className="absolute top-[28%] h-0.5 bg-gray-200 rounded-full z-0 transform -translate-y-1/2" />
         {/* Foreground progress line */}
         <div
-          className="absolute top-[23%] z-10 h-0.5 rounded-full transform -translate-y-1/2 transition-all duration-500"
+          className="absolute top-[24%] z-10 h-0.5 rounded-full transform -translate-y-1/2 transition-all duration-500"
           style={{
             left: `calc(${leftPercent}% + 70px)`,
             width: `calc(${widthPercent}% - 150px)`,
@@ -41,7 +41,7 @@ const ParcelTimeline = () => {
           const isActive = index === currentStep;
 
           return (
-            <div key={index} className="flex-1 z-20 flex flex-col items-center">
+            <div key={index} className="flex-1 z-20 flex flex-col items-center min-w-[0]">
               {/* Circle */}
               <div
                 className={`w-6 h-6 rounded-full flex items-center justify-center border-2 shadow-md transition-all duration-300
@@ -71,17 +71,18 @@ const ParcelTimeline = () => {
               </div>
               {/* Label */}
               <span
-                className={`mt-2 text-sm font-medium
-                    ${isCompleted
+                className={`mt-2 text-sm font-medium text-center truncate whitespace-nowrap max-w-[100px]
+    ${isCompleted
                     ? "text-[#4F7A21]"
                     : isActive
                       ? "text-[#7BC043]"
                       : "text-gray-400"}
-                  `}
+  `}
+                title={step} // Shows full name on hover
               >
-
                 {step}
               </span>
+
             </div>
           );
         })}

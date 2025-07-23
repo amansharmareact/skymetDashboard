@@ -26,7 +26,7 @@ const PickupPoint = () => {
   return (
     <div className="flex justify-between items-center bg-[#F5F5F5] rounded-xl px-4 py-2 shadow-sm text-sm font-medium">
       {/* Left group */}
-      <div className="flex flex-wrap items-center gap-4">
+      <div className="flex flex-wrap items-center gap-[14px]">
         {legendItemsLeft.map((item, index) => (
           <div key={index} className="flex items-center gap-1">
             <span className={item.color}>

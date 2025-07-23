@@ -11,7 +11,7 @@ const TransportStatusCard = () => {
   }, []);
 
   return (
-    <div className="w-full h-full  rounded-xl border border-[#E9EAEB] bg-[#FAFAFA] p-[14px] pb-[13px] mt-[6px] text-[#111827] shadow-sm">
+    <div className="w-fit-content h-full rounded-xl border border-[#E9EAEB] bg-[#FAFAFA] mx-[6px] p-[14px] mt-[6px] text-[#111827]">
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>
@@ -87,11 +87,11 @@ const TransportStatusCard = () => {
           </svg>
 
           {/* +3 More */}
-          <div className="justify-between w-[66px] py-[3px] px-[8px] border border-[#FDE272] bg-[#FEFBE8] text-[#717680] rounded-full flex items-center text-xs font-semibold">
+          <div className="justify-between py-[3px] px-[8px] border border-[#FDE272] bg-[#FEFBE8] text-[#717680] rounded-full flex items-center text-xs font-semibold overflow-visible">
             <div className="relative group inline-block cursor-pointer">
               {/* Trigger */}
               <div
-                className="relative inline-block cursor-pointer"
+                className="relative inline-block cursor-pointer z-10"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
@@ -101,7 +101,7 @@ const TransportStatusCard = () => {
 
               {/* Tooltip (hidden by default, shown on hover) */}
               {isHovered && (
-                <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 z-50 w-max whitespace-nowrap">
+                <div className="z-50 absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-max whitespace-nowrap">
                   <RouteCard />
                 </div>
               )}
