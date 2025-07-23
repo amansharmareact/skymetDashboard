@@ -9,7 +9,7 @@ import WeatherForecast from "./WeatherForecast";
 const HarvestStatusCard = () => {
 
     return (
-        <div className="w-full bg-white rounded-xl border-gray-200 text-sm text-gray-800 z-10">
+        <div className="w-full bg-white rounded-xl pb-4 border-gray-200 text-sm text-gray-800 z-10">
             {/* Header */}
             {/* <LastSync /> */}
 
