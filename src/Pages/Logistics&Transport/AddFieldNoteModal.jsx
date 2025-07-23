@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import Rings from "../../components/ui/rings";
 
 const AddFieldNoteModal = ({ isNotesOpen }) => {
   const [noteType, setNoteType] = useState("Visit Note");
@@ -15,15 +16,20 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
       {/* Modal */}
       {isNotesOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-lg p-6 relative">
+          <div className="bg-white w-full max-w-2xl rounded-xl shadow-lg p-6 relative overflow-hidden">
+            {/* Rings as background */}
+            <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
+              <Rings className="" />
+            </div>
+
             {/* Close Button */}
-            <button className="absolute top-4 right-4 text-gray-500 hover:text-black">
+            <button className="absolute top-4 right-4 text-gray-500 hover:text-black z-20">
               <IoClose size={22} />
             </button>
 
             {/* Header */}
-            <div className="mb-5">
-              <h2 className="text-lg font-bold text-[#181D27]">
+            <div className="mb-5 z-20 relative">
+              <h2 className="text-lg font-bold text-[#181D27] flex items-center gap-2">
                 <img src="/images/Notes.svg" alt="Notes" /> Add Field Note
               </h2>
               <p className="text-sm text-[#535862] mt-1">
@@ -32,7 +38,7 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
             </div>
 
             {/* Form Fields */}
-            <div className="grid grid-cols-2 gap-4 text-sm">
+            <div className="grid grid-cols-2 gap-4 text-sm z-20 relative">
               <div>
                 <label className="block text-[#414651] mb-1 font-medium">
                   Officer Name
@@ -92,7 +98,7 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
                 </div>
               </div>
             </div>
-            <div className="col-span-1 mt-2">
+            <div className="col-span-1 mt-2 z-20 relative">
               <label className="flex items-center text-[#414651] mb-1 font-medium text-sm">
                 <span>Note Description</span>
                 <span>
@@ -110,7 +116,7 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
               />
             </div>
             {/* File Upload */}
-            <div className="my-4 border border-[#E9EAEB] rounded-xl p-4 text-center">
+            <div className="my-4 border border-[#E9EAEB] rounded-xl p-4 text-center z-20 relative">
               <label className="cursor-pointer text-green-600 font-medium">
                 <input
                   type="file"
@@ -136,7 +142,7 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
             </div>
 
             {file && (
-              <div className="bg-green-50 text-green-800 px-4 py-2 rounded-md text-sm flex justify-between items-center">
+              <div className="bg-green-50 text-green-800 px-4 py-2 rounded-md text-sm flex justify-between items-center z-20 relative">
                 <span>
                   {file.name} - {(file.size / 1024).toFixed(0)} KB - ✅ Complete
                 </span>
@@ -144,13 +150,9 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
             )}
 
             {/* Footer */}
-            <div className="mt-5 flex items-center justify-between">
-              <p className="text-xs text-gray-500">
-                <div className="text-[#414651]">Time Stamp:</div>{" "}
-                <div className="text-[#414651] font-bold text-sm">
-                  21/08/2025 14:23
-                </div>
-              </p>
+            <div className="mt-5 flex items-center justify-between z-20 relative">
+              <div className="text-[#414651] text-xs">Time Stamp:</div>
+              <div className="text-[#414651] font-bold text-sm">21/08/2025 14:23</div>
               <button className="bg-[#4F7A21] w-[469px] h-[40px] font-bold text-sm text-white px-6 py-2 rounded-md">
                 Add Note
               </button>

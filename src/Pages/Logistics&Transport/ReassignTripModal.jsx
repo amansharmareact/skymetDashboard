@@ -1,29 +1,34 @@
 import React from "react";
+import Rings from "../../components/ui/rings"
 
 const ReassignTripModal = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-30 flex items-center justify-center">
-      <div className="bg-white rounded-xl w-[580px] p-6 relative shadow-lg">
+      <div className="bg-white rounded-xl w-[580px] p-6 relative shadow-lg overflow-hidden">
+        {/* Rings as background */}
+        <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
+          <Rings />
+        </div>
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-20"
         >
           ✕
         </button>
 
         {/* Top Icon */}
-        <div className="w-[48px] h-[48px] rounded-[10px] border border-[#E9EAEB] bg-[#FFFFFF] flex items-center justify-center mb-3">
+        <div className="w-[48px] h-[48px] rounded-[10px] border border-[#E9EAEB] bg-[#FFFFFF] flex items-center justify-center mb-3 z-10 relative">
           <img src="/images/Refresh.svg" alt="Refresh" />
         </div>
 
-        <h2 className="text-lg font-bold text-[#181D27]">Reassign Trip</h2>
-        <p className="text-sm font-normal text-[#535862] mb-5">
+        <h2 className="text-lg font-bold text-[#181D27] z-10 relative">Reassign Trip</h2>
+        <p className="text-sm font-normal text-[#535862] mb-5 z-10 relative">
           Update driver or vehicle allocation for this trip
         </p>
 
         {/* Trip Info */}
-        <div className="grid grid-cols-3 gap-3 text-sm mb-4">
+        <div className="grid grid-cols-3 gap-3 text-sm mb-4 z-10 relative">
           <div>
             <p className="text-[#717680] font-medium">Trip ID</p>
             <p className="fontibold text[#414651]B]">TRP-3409</p>
@@ -39,7 +44,7 @@ const ReassignTripModal = ({ onClose }) => {
         </div>
 
         {/* Reassign Form */}
-        <div className="grid grid-cols-2 gap-4 mb-5">
+        <div className="grid grid-cols-2 gap-4 mb-5 z-10 relative">
           <div>
             <label className="text-sm font-medium text-[#414651] mb-1 block">
               Select New Driver <span className="text-red-500">*</span>
@@ -59,7 +64,7 @@ const ReassignTripModal = ({ onClose }) => {
         </div>
 
         {/* Timestamp */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between z-10 relative">
           <p className="text-xs text-[#414651]">
             Time Stamp: <span className="font-bold">21/08/2025 14:23</span>
           </p>

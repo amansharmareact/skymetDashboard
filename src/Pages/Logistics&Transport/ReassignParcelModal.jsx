@@ -1,31 +1,36 @@
 import React from "react";
+import Rings from "../../components/ui/rings";
 
 const ReassignParcelModal = ({ onClose }) => {
   return (
-    <div className="fixed h-screen overflow-y-auto  inset-0 z-50 bg-black bg-opacity-30 flex items-center justify-center">
+    <div className="fixed h-screen overflow-y-auto inset-0 z-50 bg-black bg-opacity-30 flex items-center justify-center">
       {/* Modal Content: full screen height, scrollable if needed */}
-      <div className="bg-white rounded-xl w-[660px] p-6 relative shadow-lg">
+      <div className="bg-white rounded-xl w-[660px] p-6 relative shadow-lg overflow-hidden">
+        {/* Rings as background */}
+        <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
+          <Rings />
+        </div>
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-20"
         >
           ✕
         </button>
 
         {/* Top Icon */}
-        <div className="w-[48px] h-[48px] rounded-[10px] border border-[#E9EAEB] bg-white flex items-center justify-center">
+        <div className="w-[48px] h-[48px] rounded-[10px] border border-[#E9EAEB] bg-white flex items-center justify-center z-10 relative">
           <img src="/images/Refresh.svg" alt="Refresh" />
         </div>
 
         {/* Heading */}
-        <h2 className="text-lg font-bold text-[#181D27] mt-[16px]">Reassign Parcels</h2>
-        <p className="text-sm font-normal text-[#535862]">
+        <h2 className="text-lg font-bold text-[#181D27] mt-[16px] z-10 relative">Reassign Parcels</h2>
+        <p className="text-sm font-normal text-[#535862] z-10 relative">
           Reassign specific parcels to another vehicle
         </p>
 
         {/* Trip Info */}
-        <div className="grid grid-cols-4 gap-3 text-sm mt-[16px]">
+        <div className="grid grid-cols-4 gap-3 text-sm mt-[16px] z-10 relative">
           <div>
             <p className="text-[#717680] font-medium">Trip ID</p>
             <p className="font-bold text-[#414651]">TRP-3409</p>
@@ -45,7 +50,7 @@ const ReassignParcelModal = ({ onClose }) => {
         </div>
 
         {/* Parcel Table */}
-        <div className="border border-[#E9EAEB] rounded-md overflow-x-auto mt-[16px]">
+        <div className="border border-[#E9EAEB] rounded-md overflow-x-auto mt-[16px] z-10 relative">
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-[#F7F8F9] text-[#717680] text-bold text-xs text-left">
@@ -128,7 +133,7 @@ const ReassignParcelModal = ({ onClose }) => {
         </div>
 
         {/* Driver & Vehicle Dropdowns */}
-        <div className="flex items-center mt-[16px] justify-between gap-4">
+        <div className="flex items-center mt-[16px] justify-between gap-4 z-10 relative">
           <div className="w-full ">
             <label className="text-sm mb-[6px] font-medium text-[#414651] block">
               Select New Driver <span className="text-red-500">*</span>
@@ -148,7 +153,7 @@ const ReassignParcelModal = ({ onClose }) => {
         </div>
 
         {/* Optional Note */}
-        <div className="">
+        <div className="z-10 relative">
           <label className="text-sm font-medium text-[#414651] block mt-[16px] mb-[6px]">
             Optional Reassign Note
           </label>
@@ -160,7 +165,7 @@ const ReassignParcelModal = ({ onClose }) => {
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-between mt-[32px]">
+        <div className="flex items-center justify-between mt-[32px] z-10 relative">
           <p className="text-xs text-[#414651]">
             Time Stamp: <span className="font-bold">21/08/2025 14:23</span>
           </p>
