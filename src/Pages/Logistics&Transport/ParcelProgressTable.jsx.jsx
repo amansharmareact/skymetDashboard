@@ -107,17 +107,17 @@ const steps = [
 const ParcelProgressTable = () => {
   return (
     <div className="rounded-xl overflow-x-auto shadow border border-[#E9EAEB]">
-      <table className="text-sm text-left bg-white">
+      <table className="text-left bg-white">
         <thead className="bg-[#FAFAFA] text-[#717680] font-bold text-xs">
           <tr>
-            <th className="px-[24px] py-[13px]">Stop</th>
-            <th className="px-[24px] py-[13px]">Parcel ID</th>
-            <th className="px-[24px] py-[13px]">Village Name</th>
-            <th className="px-[24px] py-[13px]">Readiness %</th>
-            <th className="px-[24px] py-[13px]">Load (Tons)</th>
-            <th className="px-[24px] py-[13px]">Status</th>
-            <th className="px-[24px] py-[13px]">Notes</th>
-            <th className="px-[24px] py-[13px]">Actions</th>
+            <th className="table-header">Stop</th>
+            <th className="table-header">Parcel ID</th>
+            <th className="table-header">Village Name</th>
+            <th className="table-header">Readiness %</th>
+            <th className="table-header">Load (Tons)</th>
+            <th className="table-header">Status</th>
+            <th className="table-header">Notes</th>
+            <th className="table-header">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -126,9 +126,9 @@ const ParcelProgressTable = () => {
               key={idx}
               className="bg-white text-sm border-b border-[#E9EAEB]"
             >
-              <td className="pl-[14px] pr-[38px] py-[16px] text-[#535862]">{parcel.stop}</td>
-              <td className="pl-[14px] pr-[38px] py-[16px] text-[#535862]">{parcel.id}</td>
-              <td className="pl-[14px] pr-[38px] py-[16px] text-[#535862] gap-2">
+              <td className="table-cells">{parcel.stop}</td>
+              <td className="table-cells text-[#535862]">{parcel.id}</td>
+              <td className="table-cells text-[#535862] gap-2">
                 {parcel.village === "Kolhapur Plant" && (
                   <span role="img" aria-label="plant">
                     <img
@@ -140,17 +140,17 @@ const ParcelProgressTable = () => {
                 )}
                 {parcel.village}
               </td>
-              <td className="pl-[14px] pr-[38px] py-[16px] text-[#181D27] font-semibold">
+              <td className="table-cells text-[#181D27] font-semibold">
                 {parcel.readiness}
               </td>
-              <td className="pl-[14px] pr-[38px] py-[16px] text-[#181D27]">{parcel.load}</td>
-              <td className="pl-[14px] pr-[38px] py-[16px] text-[#535862]">
+              <td className="table-cells text-[#181D27]">{parcel.load}</td>
+              <td className="table-cells text-[#535862]">
                 {getStatusBadge(parcel.status)}
               </td>
-              <td className="pl-[14px] pr-[38px] py-[16px] text-[#181D27] text-sm font-medium">
+              <td className="table-cells text-[#181D27] text-sm font-medium">
                 {parcel.notes}
               </td>
-              <td className="pl-[14px] pr-[38px] py-[16px] text-center">
+              <td className="table-cells text-center">
                 <span>
                   <img
                     src="/images/Magnify.svg"

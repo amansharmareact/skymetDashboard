@@ -11,7 +11,7 @@ const TransportStatusCard = () => {
   }, []);
 
   return (
-    <div className="w-fit-content h-full rounded-xl border border-[#E9EAEB] bg-[#FAFAFA] mx-[6px] p-[14px] mt-[6px] text-[#111827]">
+    <div className="w-fit-content h-full rounded-xl border border-[#E9EAEB] bg-[#FAFAFA] mx-[6px] p-[14px] mt-[6px] text-[#111827] ">
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>

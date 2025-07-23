@@ -54,13 +54,13 @@ const ReassignParcelModal = ({ onClose }) => {
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-[#F7F8F9] text-[#717680] text-bold text-xs text-left">
-                <th className="px-4 py-2">
+                <th className="table-header">
                   <input type="checkbox" />
                 </th>
-                <th className="px-4 py-2">Stop</th>
-                <th className="px-4 py-2">Parcel ID</th>
-                <th className="px-4 py-2">Village Name</th>
-                <th className="px-4 py-2">Status</th>
+                <th className="table-header">Stop</th>
+                <th className="table-header">Parcel ID</th>
+                <th className="table-header">Village Name</th>
+                <th className="table-header">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -117,15 +117,15 @@ const ReassignParcelModal = ({ onClose }) => {
                   key={index}
                   className="border-b border-[#E9EAEB] text-[#535862] font-normal"
                 >
-                  <td className="px-4 py-2">
+                  <td className="table-cells">
                     {index !== 3 && <input type="checkbox" />}
                   </td>
-                  <td className="px-4 py-2 text-[#181D27] font-medium">
+                  <td className="table-cells text-[#181D27] font-medium">
                     {row.stop}
                   </td>
-                  <td className="px-4 py-2">{row.parcel}</td>
-                  <td className="px-4 py-2">{row.village}</td>
-                  <td className="px-4 py-2">{row.status}</td>
+                  <td className="table-cells">{row.parcel}</td>
+                  <td className="table-cells">{row.village}</td>
+                  <td className="table-cells">{row.status}</td>
                 </tr>
               ))}
             </tbody>

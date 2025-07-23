@@ -10,11 +10,11 @@ const StatusFilter = () => {
         { id: 'completed', label: 'Completed', color: 'bg-[#16B364]', bg: 'bg-[#ECFDF3]', border: 'border-[#ABEFC6]', text: 'text-[#079455]', },
         { id: 'cancelled', label: 'Cancelled', color: 'bg-[#F04438]', bg: 'bg-[#FAFAFA]', border: 'border-[#FECDCA]', text: 'text-[#B42318]' },
           { id: 'scheduled', label: 'Scheduled', color: 'bg-[#717680]', bg: 'bg-[#FAFAFA]', border: 'border-[#E9EAEB]', text: 'text-[#414651]', },
-        { id: 'cancelled', label: 'Cancelled', color: 'bg-[#FAC515]', bg: 'bg-[#FEFBE8]', border: 'border-[#FEEE95]', text: 'text-[#CA8504]' }
+        { id: 'skipped', label: 'Skipped', color: 'bg-[#FAC515]', bg: 'bg-[#FEFBE8]', border: 'border-[#FEEE95]', text: 'text-[#CA8504]' }
     ];
 
     return (
-        <div className="no-scrollbar flex items-center justify-between px-2 py-1 bg-white rounded-xl h-[21.12px] min-h-[56px] overflow-x-auto">
+        <div className="self-stretch w-[344px] min-w-[344px] max-w-[400px] no-scrollbar flex items-center justify-between px-2 py-1 bg-white rounded-xl h-[21.12px] min-h-[56px] overflow-x-auto">
             {/* Filter Icon and Label */}
             <div className="flex items-center pr-[4px]">
                 <FiFilter className="text-gray-500" size={20} />

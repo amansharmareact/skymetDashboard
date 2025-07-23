@@ -98,7 +98,7 @@ const ParcelMappingTable = () => {
       <table className="min-w-full text-sm text-left bg-white">
         <thead className="bg-[#FAFAFA] text-[#717680] font-bold text-xs">
           <tr>
-            <th className="px-4 py-2">
+            <th className="table-header">
               {" "}
               <span className="inline-block">
                 <img
@@ -108,7 +108,7 @@ const ParcelMappingTable = () => {
                 />
               </span>
             </th>
-            <th className="px-4 py-2">
+            <th className="table-header">
               <span>Parcel ID</span>{" "}
               <span className="inline-block">
                 <img
@@ -118,7 +118,7 @@ const ParcelMappingTable = () => {
                 />
               </span>
             </th>
-            <th className="px-4 py-2">
+            <th className="table-header">
               <span>Village </span>
               <span className="inline-block">
                 <img
@@ -128,7 +128,7 @@ const ParcelMappingTable = () => {
                 />
               </span>
             </th>
-            <th className="px-4 py-2">
+            <th className="table-header">
               <span>Readiness % </span>
               <span className="inline-block">
                 <img
@@ -138,7 +138,7 @@ const ParcelMappingTable = () => {
                 />
               </span>
             </th>
-            <th className="px-4 py-2">
+            <th className="table-header">
               <span>Est. (Tons) </span>
               <span className="inline-block">
                 <img
@@ -148,7 +148,7 @@ const ParcelMappingTable = () => {
                 />
               </span>
             </th>
-            <th className="px-4 py-2 ">
+            <th className="table-header ">
               <span>Alert </span>
               <span className="inline-block">
                 <img
@@ -166,9 +166,9 @@ const ParcelMappingTable = () => {
               key={idx}
               className="bg-white text-sm border-b border-[#E9EAEB]"
             >
-              <td className="px-4 py-2 text-[#535862]">{parcel.stop}</td>
-              <td className="px-4 py-2 text-[#535862]">{parcel.id}</td>
-              <td className="px-4 py-2 text-[#535862] flex items-center gap-2">
+              <td className="table-cells text-[#535862]">{parcel.stop}</td>
+              <td className="table-cells text-[#535862]">{parcel.id}</td>
+              <td className="table-cells text-[#535862] flex items-center gap-2">
                 {parcel.village === "Kolhapur Plant" && (
                   <span role="img" aria-label="plant">
                     <img
@@ -180,11 +180,11 @@ const ParcelMappingTable = () => {
                 )}
                 {parcel.village}
               </td>
-              <td className="px-4 py-2 text-[#181D27] font-semibold">
+              <td className="table-cells text-[#181D27] font-semibold">
                 {parcel.readiness}
               </td>
-              <td className="px-4 py-2 text-[#181D27]">{parcel.load}</td>
-              <td className="px-4 py-2 text-[#535862]">
+              <td className="table-cells text-[#181D27]">{parcel.load}</td>
+              <td className="table-cells text-[#535862]">
                 {getStatusBadge(parcel.status)}
               </td>
             </tr>

@@ -152,3 +152,40 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+.table-text {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--colors-text-text-secondary-600, #535862);
+  text-overflow: ellipsis;
+
+  /* Text sm/Regular */
+  font-size: var(--Font-size-text-sm, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Line-height-text-sm, 20px);
+  /* 142.857% */
+}
+
+.table-cells {
+  padding: 16px 24px 16px 24px;
+  height: 72px;
+  padding: var(--spacing-xl, 16px) var(--spacing-3xl, 24px);
+  align-items: center;
+  align-self: stretch;
+  border-bottom: 1px solid var(--Colors-Border-border-secondary, #E9EAEB);
+  color: "#535862"
+}
+
+.table-header {
+  height: 44px;
+  font-size: 12px;
+  padding: var(--spacing-lg, 12px) var(--spacing-3xl, 24px);
+  align-items: center;
+  gap: var(--spacing-lg, 12px);
+  align-self: stretch;
+  border-bottom: 1px solid var(--Colors-Border-border-secondary, #E9EAEB);
+  background: var(--Colors-Background-bg-secondary, #FAFAFA);
+
+}

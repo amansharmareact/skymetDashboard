@@ -30,18 +30,13 @@ const LogisticsAndTransport = () => {
       </div>
       {/* Transport Status Cards */}
       <div className="flex w-full mt-[16px] relative ">
-        <div className="w-[35%] bg-white border py-[9.56px] border-[#E9EAEB] rounded-[16px] flex flex-col h-[100vh] overflow-x-visible overflow-y-auto">
+        <div className="w-[344px] min-w-[344px] max-w-[400px] bg-white border py-[9.56px] border-[#E9EAEB] rounded-[16px] flex flex-col overflow-x-hidden overflow-y-auto">
           <ProgressFilter />
           {Array.from({ length: 10 }).map((_, idx) => (
             <TransportStatusCard key={idx} />
           ))}
         </div>
-        {/* {true && (
-          <div className="z-50 absolute -translate-x-1/2 w-max whitespace-nowrap">
-            <RouteCard />
-          </div>
-        )} */}
-        <div className="flex flex-col w-[65%] backgroundColor border border-[#E9EAEB] p-[6px] rounded-[16px] ml-[4px]">
+        <div className="flex flex-col w-full backgroundColor border border-[#E9EAEB] p-[6px] rounded-[16px] ml-[4px]">
           <div className="w-full">
             <TripStatusCard />
           </div>
