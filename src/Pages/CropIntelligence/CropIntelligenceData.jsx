@@ -59,11 +59,11 @@ const CropIntelligenceData = () => {
         },
     ];
     return (
-        <div className="scrollbar-hide w-full h-[96vh] overflow-auto">
+        <div className="scrollbar-hide w-full overflow-auto">
 
             <div className="backgroundColor w-full grid grid-cols-2 lg:grid-cols-5 h-full">
                 {/* Left/Main Section */}
-                <div className="col-span-1 lg:col-span-3 mt-[16px] flex flex-col">
+                <div className="col-span-1 lg:col-span-3 flex flex-col">
                     <Filters className="pl-[20px]" visibleFilters={{
                         crop: true,
                         season: true,

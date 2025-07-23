@@ -46,7 +46,7 @@ const LogisticsAndTransport = () => {
             <TripStatusCard />
           </div>
           <div className="mt-[4px] w-full">
-            <MapDataLogistics visibleFilters={{
+            <MapDataLogistics className visibleFilters={{
               circle: false
             }} />
           </div>

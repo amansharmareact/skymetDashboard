@@ -72,26 +72,26 @@ const AssignDriverButtonComp = () => {
             {/* Step Progress Bar */}
             <div className="grid grid-cols-4 gap-4 text-sm">
                 <div>
-                    <hr className="border-t-[3px] border-[#4F7A21] mb-2" />
+                    <hr className="border-t-[4px] border-[#4F7A21] mb-2" />
                     <p className="font-bold text-sm text-[#414651]">Step 1:</p>
                     <p className="text-[#535862] font-normal text-sm">
                         Discover Villages with Harvest Potential
                     </p>
                 </div>
                 <div>
-                    <hr className="border-t-[3px] border-[#4F7A21] mb-2" />
+                    <hr className="border-t-[4px] border-[#4F7A21] mb-2" />
                     <p className="font-bold text-sm text-[#414651]">Step 2:</p>
                     <p className="text[#535862] font-normal text-sm">
                         Select Parcels for the Trip
                     </p>
                 </div>
                 <div>
-                    <hr className="border-t-[3px] border-[#4F7A21] mb-2" />
+                    <hr className="border-t-[4px] border-[#4F7A21] mb-2" />
                     <p className="font-bold text-sm text-[#414651]">Step 3:</p>
                     <p className="text[#535862] font-normal text-sm">Optimize Route</p>
                 </div>
                 <div>
-                    <hr className="border-t-[3px] border-[#B5E68A] mb-2" />
+                    <hr className="border-t-[4px] border-[#B5E68A] mb-2" />
                     <p className="font-bold text-sm text-[#414651]">Step 4:</p>
                     <p className="text[#535862] font-normal text-sm">
                         Assign Driver, Vehicle & Create Trip

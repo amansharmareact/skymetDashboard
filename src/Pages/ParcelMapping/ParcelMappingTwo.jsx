@@ -70,17 +70,17 @@ const ParcelMappingTwo = () => {
   return (
     <div className="backgroundColor flex flex-col">
       <div className="mt-[16px] ml-[20px]">
-        <ParcelMappingFilters onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
+        <ParcelMappingFilters className=" w-full grid grid-cols-8 gap-[8px]" onDateRangeChange={(range) => setDateRange(range)} visibleFilters={{
           lastSync: false
         }} />
       </div>
       <div className="w-full flex justify-between">
         <div className="w-full">
-          <div className="my-[16px] mx-[36px]">
-            <Steps content="Step 1: Use the map below to find villages with high crop readiness. Click on any green marker to zoom into its fields and view eligible parcels for collection."/>
+          <div className="my-[16px] mx-[20px]">
+            <Steps content="Step 1: Use the map below to find villages with high crop readiness. Click on any green marker to zoom into its fields and view eligible parcels for collection." />
           </div>
-          <div className="ml-[16px] mb-[16px]">
-            <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} height={"78vh"}/>
+          <div className="mb-[16px]">
+            <MapData center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} height={"78vh"} />
           </div>
         </div>
         {/*<div className="w-[60%] px-5">*/}
