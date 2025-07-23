@@ -59,7 +59,7 @@ const CropIntelligenceData = () => {
         },
     ];
     return (
-        <div className="scrollbar-hide w-full">
+        <div className="scrollbar-hide w-full h-[96vh] overflow-auto">
 
             <div className="backgroundColor w-full grid grid-cols-2 lg:grid-cols-5 h-full">
                 {/* Left/Main Section */}
