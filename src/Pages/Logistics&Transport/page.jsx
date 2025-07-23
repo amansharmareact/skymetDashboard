@@ -41,7 +41,7 @@ const LogisticsAndTransport = () => {
             <RouteCard />
           </div>
         )} */}
-        <div className="flex flex-col w-[65%] backgroundColor border border-[#E9EAEB] p-[6px] rounded-[12px] ml-[4px]">
+        <div className="flex flex-col w-[65%] backgroundColor border border-[#E9EAEB] p-[6px] rounded-[16px] ml-[4px]">
           <div className="w-full">
             <TripStatusCard />
           </div>

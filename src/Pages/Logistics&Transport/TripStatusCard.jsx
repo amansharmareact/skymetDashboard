@@ -27,7 +27,7 @@ const TripStatusCard = () => {
 
   return (
     <div>
-      <div className="bg-[#F5F5F5] relative shadow-sm rounded-xl py-[10px] px-[10px] mx-auto text-sm">
+      <div className="bg-[#F5F5F5] relative shadow-sm rounded-[12px] py-[10px] px-[10px] mx-auto text-sm">
         {/* Top Info */}
         <div className="flex items-center justify-between pb-[10px] gap-[24px]">
           <div>
