@@ -1,10 +1,30 @@
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import Rings from "../../components/ui/rings";
+import CustomDateRangePicker from "../ParcelMapping/CustomDatePicker";
 
-const AddFieldNoteModal = ({ isNotesOpen }) => {
+const AddFieldNoteModal = ({ isNotesOpen, onClose }) => {
   const [noteType, setNoteType] = useState("Visit Note");
   const [file, setFile] = useState(null);
+
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const [selectedRange, setSelectedRange] = useState({
+    startDate: null,
+    endDate: null,
+  });
+
+  const formatDate = (date) =>
+    date?.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+
+  const handleDateApply = (range) => {
+    setSelectedRange(range);
+    setShowDatePicker(false);
+    //onDateRangeChange?.(range); // optional: notify parent
+  };
 
   const handleFileUpload = (e) => {
     setFile(e.target.files[0]);
@@ -14,7 +34,7 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
     <div>
       {/* Trigger Button */}
       {/* Modal */}
-      {isNotesOpen && (
+      {/* {isNotesOpen && ( */}
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
           <div className="bg-white w-full max-w-2xl rounded-xl shadow-lg p-6 relative overflow-hidden">
             {/* Rings as background */}
@@ -23,7 +43,7 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
             </div>
 
             {/* Close Button */}
-            <button className="absolute top-4 right-4 text-gray-500 hover:text-black z-20">
+            <button className="absolute top-4 right-4 text-gray-500 hover:text-black z-20" onClick={onClose}>
               <IoClose size={22} />
             </button>
 
@@ -54,11 +74,21 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
                 <label className="block text-[#414651] mb-1 font-medium">
                   Visit Date
                 </label>
-                <input
-                  type="date"
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  defaultValue="2025-01-10"
+                <div className="w-full h-[38px] flex items-center gap-2 border-[1px] border-gray-300 rounded-md px-3 py-2" onClick={() => setShowDatePicker(true)}>
+                   <img
+                  src="/images/CalendarIcon.svg"
+                  alt="CalendarIcon"
+                  className="text-[#4F7A21] w-[20px] h-[20px]"
                 />
+                <span className="text-sm text-[#414651]">
+                  {selectedRange?.startDate instanceof Date &&
+                    selectedRange?.endDate instanceof Date
+                    ? `${formatDate(selectedRange.startDate)} – ${formatDate(
+                      selectedRange.endDate
+                    )}`
+                    : "Select Range"}
+                </span>
+                </div>
               </div>
 
               <div className="grid grid-cols-1 gap-4 text-sm">
@@ -159,6 +189,12 @@ const AddFieldNoteModal = ({ isNotesOpen }) => {
             </div>
           </div>
         </div>
+       {/* Render date picker modal */}
+      {showDatePicker && (
+        <CustomDateRangePicker
+          onCancel={() => setShowDatePicker(false)}
+          onApply={handleDateApply}
+        />
       )}
     </div>
   );

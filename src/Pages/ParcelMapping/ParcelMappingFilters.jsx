@@ -174,6 +174,7 @@ const ParcelMappingFilters = ({ onDateRangeChange, visibleFilters = {} }) => {
               <div className="bg-white w-[44px] h-[44px] flex items-center border border-[#CEEAB0] justify-center gap-1 cursor-pointer rounded-md shadow-sm">
                 <img
                   src="/images/RefreshIcon.svg"
+                  alt="refresh"
                   className="w-[20px] h-[20px] text-green-700"
                 />
               </div>
