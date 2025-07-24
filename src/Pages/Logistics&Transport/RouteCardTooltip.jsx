@@ -47,7 +47,7 @@ const RouteCard = () => {
   ];
 
   return (
-    <div className="w-[380px] h-[148px] rounded-2xl px-6 py-4 bg-[#0A0D12] flex flex-col gap-3 text-white">
+    <div className="w-full h-full rounded-2xl px-[12px] py-[8px] bg-[#0A0D12] flex flex-col gap-3 text-white">
       {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-md font-medium text-white">TRP-3409</h1>
@@ -58,7 +58,7 @@ const RouteCard = () => {
       </div>
 
       {/* Route Steps */}
-      <div className="w-[356px] bg-[#0E1117] rounded-xl border border-[#252B37] px-3 py-2 flex flex-col gap-2">
+      <div className="w-full bg-[#0E1117] rounded-xl border border-[#252B37] p-[16px] flex flex-col gap-2">
         <div className="flex items-center gap-2 overflow-x-auto max-w-full">
           {route.slice(0, 3).map((loc, idx) => (
             <React.Fragment key={idx}>
