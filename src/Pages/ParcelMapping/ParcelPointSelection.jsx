@@ -145,7 +145,7 @@ const ParcelPointSelection = () => {
                         center={[16.705, 74.2433]}
                         locations={locations}
                         onMarkerClick={handleMarkerClick}
-                        height={"87vh"}
+                        height={"86vh"}
                     />
                 </div>
             </div>
