@@ -125,10 +125,6 @@ body {
   max-width: fit-content;
 }
 
-.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
-  border-radius: 32px !important;
-}
-
 
 
 .css-5736gi-menu {
