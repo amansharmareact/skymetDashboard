@@ -18,7 +18,7 @@ const RouteCardPortal = ({ anchorRef, children }) => {
 
     return ReactDOM.createPortal(
         <div
-            className="absolute z-[9999] w-[380px] -translate-x-1/2"
+            className="absolute z-[9999] -translate-x-1/2"
             style={{
                 top: `${position.top}px`,
                 left: `${position.left}px`,

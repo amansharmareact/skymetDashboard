@@ -108,7 +108,6 @@ const TransportStatusCard = () => {
                 <RouteCardPortal anchorRef={moreRef}>
                   <div
                     onMouseLeave={() => setIsHovered(false)}
-                    className="rounded-xl"
                   >
                     <RouteCard />
                   </div>
