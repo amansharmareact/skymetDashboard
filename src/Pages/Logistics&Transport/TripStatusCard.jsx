@@ -103,7 +103,7 @@ const TripStatusCard = () => {
               </p>
             </div>
             <div className="flex items-center gap-[24px]">
-              <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">
+              <div className="bg-white border-[#D5D7DA] border w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">
                 <RotateCcw className="w-4 h-4 text-[#414651]" />
               </div>
               <div className="inline-flex border border-gray-300 rounded-lg overflow-hidden text-sm font-medium">
