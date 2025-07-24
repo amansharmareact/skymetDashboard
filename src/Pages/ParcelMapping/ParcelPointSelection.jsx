@@ -115,9 +115,9 @@ const ParcelPointSelection = () => {
 
     return (
         <div className="flex w-full h-[calc(100vh-64px)] grid grid-cols-2">
-            <div className="flex flex-col w-[100%] gap-[5px]">
+            <div className="flex flex-col w-[100%] gap-[5px] backgroundColor">
                 {/* Map Section */}
-                <div className="mt-[16px] ml-[10px] w-full">
+                <div className="mt-[16px] ml-[10px] w-full ">
                     <ParcelMappingFilters
                         className="grid grid-cols-4 gap-[8px] w-full ml-[20px] mt-[16px]"
                         onDateRangeChange={(range) => setDateRange(range)}

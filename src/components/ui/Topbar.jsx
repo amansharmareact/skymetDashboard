@@ -2,7 +2,7 @@ import React from "react";
 
 const Topbar = () => {
   return (
-    <div className="w-full fixed bg-white px-8 py-1 shadow flex items-center justify-between z-50">
+    <div className="w-full fixed bg-white px-8 py-1 border border-b-[#EEF2F6] flex items-center justify-between z-50">
       {/* Logo */}
       <div className="flex items-center gap-1">
         <img src="/images/logo.svg" alt="logo" className="w-full h-full" />

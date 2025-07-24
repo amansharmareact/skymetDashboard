@@ -74,7 +74,7 @@ const CropIntelligence = () => {
                 }}/>
             </div>
 
-            <div className="mt-[16px] rounded-[12px] w-full">
+            <div className="mt-[16px] w-full">
                 <MapData height={"73vh"} center={[16.705, 74.2433]} locations={locations} onClick={handleRedirect} />
             </div>
             <div className="flex justify-items-start">
