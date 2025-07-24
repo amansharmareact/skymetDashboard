@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import TransportStatusCard from "./TransportStatusCard";
 import ScheduledTripsCard from "./ScheduledTripsCard";
 import Filters from "../../components/Filters";
@@ -56,9 +56,9 @@ const LogisticsAndTransport = () => {
             <TransportStatusCard key={idx} />
           ))}
         </div>
-        <div 
+        <div
           ref={rightRef}
-        className="flex flex-col w-full backgroundColor border border-[#E9EAEB] p-[6px] rounded-[16px] ml-[4px]">
+          className="flex flex-col w-full bg-white border border-[#E9EAEB] p-[6px] rounded-[16px] ml-[4px]">
           <div className="w-full">
             <TripStatusCard />
           </div>

@@ -137,18 +137,23 @@ const TransportStatusCard = () => {
         </div>
 
         {/* Progress Bar */}
-        <div className="h-[7px] w-full bg-gray-200 rounded-full overflow-hidden">
-          <div
-            ref={fillRef}
-            className="h-full bg-[#4F7A21]"
-            style={{ width: "70%" }}
-          />
+        <div className="w-full flex items-center gap-2">
+          {/* Progress Bar */}
+          <div className="h-[7px] bg-gray-200 rounded-full overflow-hidden flex-1">
+            <div
+              ref={fillRef}
+              className="h-full bg-[#4F7A21]"
+              style={{ width: "70%" }}
+            />
+          </div>
+
+          {/* Percentage Text */}
+          <p className="text-xs font-semibold text-gray-500 whitespace-nowrap">
+            70%
+          </p>
         </div>
 
-        {/* % Text */}
-        <p className="text-right text-xs font-semibold text-gray-500 mt-[2px]">
-          70%
-        </p>
+
       </div>
     </div>
   );
