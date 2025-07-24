@@ -59,7 +59,7 @@ const TransportStatusCard = () => {
 
       {/* Route */}
       <div className="border-t pt-3">
-        <div className="flex items-center gap-[6px] text-[13px] font-semibold text-gray-600 mb-2">
+        <div className="flex items-center justify-between gap-[6px] text-[13px] font-semibold text-gray-600 mb-2">
           {/* Start Location */}
           <div className="w-[22px] h-[22px] rounded-full border-[1px] border-[#ACDC79] flex items-center justify-center p-1 text-sm">
             <img src="/images/Location.svg" alt="Location" />
