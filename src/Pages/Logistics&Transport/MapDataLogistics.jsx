@@ -102,6 +102,7 @@ const MapData = ({
             <MapContainer
                 center={center}
                 zoom={12}
+                 zoomControl={false} 
                 className="rounded-[12px]"
                 style={{height: "450px", width: "fitContent"}}
                 whenReady={(map) => {
