@@ -92,7 +92,7 @@ const Filters = ({ visibleFilters = {}, lastSync, apply, className = "" }) => {
 
         {/* Filter Icon */}
         {visibleFilters.filter !== false && (
-          <div className="w-[44px] h-[44px] bg-white p-3 rounded-[8px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[44px] border border-[#D5D7DA] h-[44px] bg-white p-3 rounded-[8px] flex items-center justify-center flex-shrink-0">
             <Filter />
           </div>
         )}
@@ -111,7 +111,7 @@ const Filters = ({ visibleFilters = {}, lastSync, apply, className = "" }) => {
         {/* Last Synced */}
         {visibleFilters.lastSync !== false && (
           <div className="flex items-center gap-2 text-xs text-gray-500 flex-shrink-0">
-            <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">
+            <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm border border-[#D5D7DA]">
               <img
                 alt="Refresh Icon"
                 src="/images/RefreshIcon.svg"
@@ -128,7 +128,7 @@ const Filters = ({ visibleFilters = {}, lastSync, apply, className = "" }) => {
         {/* Refresh Icon Only */}
         {visibleFilters.refresh !== false && (
           <div className="flex items-center gap-2 text-xs text-gray-500 flex-shrink-0">
-            <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm">
+            <div className="bg-white w-[44px] h-[44px] flex items-center justify-center gap-1 cursor-pointer rounded-md shadow-sm border border-[#D5D7DA]">
               <img
                 alt="Refresh Icon"
                 src="/images/RefreshIcon.svg"
