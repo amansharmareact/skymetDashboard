@@ -30,7 +30,7 @@ const LogisticsAndTransport = () => {
       </div>
       {/* Transport Status Cards */}
       <div className="flex w-full mt-[16px] relative ">
-        <div className="w-[344px] min-w-[344px] max-w-[400px] bg-white border py-[9.56px] border-[#E9EAEB] rounded-[16px] flex flex-col overflow-x-hidden overflow-y-auto">
+        <div className="w-[344px] min-w-[344px] max-w-[400px] relative bg-white border py-[9.56px] border-[#E9EAEB] rounded-[16px] flex flex-col overflow-x-hidden overflow-y-auto">
           <ProgressFilter />
           {Array.from({ length: 10 }).map((_, idx) => (
             <TransportStatusCard key={idx} />

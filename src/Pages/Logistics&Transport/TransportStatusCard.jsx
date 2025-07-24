@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import RouteCard from "./RouteCardTooltip";
+import RouteCardPortal from "./RouterCardPortal";
 
 const TransportStatusCard = () => {
   const fillRef = useRef(null);
@@ -10,8 +11,10 @@ const TransportStatusCard = () => {
     }
   }, []);
 
+  const moreRef = useRef(null);
+
   return (
-    <div className="w-fit-content h-full rounded-xl border border-[#E9EAEB] bg-[#FAFAFA] mx-[6px] p-[14px] mt-[6px] text-[#111827] ">
+    <div className="w-fit-content h-full rounded-xl border relative border-[#E9EAEB] bg-[#FAFAFA] mx-[6px] p-[14px] mt-[6px] text-[#111827] ">
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>
@@ -91,7 +94,8 @@ const TransportStatusCard = () => {
             <div className="relative group inline-block cursor-pointer">
               {/* Trigger */}
               <div
-                className="relative inline-block cursor-pointer z-10"
+                ref={moreRef}
+                className="inline-block cursor-pointer z-10"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
@@ -101,9 +105,14 @@ const TransportStatusCard = () => {
 
               {/* Tooltip (hidden by default, shown on hover) */}
               {isHovered && (
-                <div className="z-50  absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-max whitespace-nowrap">
-                  <RouteCard />
-                </div>
+                <RouteCardPortal anchorRef={moreRef}>
+                  <div
+                    onMouseLeave={() => setIsHovered(false)}
+                    className="rounded-xl"
+                  >
+                    <RouteCard />
+                  </div>
+                </RouteCardPortal>
               )}
             </div>
           </div>
